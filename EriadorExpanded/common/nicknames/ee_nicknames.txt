@@ -1,0 +1,14 @@
+﻿	##################
+	# TRIGGERED ONLY #
+	##################
+
+
+	
+
+	
+	nick_last_smith = {}
+	nick_shadow_slayer = {}
+	nick_iceborn = {}
+	
+	
+	

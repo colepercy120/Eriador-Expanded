@@ -1,0 +1,106 @@
+﻿#wotr = {
+#	default = default_wotr
+#
+#	default_wotr = {
+#
+#	}
+#	
+#	random_wotr = {
+#
+#	}
+#}
+
+
+
+arnor_rule = {
+	default = no_arnor
+
+	categories = {
+		realms tweaks
+	}
+
+	no_arnor = {
+
+	}
+
+	arnor_restored = {
+
+	}
+	
+	gondor_colony = {
+
+	}
+	
+}
+
+eregion_rule = {
+	default = no_eregion
+
+	categories = {
+		realms tweaks
+	}
+
+	no_eregion = {
+
+	}
+
+	eregion_restored = {
+
+	}
+	
+}
+
+sirgala_rule = {
+	default = no_sirgala
+
+	categories = {
+		realms tweaks
+	}
+
+	no_sirgala = {
+
+	}
+
+	sirgala_restored = {
+
+	}
+	
+	greater_sirgala_restored = {
+
+	}
+}
+
+angmar_rule = {
+	default = no_angmar
+
+	categories = {
+		realms tweaks
+	}
+
+	no_angmar = {
+
+	}
+
+	angmar_restored = {
+
+	}
+	
+}
+
+moria_rule = {
+	default = yes_balrog
+
+	categories = {
+		realms tweaks
+	}
+
+	yes_balrog = {
+
+	}
+
+	no_balrog = {
+
+	}
+	
+	
+}

@@ -1,0 +1,207 @@
+﻿# LotR: This file needs to be kept in sync with the release version.
+#   Edited the dates
+#	Edited the loading screen text
+
+l_english:
+ 
+ ### Arnor 
+ 
+ ee_arnor.1.t: "Integration of the Southern Provinces"
+ ee_arnor.1.desc: "At long last, the wild lands of Enedhwaith and Dunland have been brought under the firm and righteous rule of Arnor. For too long, these rugged hills and shadowed vales harbored tribes of unruly hill-men.Faithless and fractious, their loyalties shifting like the mountain winds. Now, the banners of the North-kingdom fly proud over their stony holds and forested glens. Order is restored where once only lawlessness reigned, and the King’s peace stretches from the Barrow-downs to the Greyflood. This is not merely conquest—it is reclamation, the fulfillment of Arnor's ancient duty to tame these wild frontiers and guide their wayward folk into the light of civilization. Let it be known across the lands of Eriador and beyond: Enedhwaith and Dunland stand as proof of Arnor’s enduring strength! The hill-chieftains, once so proud and defiant, now kneel before the throne, their oaths sworn upon steel and stone. Roads shall be laid, strongholds raised, and the tongues of the West will echo in lands long silent to our speech. The wild shall be driven back, the land made fruitful beneath our hand, and the King's justice will reign unchallenged. Thus, the legacy of Elendil is renewed, and the North-kingdom’s glory shines ever brighter."
+ ee_arnor.1.a: "From the Gwathló to the Isen - The South is Ours!"
+ 
+ ee_arnor.2.t: "The Reclamation of Eregion"
+ ee_arnor.2.desc: "Through unyielding toil, sacrifice, and the determination of our people, the once-forgotten realm of Eregion stands once again, flourishing within the borders of Arnor. It is no longer the ancient domain of elves alone—it is now an integral and vibrant part of our kingdom. The banner of Arnor flies proudly over Eregion, and the world must now acknowledge that it is as much ours as any other land within our realm."
+ ee_arnor.2.a: "Declare Eregion as part of Arnor"
+ 
+ ee_arnor.3.t: "The Relinquishment of Orthanc"
+ ee_arnor.3.desc: "In a moment of great significance, the fortress of Orthanc, the ancient tower of the Isen, passes into the hands of Arnor. Once the stronghold of Gondor, it has long stood as a sentinel in the southern reaches of Middle-earth, its black stone walls watching over the Gap of Rohan and the tumultuous lands to its West. Now, with Gondor’s retreat and the shifting tides of power, the fortress is formally relinquished to our kingdom. The tower’s strength, its strategic position, and its ancient purpose as a bastion of defense against invasion will serve Arnor’s interests as they never have before. The Palantír of Orthanc, a treasure of immeasurable value, is now in our hands—a beacon of knowledge and power that will guide the future of Arnor as it has shaped the past of Middle-earth. With it, we shall command the winds of fortune, bending them toward the prosperity of our people and the security of our borders. Orthanc is no longer a symbol of Gondor’s fading strength; it is a new cornerstone of Arnor's rule, an unshakable tower in the heart of our growing dominion. From its heights, we shall watch over the land, and from its depths, we shall learn the secrets of the world. The future is ours to shape."
+ ee_arnor.3.a: "Orthanc now belongs to Arnor—what new power will we wield from its ancient halls?"
+ 
+ #ee_arnor.5.t: "The Return of the King"
+ #ee_arnor.5.desc: "With the long-awaited return of the King of Arthedain, word has reached us from the North. An emissary, clad in the heraldry of old Arnor, has come forth bearing the king’s seal and his solemn words. He speaks not with threats nor commands, but with the weight of ancient bonds and the quiet strength of a ruler returned to his rightful throne. In his hand, he carries a scroll of fine parchment, its script a reminder of oaths sworn long ago by our forebears. It calls upon us now to remember those promises made in the days of our ancestors—to stand once more as protectors of the lands entrusted to us, and to watch over the Shire, that quiet corner of the world so often overlooked, yet dear to the heart of the North. The emissary requests that we restore our oaths to the city of Annúminas, ancient seat of the kings of Arnor, now rising once more from ruin under the king’s hand. He asks that we stand vigilant along the borders of the Shire, to shield it from any shadow or foe that might seek to disturb its peace. This is not merely a call to arms, but a summons to honor—to take up the duty our fathers bore, and to remember the old alliances that shaped our people. We are given time to deliberate, yet the message is clear: the North is stirring once more, and with it comes the remembrance of what was lost, and what may yet be restored."
+ #ee_arnor.5.a: "Swear Fealty"
+ #ee_arnor.5.b: "The Shire needs no king"
+  
+ ee_arnor.6.t: "The Recovery of the Palantíri"
+ ee_arnor.6.desc: "The salvage team set sail under a pale, weary sun, their course aimed directly into the churning, frigid waters of Forochel’s most desolate reaches. For weeks, their efforts had yielded little beyond the jagged, frozen coastline and the murmur of the wind in the stillness. But this morning, as the crew cast their nets over the waters where the currents grew colder still, the sea offered a grim treasure. Beneath the dark waves, the wreck of the Arvedui, the fabled vessel of the last King of Arthedain, lay entangled in the jagged rocks, its hull shattered, yet still defiantly holding the secrets of its final voyage. For the men aboard, the sight of the wreck was a moment of awe and dread—both a triumph of discovery and a reminder of the perils the sea had claimed. The divers, now wary of the unforgiving depths, braved the icy waters with one mission: to recover the lost Palantír. \n\nHours passed in tense silence, broken only by the creaking of the ship and the crash of distant waves. Then, with an effort that seemed to defy the very ocean, the first stone surfaced—dark, smooth, and ancient, its glass surface gleaming eerily in the pale light. The Palantír of Annúminas was found, its mysteries preserved in the cold embrace of the sea. The second soon followed, a stone of equal age but twisted by time—the Palantír of Amon Sûl. Their recovery was a victory not only for the salvage team but for the realm itself, for the stones now held the promise of restoring the vision of Arnor, if the King dared to use them. As the team returned to shore, the weight of history seemed to shift, and the distant shadow of the past began to stir once again."
+ ee_arnor.6.a: "Huzzah!"
+ 
+ ee_arnor.4000.t: "The Numbers Game"
+ ee_arnor.4000.desc: "The [balrog|E] of [moria|e] is a threat unlike any other. A fallen [maiargods|E] and servent of [morgothcharacter|e] since the begining of the great music. It is in a class far beyond anything alive in Middle-Earth today, bar the [darklord|e] himself. We are but ants before its power. But ants can bring down even the strongest warrior. All they need is a proper strategy. \n\nTBy setting up propper killing fields in the tunnels we can wear the balrog down with constant attrition. Thousands will die, but that is a necessary sacrifice to destroy the last balrog and free the world of shadow!"
+ ee_arnor.4000.a: "Men to your possitions!"
+ 
+ ee_arnor.8.t: "No Word from the North"
+ ee_arnor.8.desc: "We have not yet recived any word on the search for the lost Palantiri of Arnor. Our best adventurers are continuing to search the bay of forochel for any sign of Arvedui's ship. All thats left to do it wait for results."
+ ee_arnor.8.a: "We Eagerly await their sucess."
+ ee_arnor.8.b: "Recall them, we can't afford this."
+ 
+  ee_arnor.9.t: "A Frozen Miracle"
+ ee_arnor.9.desc: "We have recived an utterly astonishing report from the adventurers in Forochel. They encountered a [numenorean|e] ship frozen in an iceberg. Getting aboard was problomatic but once inside it was clear the ship was carrying someone importiant. The crew, still eerily preserved by ice, were clad in fine robes and equiped with fine weapons. Our teams pulled the bodies from the ice to give them proper funereals fitting for our ancestors and salvaged as much as they could of the finnery and documents on the vessel. Then continued to search for the lost Palantiri. But then the miracle happened. A child, identified in the logs as Ârûbên the nephew of [pharazon|e], suddenly awoke. He was badly frostbitten and not able to stand but he was, is, alive."
+ ee_arnor.9.a: "Bring the Heir of Numenor to the Capital at once!"
+ 
+ ee_arnor.7.t: "The Osgiliath-Stone Recovered!"
+ ee_arnor.7.desc: "After long months of dredging and several alternate proposals to divert the river for the project, one of our cranes came across a large stone near one of the footings for an ancient bridge. At first, we thought it was just another boulder. But as the massive rock emerged from the water, its shape was clear. After some polishing and cleaning efforts, our suspicions were confirmed: we had found the lost Master Palantír of Osgiliath!"
+ ee_arnor.7.a: "The Master-Stone Restored!"
+
+ ee_arnor.20.t: "Chosing a Canidate"
+ ee_arnor.20.desc: "Now that the decision has been made to send an expedition to Arnor, it falls upon me, as Steward of Gondor, to select a leader worthy of this vital mission. This choice cannot be made lightly, for the road to the north is long and perilous, and the fate of this endeavor will rest heavily upon the one who commands it. The leader must possess not only martial skill and strategic wisdom but also the strength of will to endure the hardships of the journey and the burden of responsibility. They must be a figure of unwavering loyalty to Gondor, one who can inspire those who follow them and navigate both the treacherous wilds and the uncertain alliances that may await in the remnants of the old northern kingdom. As Steward, it is my duty to ensure that our hopes do not rest upon unsteady hands, for the success of this expedition may shape the future of Gondor and Arnor alike."
+ ee_arnor.20.a: "My knight, [candidate1.GetName] is up to this task!"
+ ee_arnor.20.a.tt: "[candidate1.GetName] will travel to Arnor to set up a new colony there"
+ ee_arnor.20.b: "I entrust this charge to you, [candidate2.GetFirstName]."
+ ee_arnor.20.b.tt: "[candidate2.GetFirstName] will travel to Arnor to set up a new colony there"
+ ee_arnor.20.c: "I believe [candidate3.GetName] is best suited for this mission."
+ ee_arnor.20.c.tt: "[candidate3.GetName] will travel to Arnor to set up a new colony there"
+ ee_arnor.20.d: "This is a task for [faramir.GetFirstName] Captian of Gondor!"
+ ee_arnor.20.d.tt: "[faramir.GetName] will travel to Arnor to set up a new colony there"
+ 
+ ee_arnor.21.t: "The Expiditon Assembles"
+ ee_arnor.21.desc: "In response to my recent invitation to lead an Expidition to Arnor, [arnorsettler.GetName] has arrived at my court with a small following of adventurous men.\n\nThey ask how much gold I am willing to commit to colonize [target_county.GetNameNoTier]. If I aid them in this, they will be able to grow their new realm much quicker, and become more successful..."
+ ee_arnor.21.a: "I will grant them a lavish sum."
+ ee_arnor.21.a.tt: "The new colony will have two highly developed extra buildings"
+ ee_arnor.21.b: "Let us fund them with a decent amount."
+ ee_arnor.21.b.tt: "The new colony will have two extra buildings"
+ ee_arnor.21.c: "They shall have some of my excess gold."
+ ee_arnor.21.c.tt: "The new colony will have one extra buildings"
+ ee_arnor.21.d: "I'm afraid I can't spare anything at this time"
+ ee_arnor.21.d.tt: "The new colony will not have an extra building"
+ 
+ ee_arnor.23.t: "Girithlin Settled"
+ ee_arnor.23.desc: "Uplifting news reaches me from the colony in Arnor that I sponsored. Construction has been finished, and the new settlement in [target_county.GetNameNoTier] has been completed!\n\nThe new ruler, [arnorsettler.GetName], has taken up lordship of the new holding, and the Dunedain have diligently begun to expand their new domain. Let [ROOT.Char.GetFaith.HighGodName] grant them swift success in their endeavours!"
+ ee_arnor.23.a: "Best of luck to our colony!"
+ ee_arnor.23.a.tt: "You gain a [defensive_alliance|E] with [arnorsettler.GetName]"
+ ee_arnor.23.b: "Let us hope they don't resent us for refusing funds..."
+ ee_arnor.23.c: "I do wonder what [arnorsettler.GetFirstName] will do next.."
+ 
+ ee_arnor.24.t: "Girithlin Settled"
+ ee_arnor.24.desc: "Our colonization of Girithlin has exceeded even our most ambitious hopes, unfolding with a speed and success that few could have foreseen. What began as a cautious foothold around the ancient tower has swiftly transformed into a thriving dominion, with our people spreading across the entire region. The land, once wild and untamed, now bears the mark of our settlement—villages rising along riverbanks, roads carved through dense forests, and fields tilled to yield the bounty of the earth. Our engineers have restored the old tower to its former grandeur, not merely as a relic of the past but as a symbol of our enduring claim over this land. Trade flourishes as merchants move freely between outposts, and our defenses grow stronger with each passing day. The people of Girithlin no longer see themselves as mere settlers, but as the rightful stewards of this land, forging a new chapter in its long and storied history. Yet, as we celebrate our triumphs, we must remain ever watchful, for the wilderness beyond our borders still holds secrets, and not all who once dwelt in these lands will welcome our presence."
+ ee_arnor.24.a: "First Girithlin, then Cardolan, then Arnor!"
+ gondorianrangers: "Gondorian Rangers"
+  
+ ee_arnor.30.t: "The King Of Arnor?"
+ ee_arnor.30.desc: "Now that we have secured a significant portion of the old kingdom of Arnor, the time has come to restore its ancient glory by crowning a king. The lands that once lay in ruin have been reclaimed, the people unified under a common purpose, and the legacy of Arnor’s noble past has begun to stir once more in the hearts of its inhabitants. With stability returning to the region and the shadow of chaos retreating, the need for a strong and rightful ruler has never been more urgent. A crown must be placed upon a worthy head—one who can lead with wisdom, courage, and the vision to guide Arnor into a new era of peace and prosperity." 
+ ee_arnor.30.a: "I am the restorer of the realm it is only right I assume the Throne."
+ ee_arnor.30.a.tt: "[candidate1.GetFirstName] will assume the Throne"
+ ee_arnor.30.b: "I entrust this charge to you, [candidate2.GetFirstName]."
+ ee_arnor.30.b.tt: "[candidate2.GetFirstName] will assume the Throne"
+ ee_arnor.30.c: "I believe [candidate3.GetName] is best suited for this task."
+ ee_arnor.30.c.tt: "[candidate3.GetName] will assume the Throne"
+ ee_arnor.30.d: "I believe [candidate4.GetName] is the best Choice."
+ ee_arnor.30.d.tt: "[candidate4.GetName] will assume the Throne"
+ ee_arnor.30.e: "Its Time for the Kingdoms to be Reunited!"
+ ee_arnor.30.e.tt: "You will become a vassal of Gondor"
+ 
+ ee_arnor.31.t: "The Return of the King?"
+ ee_arnor.31.desc: "I never imagined this day would come—not truly. When the Gondorian expedition first marched north, I thought only of aiding in the reclamation of Arnor’s ruins, honoring the memory of a kingdom long lost to time and shadow. Yet now, after months of hard-fought victories and tireless rebuilding, they stand before me with solemn eyes and offer the unthinkable: the throne of Arnor. Me—a man with only a faded lineage, whispered of in old books and half-forgotten songs. Yet I am not alone; others bear bloodlines that could lay claim to this crown, all of us scattered remnants of a noble line drowned in centuries of silence. Still, they look to me, perhaps for the choices I’ve made, or the trust I’ve earned, or the way I’ve stood unshaken as the kingdom stirred from its slumber. And now, I must decide if I will take up that ancient burden, and become something greater than a shadow of the past—something worthy of the throne itself."
+ ee_arnor.31.a: "Hail the Return of the King!"
+ ee_arnor.31.a.tt: "I will assume the Throne"
+ ee_arnor.31.b: "I am not the right candidate..."
+ ee_arnor.31.b.tt: "[arnorsteward.GetFirstName] will pick another candidate"
+ 
+ ee_arnor.32.t: "Our Colony Pledges Loyalty"
+ ee_arnor.32.desc: "The colony we sent to Arnor has flourished beyond our wildest hopes, transforming from a fragile outpost into a thriving stronghold that now holds a sizeable portion of the once-lost North-Kingdom. Through perseverance, wisdom, and the strength of its people, the settlement has carved out stability amidst the wilds and ruins, rekindling the ancient spirit of Arnor. In light of this remarkable success, the Steward of the North has declared that the time has come for the North-Kingdom to return to the fold—not merely as a scattered remnant or a forgotten province, but as a renewed realm, worthy of its storied past. It is a call not only to governance, but to unity, legacy, and the restoration of a kingdom long believed to be consigned to legend."
+ ee_arnor.32.a: "Its time for the Kingdoms to be reunited."
+ ee_arnor.32.a.tt: "[arnorsteward.GetFirstName] will become your vassal"
+ ee_arnor.32.b: "the time is not right."
+ ee_arnor.32.b.tt: "[arnorsteward.GetFirstName] will remain independent"
+  
+ ### Angmar 
+ 
+ ee_arnor.10.t: "Return of Angmar"
+ ee_arnor.10.desc: "The Dark Lord’s will pressed against my mind, a summon both undeniable and absolute. I knelt before the great lidless eye, shrouded in shadow, awaiting his command. Arnor has risen from its grave, Sauron’s voice seethed within my skull, a whisper of malice and steel. Its kings grow bold. Its people forget their doom. Go, my lieutenant. Go to Angmar, and remind them. A thrill of purpose coursed through me, a rekindling of the dark dominion I had once wielded. The North had slumbered too long in the absence of its true master. The frozen winds of Carn Dûm would howl with my return, and through them, fear would spread like a creeping frost. The realms of men, so foolish in their restoration, would learn that no kingdom born of old ruins could withstand the wrath of the Witch-King. \n\nAs I rose from my obeisance, the forges of Barad-dûr roared, and my steed awaited—its eyes burning with the same cold fire that animated my husk. The banners of Angmar would rise once more, and with them, the night. I would gather the remnants of the old warbands, call forth the spirits that lingered in the barrows, and raise new legions from the frozen wastes. The north had always been mine, and now, by my master’s decree, it would be again. The sons of Arnor would tremble at my coming, and their kings, no matter how noble, would falter as their forebears had before them. Sauron has spoken. I will obey."
+ ee_arnor.10.a: "My Lord Commands"
+ ee_arnor.10.b: "We wish him luck. (Continue in Mordor)"
+ orcsofmordor: "Orcs of Mordor"
+ base: "base"
+ 
+ ee_arnor.11.t: "The Witch King Returns to Angmar!"
+ ee_arnor.11.desc: "With Arnor rising once again, the Witch King of Angmar has stirred from the shadows of legend and stepped forth from his dark tower. After centuries of silence, his presence now seeps through the northern winds, bringing with it a renewed sense of dread. The ancient enemy, once defeated and cast into obscurity, has returned with purpose—to reclaim what was lost and to extinguish the flickering hope that dares to burn in the hearts of men. His gaze is set upon the broken remnants of the North, where old alliances tremble and the line of kings once stood proud.\n\nBut this time, the Witch King does not come as a mere shadow of his former self. Empowered by deeper, darker sorceries and driven by vengeance that has fermented over ages, he seeks not only the fall of Arnor but the complete obliteration of its legacy. His armies muster in secret, dark creatures crawl from hidden places, and the land itself begins to groan under the weight of his return. What he started long ago—war, ruin, and domination—he now intends to finish, and unless the free peoples rise together once more, the North may fall beneath a second, more merciless shadow."
+ ee_arnor.11.b: "The Witch King returns to claim his rightful dominion!"
+ ee_arnor.11.a: "We will succeed where our forebarers failed."
+ ee_arnor.11.c: "Whether ruin or rebirth follows, only time will tell."
+ 
+ ee_arnor.40.t: "Placeholder"
+ ee_arnor.40.desc: "Placeholder"
+ ee_arnor.40.a: "Placeholder"
+ ee_arnor.40.b: "Placeholder"
+ 
+ ee_arnor.12.t: "Placeholder"
+ ee_arnor.12.desc: "Placeholder"
+ ee_arnor.12.a: "Placeholder"
+ ee_arnor.12.b: "Placeholder"
+ ee_arnor.12.c: "Placeholder"
+ 
+ ### Elf
+ 
+ ee_elf.05.t: "Nenunial Reclaimed!"
+ ee_elf.05.desc: "The shores of Nenuial, once graced by the presence of the Lady Galadriel herself, have been silent for long years, their beauty hidden beneath the weight of time. The ruins of Annúminas, once the heart of the Kingdom of Arnor, now lie in crumbling decay, a shadow of a human glory that was never meant to last. The stones left behind by men serve as a reminder of their fleeting presence, but the Elven song now rises once more, as we return to these shores where Galadriel once stood.\n\nWe do not come to preserve the remnants of mortal kingdoms, nor to honor the ruins that have long since lost their meaning. No, we come to clear away the human remains that have no place in the future of this land. Their broken walls, their faded roads—these are but the fading echoes of an age that has passed. We will sweep them aside, for they were never meant to endure.\n\nIn their place, we shall build a realm worthy of the stars, as timeless and enduring as the Elves themselves. The lands of Nenuial shall once again be a beacon of light and grace. The legacy of Galadriel, who once walked these shores, shall be honored, not through the crumbling remnants of a past kingdom, but through the creation of something greater—an Elven realm that will shine for all ages to come."
+ ee_elf.05.a: "A new dawn for the moonlit shores"
+ 
+ 
+ 
+ ee_elf.06.t: "The High Kindom of Eriador"
+ ee_elf.06.desc: "For Ages and Ages [eriador|e] was one of the largest and mightiest Elven Realms in Middle-Earth. Guarded in the West by the Ered Luin and the east by the Hithaeglir, Eriador was long a fair and peaceful land of the [eldar|e]. However it was destoryed in the [waroftheelvesandsauron|E] and given to the Dunedain after the downfall. \n\nBut no longer! Eriador once again is host to elven songs and fields of flowers. Forests march into long barren plains, [eregion|e] is rising as a phoenix, a new spring has reached [GetTitleByKey('k_sirgala').GetNameNoTier] and the moonlit shores of [GetTitleByKey('k_nenuial').GetNameNoTier] are once again prestine. Eriador is Elven once again!"
+ ee_elf.06.a: "And it will never fall again!"
+ 
+ ee_elf.07.t: "West Lorien"
+ ee_elf.07.desc: "Long has [eregion|e] lain abandoned. ever since the [waroftheelvesandsauron|E] has my second home been naught but ruins, but no more. with the taming of the pass and the restoration of the realm it is finally time to weld these two kingdoms and their two peoples together."
+ ee_elf.07.a: "To Last Forever After"
+  
+ ee_elf.1000.t: "The Restoration of Eregion"
+ ee_elf.1000.desc: "For to long has the land of [eregion|e] lay abandoned. Now by the might of [primarytitle.GetNameNoTier] it has been cleansed and made habitable once more. Now it's time to send our emissaries to the [noldorelves|E] and nominate a new Lord of Eregion to rule these lands."
+ ee_elf.1000.a: "Send word to [elrond.GetName], The Wisest of the [noldorelves|E]."
+ ee_elf.1000.b: "Send word to [galadriel.GetName], One of the last surviors of Eregion."
+ ee_elf.1000.c: "Send word to [maglor.GetName], the last son of [feanor|e]."
+ ee_elf.1000.d: "Let the elves choose a leader amoung themselves."
+ eregion_message1: "Send word to [elrond.GetFirstName]."
+ eregion_message2: "Send word to [galadriel.GetFirstName]."
+ eregion_message3: "Send word to [maglor.GetFirstName]."
+ 
+ ee_elf.1001.t: "The Restoration of Eregion"
+ ee_elf.1001.desc: "For many long years the lands of [eregion|E] have been ruined. Since the [waroftheelvesandsauron|E] the land of the Ring Smiths has laid bare. But no longer! [eregion_restorer.GetName], through great toil, has restored the lost land, and most strangly, has offered me rule over it."
+ ee_elf.1001.a: "Let us reignite the forges!"
+ ee_elf.1001.b: "I will be lord of Eregion and nothing else."
+ ee_elf.1001.c: "I can not abandon my home to rule a cursed land."
+
+
+ ee_elf.2000.t: "Rage Against the Dying of the Light"
+ ee_elf.2000.desc: "Why should the Eldar resort to hiding in the forests and mountains of the world like ghosts of a forgotten age? Why should we, the Firstborn of Ilúvatar, shrink from the light and abandon the legacies of our past, merely because the shadows of evil once claimed victory? The fall of Eregion was a bitter wound, yes but are we not greater than our grief? Did not the race of Men rise anew from the ashes of Númenor, forging realms and destinies despite their mortality?\n\nShall we, who have seen the Two Trees bloom and fade, who walked beneath the stars before the Sun and Moon were born, now cower in hidden glades, waiting for the world to pass us by? Why must we linger here in silence, behind marble walls and memory-laden halls, while the world beyond changes without us? \n\nNo. I say we are not relics. We are not the fading song. The fire of our spirit still burns. Let us remember who we are not with mourning, but with purpose. Let the winds carry our voices once more. Let the world see that the Eldar have not yet vanished, we endure! And perhaps, we shall rise again."
+ ee_elf.2000.a: "We Will Not Go Quietly!"
+ 
+ ee_elf.2001.t: "A Lucky Find"
+ ee_elf.2001.desc: "We had only been searching the ruins of [eregion|e] for a short while when one of our party called out. She had been searching the old forges and found a hidden alcove in the wall of one of the smithys. Behind a loose brick was not only a set of smithing tools, but an old handbook. Flipping through it I realized it's a collection of the Teachings of [celebrimbor|e]! Apparently this particular smith didn't want anyone to know they were consulting the textbook. But their hidden book might just be the reason the [eldar|e] haven't lost the art of ring smithing after all! \n\nNow all thats left to do is to determine our next stop. Either seek the surviors of Eregion in [imladris|e] or seek the White Wizard, [sarumancharacter|e]."
+ ee_elf.2001.a: "To Imladris!"
+ ee_elf.2001.b: "We seek the White Wizard!"
+ ee_elf.2001.c: "We need no help!"
+ ee_elf.2001.a.effect: "Travel to Imladris"
+ ee_elf.2001.b.effect: "Travel to Saruman"
+ 
+ ee_elf.2002.t: "The Last Smith"
+ ee_elf.2002.desc: "[imladris|e] is a strange place. The Last Homely House west of the Misty Mountians. To me, all I can see is the lost potential. This is the place the [eldar|e] retreated to after the [waroftheelvesandsauron|e]? This? It's basically a single valley hidden in the mountians. It's sad to see the state our people have fallen to. \n\nBut nevertheless, I have a job to do. Imladris is the home of the survivors of [eregion|e] and the Ring Smiths. With any luck I can find a surviving smith who has first hand experiance forging rings of power. After a short time asking around I found [smith.GetFirstName]. They claim to be the be the last smith of the Noldor. But they claim to have lost all hope for the future of Middle-Earth."
+ ee_elf.2002.a: "Lets see if i can convince them otherwise."
+ ee_elf.2002.a.success: "You convince them"
+ ee_elf.2002.a.failure: "You fail to convince them"
+ 
+ ee_elf.2003.t: "The White Wizard"
+ ee_elf.2003.desc: "I stand before the White Wizard [sarumancharacter|e], one of the five [istariconcept|e] sent by the [valargods|e] to guide the peoples of Middle-Earth, with an odd request. The White Wizard was once a [maiargods|e] of [aulecharacter|e], known to be exceptional in craft. If anyone in Middle-Earth can replicate the aid [sauroncharacter|e] gave to Celebrimbor, it's him. The Wizard is even said to have been engaged on a similar quest to replicate the [ringsofpower|e], presumably to understand how to counter the [oneringshort|e]." 
+ ee_elf.2003.a: "Lets see if we can come to an agreement."
+ ee_elf.2003.a.success: "You come to an agreement"
+ ee_elf.2003.a.failure: "You fail to come to an agreement"
+ ee_elf.2003.a.effect: "Saruman agrees to aid you"
+ 
+ ee_elf.2004.t: "A New Ring"
+ ee_elf.2004.desc: "The time has finally arrived to forge a new ring of power! we have gathered the materials, made several tests and practiced everything according to [celebrimbor|e]'s methods tell we have it down to perfection, because this requires perfection. If it Didn't someone else would have managed to do this mellenia ago. it is finally time to show the world the [eldar|e] aren't a diminished people doomed to decay. that we are still a part of this world and will fight to defend it!"
+ ee_elf.2004.a: "Light the Forges"
+ ee_elf.2004.a.success: "A Ring is Forged"
+ ee_elf.2004.a.failure: "The Project Fails"
+ 
+ ee_elf.2005.t: "Before the Dark Tower"
+ ee_elf.2005.desc: "'Come out and face me!' I shout up to the unfathomable tower and wait for a response. The gaze of the Lidless Eye beats on me from uptop the tower but I stand firm. I am the hope of the Free Peoples! I am the Flame of the West! I will show once and for all that the [eldar|e] are still as great as we were in the [elderdays|e]. I will slay [sauroncharacter|e]! My gaze snaps back to the gate as it opens and the Lord of the Black Land comes forth..."
+ ee_elf.2005.a: "I will avenge my ancestors!"
+ ee_elf.2005.b: "Maybe this is a bad idea?"
+ ee_elf.2005.c: "#italic Hail Annatar, The Lord of the Rings! #!"
+ ee_elf.2005.a.success: "The Dark Lord Falls to your blade"
+ ee_elf.2005.a.failure: "Sauron crushes you with his Mace"
+ ee_elf.2005.b.success: "You escape"
+ ee_elf.2005.c.success: "You Resist the Ring"
+ ee_elf.2005.c.failure: "You Fall to the Ring"

@@ -1,0 +1,121 @@
+﻿# LotR: This file needs to be kept in sync with the release version.
+#   Edited the dates
+#	Edited the loading screen text
+
+l_english:
+
+ ### Titles
+ 
+ k_fornost: "Fornost"
+ k_fornost_adj: "Fornostian"
+ 
+ k_mistalonde: "Mistalondë"
+ k_mistalonde_adj: "Mistalondën"
+ 
+ k_mitheithel: "Mitheithel"
+ k_mitheithel_adj: "Mitheithel"
+ 
+ k_nenuial: "Nenuial"
+ k_nenuial_adj: "Nenuialian"
+ 
+ k_arnor_steward: "Arnor"
+ k_arnor_steward_adj: "Arnorian"
+ 
+ e_eriador: "Eriador"
+ e_eriador_adj: "Eriadorian"
+ 
+ cn_west_lorien: "West Lorien"
+ cn_west_lorien_adj: "West Lorien"
+ 
+ ### Flavorization
+ 
+ emperor_feudal_male_steward_arnor: "Ruling Steward"
+ emperor_feudal_female_steward_arnor: "Ruling Steward"
+ emperor_feudal_female_steward_nonholder_arnor: "Lady"
+ prince_male_steward_arnor: "Lord"
+ prince_female_steward_arnor: "Lady"
+ empire_feudal_steward_arnor: "Stewardship"
+ empress_mother_steward_arnor: "Lady"
+ 
+ ### Modifiers
+ 
+ ratdotl_modifier: "Raging Again the Dying of the Light"
+ 
+ ### Traits
+ 
+ trait_rageagainstlight: "Raging Again the Dying of the Light"
+ trait_rageagainstlight_desc: "This Character is raging against the fading of the [eldar|E], working to preserve the works of the [elderdays|e] and create new wonders."
+ 
+ #### Game Rules
+ 
+ rule_eregion_rule: "The Existence of Eregion"
+ setting_eregion_restored: "Eregion Restored"
+ setting_eregion_restored_desc: "Eregion will be fully restored and ruled by Elrond at game start."
+ setting_no_eregion: "Eregion Ruined"
+ setting_no_eregion_desc: "Eregion will remain unchanged"
+ 
+ rule_sirgala_rule: "The Existence of Sirgala"
+ setting_sirgala_restored: "Sirgala Restored"
+ setting_sirgala_restored_desc: "Sirgala will be fully restored and ruled by Karamar at game start."
+ setting_no_sirgala: "Sirgala Ruined"
+ setting_no_sirgala_desc: "Sirgala will remain unchanged"
+ setting_greater_sirgala_restored: "Greater Sirgala Restored"
+ setting_greater_sirgala_restored_desc: "Greater Sirgala will be fully restored and ruled by Karamar at game start."
+ 
+ rule_angmar_rule: "The Existence of Angmar"
+ setting_angmar_restored: "Angmar Restored"
+ setting_angmar_restored_desc: "Angmar will be fully restored and ruled by the Witch King at game start."
+ setting_no_angmar: "Angmar Ruined"
+ setting_no_angmar_desc: "Angmar will remain unchanged"
+ 
+ rule_arnor_rule: "The Existence of Arnor"
+ setting_arnor_restored: "Arnor Restored"
+ setting_arnor_restored_desc: "Arnor will be fully restored and ruled by the Heir of Isildur at game start."
+ setting_no_arnor: "Arnor Ruined"
+ setting_no_arnor_desc: "Arnor will remain unchanged"
+ setting_gondor_colony: "Gondorian Expidition"
+ setting_gondor_colony_desc: "Gondor will immiedietly launch a colonization expidition to Arnor instead of waiting for the normal requirements (to play as the colony select gondor and follow the event chain)"
+ 
+ rule_moria_rule: "The Struggle for Moria"
+ setting_yes_balrog: "Struggle Enabled"
+ setting_yes_balrog_desc: "The Balrog of Moria Struggle will be enabled"
+ setting_no_balrog: "Struggle Disabled"
+ setting_no_balrog_desc: "The Struggle For Moria will be disabled"
+ 
+ ### Wars
+ 
+ ELVEN_HOMELANDS_KINGDOM_CONQUEST_WAR_NAME: "War to Reclaim Elven Homelands"
+ ELVEN_HOMELANDS_KINGDOM_CONQUEST_CB_NAME: "[elven_homelands_conquest_casus_belli|E] for [kingdom|E]"
+ VANQUISH_DARKNESS_KINGDOM_WAR_NAME: "War to Vanquish Darkness in [TITLE.GetBaseName]"
+ VANQUISH_DARKNESS_KINGDOM_CB_NAME: "[vanquish_darkness_casus_belli|E] in [kingdom|E]"
+ 
+ ### Artifacts
+ ring_manual: "Teachings of Celebrimbor"
+ ring_manual_desc: "The collected teachings of the great smith [celebrimbor|e] written before the fall of [eregion|e], containing all he learned from [annatarcharacter|e] and the formula to forge the [ringsofpower|e]."
+ 
+ new_ring_name: "Ring of [owner.GetFirstNameNoTooltip]"
+ new_ring_description: "@warning_icon!#T Do not trust your senses: the magic of the [ringsofpower|E] changes according to the bearer's race.#! \n\n A True Miracle of Elvish Smith Craft. A new [ringofpower|e] forged long after the fall of [eregion|e]. [owner.GetFirstName] studied long the work of [celebrimbor|e] in order to replicate the craft without [sauroncharacter|e]'s help. But time will tell if this ring is free of the shadow."
+ 
+ ### Nicknames
+ 
+ nick_last_smith: "The Last Smith"
+ nick_last_smith_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] is the last of the smiths of [eregion|e], having fled to [imladris|e] during the [waroftheelvesandsauron|e]"
+ 
+ nick_shadow_slayer: "Shadow Slayer"
+ nick_shadow_slayer_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] Slew the Dark Lord [sauroncharacter|e]"
+ 
+
+ 
+ last_smith_name: "Damron"
+ 
+ iceboy_name: "Helcion"
+ iceboy_name_2: "Ârûbên"
+ 
+ nick_iceborn: "Helcion"
+ nick_iceborn_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] was the nephew of [pharazon|e] during the [downfallofnumenor|e]. Considered a failure for taking after Tar-Palantir, his uncle sent him away on an expidition to forochel, his ship was destoryed but miraculously [CHARACTER.GetShortUINameNoTooltipNoFormat|U] was pulled from the ice by Arnorian salvagers in the late [thirdage|e]"
+
+ ### Culture 
+ 
+ laurenoldor: "Laurenoldor"
+ laurenoldor_collective_noun: "Laurenoldor"
+ laurenoldor_prefix: "Laurenoldo"

@@ -1,0 +1,117 @@
+﻿namespace = ee
+
+ee.1 = { # integrate the southern provinces
+	hidden = yes
+ 	scope = none
+	
+	
+	immediate = {
+		province:4796 = {
+			add_special_building = wonder_tradeport_of_hyarmenyalond_01
+		}
+#		province:4804 = {
+#			add_special_building = wonder_edhelas_01
+#		}
+		province:4444 = {
+			add_special_building = wonder_angle_of_eriador
+		}
+		province:4492 = {
+			add_special_building = wonder_fort_arlas_01
+		}
+		province:4727 = {
+			add_special_building = wonder_shrouded_isles_01
+		}
+		
+		if = {
+			limit = { has_game_rule = arnor_restored }
+			random_ruler = {
+				limit = { has_title = title:d_northern_dunedain }
+				trigger_event = {
+					id = ee_arnor.4
+				}
+				trigger_event = {
+					id = ee_arnor.44
+				}
+			}
+		}
+		if = {
+			limit = { has_game_rule = gondor_colony }
+			random_ruler = {
+				limit = { 
+					OR = {
+						is_gondor = yes
+					}	
+				}
+				trigger_event = {
+					id = ee_arnor.20
+					days = 10
+				}
+			}
+		}
+		character:nazgul1 =  { 
+				add_trait = witch
+			}
+			
+		if = {
+			limit = { has_game_rule = eregion_restored }
+			random_ruler = {
+				limit = { has_title = title:k_imladris }
+				trigger_event = {
+					id = ee_elf.3
+				}
+				trigger_event = {
+					id = ee_arnor.44
+				}
+			}
+		}
+		if = {
+			limit = { 
+				OR = {
+					has_game_rule = sirgala_restored 
+					has_game_rule = greater_sirgala_restored 
+				}
+			}
+			random_ruler = {
+				limit = { culture = culture:sirrandrai }
+				trigger_event = {
+					id = ee_elf.4
+				}
+				trigger_event = {
+					id = ee_arnor.44
+				}
+			}
+		}
+		if = {
+			limit = { has_game_rule = angmar_restored }
+			character:nazgul1 = {
+				
+				trigger_event = {
+					id = ee_angmar.10
+				}
+				trigger_event = {
+					id = ee_arnor.44
+				}
+			}
+		}
+		
+		if = {
+			limit = { has_game_rule = no_balrog }
+			trigger_event = {
+					id = ee.2
+					days = 1
+				}
+		}
+	}
+}
+
+ee.2 = { # integrate the southern provinces
+	hidden = yes
+ 	scope = none
+	
+	
+	immediate = {
+		
+			struggle:balrog_struggle = { end_struggle = yes }
+		
+	}
+}

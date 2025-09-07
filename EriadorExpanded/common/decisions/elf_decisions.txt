@@ -1,0 +1,928 @@
+﻿
+
+decision_reclaim_nenuial = {
+	title = decision_reclaim_nenuial
+	desc = decision_reclaim_nenuial_desc
+	confirm_text = decision_reclaim_nenuial_confirm
+	selection_tooltip = decision_reclaim_nenuial_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_elves_dwarves_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		is_elf = yes
+		OR = {
+			
+			
+				
+			completely_controls = title:d_eketya # Completely controls the old heartland of the Kingdom
+			completely_controls = title:d_tarmea # Completely controls the old heartland of the Kingdom
+			
+			this = character:linefinwe36
+			this = character:lineofelmo5
+		}
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_reclaim_nenuial
+			}		
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		completely_controls = title:d_eketya # Completely controls the old heartland of the Kingdom
+		completely_controls = title:d_tarmea # Completely controls the old heartland of the Kingdom
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		add_prestige = 1000
+		title:d_eketya = {
+			set_de_jure_liege_title = title:k_nenuial
+		}
+		title:d_tarmea = {
+			set_de_jure_liege_title = title:k_nenuial
+		}
+		
+		if = {
+			limit = { highest_held_title_tier < tier_empire }
+			set_primary_title_to = title:k_nenuial
+		}
+		title:k_nenuial = {
+			set_de_jure_liege_title = title:e_lindon
+		}
+		title:k_nenuial = {
+			set_capital_county = title:c_annuminas
+			every_de_jure_county = {
+				add_county_modifier = elven_homeland_county_modifier
+			}
+		}
+		#Create the title and make it primary
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = yes
+		}
+		title:k_nenuial = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_reclaim_nenuial
+		}
+
+		trigger_event = {
+			id = ee_elf.05	# Reclaim Nenuial Kingdom
+		}
+	}
+}
+
+# Invite Elves to Eregion
+decision_invite_elves_eregion = {
+	sort_order = 35
+	# TEXT + PICTURE
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_elves_01.dds"
+	}
+	title = decision_invite_elves_eregion
+	selection_tooltip = decision_invite_elves_eregion_tooltip
+	desc = decision_invite_elves_eregion_desc
+	confirm_text = decision_invite_elves_eregion_confirm
+
+	decision_group_type = realms_in_exile_major
+	
+
+	# SHOWN
+	is_shown = {
+		is_landed = yes
+		
+		game_start_date < 7100 #Juke note: by this point, elves were leaving
+		
+		
+		faith_is_good = yes
+		
+		
+		
+		any_sub_realm_county = {
+			any_neighboring_county = {
+				de_jure_liege = title:d_eregion
+			}
+		}
+		
+		NOR = {
+			title:d_eregion = {
+				any_de_jure_county = {
+					county_is_elven = yes
+				}
+			}
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:invite_elves_eregion
+			}
+		}
+	}
+
+	# IS_VALID
+	is_valid = {
+		
+
+		completely_controls = title:d_eregion
+		custom_tooltip = {
+			text = fully_settled_eregion
+			title:d_eregion = {
+				any_de_jure_county = {
+					count = all
+					title_province = {
+						NOR = {
+							has_holding_type = settlement_holding
+							has_holding_type = wastelands_holding
+						}
+					}	
+				}
+			}
+		}
+		
+		prestige_level >= 5
+		
+
+		
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	#COST
+	cost = {
+		gold = 350
+		prestige = 1000
+		piety = 750
+	}
+
+	# EFFECT
+	effect = {
+		custom_tooltip = decision_invite_elves_eregion_effect_tooltip
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:invite_elves_eregion
+		}
+		
+		add_character_flag = eregion_restorer
+		
+		
+			trigger_event = {
+				id = ee_elf.1000
+			
+			}
+		
+		
+		
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
+
+decision_reclaim_eriador = {
+	title = decision_reclaim_eriador
+	desc = decision_reclaim_eriador_desc
+	confirm_text = decision_reclaim_eriador_confirm
+	selection_tooltip = decision_reclaim_eriador_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_host_of_the_west.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		is_elf = yes
+		OR = {
+			this = character:linefinwe36
+			this = character:lineofelmo5
+			capital_province = {
+				geographical_region = custom_eriador
+			}
+		
+		}
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_reclaim_eriador
+			}		
+		}
+	}
+	
+	cost = {
+		prestige = 10000
+		piety = 5000
+	}
+	
+	# IS VALID
+	is_valid = {
+		legitimacy_level >= 5
+		prestige_level >= 5
+		piety_level >= 5
+		
+		completely_controls_region = custom_eriador
+		custom_tooltip = {
+			text = no_evil_rulers_in_forodwaith_tt
+			any_county_in_region = {
+				region = middleearth_forodwaith
+				holder = {
+					faith_is_evil = no
+				}
+				count = all
+			}
+		}
+		
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		
+		
+		
+		#Create the title and make it primary
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = yes
+		}
+		
+		title:e_eriador = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+		
+		
+		if = {
+			limit = { highest_held_title_tier < tier_empire }
+			set_primary_title_to = title:e_eriador
+		}
+		
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_reclaim_eriador
+		}
+		
+		custom_tooltip = {
+			text = decision_reclaim_eriador_effect
+			every_kingdom = {
+				limit = {
+					title_capital_county = {
+						any_county_province = {
+							OR = {
+								geographical_region = custom_eriador
+								geographical_region = middleearth_forodwaith
+							}
+						}
+					}
+				}
+				set_de_jure_liege_title = title:e_eriador
+			}
+		}
+
+		custom_tooltip = {
+			text = decision_noldor_eriador_effect
+			every_county_in_region = {
+				region = middleearth_west_arnor
+				add_county_modifier = elven_homeland_county_modifier
+				
+			}	
+		}
+
+		trigger_event = {
+			id = ee_elf.06	# Reclaim Nenuial Kingdom
+		}
+	}
+}
+
+### Rage Against the Dying of the Light
+
+decision_rage_aganist_the_dying_of_the_light = { #Intro
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_elvenhost.dds" }
+	
+	desc = decision_rage_aganist_the_dying_of_the_light_desc
+	selection_tooltip = become_landless_adventurer_decision_tooltip
+	confirm_text = become_landless_adventurer_decision_confirm
+	
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1
+	}
+	
+	decision_group_type = realms_in_exile_major
+	is_shown = {
+		is_elf = yes
+		NOT = {
+			has_trait = rageagainstlight
+			
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_rage_aganist_the_dying_of_the_light
+			}
+		}
+	}
+	
+	is_valid = {
+		NOT = {
+			has_trait = twotreeslight
+			
+		}
+		
+		is_ruler = yes
+	}
+
+	effect = {
+		add_trait = rageagainstlight
+		set_character_faith = faith:faith_arimaite_creed
+		trigger_event = ee_elf.2000
+		
+		save_scope_as = adventurer
+		if = {
+			limit = {
+				is_landed = yes
+			}
+			if = {
+				limit = {
+					player_heir ?= {
+						NOT = { this = root }
+						is_adult = yes
+					}
+				}
+				player_heir = {
+					save_scope_as = laamp_heir
+					save_scope_as = laamp_inheritor
+					custom_tooltip = become_landless_adventurer_decision_title_scope_tt
+				}
+			}
+			else_if = {
+				limit = { is_independent_ruler = no }
+				liege = {
+					save_scope_as = laamp_liege
+					save_scope_as = laamp_inheritor
+					custom_tooltip = become_landless_adventurer_decision_title_scope_tt
+				}
+			}
+			else = {
+				custom_tooltip = become_landless_adventurer_decision_title_created_tt
+				if = {
+					limit = {
+						NOT = { exists = scope:laamp_inheritor }
+					}
+					hidden_effect_new_object = {
+						create_character = {
+							template = laamp_inheritor_template
+							culture = root.capital_county.culture
+							faith = root.capital_county.faith
+							dynasty = generate
+							location = root.capital_province
+							after_creation = {
+								save_scope_as = laamp_inheritor
+								add_character_flag = new_laamp_inheritor
+							}
+						}
+					}
+				}
+			}
+			create_landless_adventurer_title_tooltip_effect = yes
+			show_as_tooltip = {
+				add_prestige = medium_prestige_gain
+				add_character_modifier = {
+					modifier = ep3_voluntary_laamp_character_modifier
+					years = 5
+				}
+			}
+			trigger_event = { id = ep3_laamps.0030 }
+			# Debug tracking
+			if = {
+				limit = {
+					is_ai = yes
+					debug_only = yes
+				}
+				if = {
+					limit = { exists = global_var:ai_voluntary_laamp_count }
+					change_global_variable = {
+						name = ai_voluntary_laamp_count
+						add = 1
+					}
+				}
+				else = {
+					set_global_variable = {
+						name = ai_voluntary_laamp_count
+						value = 1
+					}
+				}
+				debug_log = "AI became adventurer voluntarily"
+				debug_log_scopes = yes
+			}
+			stress_impact = {
+				craven = minor_stress_impact_gain
+				content = minor_stress_impact_gain
+				lazy = minor_stress_impact_gain
+			}
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_rage_aganist_the_dying_of_the_light
+		}
+	}
+}
+
+decision_elf_have_more_kids = {
+	title = decision_elf_have_more_kids
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_elf_love.dds"
+	}
+	
+	ai_goal = yes
+	ai_potential = {
+		always = no
+	}
+	ai_will_do = {
+		base = 100
+	}
+	selection_tooltip = decision_elf_have_more_kids_tooltip
+	desc = decision_elf_have_more_kids_desc
+	confirm_text = decision_elf_have_more_kids_confirm
+	
+	decision_group_type = realms_in_exile_minor
+	
+	is_shown = {
+		is_elf = yes
+		is_in_valinor = no
+		
+		trigger_if = {
+			limit = { is_married = yes }
+			primary_spouse = { is_elf = yes }
+			sex_opposite_of = primary_spouse
+			 
+			OR = {	
+				has_character_modifier = elf_child_limit_modifier
+				primary_spouse = { has_character_modifier = elf_child_limit_modifier }
+			}
+			
+		}
+		trigger_else = {
+			always = no
+		}
+	}
+	
+	is_valid = {
+		trigger_if = {
+			limit = { is_married = yes }
+			has_relation_soulmate = primary_spouse
+			stress_level < 1
+			is_at_war = no		
+			OR = { 
+				has_character_modifier = elf_child_limit_modifier
+				primary_spouse = { has_character_modifier = elf_child_limit_modifier }
+			}
+		}
+		trigger_else = {
+			always = no
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+	
+	effect = {
+		remove_character_modifier = elf_child_limit_modifier
+		primary_spouse = { remove_character_modifier = elf_child_limit_modifier }
+	}
+	
+}
+
+decision_ring_lore = { #Intro
+	picture = { reference = "gfx/interface/illustrations/event_scenes/eregion_ruins.dds" }
+	
+	desc = decision_ring_lore_desc
+	selection_tooltip = decision_ring_lore_tooltip
+	confirm_text = decision_ring_lore_confirm
+	
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1
+	}
+	
+	decision_group_type = realms_in_exile_major
+	is_shown = {
+		is_elf = yes
+		has_trait = rageagainstlight
+			
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_ring_lore
+			}
+		}
+		
+	}
+	
+	is_valid = {
+		prestige_level >= 4
+		highest_held_title_tier >= 4
+		realm_size >= 20
+		has_trait = lifestyle_artifact_crafting
+		
+	}
+	
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		
+		if = {
+			limit = {
+				root.location = title:c_ost_in_edhil.title_province
+			}
+			custom_tooltip = {
+				text = decision_ring_lore_effect1
+				trigger_event = ee_elf.2001
+			}
+		}
+		else = {
+			custom_tooltip = {
+				text = decision_ring_lore_effect2
+				start_travel_plan = {
+					destination = title:c_ost_in_edhil.title_province
+					on_arrival_event = ee_elf.2001
+					return_trip = yes
+					players_use_planner = no
+					on_arrival_destinations = all_but_last
+				}
+			}
+		}
+		
+		
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_ring_lore
+		}
+	}
+}
+
+decision_forge_ring = { #Intro
+	picture = { reference = "gfx/interface/illustrations/event_scenes/eregion.dds" }
+	
+	desc = decision_forge_ring_desc
+	selection_tooltip = decision_forge_ring_tooltip
+	confirm_text = decision_forge_ring_confirm
+	
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1
+	}
+	
+	decision_group_type = realms_in_exile_major
+	is_shown = {
+		is_elf = yes
+		has_trait = rageagainstlight
+		
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_ring_lore
+		}
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_forge_ring
+			}
+		}
+		
+	}
+	cost = {
+		gold = 1000
+		piety = 1000
+	}
+	cooldown = { years = 20 }
+	
+	is_valid = {
+		prestige_level >= 4
+		piety_level >= 4
+		highest_held_title_tier >= 4
+		
+		has_trait = lifestyle_artifact_crafting
+		has_trait = enchanter
+		has_trait = artificer
+		
+	}
+	
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = decision_forge_ring_effect
+			trigger_event = ee_elf.2004
+		}
+		
+	}
+}
+
+decision_vanquish_darkess = { #Intro
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_elvenhost.dds" }
+	
+	desc = decision_vanquish_darkess_desc
+	selection_tooltip = decision_vanquish_darkess_tooltip
+	confirm_text = decision_vanquish_darkess_confirm
+	
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1
+	}
+	
+	decision_group_type = realms_in_exile_major
+	is_shown = {
+		is_elf = yes
+		has_trait = rageagainstlight
+			
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_vanquish_darkess
+			}
+		}
+		
+	}
+	
+	is_valid = {
+		prestige_level >= 3
+		is_landed = yes
+		is_ruler = yes
+		realm_size >= 15
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = decision_vanquish_darkess_effect
+			add_character_flag = rageagainstlight_war
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_vanquish_darkess
+		}
+	}
+}
+
+decision_slay_sauron = { #Intro
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_barad_dur_01.dds" }
+	
+	desc = decision_slay_sauron_desc
+	selection_tooltip = decision_slay_sauron_tooltip
+	confirm_text = decision_slay_sauron_confirm
+	
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1
+	}
+	
+	decision_group_type = realms_in_exile_major
+	is_shown = {
+		is_elf = yes
+		has_trait = rageagainstlight
+		character:lineofsauron = {
+			has_primary_title = title:e_mordor
+		}
+		
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_vanquish_darkess
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_slay_sauron
+			}
+		}
+		
+	}
+	
+	is_valid = {
+		prestige_level >= 5
+		is_landed = yes
+		is_ruler = yes
+		realm_size >= 30
+		
+		
+		
+		custom_tooltip = {
+			text = decision_slay_sauron_trigger_1
+			capital_county.empire = {
+				any_de_jure_county = {
+					count = all
+					holder = {
+						faith_is_evil = no
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = decision_slay_sauron_trigger_2
+			any_sub_realm_county = {
+				count = all
+				any_neighboring_county = {
+					count = all
+					holder = {
+						faith_is_evil = no
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = decision_slay_sauron_effect
+			start_travel_plan = {
+				destination = character:lineofsauron.location
+				on_arrival_event = ee_elf.2005
+				return_trip = yes
+				players_use_planner = no
+				on_arrival_destinations = all_but_last
+			}
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_slay_sauron
+		}
+	}
+}
+
+### West Lorein
+
+decision_lorien_eregion = {
+	picture = {
+		reference = "gfx/interface/illustrations/event_scenes/eregion.dds"
+	}
+	title = decision_lorien_eregion
+	desc = decision_lorien_eregion_desc	
+	selection_tooltip = decision_lorien_eregion_tooltip
+	confirm_text = decision_lorien_eregion_confirm
+
+
+	# Shown checks
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		is_elf = yes
+		culture = culture:galadhrim
+		any_held_title = {
+			de_jure_liege = title:k_lothlorien
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_lorien_eregion
+			}
+		}
+	}
+
+	# Valid checks
+	is_valid = {
+		is_independent_ruler = yes
+		prestige_level >= max_prestige_level
+		has_title = title:k_lothlorien
+		completely_controls = title:k_eregion
+		
+		
+		title:c_ost_in_edhil = { 
+			title_province = {
+				has_building = wonder_mirdairond
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# Effect
+	effect = {
+		
+			get_title = title:e_laurelindorenan
+			title:k_eregion = { set_de_jure_liege_title = title:e_laurelindorenan }
+			title:k_imladris = { set_de_jure_liege_title = title:e_laurelindorenan }
+			title:c_caradhras_pass = { set_de_jure_liege_title = title:d_dor_maenor }
+			custom_tooltip = decision_lorien_eregion_effect
+			title:k_eregion = { set_title_name = cn_west_lorien }
+			dynasty = {
+				add_dynasty_prestige = 2500
+			}
+			
+			give_nickname = nick_lordlady_of_light
+
+			if = {
+				limit = {
+					has_character_modifier = valar_ban_modifier
+				}
+				remove_character_modifier = valar_ban_modifier
+			}
+		
+		trigger_event = ee_elf.07
+	}
+
+	# Cost
+	cost = {
+		prestige = 5000
+	}
+
+	# AI values
+	ai_check_interval = 12
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

@@ -1,0 +1,1626 @@
+﻿namespace = ee_arnor
+
+ee_arnor.1 = { # integrate the southern provinces
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.1.t
+	desc = ee_arnor.1.desc
+	theme = war
+	
+	left_portrait = {
+		character = root
+		animation = accepting
+	}
+
+	option = {
+		name = ee_arnor.1.a
+		add_prestige = 1000 
+	}
+}
+
+ee_arnor.2 = { # integrate eregion
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.2.t
+	desc = ee_arnor.2.desc
+	theme = war
+	
+	left_portrait = {
+		character = root
+		animation = accepting
+	}
+
+	option = {
+		name = ee_arnor.2.a
+		add_prestige = 1000 
+	}
+}
+
+ee_arnor.3 = { # integrate isengard
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.3.t
+	desc = ee_arnor.3.desc
+	theme = war
+	
+	left_portrait = {
+		character = root
+		animation = accepting
+	}
+
+	option = {
+		name = ee_arnor.3.a
+		add_prestige = 1000 
+	}
+}
+
+ee_arnor.4 = { # spawn arnor
+	content_source = realms_dlc
+	type = character_event
+#	title = ee_arnor.4.t
+#	desc = ee_arnor.4.desc
+	theme = war
+	
+	hidden = yes
+	
+	
+
+	immediate = {
+#		name = ee_arnor.4.a
+		
+		get_title = title:e_arnor
+		title:e_arnor = {
+			save_scope_as = target_duchy
+			
+		}
+		
+		
+		scope:target_duchy = {
+			every_de_jure_county = {
+				limit = {
+					any_county_province = {
+						has_holding_type = wastelands_holding
+					}
+				}
+				random_list = {
+					33 = { change_development_level = 2 }
+					33 = { change_development_level = 3 }
+					33 = { change_development_level = 4 }
+				}
+				save_temporary_scope_as = target_county
+						
+				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+						
+				scope:target_county = {
+					if = {
+						limit = { root = { is_elf = yes } }
+						title_province = { set_holding_type = elven_holding }
+					} else_if = {
+						limit = { title_province = { terrain = halls } }
+						title_province = { set_holding_type = dwarven_holding }
+					} else_if = {
+						limit = { root = { is_hobbit = yes } }
+						title_province = { set_holding_type = city_holding }
+					} else = {
+						if = {
+							limit = { root = { has_government = tribal_government } }
+							title_province = { set_holding_type = tribal_holding }
+						} else = {
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+				}		
+
+				if = { #Fallback
+					limit = { faith = faith:faith_wastelands_pagan }
+					set_county_faith = root.faith
+				}
+				if = { #Fallback
+					limit = { culture = culture:wastelands }
+					set_county_culture = root.culture
+				}
+			}
+			every_de_jure_county = {
+				limit = {
+					any_county_province = {
+						NOT = { has_holding_type = wastelands_holding } 
+					}
+					NOT = { holder = root }
+				}
+				holder.top_liege = {
+					create_title_and_vassal_change = {
+						type = swear_fealty
+						save_scope_as = change
+					}
+					change_liege = {
+						liege = title:e_arnor.holder
+						change = scope:change
+				 	}
+					resolve_title_and_vassal_change = scope:change
+					if = {
+						limit = {
+							has_government = tribal_government
+						}
+						change_government = feudal_government
+						every_sub_realm_county = {
+							limit = {
+								title_province = { has_holding_type = tribal_holding }
+							}
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+				}
+			}
+			
+		}
+		every_realm_province = {
+				
+			limit = {
+				has_holding = no
+			}
+			random_list = {
+				30 = {
+					
+				}
+				10 = {
+					 set_holding_type = city_holding
+				}
+				10 = {
+					 set_holding_type = church_holding
+				}
+				10 = {
+					 set_holding_type = castle_holding
+				}
+			}
+		}
+		every_realm_province = {
+			limit = {
+				has_holding = yes
+			}
+			random_list = {
+				pick = 3
+				30 = {
+					
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_economic_building_effect = yes
+					county = { change_development_level = 3 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_military_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_fortification_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				
+			}
+			
+		}
+		
+		get_title = title:c_annuminas
+		set_realm_capital = title:c_annuminas
+		
+		
+		add_gold = 25000
+		correct_wastelands_tracker
+		
+		
+		
+		
+			
+		
+	
+		
+			
+	}
+}}
+
+ee_arnor.44 = { # spawn vassals
+	content_source = realms_dlc
+	type = character_event
+	
+	theme = war
+	
+	
+	hidden = yes
+
+	immediate = {
+		
+		
+		
+		while = {
+			limit = {
+				domain_limit_available < 0
+			}
+			random_list = {
+				pick = 1
+				20 = {
+					every_vassal = {
+						limit = {
+							any_sub_realm_county = {
+								any_neighboring_county = {
+									holder = root
+									NOT = {
+										this = title:c_annuminas
+										this = title:c_tharbad
+										this = title:c_thalion
+										this = title:c_cameth_brin
+										this = title:c_fornost
+										this = title:c_ost_in_edhil
+										this = title:c_imladris
+										this = title:c_edhelas
+										this = title:c_carn_dum
+									}
+									duchy = prev.duchy
+								}
+								
+							}
+						}
+						random_sub_realm_county = {
+							limit = {
+								any_neighboring_county = {
+									holder = root
+									NOT = {
+										this = title:c_annuminas
+										this = title:c_tharbad
+										this = title:c_thalion
+										this = title:c_cameth_brin
+										this = title:c_fornost
+										this = title:c_ost_in_edhil
+										this = title:c_imladris
+										this = title:c_edhelas
+										this = title:c_carn_dum
+									}
+									duchy = prev.duchy
+								}
+							}
+							random_neighboring_county = {
+								limit = {
+									holder = root
+									NOT = {
+										this = title:c_annuminas
+										this = title:c_tharbad
+										this = title:c_thalion
+										this = title:c_cameth_brin
+										this = title:c_fornost
+										this = title:c_ost_in_edhil
+										this = title:c_imladris
+										this = title:c_edhelas
+										this = title:c_carn_dum
+									}
+									duchy = prev.duchy
+								}
+								save_scope_as = target_county
+							}
+						}
+						get_title = scope:target_county
+					}
+				}
+				80 = {
+					
+					random_sub_realm_county = {
+						limit = {
+							holder = root
+							NOT = {
+								this = title:c_annuminas
+								this = title:c_tharbad
+								this = title:c_thalion
+								this = title:c_cameth_brin
+								this = title:c_fornost
+								this = title:c_ost_in_edhil
+								this = title:c_imladris
+								this = title:c_edhelas
+								this = title:c_carn_dum
+							}
+						}
+						save_scope_as = target_county	
+					}
+					if = {
+						limit = {
+							is_nazgul = yes
+						}
+						create_character = {
+							template = administrator_character
+							location = scope:target_county.title_province
+							culture = culture:uruk_ongmair
+							faith = root.faith
+							gender_female_chance = 50
+							dynasty = none
+							save_scope_as = new_vassal
+						}
+					}
+					else = {
+						create_character = {
+							template = administrator_character
+							location = scope:target_county.title_province
+							culture = root.culture
+							faith = root.faith
+							gender_female_chance = 50
+							dynasty = none
+							save_scope_as = new_vassal
+						}
+					}
+		
+					scope:new_vassal = {
+						get_title = scope:target_county
+					}
+				}
+			}
+		}
+		every_vassal = {
+			limit = {
+				sub_realm_size > 3
+				
+			}
+			get_title = primary_title.duchy
+		}
+	}
+}
+
+#ee_arnor.5 = { # integrate isengard
+#	content_source = realms_dlc
+#	type = character_event
+#	title = ee_arnor.5.t
+#	desc = ee_arnor.5.desc
+#	theme = war
+#	
+#	left_portrait = {
+#		character = root
+#		animation = accepting
+#	}
+#	
+#	
+#
+#	option = {
+#		name = ee_arnor.5.a
+#		
+#		create_title_and_vassal_change = {
+#			type = conquest 
+#			save_scope_as = change 
+#			add_claim_on_loss = no 
+#		}
+#		
+#		get_title = title:d_shire
+#		destroy_title = title:k_shire
+#		every_ruler = { 
+#			limit = { 
+#				has_title = title:k_arthedain 
+#			} 
+#			save_scope_as = new_leige 
+#		}
+#		change_liege = {
+#			liege = scope:new_leige
+#			change = scope:change
+#		}
+#		resolve_title_and_vassal_change = scope:change	
+#		
+#		ai_chance = {
+#			base = 90
+#		}
+#	}
+#	
+#	option = {
+#		name = ee_arnor.5.b
+#		
+#		every_ruler = { 
+#			limit = { 
+#				has_title = title:k_arthedain 
+#			} 
+#			add_pressed_claim = title:d_shire
+#		}
+#		ai_chance = {
+#			base = 10
+#		}
+#		
+#	}
+#}
+
+ee_arnor.6 = { # palintir fishing
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.6.t
+	desc = ee_arnor.6.desc
+	theme = sailing_activity
+	
+	override_background = {
+		reference = wilderness_arctic
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = ee_arnor.6.a
+		
+		add_prestige = 2000
+		dynasty = { add_dynasty_prestige = 1000 }
+		create_artifact_palantir_annuminas_effect = { OWNER = this }
+		create_artifact_palantir_amonsul_effect = { OWNER = this }
+
+	}
+}
+
+ee_arnor.7 = { # palintir fishing 2
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.7.t
+	desc = ee_arnor.7.desc
+	theme = sailing_activity
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = ee_arnor.7.a
+		
+		add_prestige = 2000
+		dynasty = { add_dynasty_prestige = 1000 }
+		create_artifact_palantir_osgiliath_effect = { OWNER = this }
+		
+
+	}
+}
+
+ee_arnor.8 = { # palintir fishing fail
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.8.t
+	desc = ee_arnor.8.desc
+	theme = sailing_activity
+	
+	right_portrait = {
+		character = root
+		animation = disapproval
+	}
+	
+	
+	override_background = {
+		reference = wilderness_arctic
+	}
+
+	option = {
+		name = ee_arnor.8.a
+		
+		add_gold = major_gold_loss
+		
+		hidden_effect = {
+			random_list = {
+				10 = {
+					trigger_event = {
+						id = ee_arnor.6
+						months = 6
+					}
+				}
+				5 = {
+					trigger_event = {
+						id = ee_arnor.9
+						months = 9
+					}
+				}
+				85 = {
+					trigger_event = {
+						id = ee_arnor.8
+						months = 6
+					}
+				}
+			}
+		}
+
+	}
+	option = {
+		name = ee_arnor.8.b
+		
+
+	}
+}
+
+ee_arnor.9 = { # boy in the ice
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.9.t
+	desc = ee_arnor.9.desc
+	theme = sailing_activity
+	
+	override_background = {
+		reference = wilderness_arctic
+	}
+	
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	
+	right_portrait = {
+		character = scope:iceboy
+		animation = shiver
+		triggered_outfit = {
+			outfit_tags = { beggar_rags }
+		}
+	}
+	
+	immediate = {
+		create_character = { 
+			age = 180
+			culture = culture:numenorean
+			faith = faith:faith_numenorean
+			gender = female
+			trait = born_on_numenor 
+			trait = blood_of_numenor_10
+			father = character:lineofelros27
+			dynasty = inherit
+			location = root.location
+			save_scope_as = iceboy_mom
+			after_creation = {
+				death = { death_reason = death_numenor_drowned }
+			}
+		}
+		
+		create_character = { 
+			age = 9
+			culture = culture:numenorean
+			faith = faith:faith_numenorean
+			gender = male
+			dynasty = inherit
+			mother = scope:iceboy_mom
+			location = root.location
+			trait = born_on_numenor 
+			trait = blood_of_numenor_10
+			trait = wounded_3
+			trait = stuttering
+			trait = intellect_good_2
+			
+			trait = shy
+			trait = craven
+			trait = curious
+			
+			random_traits = no
+			name = iceboy_name_2
+			
+			save_scope_as = iceboy
+			
+			diplomacy = { 5 15 }
+			martial = { 5 15 }
+			stewardship = { 7 17 }
+			intrigue = { 5 15 }
+			learning = { 7 17 }
+			prowess = { 0 5 }
+			after_creation = {
+				give_nickname = nick_iceborn
+				add_pressed_claim = title:e_numenor
+				
+			}
+		}
+		
+	}
+
+	option = {
+		name = ee_arnor.9.a
+		
+		add_gold = 2000
+		create_artifact_numenorean_steelbow_effect = { OWNER = root }
+		
+		add_courtier = scope:iceboy
+		if = {
+			limit = {
+				num_of_relation_ward < 2
+			}
+			set_relation_ward = scope:iceboy
+		}
+		scope:iceboy = {
+		#	change_first_name = iceboy_name
+		}
+		trigger_event = {
+			id = ee_arnor.6
+			months = 6
+		}
+
+	}
+}
+
+ee_arnor.20 = { # Dwarf King decides who to send to the White Mountain
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.20.t
+	desc = ee_arnor.20.desc
+	theme = realm
+	window = visit_settlement_window
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	left_portrait = {
+		character = scope:whitemountainsinviter
+		animation = personality_honorable
+	}
+	lower_left_portrait = { character = scope:candidate1 }
+	lower_center_portrait = { character = scope:candidate2 }
+	lower_right_portrait = { character = scope:candidate3 }
+	
+	immediate = {
+		if = {
+			limit = { character:linesteward40 = { is_alive = yes } }
+			character:linesteward40 = { save_scope_as = faramir }
+		}	
+		root = { save_scope_as = gondorleader }
+		random_knight = { 
+			limit = {
+				is_landed = no
+				NOT = { is_player_heir_of = root }
+			}
+			save_scope_as = candidate1 
+		}
+		random_close_or_extended_family_member = {
+			limit = {
+				root.primary_title = {
+					place_in_line_of_succession = {
+						target = prev
+						value > 2
+					}
+				}
+				is_ruler = no
+			}
+			save_scope_as = candidate2
+		}
+		random_courtier_or_guest = { 
+			limit = { NOT = { is_player_heir_of = root } }
+			save_scope_as = candidate3 
+		}	
+	}
+	
+	option = { # A knight
+		name = ee_arnor.20.a 
+		custom_tooltip = ee_arnor.20.a.tt
+		scope:candidate1 = { add_character_flag = arnorsettler }
+		
+			add_courtier = scope:candidate1
+			trigger_event = {
+				id = ee_arnor.21
+				days = 10
+			}
+		
+	}
+	
+	option = { # A family member
+		name = ee_arnor.20.b 
+		trigger = { exists = scope:candidate2 }
+		custom_tooltip = ee_arnor.20.b.tt
+		scope:candidate2 = { add_character_flag = arnorsettler }
+		
+			add_courtier = scope:candidate2
+			trigger_event = {
+				id = ee_arnor.21
+				days = 10
+			}
+		
+	}
+
+	option = { # A courtier
+		name = ee_arnor.20.c 
+		custom_tooltip = ee_arnor.20.c.tt
+		scope:candidate3 = { add_character_flag = arnorsettler }
+		
+			add_courtier = scope:candidate3
+			trigger_event = {
+				id = ee_arnor.21
+				days = 10
+			}
+		
+	}
+
+	option =  { # faramir, son of Glóin
+		name = ee_arnor.20.d 
+		trigger = {
+			
+			exists = scope:faramir
+			
+		}
+		custom_tooltip = ee_arnor.20.d.tt 
+		scope:faramir = { 
+			add_character_flag = arnorsettler 
+			depose = yes
+			}
+		
+			add_courtier = scope:faramir
+			trigger_event = {
+				id = ee_arnor.21
+				days = 10
+			}
+		
+		ai_chance = {
+			base = 100
+		}
+	}	
+	
+	after = {
+		
+	}
+}
+
+ee_arnor.21 = { 
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.21.t
+	desc = ee_arnor.21.desc
+	theme = realm
+	window = visit_settlement_window
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:arnorsettler
+		animation = personality_honorable
+	}
+	immediate = {
+		every_courtier = {
+			limit = {
+				has_character_flag = arnorsettler
+			}
+			save_scope_as = arnorsettler
+		}
+		# if = {
+		# 	limit = {
+		# 		completely_controls = title:c_emyndunendor #Trig Note - Not an entrance 
+		# 	}
+		# 	
+		# }
+		
+		title:c_girithlindor = { save_scope_as = target_county }
+		
+		if = {
+			#check if he is still alive and not in prison
+			limit = {
+				OR = {
+					scope:arnorsettler = {
+						OR = {
+							is_alive = no
+							is_imprisoned = yes
+						}
+					}
+					NOT = { exists = scope:arnorsettler } 
+				}
+			}
+			create_character = { # 
+				age = { 140 200 }
+				gender = male
+				culture = culture:longbeards
+				faith = faith:faith_khazad
+				location = root.location
+				dynasty = create
+				trait = adventurer
+				save_scope_as = arnorsettler
+			}
+		}
+	}
+	
+	option = { # Fund them with a large sum
+		name = ee_arnor.21.a 
+		remove_short_term_gold = massive_gold_value
+		custom_tooltip = ee_arnor.21.a.tt
+		add_character_flag = large_sum_white_mountains
+		trigger_event = {
+			id = ee_arnor.22
+			days = 10 
+		}
+	}
+	option = { # Fund them with a medium sum
+		name = ee_arnor.21.b 
+		remove_short_term_gold = major_gold_value
+		custom_tooltip = ee_arnor.21.b.tt
+		add_character_flag = medium_sum_white_mountains
+		trigger_event = {
+			id = ee_arnor.22
+			days = 10 
+		}
+	}
+	option = { # Fund them with a minor sum
+		name = ee_arnor.21.c 
+		remove_short_term_gold = medium_gold_value
+		custom_tooltip = ee_arnor.21.c.tt
+		add_character_flag = minor_sum_white_mountains
+		trigger_event = {
+			id = ee_arnor.22
+			days = 10 
+		}
+	}
+	option = { # Give them no funds at all
+		name = ee_arnor.21.d 
+		add_prestige = medium_prestige_loss
+		custom_tooltip = ee_arnor.21.d.tt
+		add_character_flag = no_funds_white_mountains
+		trigger_event = {
+			id = ee_arnor.22
+			days = 10
+		}
+	}
+}
+
+ee_arnor.22 = { # Check if the target county is empty. Check if the settler is still alive
+	hidden = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				#check if he is still alive and not in prison
+				limit = {
+					OR = {
+						scope:arnorsettler = {
+							OR = {
+								is_alive = no
+								is_imprisoned = yes
+							}
+						}
+						NOT = { exists = scope:arnorsettler } 
+					}
+				}
+				create_character = { # `
+					age = { 140 200 }
+					gender = male
+					culture = culture:gondorian
+					faith = faith:faith_khazad
+					location = root.location
+					dynasty = create
+					trait = adventurer
+					save_scope_as = arnorsettler
+				}
+			}
+ 		}
+		
+			trigger_event = ee_arnor.23
+		
+	}
+}
+
+ee_arnor.23 = { # The colony is completed
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.23.t
+	desc = ee_arnor.23.desc
+	theme = realm
+	window = visit_settlement_window
+	right_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	left_portrait = {
+		character = scope:arnorsettler
+		animation = happiness
+	}
+	lower_center_portrait = { character = scope:chosen_dwarfking }
+	immediate = {
+		scope:target_county = { title_province = { set_holding_type = castle_holding } }
+
+		# Transfer the target title
+		create_title_and_vassal_change = {
+			type = returned
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+
+		scope:target_county = {
+			set_county_culture = scope:arnorsettler.culture
+			set_county_faith = scope:arnorsettler.faith
+			generate_coa = yes
+		}
+
+		scope:target_county = {
+			change_title_holder = {
+				holder = scope:arnorsettler
+				change = scope:change
+			}			
+		}
+		
+		scope:arnorsettler = {
+			becomes_independent = { change = scope:change }
+		}
+
+		resolve_title_and_vassal_change = scope:change
+		
+		scope:target_county = {
+			generate_coa = yes
+
+		}
+		
+		hidden_effect = {
+			scope:arnorsettler = {
+				change_government = feudal_government
+			}
+		}
+		
+		if = {
+			limit =  {
+				has_character_flag = large_sum_white_mountains
+			}
+			scope:target_county = {
+				random_list = {
+					1 = { scope:target_county.title_province = { add_building = farm_estates_04 } }
+					1 = { scope:target_county.title_province = { add_building = cereal_fields_04 } }
+					1 = { scope:target_county.title_province = { add_building = regimental_grounds_04 } }
+					1 = { scope:target_county.title_province = { add_building = curtain_walls_04 } }
+				}
+				random_list = {
+					1 = { scope:target_county.title_province = { add_building = common_tradeport_04 } }
+					1 = { scope:target_county.title_province = { add_building = windmills_04 } }
+					1 = { scope:target_county.title_province = { add_building = watermills_04 } }
+					1 = { scope:target_county.title_province = { add_building = workshops_04 } }
+				}
+			}
+			scope:target_county.title_province = { add_building = castle_02 }
+			scope:target_county = { change_development_level = 6 }
+		}
+		else_if = {
+			limit =  {
+				has_character_flag = medium_sum_white_mountains
+			}
+			scope:target_county = {
+				random_list = {
+					1 = { scope:target_county.title_province = { add_building = farm_estates_02 } }
+					1 = { scope:target_county.title_province = { add_building = cereal_fields_02 } }
+					1 = { scope:target_county.title_province = { add_building = regimental_grounds_02 } }
+					1 = { scope:target_county.title_province = { add_building = curtain_walls_02 } }
+				}
+				random_list = {
+					1 = { scope:target_county.title_province = { add_building = common_tradeport_03 } }
+					1 = { scope:target_county.title_province = { add_building = windmills_03 } }
+					1 = { scope:target_county.title_province = { add_building = watermills_03 } }
+					1 = { scope:target_county.title_province = { add_building = workshops_03 } }
+				}
+			}
+			scope:target_county = { change_development_level = 4 }
+		}
+		else_if = {
+			limit = {
+				has_character_flag = minor_sum_white_mountains
+			}
+			scope:target_county = {
+				random_list = {
+					1 = { scope:target_county.title_province = { add_building = farm_estates_02 } }
+					1 = { scope:target_county.title_province = { add_building = cereal_fields_02 } }
+					1 = { scope:target_county.title_province = { add_building = regimental_grounds_02 } }
+					1 = { scope:target_county.title_province = { add_building = curtain_walls_02 } }
+					1 = { scope:target_county.title_province = { add_building = common_tradeport_02 } }
+					1 = { scope:target_county.title_province = { add_building = windmills_02 } }
+					1 = { scope:target_county.title_province = { add_building = watermills_02 } }
+					1 = { scope:target_county.title_province = { add_building = workshops_02 } }
+				}
+			}
+			scope:target_county = { change_development_level = 3 }
+		}
+		else = {
+			scope:target_county = { change_development_level = 2 }
+		}			
+	}
+
+	option = { # Best of luck to you, new neighbours
+		trigger = {
+			NOT = { has_character_flag = no_funds_white_mountains }
+		}
+		name = ee_arnor.23.a              
+		scope:arnorsettler = {
+			add_opinion = {
+				modifier = grateful_opinion
+				opinion = 50
+				target = root
+			}
+		}
+		if = {
+			limit = {
+				has_defensive_alliance = no
+			}
+			scope:arnorsettler = {
+				add_to_variable_list = {
+					name = defensive_allies
+					target = root
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = defensive_allies
+					target = scope:arnorsettler
+				}
+			}
+			custom_tooltip = ee_arnor.23.a.tt
+		}
+	}
+	option = { # I hope they're not angry I didn't fund them
+		trigger = { has_character_flag = no_funds_white_mountains }
+		name = ee_arnor.23.b 
+	}
+	option = { # Switch to playing as the new dwarven ruler
+		trigger = { is_ai = no }
+		name = ee_arnor.23.c 
+		#custom_tooltip = ee_arnor.23.c.tt
+		if = {
+			limit = {
+				has_defensive_alliance = no
+			}
+			scope:arnorsettler = {
+				add_to_variable_list = {
+					name = defensive_allies
+					target = root
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = defensive_allies
+					target = scope:arnorsettler
+				}
+			}
+		}
+		set_player_character = scope:arnorsettler
+	}
+	
+	after = {
+		scope:arnorsettler = { # Bring the news to the king that sent the dwarves
+			trigger_event = {
+				id = ee_arnor.24
+				days = 5
+			}
+		}
+		
+		# Give the new ruler a few starting courtiers
+		create_character = { 
+			template = lotr_dunedain_traveler_template
+			age = { 80 120 }
+			culture = scope:arnorsettler.culture
+			faith = scope:arnorsettler.faith
+			gender = male
+			random_traits = yes
+			employer = scope:arnorsettler
+		}
+		create_character = { 
+			template = lotr_dunedain_traveler_template
+			age = { 80 120 }
+			culture = scope:arnorsettler.culture
+			faith = scope:arnorsettler.faith
+			gender = female
+			random_traits = yes
+			employer = scope:arnorsettler
+		}
+		create_character = { 
+			template = lotr_dunedain_traveler_template
+			age = { 80 120 }
+			culture = scope:arnorsettler.culture
+			faith = scope:arnorsettler.faith
+			gender = male
+			random_traits = yes
+			employer = scope:arnorsettler
+		}
+		
+		create_character = { 
+			template = lotr_dunedain_traveler_template
+			culture = scope:arnorsettler.culture
+			faith = scope:arnorsettler.faith
+			gender = male
+			random_traits = yes
+			employer = scope:arnorsettler
+		}
+		
+		create_character = { 
+			template = lotr_dunedain_traveler_template
+			culture = scope:arnorsettler.culture
+			faith = scope:arnorsettler.faith
+			gender = female
+			random_traits = yes
+			employer = scope:arnorsettler
+		}
+	}
+}
+
+ee_arnor.24 = { # integrate isengard
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.24.t
+	desc = ee_arnor.24.desc
+	theme = war
+	
+	left_portrait = {
+		character = root
+		animation = accepting
+	}
+	
+	immediate = {
+		
+	}
+
+	option = {
+		name = ee_arnor.24.a
+		
+		hidden_effect = {
+		
+			title:d_girithlin = {
+				save_scope_as = target_duchy
+			}
+			scope:target_duchy = {
+				every_de_jure_county = {
+					random_list = {
+						33 = { change_development_level = 2 }
+						33 = { change_development_level = 3 }
+						33 = { change_development_level = 4 }
+					}
+					save_temporary_scope_as = target_county
+							
+					ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+							
+					scope:target_county = {
+						if = {
+							limit = { root = { is_elf = yes } }
+							title_province = { set_holding_type = elven_holding }
+						} else_if = {
+							limit = { title_province = { terrain = halls } }
+							title_province = { set_holding_type = dwarven_holding }
+						} else_if = {
+							limit = { root = { is_hobbit = yes } }
+							title_province = { set_holding_type = city_holding }
+						} else = {
+							if = {
+								limit = { root = { has_government = tribal_government } }
+								title_province = { set_holding_type = tribal_holding }
+						} else = {
+							title_province = { set_holding_type = castle_holding }
+						}
+						}
+						}
+						if = { #Fallback
+							limit = { faith = faith:faith_wastelands_pagan }
+							set_county_faith = root.faith
+						}
+						if = { #Fallback
+							limit = { culture = culture:wastelands }
+							set_county_culture = root.culture
+						}
+				}
+			}
+		
+			get_title = title:d_girithlin
+			get_title = title:k_arnor_steward
+			
+			
+			add_gold = 10000
+			
+			
+			
+			title:d_girithlin = {
+				every_de_jure_county = {
+					save_temporary_scope_as = target_county
+					scope:target_county = {
+					
+						title_province = { add_building  = cereal_fields_03 }
+						title_province = { add_building  = windmills_03 }
+	
+					}
+				}
+			}
+			
+			
+			
+			
+			
+			spawn_army = {
+				men_at_arms = {
+					type = rangers_of_ithilien
+					men = 2000
+				}
+				location = province:4609
+				
+				name = gondorianrangers
+			}
+		}
+	}
+	after = {
+		correct_wastelands_tracker
+	}
+}} 
+
+ee_arnor.30 = { # Dwarf King decides who to send to the White Mountain
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.30.t
+	desc = ee_arnor.30.desc
+	theme = realm
+	window = visit_settlement_window
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	left_portrait = {
+		character = scope:whitemountainsinviter
+		animation = personality_honorable
+	}
+	lower_left_portrait = { character = scope:candidate2 }
+	lower_center_portrait = { character = scope:candidate3 }
+	lower_right_portrait = { character = scope:candidate4 }
+	
+	immediate = {
+			
+		root = { save_scope_as = arnorsteward }
+		root = { 
+			save_scope_as = candidate1 
+		}
+		random_ruler = {
+			limit = {
+				has_title = title:d_northern_dunedain
+			}
+			save_scope_as = candidate2
+		}
+		random_ruler = {
+			limit = {
+				has_title = title:d_emyn_uial
+			}
+			save_scope_as = candidate3
+		}
+		random_ruler = {
+			limit = {
+				has_title = title:k_shire
+			}
+			save_scope_as = candidate4
+		}			
+	}
+	
+	option = { # A knight
+		name = ee_arnor.30.a 
+		custom_tooltip = ee_arnor.30.a.tt
+		scope:candidate1 = { add_character_flag = kingarnor }
+			get_title = title:e_arnor
+			destroy_title = title:k_arnor_steward
+			title:e_arnor = {
+			every_de_jure_county_holder = {
+				limit = {
+					is_independent_ruler = yes
+					NOT = { 
+						has_title = title:e_arnor
+					}
+					capital_county = { # If capital is in Arnor
+						title_province = { geographical_region = middleearth_west_arnor }
+					}
+				}
+				trigger_event = {
+					id = gondor.0503
+					days = 5
+				}
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+	
+	option = { # A family member
+		name = ee_arnor.30.b 
+		trigger = { exists = scope:candidate2 }
+		custom_tooltip = ee_arnor.30.b.tt
+		scope:candidate2 = { 
+			add_character_flag = kingarnor 		
+			trigger_event = {
+				id = ee_arnor.31
+				days = 10
+			}
+		}
+		ai_chance = {
+			base = 75
+		}
+	}
+
+	option = { # A courtier
+		name = ee_arnor.30.c 
+		custom_tooltip = ee_arnor.30.c.tt
+		scope:candidate3 = { 
+			add_character_flag = kingarnor 		
+			trigger_event = {
+				id = ee_arnor.31
+				days = 10
+			}
+		}
+	}
+	
+	option = { # A courtier
+		name = ee_arnor.30.d
+		custom_tooltip = ee_arnor.30.d.tt
+		scope:candidate4 = { 
+			add_character_flag = kingarnor 		
+			trigger_event = {
+				id = ee_arnor.31
+				days = 10
+			}
+		}
+		
+	}
+	
+	option = { # A courtier
+		name = ee_arnor.30.e
+		custom_tooltip = ee_arnor.30.e.tt
+		random_ruler = {
+			limit = {
+				OR = {
+					has_title = title:e_gondor_steward
+					has_title = title:e_gondor
+				}
+			}
+			trigger_event = {
+				id = ee_arnor.32
+				days = 10
+			}
+		}
+		
+			
+			
+		
+	}
+
+	
+	
+	after = {
+		
+	}
+}
+
+ee_arnor.31 = { # Dwarven settler arrives at hosts's court, decide how much you want to fund them
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.31.t
+	desc = ee_arnor.31.desc
+	theme = realm
+	window = visit_settlement_window
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:arnorsteward
+		animation = personality_honorable
+	}
+	
+	immediate = {
+		create_title_and_vassal_change = {
+			type = returned 
+			save_scope_as = returnking 
+			
+		}
+	}
+	
+	
+	option = { # Fund them with a large sum
+		name = ee_arnor.31.a 
+		
+		custom_tooltip = ee_arnor.31.a.tt
+		get_title = title:e_arnor
+		scope:arnorsteward = {
+			change_liege = { 
+				liege = root 
+				change = scope:returnking
+			}
+		}
+		resolve_title_and_vassal_change = scope:returnking
+		
+		title:e_arnor = {
+			every_de_jure_county_holder = {
+				limit = {
+					is_independent_ruler = yes
+					NOT = { 
+						has_title = title:e_arnor
+					}
+					capital_county = { # If capital is in Arnor
+						title_province = { geographical_region = middleearth_west_arnor }
+					}
+				}
+				trigger_event = {
+					id = gondor.0503
+					days = 5
+				}
+			}
+		}
+		
+	}
+	option = { # Fund them with a medium sum
+		name = ee_arnor.31.b 
+		
+		custom_tooltip = ee_arnor.31.b.tt
+		
+		scope:arnorsteward = {
+			trigger_event = {
+				id = ee_arnor.30
+				days = 10 
+			}
+		}
+	}
+	
+}
+
+ee_arnor.32 = { # Dwarven settler arrives at hosts's court, decide how much you want to fund them
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.32.t
+	desc = ee_arnor.32.desc
+	theme = realm
+	window = visit_settlement_window
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:arnorsteward
+		animation = personality_honorable
+	}
+	
+	immediate = {
+		
+	}
+	
+	
+	option = { # Fund them with a large sum
+		name = ee_arnor.32.a 
+		
+		custom_tooltip = ee_arnor.32.a.tt
+		
+		scope:arnorsteward = {
+			create_title_and_vassal_change = {
+			type = returned 
+			save_scope_as = returnking 
+			
+		}
+			change_liege = { 
+				liege = root 
+				change = scope:returnking
+			}
+			resolve_title_and_vassal_change = scope:returnking
+		}
+		
+		
+		
+		
+		
+		
+	}
+	option = { # Fund them with a medium sum
+		name = ee_arnor.32.b 
+		
+		custom_tooltip = ee_arnor.32.b.tt
+		
+		scope:arnorsteward = {
+			trigger_event = {
+				id = ee_arnor.30
+				days = 10 
+			}
+		}
+	}
+	
+}
+
+
+ee_arnor.4000 = {
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.4000.t
+	desc = ee_arnor.4000.desc
+
+	theme = balrog
+	override_background = { reference = durins_bane }
+	
+	right_portrait = {
+		character = root
+		animation = celebrate_axe
+	}
+
+	immediate = {
+		save_scope_as = balrog_contender
+	}
+
+	option = { # Stand and fight
+		name = ee_arnor.4000.a
+		skill = prowess
+
+		random_list = {
+			# You survive.
+			0 = {
+				modifier = { add = kill_balrog_chance_value }
+				
+				modifier = { 
+					add = {
+						value = root.martial
+						divide = 5
+						floor = yes
+					} 
+				}
+				modifier = { 
+					add = {
+						value = root.military_power
+						divide = 1000
+						floor = yes
+					} 
+				}
+				
+				desc = balrog_struggle.1011.tt.success
+				custom_tooltip = struggle_balrog_ending_kill_balrog_decision_effect_4
+				add_prestige = 2500
+				dynasty = { add_dynasty_prestige = 1500 }
+				dynasty = { add_dynasty_prestige_level = 1 }
+				struggle:balrog_struggle = { end_struggle = yes }
+				if = {
+					limit = {
+						NOT = {
+							exists = title:k_khazad_dum.holder
+						}
+						is_independent_ruler = yes
+						is_dwarf = yes
+					}
+					get_title = title:k_khazad_dum
+				}
+				# Nickname
+				if = {
+					limit = {
+						is_dwarf = yes
+					}
+					give_nickname = nick_durin_bane_bane
+				}
+				else = {
+					give_nickname = nick_flame_of_moria
+				}
+				# Legend
+				if = {
+					limit = {
+						has_dlc_feature = legends
+					}
+					custom_tooltip = balrog_slayer_legend.tt
+					hidden_effect = {
+						create_legend_seed = {
+							type = heroic
+							quality = illustrious
+							chronicle = beast_slayer
+							properties = {
+								beast = flag:balrog
+								location = province:4913 # Endless Stairs
+							}
+						}
+					}
+				}
+				random = {
+					chance = 30
+					death = { death_reason = death_durins_bane }
+					set_global_variable = {
+						name = balrog_slayer_dead
+						value = yes
+					}
+				}
+				if = {
+					limit = { # Major News
+						NOT = { has_game_rule = no_news }
+					}
+					every_player = { # Global News Announcement
+						trigger_event = balrog_struggle.0002
+					}
+				}
+			}
+			# You perish.
+			100 = {	
+				modifier = { add = kill_balrog_chance_value.neg }
+				
+				death = { death_reason = death_durins_bane }
+				
+				struggle:balrog_struggle = {
+					every_involved_ruler = { trigger_event = balrog_struggle.1012 }
+					change_struggle_phase = struggle_balrog_phase_active
+				}
+			}
+		}
+	}
+	option = { # Nevermind, lets not do it
+		name = balrog_struggle.1011.b
+		
+	}
+}

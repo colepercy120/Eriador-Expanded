@@ -1,0 +1,27 @@
+﻿#ratdotl_modifier = {
+#	icon = magic_positive
+#	
+#	domain_limit = 3
+#	
+#	diplomacy = 1
+#	martial = 1
+#	stewardship = 1
+#	intrigue = 1
+#	learning = 1
+#	prowess = 1
+#}
+
+ring_manual_modifier = {
+	monthly_prestige = 0.5
+	stewardship_per_prestige_level = 3
+	learning_per_prestige_level = 3
+	monthly_crafting_lifestyle_xp_gain_mult = 1
+}
+
+ee_ring_saruman_modifier = {
+	monthly_prestige = 0.8
+	owned_hostile_scheme_success_chance_add = 10
+	prowess_no_portrait = 20
+	intrigue_per_prestige_level = 1
+	diplomacy_per_prestige_level = 1
+}

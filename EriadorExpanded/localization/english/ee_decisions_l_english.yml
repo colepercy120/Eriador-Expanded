@@ -1,0 +1,174 @@
+﻿# LotR: This file needs to be kept in sync with the release version.
+#   Edited the dates
+#	Edited the loading screen text
+
+l_english:
+
+ ### Arnor
+ 
+ decision_integrate_eregion_arnor_tooltip: "Integrate the Elven Realm of Eregion"
+ decision_integrate_eregion_arnor_desc: "We have reclaimed and repopulated the ancient elven realm of Eregion, once lost to time and shadow. Through toil, sacrifice, and the steadfast will of our people, it stands once more, not as a memory of the past, but as a thriving and vital part of our realm. Its lands are now as integral to Arnor as Cardolan or Arthedain, bound by blood, oaths, and the labors of generations. No longer shall Eregion be spoken of as a relic of elvenkind alone. It is Arnorian now, ours by right of settlement, protection, and the enduring strength of our kingdom. The time has come for the world to recognize this truth and acknowledge the banner of Arnor flies over Eregion just as surely as it does over every hill and vale of our land."
+ decision_integrate_eregion_arnor_confirm: "Acknowledge Reality"
+
+ decision_integrate_the_southern_provinces: "Push to the Isen"
+ decision_integrate_the_southern_provinces_desc: "Enedwaith has long stood as a borderland of our realm; a wild and untamed expanse, overlooked and ungoverned for generations. Yet within its bounds, particularly the lands between the rivers Gwathló and Isen, lie fertile plains and rich forests, brimming with potential. Under the guidance and stewardship of Arnor, these lands could prosper, their wildness tamed and their bounty brought forth to strengthen our kingdom. With Gondor’s retreat from these western frontiers, no power now stands to contest our rightful claim. Enedwaith lies unguarded, its future uncertain save for the certainty that we now hold dominion over it. There is no force to oppose us, no voice strong enough to deny us. The time is ripe. With pen or sword, map or plow, we need only redraw the borders to reflect what has already become reality. Enedwaith is Arnor’s by right; ours to shape, to settle, and to rule."
+ decision_integrate_the_southern_provinces_tooltip: "Integrate Enedwaith"
+ decision_integrate_the_southern_provinces_confirm: "Assert Royal Authorty"
+ 
+ decision_integrate_isengard: "Occupy Orthanc"
+ decision_integrate_isengard_desc: "The fortress of Orthanc stands as one of the oldest and strongest strongholds in all of Middle-earth, a marvel of forgotten craft, wrought from black stone that no tool of man nor elf may mark. It has withstood the passing of ages, unbroken and unconquered, a testament to the skill and power of those who came before. Its position, commanding the vital Gap of Rohan and standing sentinel over the River Isen, makes it the perfect fortification from which to secure our southern border. From its heights, we may watch over the passes, control the flow of trade and armies, and ensure that no threat rises unseen upon our frontier. Yet Orthanc is more than stone and walls. Within its tower rests one of the great treasures of the ancient world: a Palantír, one of the seeing-stones of the West. With it, we hold not just the land but the power to see far and wide, to guard against hidden threats and guide the fate of our realm. In our hands, Orthanc becomes the keystone of our dominion in the south, a beacon of Arnor’s strength, and a symbol that our reach is long, our sight far, and our rule unshaken."
+ decision_integrate_isengard_tooltip: "Occupy Orthanc"
+ decision_integrate_isengard_confirm: "Occupy the Tower"
+ 
+ decision_arthedain_provinces: "Establish Trian System in Arthedain"
+ decision_arthedain_provinces_desc: "By implementing the Tiran System, Arthedain is reorganized into distinct provinces, allowing for more efficient management and regional autonomy. This system brings a structural shift, notably impacting key areas such as Fornost, once the capital and a symbol of Arthedain’s strength, and the Shire, known for its rural tranquility and vital agricultural output. The new system will enable local governance to flourish in these diverse regions while maintaining a unified kingdom under the crown."
+ decision_arthedain_provinces_confirm: "Establish the Trian System"
+ decision_arthedain_provinces_tooltip: "Establishes the Tiran System, dividing the kingdom into provinces for better governance and organization."
+ 
+ decision_cardolan_provinces: "Establish Trian System in Cardolan"
+ decision_cardolan_provinces_desc: "The Tiran System brings a new era of governance to Cardolan by splitting the kingdom into provinces, each with greater local control. This shift is particularly impactful in regions like Mistolonde, once a stronghold of Cardolan’s maritime power, and Miniriath, known for its dense forests and strategic location. The new system is designed to empower these provinces to better manage their resources, ensuring that the rich cultural and economic diversity of Cardolan, from the coastal trade routes of Mistolondë to the forested borders of Minhiriath, is preserved and enhanced."
+ 
+ decision_rhudaur_provinces: "Establish Trian System in Rhudaur"
+ decision_rhudaur_provinces_desc: "The Tiran System is implemented in Rhudaur to address the growing need for more localized control, particularly in the region of Mitheithel. Known for its rugged terrain and complex borderlands, Mitheithel has long struggled to integrate with the rest of Rhudaur, which is dominated by the harsh northern reaches. By separating Mitheithel into its own province, the kingdom aims to streamline governance, allowing this strategically important region to better manage its resources and security, while the rest of Rhudaur can focus on its own unique challenges and development."
+ 
+ #decision_restore_shire: "Restore Royal Authority in the Shire"
+ #decision_restore_shire_desc: "The Hobbits have long been the quiet and steadfast stewards of the Shire, tending its fields and guarding its borders with the simple wisdom and resilience that has defined their folk since the land was first granted to them by my predecessor in an age now fading into memory. For generations they have known peace, nestled safely within the bounds of their green hills and gentle rivers, content in their isolation from the wider world. Yet now, with the return of a king to Annúminas and the ancient throne once more filled, the time has come for the Shire to return to the fold of the North. Not as subjects forced beneath a distant crown, but as cherished kin, bound by the oaths of old and the shared bloodlines of our ancestors. It is time for them to stand once more beneath the banner of the North, not merely as keepers of their own land, but as a part of the greater whole acknowledged, protected, and honored as they rightfully deserve."
+ #decision_restore_shire_confirm: "Send the Emissary"
+ #decision_restore_shire_tooltip: "Send a messenger to the hobbits to restore the shire to our control"
+ #decision_restore_shire_effect: "Sends a messenger to the Thrain"
+ 
+ decision_palintir_fishing: "Attempt to Salvage the Palantíri"
+ decision_palintir_fishing_desc: "The frozen shores of Forochel lie beneath our banner at last, and with them, the faintest hope of reclaiming what was thought lost to the depths. Long ago, in the dark days of our kingdom’s decline, the palantíri of Annúminas and Amon Sûl were lost to the icy seas. Treasures beyond price, our birthright swallowed by the cruel northern waters. Yet now, with mastery over these lands, we may dare what none before have dared: to scour the frozen waves and sunken wrecks for our lost seeing-stones. It is a perilous task, one fit only for the desperate or the bold. But if even one of the palantíri is found, it may light a beacon for Arnor’s renewal and bind the sundered North-kingdom whole once more."
+ decision_palintir_fishing_confirm: "Send a salvage team"
+ decision_palintir_fishing_tooltip: "Send a salvage team to find the wreck of Arvedui and reclaim the lost Palantíri"
+ decision_palintir_fishing_effect: "Send a salvage team to find the wreck of Arvedui in the wastes of Forochel and reclaim the lost Palantíri - Warning this will take time"
+
+ decision_rebuild_ost_in_edhil_human_desc: "As the light of our kingdom grows, the time has come to stake a claim to the heart of Eriador, and there is no place more fitting than Ost-in-Edhil. Once the shining jewel of the Elven realm Eregion, its towers and halls now lie in ruin, a testament to a forgotten age. The Elves have long departed, leaving only their timeless craftsmanship and the promise of what once was. We, the Dúnedain of Arnor, will not merely reclaim this city, but will build upon it, reshaping it in our own image, infusing it with the strength and vision of our people. It is not enough to stand on the remnants of the past,  we must rise from it, forging a new legacy. The city shall serve as a symbol of our might and our future, as enduring as the stone beneath our feet. We will breathe new life into these ancient streets, build our own towers to rival the Elves’ once-proud spires, and make Ost-in-Edhil a living testament to the greatness of Arnor. Let the world know: our claim is not just to land, but to the future of this land itself."
+ decision_rebuild_ost_in_edhil_human_confirm: "We shall claim Ost-in-Edhil and forge it anew, making it a symbol of Arnor's power and future."
+ 
+ decision_arnor_colony: "Attempt to resettle Arnor"
+ decision_arnor_colony_desc: "Eriador has long lain in ruin, silent echoes of the realm that was Arnor, home to the noble Dúnedain of the North, are all that remain. War, plague, and time have left its cities broken and roads forgotten. But the North cannot remain a desolation. If Gondor is to endure, we must restore the North-Kingdom. Girithlin, still rich with promise, is the place to begin. Yet such a task demands more than will. It requires a leader with vision, strength, and resolve. The question is not if we reclaim it, but who will bear the burden." 
+ decision_arnor_colony_confirm: "Search for Canidates"
+ decision_arnor_colony_tooltip: "Begin planning for a Colony in Girithlin"
+ decision_arnor_colony_effect: "Search for Canidates to establish a colony in Girithlin"
+ 
+ arnor_colony_requriement: "You have reintegrated 2 or more lost territories using the #bold $decision_restore_gondor_province.gondorian$#! [decision|E]"
+
+ decision_colonize: "Colonize"
+ decision_colonize_desc: "Colonize a Neighboring Province"
+ decision_colonize_confirm: "Send the Colonists"
+ decision_colonize_tooltip: "Colonize a Neighboring Province"
+ decision_colonize_dark_effect: "3 Counties can be colonized"
+ 
+ decision_arnor_king: "Search for a King"
+ decision_arnor_king_desc: "We have successfully reclaimed a substantial portion of the North, enough to restore our rightful claim as the true successor to the ancient kingdom of Arnor. The lands are secured, the people rally behind us, and the legacy of our forebears stirs once more in the hearts of men. All that remains is for a king worthy of the throne and the crown of Elendil to rise and take his place, uniting the realm under a single banner once again."
+ decision_arnor_king_tooltip: "Search for an Heir to Isildur"
+ decision_arnor_king_effect: "Search for an Heir to Isildur"
+ 
+ decision_palintir_fishing_gondor: "Dredge the Anduin"
+ decision_palintir_fishing_gondor_desc: "The Master Stone of Osgiliath was the first Palantír to be lost. During the [kinstrife|e] the Tower of the Dome was destroyed and the Osgiliath-Stone was lost in the Anduin. While the stone was spherical, it was also quite heavy. But the Anduin is wide and not noteably fast. Meaning that in all likelyhood the Master Stone is still there in Osgiliath, just buried under millennia of silt. Meaning that with sufficent dredging we should be able to recover it."
+ decision_palintir_fishing_gondor_confirm: "A chance to recover our ancient birthright!"
+ decision_palintir_fishing_gondor_tooltip: "Dredge the Anduin"
+ decision_palintir_fishing_gondor_effect: "Your engineers will dredge the Anduin for the Lost Palantír"
+
+ ### Angmar
+ 
+ decision_restore_angmar: "Restore Angmar"
+ decision_restore_angmar_desc: "The Dúnedain of the North dare to rise from the ashes, binding their broken lines and naming themselves a kingdom once more; Arnor restored. Fools, dressing a corpse and calling it a king! I shattered the North once, and I will not allow it to rise again. If left unchecked, their strength will return, reforging the blade that once defied me. My most faithful servant, the Witch-King, shall return to Angmar to ensure their fall. From Carn Dûm, he will sow terror, break their cities, and turn their unity into ruin. Let them remember: the will of Sauron cannot be denied!"
+ decision_restore_angmar_confirm: "Dispatch the Witch-king"
+ decision_restore_angmar_tooltip: "Dispatch the Witch-king to Angmar"
+ decision_restore_angmar_effect: "Dispatch the Witch King to Angmar"
+ decision_restore_angmar_trigger: "The Kingdom of Arnor has been restored"
+ decision_restore_angmar_trigger2: "The Witch King Lives"
+ decision_restore_angmar_trigger3: "Angmar is Unsettled"
+ 
+ decision_rally_eriador: "Rally the Orcs Of Eriador"
+ decision_rally_eriador_desc: "Centuries have passed since our defeat scattered the legions of Angmar to the winds, leaving our orcs broken, isolated, and forgotten by all, but not destroyed. In the dark places of the North they endured, clinging to memory and hate, their spirits unbroken beneath frost and stone. Now I, the Witch-king, have returned, and with me comes the shadow of old power reborn. They remember my voice, my will, my wrath and they will answer. One by one, the scattered tribes will rise from their holes and ruins, drawn once more to the banner of Carn Dûm. The North shall bleed, and in its blood our dominion shall be rekindled."
+ decision_rally_eriador_confirm: "Rally the Orcs"
+ decision_rally_eriador_tooltip: "Rally the Orcs of Eriador"
+ decision_rally_eriador_trigger: "There are Wild Orcs North of the Isen"
+ decision_rally_eriador_effect: "Summon the Orcs of Angmar"
+ 
+ decision_orc_angmar: "Rally the Mountian Orcs"
+ decision_orc_angmar_desc: "You who have dwelled in the deep and forgotten places of the Misty Mountains, you who have scraped and fought and fed on the leavings of men and dwarves, your time of hiding is over! No longer shall you be scattered clans and squabbling wretches. I am the Witch-king, servant of the great Eye, and I call you now to war. Come forth from your tunnels and crags, from Goblin-town to Gundabad, and bend your knee to the will of Angmar. Together, we will shake the mountains and drown the West in fire and shadow. The age of men grows weak and blind, let them choke on our return!"
+ decision_orc_angmar_confirm: "The Winter King Calls"
+ decision_orc_angmar_tooltip: "Vassalizes all the Orcs of the Misty Mountains"
+ decision_orc_angmar_effect: "Attempts to vassalize all the Orcs of the Misty Mountains"
+ 
+ decision_winter_king: "Restore the Cult of the Witch-King"
+ decision_winter_king_desc: "The cult of the Witch-king, once the dark heart of Angmar's dominion, shall rise again from the ashes of fear and forgotten rites. In secret places, deep tombs, black altars and ruined towers the faithful have whispered my name through the long silence, guarding the fragments of ancient power. Now the veil is lifted, and the time has come to restore the old ways. The black priests shall walk the earth once more, cloaked in shadow and flame, spreading terror and obedience in my name. Through blood, fire, and unyielding will, the cult shall bind the orcs, the beasts, and all servants of darkness into a single, relentless purpose: to break the world and remake it in the image of Angmar’s vengeance."
+ decision_winter_king_confirm: "The Witch King Beckons"
+ decision_winter_king_tooltip: "Restores the Cult of the Winter King"
+ decision_winter_king_effect: "Restores the Cult of the Winter King"
+ 
+ decision_integrate_arnor: "Shatter Arnor"
+ decision_integrate_arnor_desc: "They flee before me like leaves in a storm. The last of their petty resistance crumbles beneath iron and flame, their strongholds falling one by one as my banners rise over the ruins. The people whisper my name in fear, and their kings, what few remain, either kneel or perish. I have broken their will, drowned their hopes in shadow, and with each fallen citadel, Arnor bends to me. This land, once defiant, now belongs to the darkness. It is mine."
+ decision_integrate_arnor_confirm: "Solidify Control"
+ decision_integrate_arnor_tooltip: "Solidifies control over Arnor"
+ 
+ ### Elves 
+ 
+ decision_rage_aganist_the_dying_of_the_light: "Rage Against the Dying of the Light"
+ decision_rage_aganist_the_dying_of_the_light_desc: "Why should the Eldar, the Firstborn of Ilúvatar, fade into shadows and silence, hiding in forests like ghosts of a forgotten age? Though the fall of Eregion wounded us, we are more than our grief—have we not seen Men rise from the ruins of Númenor and shape the world anew? We who walked beneath the stars before the Sun and Moon must not cower in memory-laden halls while the world moves on. We are not relics. The fire of our spirit still burns. Let us remember who we are—not in mourning, but with purpose—and show the world that the Eldar endure!"
+ decision_reclaim_nenuial: "Reclaim Nenuial"
+ decision_reclaim_nenuial_desc: "Long have the shores of Nenuial remained silent, untouched by the Mistress of Magic. Time has passed since the White City fell, and all that remains are forgotten ruins. But now, the elven song returns to the air, echoing once more on the moonlit shores. We have returned, and the great realm will be reforged."
+ decision_reclaim_nenuial_confirm: "The Elves have returned. Nenuial is ours once more."
+ decision_reclaim_nenuial_tooltip: "Restore the Realm of Nenuial"
+ 
+ decision_elf_have_more_kids: "Have More Kids"
+ decision_elf_have_more_kids_desc: "the [eldar|e] have been in decline for 2 full ages of the world. One of the the consequences of this is that elven children are rare, and while most elves only have children for a short period in their lives, there isn't anything making me follow that traditon."
+ decision_elf_have_more_kids_confirm: "My heart still desires children"
+ decision_elf_have_more_kids_tooltip: "Have More Kids"
+ 
+ decision_invite_elves_eregion: "Invite Elves to Eregion"
+ decision_invite_elves_eregion_desc: "The Ancient realm of [eregion|E] was destoryed millennia ago during the [waroftheelvesandsauron|E]. Since then the realm of the ring makers has laid abandoned, with only the ghosts of the past inhabiting the ancient halls. Now that the realm has been cleansed we can again invite the [noldorelves|E] to reestablish their ancient halls and serve as a bulwark against the darkess."
+ decision_invite_elves_eregion_tooltip: "Invite Elves to Eregion"
+ decision_invite_elves_eregion_confirm: "Let the Ancient Realm Rise"
+ decision_invite_elves_eregion_effect_tooltip: "Send an emissary to the [noldorelves|E]"
+ fully_settled_eregion: "The [GetTitleByKey('d_eregion').GetName] is fully settled"
+ noldor_friend: "You have a [friend|e] amongst the [noldorelves|E]"
+
+ decision_reclaim_eriador: "Restore Elven Rule over Eriador"
+ decision_reclaim_eriador_desc: "For most of the [firstage|e] and [secondage|e], [eriador|e] was an elven realm, with its borders stretching from the Gwathló and Misty Mountains in the East to the Blue Mountains in the west. The [waroftheelvesandsauron|E] shattered the realm and dispursed its people, and after the [downfallofnumenor|E] the land was given to the [faithful|e]. But now the [dunedain|e] are long gone and Eriador lays abandoned, presenting us with an oppritunity to restore our ancient home."
+ decision_reclaim_eriador_confirm: "Let the land be filled with music once again"
+ decision_reclaim_eriador_tooltip: "Restore Elven Rule over Eriador"
+ decision_reclaim_eriador_effect: "[GetTitleByKey('e_eriador').GetName] will become de jure leige of every [kingdom|e] in [GetGeographicalRegion('custom_eriador').GetName] and [GetGeographicalRegion('middleearth_forodwaith').GetName]"
+ 
+ decision_vanquish_darkess: "Vanquish Darkness"
+ decision_vanquish_darkess_desc: "For to long the [eldar|e] have let Middle-earth sit in darkness. We are the first born, the stewards and guardians of the world. We have abandoned our duty to protect the world for to long. Well, no longer! I say the time for sitting in our hallowed halls is over! It has been an age since the Elves roused from their malaise and the [darklord|e] has forgotten our strength. It's time we reminded him!"
+ decision_vanquish_darkess_confirm: "To Arms!"
+ decision_vanquish_darkess_tooltip: "Vanquish Darkness"
+ decision_vanquish_darkess_effect: "Unlocks new [casus_belli|e] to destory darkness"
+ 
+ decision_ring_lore: "Study Ring Lore"
+ decision_ring_lore_desc: "The [ringsofpower|e] are the greatest artifacts created by elves after the [elderdays|e], only surpassed by [feanor|e]'s [silmarils|e]. Of course they were only designed with the help of [annatarcharacter|e], and he tied them to his will and that of the [onering|e]. But the concept is sound, and [celebrimbor|e] created the [threeringsofelvesshort|E] free of the shadow. \n\nUnlike the Silmarils, there is no material in the Rings of Power we can't possess. All we need is the knowledge. While most of the great smiths of the [noldorelves|E] perished with the fall of [eregion|E], the ruins of the great forges still stand. A visit to the remnants of Ost-in-Edhil might yield some of their lost knowledge."
+ decision_ring_lore_tooltip: "Study Ring Lore"
+ decision_ring_lore_confirm: "to Eregion!"
+ decision_ring_lore_effect1: "Search the Ruins for knowledge on the rings"
+ decision_ring_lore_effect2: "Travel to Eregion to search the ruins for knowledge on the rings"
+ 
+ decision_forge_ring: "Attempt to Forge a Ring of Power"
+ decision_forge_ring_desc: "It's time! We have stuided the work of [celebrimbor|e], we have built great forges, we have gathered the best Song-Smiths left in Middle-Earth, we have even contacted the White Wizard. It is finally time for us to prove that the [eldar|e] aren't doomed to fade into the west! It's time to forge a [ringofpower|e]!"
+ decision_forge_ring_confirm: "Light the Forges!"
+ decision_forge_ring_tooltip: "Attempt to Forge a Ring of Power"
+ decision_forge_ring_effect: "Attempt to Forge a Ring of Power"
+ 
+ decision_slay_sauron: "Slay Sauron"
+ decision_slay_sauron_desc: "The root of all evil still left in [arda|e] is the Dark Lord [sauroncharacter|e]. He picked up right where [morgothcharacter|e] left off and has constructed a host almost as large as his former masters. If we want to truly save this world, then we must destory him. Gil-galad and [elendil|E] both died trying to defeat him miliarilarly, and all that did was delay him for an age. If we want to truly destroy him. then it will take more then cutting off a ring. Maybe [fingolfin|E] had the right idea..."
+ decision_slay_sauron_effect: "Travel to Mordor to face [sauroncharacter|e] in single combat. - #bold This is a bad idea #!"
+ decision_slay_sauron_tooltip: "Slay Sauron"
+ decision_slay_sauron_confirm: "To Mordor!"
+ decision_slay_sauron_trigger_1: "All lands in the [empire|e] of your [capital|e] have been cleared of Evil"
+ decision_slay_sauron_trigger_2: "All Neighboring Lands have been cleared of Evil"
+ 
+ decision_attack_balrog: "March Against the Balrog"
+ decision_attack_balrog_desc: "The [balrog|E] of [moria|e] has been allowed to persist for far to long. Ever since the destruction of Khazad-Dum we have known a darkness laid in the deep. But it has been left to fester. Enough is enough! We will finally purge the darkness and restore light to the tunnels!"
+ decision_attack_balrog_confirm: "Ready the Troops!"
+ decision_attack_balrog_tooltip: "March Against the Balrog"
+ decision_attack_balrog_trigger_1: "Your Army is Strong Enough to kill the [balrog|E]"
+ 
+ decision_lorien_eregion: "Proclaim the Realm of West Lorien"
+ decision_lorien_eregion_desc: "[eregion|E] was founded by Lady Galadriel before settling here in Lothlorien. She was expelled by [celebrimbor|e] after the arrival of [annatarcharacter|e], leading to that realm's destruction. However, now that Eregion has been restored to her, it is no brainer to unite both her realms."
+ decision_lorien_eregion_confirm: "Proclaim the Realm of West Lorien"
+ decision_lorien_eregion_effect: "The [GetTitleByKey('k_eregion').GetName] will receive a new name, symbolizing its renewed state."
+ decision_lorien_eregion_tooltip: "Proclaim the Realm of West Lorien"

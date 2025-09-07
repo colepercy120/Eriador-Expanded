@@ -1,0 +1,2032 @@
+﻿
+decision_integrate_the_southern_provinces = {
+	title = decision_integrate_the_southern_provinces
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_rhudaur_02.dds"
+	}
+	
+	selection_tooltip = decision_integrate_the_southern_provinces_tooltip
+	desc = decision_integrate_the_southern_provinces_desc
+	confirm_text = decision_integrate_the_southern_provinces_confirm
+
+	decision_group_type = realms_in_exile_major
+	
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+
+	is_shown = {
+		is_independent_ruler = yes
+		
+		lotr_has_numenorean_culture_trigger = yes
+		
+		OR = {
+			has_title = title:e_arnor
+			AND = {
+				has_title = title:e_reunitedkingdom
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:decision_solidify_reunited_kingdom
+				}
+			}
+			AND = {
+				has_title = title:e_numenor_in_exile
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:decision_numenor_in_exile
+				}
+			}
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_integrate_the_southern_provinces
+			}
+		}
+	}
+
+	is_valid = {
+        completely_controls = title:k_dunland
+        completely_controls = title:k_enedhwaith
+    }
+
+    is_valid_showing_failures_only = {
+        is_imprisoned = no
+        is_available_adult = yes
+        is_at_war = no
+    }
+
+	effect = {
+		trigger_event = {
+			id = ee_arnor.1
+			days = 1
+		}
+		dynasty = { add_dynasty_prestige = 500 }
+		hidden_effect = {
+			if = {
+				limit = {
+					has_title = title:e_reunitedkingdom
+					is_target_in_global_variable_list = {
+						name = unavailable_unique_decisions
+						target = flag:decision_solidify_reunited_kingdom
+					}
+				}
+				title:k_dunland = { set_de_jure_liege_title = title:e_reunitedkingdom }
+				title:k_enedhwaith = { set_de_jure_liege_title = title:e_reunitedkingdom }
+			}
+			else_if = {
+				limit = { has_title = title:e_numenor_in_exile }
+				title:k_dunland = { set_de_jure_liege_title = title:e_numenor_in_exile }
+				title:k_enedhwaith = { set_de_jure_liege_title = title:e_numenor_in_exile }
+			}
+			else = {
+				title:k_dunland = { set_de_jure_liege_title = title:e_arnor }
+				title:k_enedhwaith = { set_de_jure_liege_title = title:e_arnor }
+			}	
+		}	
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_integrate_the_southern_provinces
+		}
+	}	
+}
+
+decision_integrate_eregion = {
+	title = decision_integrate_eregion
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_rhudaur_02.dds"
+	}
+	
+	selection_tooltip = decision_integrate_eregion_arnor_tooltip
+	desc = decision_integrate_eregion_arnor_desc
+	confirm_text = decision_integrate_eregion_arnor_confirm
+
+	decision_group_type = realms_in_exile_major
+	
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+
+	is_shown = {
+		is_independent_ruler = yes
+		
+		lotr_has_numenorean_culture_trigger = yes
+		
+		OR = {
+			has_title = title:e_arnor
+			AND = {
+				has_title = title:e_reunitedkingdom
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:decision_solidify_reunited_kingdom
+				}
+			}
+			AND = {
+				has_title = title:e_numenor_in_exile
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:decision_numenor_in_exile
+				}
+			}
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_integrate_eregion
+			}
+		}
+	}
+
+	is_valid = {
+        completely_controls = title:k_eregion
+        
+    }
+
+    is_valid_showing_failures_only = {
+        is_imprisoned = no
+        is_available_adult = yes
+        is_at_war = no
+    }
+
+	effect = {
+		trigger_event = {
+			id = ee_arnor.2
+			days = 1
+		}
+		dynasty = { add_dynasty_prestige = 500 }
+		hidden_effect = {
+			if = {
+				limit = {
+					has_title = title:e_reunitedkingdom
+					is_target_in_global_variable_list = {
+						name = unavailable_unique_decisions
+						target = flag:decision_solidify_reunited_kingdom
+					}
+				}
+				title:k_eregion = { set_de_jure_liege_title = title:e_reunitedkingdom }
+				
+			}
+			else_if = {
+				limit = { has_title = title:e_numenor_in_exile }
+				title:k_eregion = { set_de_jure_liege_title = title:e_numenor_in_exile }
+				
+			}
+			else = {
+				title:k_eregion = { set_de_jure_liege_title = title:e_arnor }
+				
+			}	
+		}	
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_integrate_eregion
+		}
+	}	
+}
+
+decision_integrate_isengard = {
+	title = decision_integrate_isengard
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_rhudaur_02.dds"
+	}
+	
+	selection_tooltip = decision_integrate_isengard_tooltip
+	desc = decision_integrate_isengard_desc
+	confirm_text = decision_integrate_the_southern_provinces_confirm
+
+	decision_group_type = realms_in_exile_major
+	
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+
+	is_shown = {
+		is_independent_ruler = yes
+		
+		lotr_has_numenorean_culture_trigger = yes
+		
+		OR = {
+			has_title = title:e_arnor
+			AND = {
+				has_title = title:e_reunitedkingdom
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:decision_solidify_reunited_kingdom
+				}
+			}
+			AND = {
+				has_title = title:e_numenor_in_exile
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:decision_numenor_in_exile
+				}
+			}
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_integrate_isengard
+			}
+		}
+	}
+
+	is_valid = {
+        completely_controls = title:k_isengard
+        
+    }
+
+    is_valid_showing_failures_only = {
+        is_imprisoned = no
+        is_available_adult = yes
+        is_at_war = no
+    }
+
+	effect = {
+		trigger_event = {
+			id = ee_arnor.3
+			days = 1
+		}
+		dynasty = { add_dynasty_prestige = 500 }
+		hidden_effect = {
+			if = {
+				limit = {
+					has_title = title:e_reunitedkingdom
+					is_target_in_global_variable_list = {
+						name = unavailable_unique_decisions
+						target = flag:decision_solidify_reunited_kingdom
+					}
+				}
+				title:k_isengard = { set_de_jure_liege_title = title:e_reunitedkingdom }
+				
+			}
+			else_if = {
+				limit = { has_title = title:e_numenor_in_exile }
+				title:k_isengard = { set_de_jure_liege_title = title:e_numenor_in_exile }
+				
+			}
+			else = {
+				title:k_isengard = { set_de_jure_liege_title = title:e_arnor }
+				
+			}	
+		}	
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_integrate_isengard
+		}
+	}	
+}
+
+decision_arthedain_provinces = {
+	title = decision_arthedain_provinces
+	desc = decision_arthedain_provinces_desc
+	confirm_text = decision_arthedain_provinces_confirm
+	selection_tooltip = decision_arthedain_provinces_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_elves_dwarves_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		
+			has_title = title:e_arnor
+			has_title = title:k_arthedain
+		
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_arthedain_provinces
+			}		
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		completely_controls = title:k_arthedain # Completely controls the old heartland of the Kingdom
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		add_prestige = 1000
+		title:d_siragale = {
+			set_de_jure_liege_title = title:k_sirgala
+		}
+		title:d_hyarromenya = {
+			set_de_jure_liege_title = title:k_sirgala
+		}
+		title:d_sarn_athrad = { # Vector Note - see above comment
+			set_de_jure_liege_title = title:k_sirgala
+		}
+		title:k_sirgala = { # Vector Note - see above comment
+			set_de_jure_liege_title = title:e_arnor
+		}
+		
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = yes
+		}
+		title:k_sirgala = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+		
+		title:d_shire = {
+				set_de_jure_liege_title = title:k_shire
+			}
+		title:c_dunglan = {
+				set_de_jure_liege_title = title:d_shire
+			}
+		title:c_buckland = {
+				set_de_jure_liege_title = title:d_shire
+				
+		}
+		title:k_shire = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+		
+		title:d_nan_turath = {
+				set_de_jure_liege_title = title:k_fornost
+			}
+		title:d_emyn_sul = {
+				set_de_jure_liege_title = title:k_fornost
+			}
+			
+		title:k_fornost = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+
+		title:k_fornost = {
+			set_de_jure_liege_title = title:e_arnor
+		}
+		title:k_arthedain = {
+			set_capital_county = title:c_annuminas
+		}
+		
+		if = {
+				limit = {
+					has_title = title:e_reunitedkingdom
+					is_target_in_global_variable_list = {
+						name = unavailable_unique_decisions
+						target = flag:decision_solidify_reunited_kingdom
+					}
+				}
+				title:k_fornost = { set_de_jure_liege_title = title:e_reunitedkingdom }
+				title:k_sirgala = { set_de_jure_liege_title = title:e_reunitedkingdom }
+				title:k_shire = { set_de_jure_liege_title = title:e_reunitedkingdom }
+			}
+		else_if = {
+				limit = { has_title = title:e_numenor_in_exile }
+				title:k_fornost = { set_de_jure_liege_title = title:e_numenor_in_exile }
+				title:k_sirgala = { set_de_jure_liege_title = title:e_numenor_in_exile }
+				title:k_shire = { set_de_jure_liege_title = title:e_numenor_in_exile }
+				
+			}
+		
+		
+		resolve_title_and_vassal_change = scope:title_change
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_arthedain_provinces
+		}
+
+		
+	}
+}
+
+decision_cardolan_provinces = {
+	title = decision_cardolan_provinces
+	desc = decision_cardolan_provinces_desc
+	confirm_text = decision_arthedain_provinces_confirm
+	selection_tooltip = decision_arthedain_provinces_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_elves_dwarves_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		
+			has_title = title:e_arnor
+			has_title = title:k_cardolan
+		
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_cardolan_provinces
+			}		
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		completely_controls = title:k_cardolan # Completely controls the old heartland of the Kingdom
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		add_prestige = 1000
+		
+		
+
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_cardolan_provinces
+		}
+		
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = yes
+		}
+		
+		title:d_girithlin = {
+				set_de_jure_liege_title = title:k_mistalonde
+			}
+		title:d_dol_caladir = {
+				set_de_jure_liege_title = title:k_mistalonde
+			}
+		title:d_ethir_gwathlo = {
+				set_de_jure_liege_title = title:k_mistalonde
+			}
+		title:d_eryn_vorn = {
+				set_de_jure_liege_title = title:k_mistalonde
+			}
+		title:k_mistalonde = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+
+		title:k_mistalonde = {
+			set_de_jure_liege_title = title:e_arnor
+		}
+		
+		if = {
+				limit = {
+					has_title = title:e_reunitedkingdom
+					is_target_in_global_variable_list = {
+						name = unavailable_unique_decisions
+						target = flag:decision_solidify_reunited_kingdom
+					}
+				}
+				title:k_mistalonde = { set_de_jure_liege_title = title:e_reunitedkingdom }
+				
+			}
+		else_if = {
+				limit = { has_title = title:e_numenor_in_exile }
+				title:k_mistalonde = { set_de_jure_liege_title = title:e_numenor_in_exile }
+
+				
+			}
+		
+		resolve_title_and_vassal_change = scope:title_change
+
+		
+	}
+}
+
+decision_rhudaur_provinces = {
+	title = decision_rhudaur_provinces
+	desc = decision_rhudaur_provinces_desc
+	confirm_text = decision_arthedain_provinces_confirm
+	selection_tooltip = decision_arthedain_provinces_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_elves_dwarves_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		
+			has_title = title:e_arnor
+			has_title = title:k_rhudaur
+		
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_rhudaur_provinces
+			}		
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		completely_controls = title:k_rhudaur # Completely controls the old heartland of the Kingdom
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		add_prestige = 1000
+		
+		
+
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_rhudaur_provinces
+		}
+		
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = yes
+		}
+		
+		
+		title:d_dor_en_egladil = {
+				set_de_jure_liege_title = title:k_mitheithel
+			}
+		title:d_cameth_brin = {
+				set_de_jure_liege_title = title:k_mitheithel
+			}
+		title:d_hithaeglir_harad = {
+				set_de_jure_liege_title = title:k_mitheithel
+			}
+		title:k_mitheithel = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+
+		title:k_mitheithel = {
+			set_de_jure_liege_title = title:e_arnor
+		}
+		
+		title:k_rhudaur = {
+			set_capital_county = title:c_enedhgarth
+		}
+		
+		if = {
+				limit = {
+					has_title = title:e_reunitedkingdom
+					is_target_in_global_variable_list = {
+						name = unavailable_unique_decisions
+						target = flag:decision_solidify_reunited_kingdom
+					}
+				}
+				title:k_mitheithel = { set_de_jure_liege_title = title:e_reunitedkingdom }
+				
+			}
+		else_if = {
+				limit = { has_title = title:e_numenor_in_exile }
+				title:k_mitheithel = { set_de_jure_liege_title = title:e_numenor_in_exile }
+			
+			}
+		resolve_title_and_vassal_change = scope:title_change
+
+		
+	}
+}
+
+#decision_restore_shire = {
+#	title = decision_restore_shire
+#	desc = decision_restore_shire_desc
+#	confirm_text = decision_restore_shire_confirm
+#	selection_tooltip = decision_restore_shire_tooltip
+#	picture = {
+#		reference = "gfx/interface/illustrations/decisions/decision_elves_dwarves_02.dds"
+#	}
+#	
+#
+#	# AI
+#	ai_goal = yes
+#	ai_potential = {
+#		always = yes
+#	}
+#	ai_will_do = {
+#		base = 100
+#	}
+#	
+#	# IS SHOWN
+#	decision_group_type = realms_in_exile_major
+#	
+#	is_shown = {
+#		OR = {
+#			
+#			has_title = title:k_arnor_steward
+#		}
+#		NOT = {
+#			is_target_in_global_variable_list = {
+#				name = unavailable_unique_decisions
+#				target = flag:decision_restore_shire
+#			}
+#			OR = {
+#				any_vassal = { has_title = title:k_shire }
+#				any_vassal = { has_title = title:d_shire }
+#			}
+#			completely_controls = title:d_shire
+#		}
+#		NOT = {
+#			is_target_in_global_variable_list = {
+#				name = unavailable_unique_decisions
+#				target = flag:decision_reintegrate_shire
+#			}
+#		}
+#	}
+#	
+#	# IS VALID
+#	is_valid = {
+#		prestige_level >= high_prestige_level
+#		any_neighboring_and_across_water_top_liege_realm_owner = {
+#			OR = {
+#				has_title = title:k_shire
+#				has_title = title:d_shire
+#			}
+#		}
+#	}
+#
+#	is_valid_showing_failures_only = {
+#		is_imprisoned = no
+#		is_available_adult = yes
+#		is_at_war = no
+#	}
+#
+#	# EFFECT
+#	effect = {
+#		custom_tooltip = {
+#			text = decision_restore_shire_effect
+#		}
+#
+#		add_to_global_variable_list = {
+#			name = unavailable_unique_decisions
+#			target = flag:decision_restore_shire
+#		}
+#		
+#		if = {
+#			limit = { 
+#				any_ruler = { has_title = title:k_shire }
+#			} 
+#			every_ruler = { 
+#				limit = { 
+#					has_title = title:k_shire 
+#				} 
+#				trigger_event = {
+#					id = ee_arnor.5
+#					days = 1
+#				}
+#			}
+#		}
+#		else = {
+#			every_ruler = { 
+#				limit = { 
+#					has_title = title:d_shire 
+#				} 
+#				trigger_event = {
+#					id = ee_arnor.5
+#					days = 1
+#				}
+#			}
+#		}
+#		
+#	}
+#}
+
+decision_palintir_fishing = {
+	title = decision_palintir_fishing
+	desc = decision_palintir_fishing_desc
+	confirm_text = decision_palintir_fishing_confirm
+	selection_tooltip = decision_palintir_fishing_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		
+		is_arnor = yes
+	
+		
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_palintir_fishing
+			}		
+		}
+	}
+	
+	cost = {
+		prestige = major_prestige_value
+		gold = 1500
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		completely_controls = title:k_forochel # Completely controls the old heartland of the Kingdom
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+
+		custom_tooltip = {
+			text = decision_palintir_fishing_effect
+		}
+
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_palintir_fishing
+		}
+		
+		hidden_effect = {
+			random_list = {
+				10 = {
+					trigger_event = {
+						id = ee_arnor.6
+						months = 6
+					}
+				}
+				5 = {
+					trigger_event = {
+						id = ee_arnor.9
+						months = 9
+					}
+				}
+				85 = {
+					trigger_event = {
+						id = ee_arnor.8
+						months = 6
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+decision_palintir_fishing_gondor = {
+	title = decision_palintir_fishing_gondor
+	desc = decision_palintir_fishing_gondor_desc
+	confirm_text = decision_palintir_fishing_gondor_confirm
+	selection_tooltip = decision_palintir_fishing_gondor_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_osgiliath_01.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		OR = {
+			is_gondor = yes
+		}
+		
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_palintir_fishing_gondor
+			}		
+		}
+	}
+	
+	cost = {
+		prestige = major_prestige_value
+		gold = 1000
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		
+				completely_controls = title:c_osgiliath
+				province:202 = { has_building_or_higher = wonder_osgiliath_05 }
+				province:203 = { has_building_or_higher = wonder_osgiliath_05 }
+			
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+
+		custom_tooltip = {
+			text = decision_palintir_fishing_gondor_effect
+		}
+
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_palintir_fishing_gondor
+		}
+		
+		trigger_event = {
+			id = ee_arnor.7
+			months = 6
+		}
+
+		
+	}
+}
+
+decision_rebuild_ost_in_edhil= {
+	title = decision_rebuild_ost_in_edhil
+	desc = decision_rebuild_ost_in_edhil_human_desc
+	confirm_text = decision_rebuild_ost_in_edhil_human_confirm
+	selection_tooltip = decision_rebuild_ost_in_edhil_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_elves_dwarves_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		has_title = title:e_arnor
+		OR = {
+			has_title = title:c_ost_in_edhil
+			any_vassal = {
+				has_title = title:c_ost_in_edhil
+				
+			}
+		}
+		is_elf = no
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_rebuilding_ost_in_edhil
+			}		
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		OR = {
+			has_title = title:c_ost_in_edhil
+			any_vassal = {
+				has_title = title:c_ost_in_edhil
+				is_elf = yes
+			}
+		}
+		title:c_ost_in_edhil = {
+			title_province = {
+				NOR = {
+					has_holding_type = settlement_holding
+					has_holding_type = wastelands_holding
+					has_holding_type = ruined_holding
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		gold = 3000
+	}
+
+	# EFFECT
+	effect = {
+		if = {
+			limit = { 
+				province:4351 = {
+					has_special_building_slot = no
+				}
+		 	}
+			province:4351 = { add_special_building_slot = wonder_mirdairond_human }
+		}
+		title:c_ost_in_edhil = {
+			change_development_level = 5
+		}
+
+		
+		title:e_orrostar = { set_capital_county = title:c_ost_in_edhil }
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_rebuilding_ost_in_edhil
+		}
+
+		trigger_event = {
+			id = elven.0800	# Ost in Edhil Reborn
+		}
+	}	
+}
+
+
+
+decision_arnor_colony = {
+	title = decision_arnor_colony
+	desc = decision_arnor_colony_desc
+	confirm_text = decision_arnor_colony_confirm
+	selection_tooltip = decision_arnor_colony_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+			is_ruler = yes
+			is_landed = yes
+			is_gondor = yes
+			NOT = {
+				any_ruler = {
+					OR = {		
+						has_title = title:e_arnor
+						has_title = title:k_arthedain
+						has_title = title:k_cardolan
+						has_title = title:k_rhudaur
+						has_title = title:k_arnor_steward
+			
+					}
+				}
+			}
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_arnor_colony
+			}
+			
+			
+			
+		}
+		title:d_girithlin = {
+			any_de_jure_county = { 
+				count = all  
+				any_county_province = {
+							has_holding_type = wastelands_holding
+							geographical_region = middleearth_west_arnor					
+						}
+			}
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		custom_tooltip = {
+				text = arnor_colony_requriement
+				dynasty = {
+					exists = var:reintegrated_provinces_counter
+					var:reintegrated_provinces_counter >= 2
+				}
+		}
+		
+		
+	}
+	
+	cost = {
+		prestige = minor_prestige_value
+		gold = 1000
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+
+		custom_tooltip = {
+			text = decision_arnor_colony_effect
+		}
+
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_arnor_colony
+		}
+		
+		
+			trigger_event = {
+				id = ee_arnor.20
+			
+			}
+		
+		
+	}
+}
+	
+
+
+decision_colonize_arnor = {
+	title = decision_colonize
+	desc = decision_colonize_desc
+	confirm_text = decision_colonize_confirm
+	selection_tooltip = decision_colonize_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1000
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_minor 
+	
+	is_shown = {
+			
+		OR = {		
+			has_title = title:e_arnor
+			has_title = title:k_arthedain
+			has_title = title:k_cardolan
+			has_title = title:k_rhudaur
+			has_title = title:k_arnor_steward
+			
+		}	
+		
+		
+	}
+	
+	# IS VALID
+	is_valid = {
+		NOT = {
+			has_character_flag = Colonizing
+			completely_controls_region = middleearth_west_arnor
+		}
+		any_sub_realm_county = {
+			any_neighboring_county = {
+				any_county_province = {
+					has_holding_type = wastelands_holding
+					geographical_region = middleearth_west_arnor					
+				}
+			}
+		}
+		
+		
+	}
+	
+	cost = {
+		gold = minor_gold_value
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	# EFFECT
+	effect = {
+			
+			
+			
+		random_sub_realm_county = {
+				limit = {
+					any_neighboring_county = {
+						any_county_province = {
+							has_holding_type = wastelands_holding
+							geographical_region = middleearth_west_arnor						
+						}
+					}
+				}
+				random_neighboring_county = { 
+					limit = {
+						any_county_province = {
+							has_holding_type = wastelands_holding
+							geographical_region = middleearth_west_arnor						
+						}
+					}
+					save_scope_as = target_county
+				}
+			}
+			
+			
+			
+				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+				 
+				scope:target_county = {
+					random_list = {
+						33 = { change_development_level = 2 }
+						33 = { change_development_level = 3 }
+						33 = { change_development_level = 4 }
+					}
+					if = {
+						limit = { root = { is_elf = yes } }
+						title_province = { set_holding_type = elven_holding }
+					} else_if = {
+						limit = { root.location = { terrain = halls } }
+						title_province = { set_holding_type = dwarven_holding }
+					} else_if = {
+						limit = { root = { is_hobbit = yes } }
+						title_province = { set_holding_type = city_holding }
+					} else = {
+						if = {
+							limit = { root = { has_government = tribal_government } }
+							title_province = { set_holding_type = tribal_holding }
+						} else = {
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+				}
+
+				if = { #Fallback
+					limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+					scope:target_county = { set_county_faith = root.faith }
+				}
+				if = { #Fallback
+					limit = { scope:target_county.culture = culture:wastelands }
+					scope:target_county = { set_county_culture = root.culture }
+				}
+			 
+		
+		
+		
+			
+			
+		add_character_flag = { flag = Colonizing months = 3 }
+		add_gold = 100
+		correct_wastelands_tracker
+	}
+	
+}}
+
+decision_adopt_arnorian_culture_colonist = {
+	sort_order = 97
+	# TEXT
+	title = decision_adopt_arnorian_culture
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	}
+	selection_tooltip = decision_adopt_arnorian_culture_tooltip
+	desc = decision_adopt_arnorian_culture_desc
+	confirm_text = decision_adopt_arnorian_culture_confirm
+	
+	# IS_SHOWN
+	is_shown = {
+		has_character_flag = arnorsettler
+		capital_province = { geographical_region = middleearth_west_arnor }
+	}
+
+	decision_group_type = realms_in_exile_major
+	
+	# IS_VALID
+	is_valid = {
+		root.realm_size >= 20
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	# EFFECT 
+	effect = {
+
+		play_music_cue = lotr_cue_gondor
+		set_culture = culture:arnorian
+		
+		if = { #juke note: this code should be refined so it works with multiple spouses, though its unlikely to happen
+			limit = { 
+				any_spouse = { 
+					is_landed = no 
+					culture = { has_cultural_pillar = heritage_dunedain }
+				} 
+			}
+			every_spouse = {
+				limit = {
+					is_landed = no
+					culture = { has_cultural_pillar = heritage_dunedain }
+				}
+				if = {
+					limit = { is_ai = yes }
+					set_culture = culture:arnorian
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_close_family_member = {
+					is_landed = no
+					NOT = { is_spouse_of = root }
+					culture = { has_cultural_pillar = heritage_dunedain }
+				}
+			}
+			every_close_family_member = {
+				limit = {
+					is_landed = no
+					NOT = { is_spouse_of = root }
+					culture = { has_cultural_pillar = heritage_dunedain }
+				}
+				custom = all_unlanded_family_members
+				if = {
+					limit = { is_ai = yes }
+					set_culture = culture:arnorian
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_child = {
+					culture = { has_cultural_pillar = heritage_dunedain }
+				}
+			}
+			every_child = {
+				limit = {
+					NOT = { 
+						culture = { has_cultural_pillar = heritage_dunedain }
+					}
+				}
+				custom = all_children_custom
+				if = {
+					limit = { is_ai = yes }
+					set_culture = culture:arnorian
+				}
+			}
+		}
+
+		#Convert appropriate vassals, and their family
+		if = {
+			limit = {
+				any_vassal_or_below = {
+					culture = { has_cultural_pillar = heritage_dunedain }
+				}
+			}
+			every_vassal_or_below = {
+				custom = decision_adopt_arnorian_culture_vassal_custom
+				limit = {
+					culture = { has_cultural_pillar = heritage_dunedain }
+				}
+				if = {
+					limit = { is_ai = yes }
+					set_culture = culture:arnorian
+				}
+				hidden_effect = {
+					if = {
+						limit = { 
+							any_spouse = { 
+								is_landed = no
+								culture = { has_cultural_pillar = heritage_dunedain }
+							} 
+						}
+						every_spouse = {
+							limit = {
+								is_landed = no
+								culture = { has_cultural_pillar = heritage_dunedain }
+							}
+							if = {
+								limit = { is_ai = yes }
+								set_culture = culture:arnorian
+							}
+						}
+					}
+					if = {
+						limit = {
+							any_close_family_member = {
+								is_landed = no
+								NOT = { is_spouse_of = prev }
+								culture = { has_cultural_pillar = heritage_dunedain }
+							}
+						}
+						every_close_family_member = {
+							limit = {
+								is_landed = no
+								NOT = { is_spouse_of = prev }
+								culture = { has_cultural_pillar = heritage_dunedain }
+							}
+							custom = all_unlanded_family_members
+							if = {
+								limit = { is_ai = yes }
+								set_culture = culture:arnorian
+							}
+						}
+					}
+					if = {
+						limit = {
+							any_child = {
+								culture = { has_cultural_pillar = heritage_dunedain }
+							}
+						}
+						every_child = {
+							limit = {
+								culture = { has_cultural_pillar = heritage_dunedain }
+							}
+							custom = all_children_custom
+							if = {
+								limit = { is_ai = yes }
+								set_culture = culture:arnorian
+							}
+						}
+					}
+					if = {
+						limit = {
+							any_vassal_or_below = {
+								culture = { has_cultural_pillar = heritage_dunedain }
+							}
+						}
+						every_vassal_or_below = {
+							custom = decision_reunify_dunedain_vassals_custom
+							limit = {
+								culture = { has_cultural_pillar = heritage_dunedain }
+							}
+							if = {
+								limit = { is_ai = yes }
+								set_culture = culture:arnorian
+							}
+							hidden_effect = {
+								if = {
+									limit = { 
+										any_spouse = { 
+											is_landed = no 
+											culture = { has_cultural_pillar = heritage_dunedain }
+										} 
+									}
+									every_spouse = {
+										limit = {
+											is_landed = no
+											culture = { has_cultural_pillar = heritage_dunedain }
+										}
+										if = {
+											limit = { is_ai = yes }
+											set_culture = culture:arnorian
+										}
+									}
+								}
+								if = {
+									limit = {
+										any_close_family_member = {
+											is_landed = no
+											NOT = { is_spouse_of = prev }
+											culture = { has_cultural_pillar = heritage_dunedain }
+										}
+									}
+									every_close_family_member = {
+										limit = {
+											is_landed = no
+											NOT = { is_spouse_of = prev }
+											culture = { has_cultural_pillar = heritage_dunedain }
+										}
+										custom = all_unlanded_family_members
+										if = {
+											limit = { is_ai = yes }
+											set_culture = culture:arnorian
+										}
+									}
+								}
+								if = {
+									limit = {
+										any_child = {
+											culture = { has_cultural_pillar = heritage_dunedain }
+										}
+									}
+									every_child = {
+										limit = {
+											culture = { has_cultural_pillar = heritage_dunedain }
+										}
+										custom = all_children_custom
+										if = {
+											limit = { is_ai = yes }
+											set_culture = culture:arnorian
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#Flip Counties
+		every_county = {
+			custom = decision_adopt_arnorian_culture_province_custom
+			limit = {
+				OR = {
+					holder = root
+					holder.top_liege = root
+				}
+				culture = { has_cultural_pillar = heritage_dunedain }
+			}
+			set_county_culture = culture:arnorian
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+
+decision_arnor_king = {
+	title = decision_arnor_king
+	desc = decision_arnor_king_desc
+	confirm_text = decision_arnor_colony_confirm
+	selection_tooltip = decision_arnor_king_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_minas_tirith_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+			is_ruler = yes
+			is_landed = yes
+			
+				
+				has_title = title:k_arnor_steward
+			
+			
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_arnor_king
+			}		
+		}
+		NOT = {
+			OR = {
+				any_ruler = {
+					has_title = title:e_numenor_in_exile
+				}
+				any_ruler = {
+					has_title = title:e_arnor
+				}
+				any_ruler = {
+					has_title = title:e_reunitedkingdom
+				}
+			}
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		custom_tooltip = {
+			text = control_percentage_of_arnor_desc
+			title:e_arnor = {
+				any_de_jure_county = {
+					percent > 0.6
+					holder.top_liege = root
+				}
+			}
+		}
+		
+		
+		
+	}
+	
+	cost = {
+		prestige = major_prestige_value
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		custom_tooltip = {
+			text = decision_arnor_king_effect
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_arnor_king
+		}
+		trigger_event = {
+			id = ee_arnor.30
+		}
+	}
+}
+
+decision_colonize_rhudaur = {
+	title = decision_colonize
+	desc = decision_colonize_desc
+	confirm_text = decision_colonize_confirm
+	selection_tooltip = decision_colonize_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_minor 
+	
+	is_shown = {
+			
+		OR = {		
+			has_title = title:d_northern_dunedain
+			
+			
+		}
+
+		NOT = {
+			OR = {		
+				has_title = title:e_arnor
+				has_title = title:k_rhudaur
+				has_title = title:k_cardolan
+				has_title = title:k_arthedain
+			
+			
+			}
+			
+		}	
+		
+		
+	}
+	
+	# IS VALID
+	is_valid = {
+		NOT = {
+			has_character_flag = Colonizing
+			completely_controls = title:k_rhudaur
+		}
+		any_sub_realm_county = {
+			any_neighboring_county = {
+				any_county_province = {
+					has_holding_type = wastelands_holding
+					geographical_region = middleearth_west_arnor_rhudaur						
+				}
+			}
+		
+		}
+	}
+	
+	cost = {
+		gold = minor_gold_value
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	# EFFECT
+	effect = {
+			
+			
+			
+		random_sub_realm_county = {
+				limit = {
+					any_neighboring_county = {
+						any_county_province = {
+							has_holding_type = wastelands_holding
+							geographical_region = middleearth_west_arnor_rhudaur						
+						}
+					}
+				}
+				random_neighboring_county = { 
+					limit = {
+						any_county_province = {
+							has_holding_type = wastelands_holding
+							geographical_region = middleearth_west_arnor_rhudaur						
+						}
+					}
+					save_scope_as = target_county
+				}
+			}
+			
+			
+			
+				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+				 
+				scope:target_county = {
+					random_list = {
+						33 = { change_development_level = 2 }
+						33 = { change_development_level = 3 }
+						33 = { change_development_level = 4 }
+					}
+					if = {
+						limit = { root = { is_elf = yes } }
+						title_province = { set_holding_type = elven_holding }
+					} else_if = {
+						limit = { root.location = { terrain = halls } }
+						title_province = { set_holding_type = dwarven_holding }
+					} else_if = {
+						limit = { root = { is_hobbit = yes } }
+						title_province = { set_holding_type = city_holding }
+					} else = {
+						if = {
+							limit = { root = { has_government = tribal_government } }
+							title_province = { set_holding_type = tribal_holding }
+						} else = {
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+				}
+
+				if = { #Fallback
+					limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+					scope:target_county = { set_county_faith = root.faith }
+				}
+				if = { #Fallback
+					limit = { scope:target_county.culture = culture:wastelands }
+					scope:target_county = { set_county_culture = root.culture }
+				}
+			 
+		
+		
+		
+			
+			
+		add_character_flag = { flag = Colonizing months = 6 }
+		add_gold = 100
+
+	}
+	
+}
+
+decision_colonize_arthedain = {
+	title = decision_colonize
+	desc = decision_colonize_desc
+	confirm_text = decision_colonize_confirm
+	selection_tooltip = decision_colonize_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1000
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_minor 
+	
+	is_shown = {
+			
+		OR = {		
+			has_title = title:d_emyn_uial
+			
+			
+		}	
+		NOT = {
+			OR = {		
+				has_title = title:e_arnor
+				has_title = title:k_rhudaur
+				has_title = title:k_cardolan
+				has_title = title:k_arthedain
+			
+			
+			}
+			
+		}
+		
+	}
+	
+	# IS VALID
+	is_valid = {
+		NOT = {
+			has_character_flag = Colonizing
+			completely_controls = title:k_arthedain
+		}
+		any_sub_realm_county = {
+			any_neighboring_county = {
+				any_county_province = {
+					has_holding_type = wastelands_holding
+					geographical_region = middleearth_west_arnor_arthedain						
+				}
+			}
+		}
+		
+	}
+	
+	cost = {
+		gold = minor_gold_value
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	# EFFECT
+	effect = {
+			
+			
+			
+		random_sub_realm_county = {
+				limit = {
+					any_neighboring_county = {
+						any_county_province = {
+							has_holding_type = wastelands_holding
+							geographical_region = middleearth_west_arnor_arthedain						
+						}
+					}
+				}
+				random_neighboring_county = { 
+					limit = {
+						any_county_province = {
+							has_holding_type = wastelands_holding
+							geographical_region = middleearth_west_arnor_arthedain						
+						}
+					}
+					save_scope_as = target_county
+				}
+			}
+			
+			
+			
+				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+				 
+				scope:target_county = {
+					random_list = {
+						33 = { change_development_level = 2 }
+						33 = { change_development_level = 3 }
+						33 = { change_development_level = 4 }
+					}
+					if = {
+						limit = { root = { is_elf = yes } }
+						title_province = { set_holding_type = elven_holding }
+					} else_if = {
+						limit = { root.location = { terrain = halls } }
+						title_province = { set_holding_type = dwarven_holding }
+					} else_if = {
+						limit = { root = { is_hobbit = yes } }
+						title_province = { set_holding_type = city_holding }
+					} else = {
+						if = {
+							limit = { root = { has_government = tribal_government } }
+							title_province = { set_holding_type = tribal_holding }
+						} else = {
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+				}
+
+				if = { #Fallback
+					limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+					scope:target_county = { set_county_faith = root.faith }
+				}
+				if = { #Fallback
+					limit = { scope:target_county.culture = culture:wastelands }
+					scope:target_county = { set_county_culture = root.culture }
+				}
+			 
+		
+		
+		
+			
+			
+		add_character_flag = { flag = Colonizing months = 6 }
+		add_gold = 100
+		
+	}
+	
+}
+
+decision_attack_balrog = {
+	title = decision_attack_balrog
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/struggle_balrog_ending_kill_balrog.dds"
+	}
+	
+	selection_tooltip = decision_attack_balrog_tooltip
+	desc = decision_attack_balrog_desc
+	confirm_text = decision_attack_balrog_confirm
+
+	decision_group_type = realms_in_exile_major
+	
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+
+	is_shown = {
+		is_independent_ruler = yes
+		faith_is_good = yes
+		
+		title:k_khazad_dum = {
+			any_de_jure_county = {
+				any_county_struggle = {
+					is_struggle_type = balrog_struggle
+				}
+			}
+	    }
+        any_sub_realm_county = {
+			OR = {
+				any_neighboring_county = {
+					kingdom = title:k_khazad_dum
+				}
+				kingdom = title:k_khazad_dum
+			}
+		}
+		
+	}
+
+	is_valid = {
+		
+		prestige_level >= 4
+		piety_level >= 4
+		
+		custom_tooltip = {
+			text = decision_attack_balrog_trigger_1
+			military_power >= 200000
+		}
+		
+		
+    }
+
+    is_valid_showing_failures_only = {
+        is_imprisoned = no
+        is_available_adult = yes
+        is_at_war = no
+    }
+
+	effect = {
+		
+		trigger_event = ee_arnor.4000
+		show_as_tooltip = {
+			custom_tooltip = struggle_balrog_ending_kill_balrog_decision_effect_4
+				add_prestige = 2500
+				dynasty = { add_dynasty_prestige = 1500 }
+				dynasty = { add_dynasty_prestige_level = 1 }
+				struggle:balrog_struggle = { end_struggle = yes }
+				if = {
+					limit = {
+						NOT = {
+							exists = title:k_khazad_dum.holder
+						}
+						is_independent_ruler = yes
+						is_dwarf = yes
+					}
+					get_title = title:k_khazad_dum
+				}
+				# Nickname
+				if = {
+					limit = {
+						is_dwarf = yes
+					}
+					give_nickname = nick_durin_bane_bane
+				}
+				else = {
+					give_nickname = nick_flame_of_moria
+				}
+				# Legend
+				if = {
+					limit = {
+						has_dlc_feature = legends
+					}
+					custom_tooltip = balrog_slayer_legend.tt
+					hidden_effect = {
+						create_legend_seed = {
+							type = heroic
+							quality = illustrious
+							chronicle = beast_slayer
+							properties = {
+								beast = flag:balrog
+								location = province:4913 # Endless Stairs
+							}
+						}
+					}
+				}
+		}
+		
+	}	
+}

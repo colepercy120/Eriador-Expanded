@@ -1,0 +1,39 @@
+﻿
+rageagainstlight = {
+	# This elf beheld the light of the Two Trees before they were felled by Morgoth.
+	icon = rage_against_the_dying_of_the_light.dds
+	
+	ruler_designer_cost = 300
+	same_culture_opinion = 20
+	enemy_hostile_scheme_phase_duration_add = 20
+	
+	
+	genetic = no
+	physical = no
+	inherit_chance = 0
+	birth=0	
+	random_creation = 0
+	shown_in_ruler_designer = no
+	
+	diplomacy = 1
+	martial = 1
+	stewardship = 1
+	intrigue = 1
+	learning = 1
+	prowess = 4
+	
+	monthly_legitimacy_add = 5
+	monthly_income = 5
+	ai_war_chance = -100
+	ai_war_cooldown = -100
+	ai_amenity_spending = -0.25
+	ai_amenity_target_baseline = -0.4
+	title_creation_cost_mult = -0.75
+	
+	holding_build_gold_cost = -0.5
+	holding_build_speed = -0.5
+	build_speed = -0.5
+	build_gold_cost = -0.5
+	development_growth_factor = 1
+	
+}

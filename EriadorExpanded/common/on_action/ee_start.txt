@@ -1,0 +1,12 @@
+﻿ee_game_start = {
+	
+
+	events = {
+		ee.1
+	}
+	
+	effect = {
+		
+	}
+	
+	}

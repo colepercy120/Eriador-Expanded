@@ -1,0 +1,596 @@
+﻿namespace = ee_angmar
+
+ee_angmar.40 = { # integrate isengard
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.40.t
+	desc = ee_arnor.40.desc
+	theme = war
+	
+	left_portrait = {
+		character = root
+		animation = accepting
+	}
+	
+	
+
+	option = {
+		name = ee_arnor.40.a
+		
+		create_title_and_vassal_change = {
+			type = conquest 
+			save_scope_as = change 
+			add_claim_on_loss = no 
+		}
+		
+		every_ruler = { 
+			limit = { 
+				has_title = title:e_angmar 
+			} 
+			save_scope_as = new_leige 
+		}
+		change_liege = {
+			liege = scope:new_leige
+			change = scope:change
+		}
+		resolve_title_and_vassal_change = scope:change	
+		
+		ai_chance = {
+			base = 90
+		}
+	}
+	
+	option = {
+		name = ee_arnor.40.b
+		
+		
+		ai_chance = {
+			base = 10
+		}
+		
+	}
+}
+
+# Witch-King returns to Angmar
+ee_angmar.11 = { # 
+	content_source = realms_dlc
+	type = character_event
+	window = fullscreen_event
+	title = ee_arnor.11.t
+	desc = ee_arnor.11.desc
+	theme = skull 
+	override_background = { reference = mordor_fullscreen }
+	
+	orphan = yes
+	
+	immediate = { 
+		title:e_mordor.holder = { save_scope_as = sauron }
+	}
+
+	option = { 
+		name = ee_arnor.11.a # This suckss
+		trigger = {
+			faith_is_good = yes
+		}
+	}
+	option = { 
+		name = ee_arnor.11.b # All hail the Dark Lord!
+		trigger = {
+			faith_is_evil = yes
+		}
+	}
+	option = { 
+		name = ee_arnor.11.c # Let's see what comes of this
+		trigger = {
+			faith_is_neutral = yes
+		}
+	}
+}
+
+# Sauron returns to Mordor
+ee_angmar.12 = { # 
+	content_source = realms_dlc
+	type = character_event
+	window = fullscreen_event
+	title = ee_arnor.12.t
+	desc = ee_arnor.12.desc
+	theme = skull 
+	override_background = { reference = mordor_fullscreen }
+	
+	orphan = yes
+
+	option = { 
+		name = ee_arnor.12.a # This suckss
+		trigger = {
+			faith_is_good = yes
+		}
+	}
+	option = { 
+		name = ee_arnor.12.b # All hail the Dark Lord!
+		trigger = {
+			faith_is_evil = yes
+		}
+	}
+	option = { 
+		name = ee_arnor.12.c # Let's see what comes of this
+		trigger = {
+			faith_is_neutral = yes
+		}
+	}
+}
+
+ee_angmar.10 = { # Return to Angmar
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.10.t
+	desc = ee_arnor.10.desc
+	theme = war
+	
+	left_portrait = {
+		character = root
+		animation = accepting
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_independent_ruler = yes
+				character:nazgul2 = {
+					is_independent_ruler = no
+				}
+			}
+			character:nazgul2 =  { 
+				save_scope_as = lordmordor 
+			}
+			
+		}
+		else_if = {
+			limit = {
+				is_independent_ruler = yes
+				character:nazgul3 = {
+					is_independent_ruler = no
+				}
+			}
+			character:nazgul3 =  { 
+				save_scope_as = lordmordor 
+			}
+		}
+		else_if = {
+			limit = {
+				is_independent_ruler = yes
+				character:nazgul4 = {
+					is_independent_ruler = no
+				}
+			}
+			character:nazgul4 =  { 
+				save_scope_as = lordmordor 
+			}
+		}
+		else_if = {
+			limit = {
+				is_independent_ruler = yes
+				character:nazgul5 = {
+					is_independent_ruler = no
+				}
+			}
+			character:nazgul5 =  { 
+				save_scope_as = lordmordor 
+			}
+		}
+		else_if = {
+			limit = {
+				is_independent_ruler = yes
+				character:nazgul6 = {
+					is_independent_ruler = no
+				}
+			}
+			character:nazgul6 =  { 
+				save_scope_as = lordmordor 
+			}
+		}
+		else_if = {
+			limit = {
+				is_independent_ruler = yes
+				character:nazgul7 = {
+					is_independent_ruler = no
+				}
+			}
+			character:nazgul7 =  { 
+				save_scope_as = lordmordor 
+			}
+		}
+		else_if = {
+			limit = {
+				is_independent_ruler = yes
+				character:nazgul8 = {
+					is_independent_ruler = no
+				}
+			}
+			character:nazgul8 =  { 
+				save_scope_as = lordmordor 
+			}
+		}
+		else_if = {
+			limit = {
+				is_independent_ruler = yes
+				character:nazgul9 = {
+					is_independent_ruler = no
+				}
+			}
+			character:nazgul9 =  { 
+				save_scope_as = lordmordor 
+			}
+		}
+		
+		else = {
+			character:lineofsauron =  { 
+				save_scope_as = lordmordor 
+			}
+		}
+			
+	}
+
+	option = {
+		name = ee_arnor.10.a
+		hidden_effect = {
+			title:k_angmar = {
+					every_de_jure_county = {
+						limit = {
+							any_county_province = {
+							has_holding_type = wastelands_holding
+											
+							}
+						}
+						random_list = {
+							33 = { change_development_level = 2 }
+							33 = { change_development_level = 3 }
+							33 = { change_development_level = 4 }
+						}
+						save_temporary_scope_as = target_county
+						
+						ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+						
+								scope:target_county = {
+									if = {
+										limit = { root = { is_elf = yes } }
+										title_province = { set_holding_type = elven_holding }
+									} else_if = {
+										limit = { title_province = { terrain = halls } }
+										title_province = { set_holding_type = dwarven_holding }
+									} else_if = {
+										limit = { root = { is_hobbit = yes } }
+										title_province = { set_holding_type = city_holding }
+									} else = {
+										if = {
+											limit = { root = { has_government = tribal_government } }
+											title_province = { set_holding_type = tribal_holding }
+										} else = {
+											title_province = { set_holding_type = castle_holding }
+										}
+									}
+									set_county_culture = culture:uruk_ongmair
+								}
+					
+							
+			
+
+						if = { #Fallback
+							limit = { faith = faith:faith_wastelands_pagan }
+							set_county_faith = root.faith
+						}
+						if = { #Fallback
+							limit = { culture = culture:wastelands }
+							set_county_culture = culture:uruk_ongmair
+						}
+					}
+			}
+		}
+		
+		set_realm_capital = title:c_carn_dum
+		add_gold = 10000
+		
+		root.culture = {
+			change_cultural_acceptance = {
+				target = culture:uruk_ongmair
+				value = 100
+				desc = base
+			}
+		}
+		
+		culture:uruk_ongmair = {
+			get_all_innovations_from = culture:murdurhai
+		}
+		
+		every_held_title = {
+			limit = {
+				NOT = {
+					any_county_province = {
+						geographical_region	= middleearth_forodwaith_angmar
+					}
+				}
+			}
+			create_title_and_vassal_change = {
+				type = conquest 
+				save_scope_as = change 
+				add_claim_on_loss = yes
+			}
+			change_title_holder	= {
+				holder = scope:lordmordor
+				change = scope:change
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+		every_vassal = {
+			create_title_and_vassal_change = {
+				type = swear_fealty
+				save_scope_as = change2
+				add_claim_on_loss = no
+			}
+			change_liege = {
+				liege = scope:lordmordor
+				change = scope:change2
+			}
+			resolve_title_and_vassal_change = scope:change2
+		}
+			
+		get_title = title:e_angmar
+		get_title = title:k_angmar
+		
+		title:k_angmar = {
+			every_de_jure_county = {
+				save_temporary_scope_as = target_county
+				scope:target_county = {
+				
+					title_province = { add_building  = uruk_pits_03 }
+					title_province = { add_building  = furnaces_03 }
+
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_game_rule = apocalyptic_sauron_strength
+			}
+			root = {
+				spawn_army = {
+					levies = 50000
+					location = province:5120
+					name = orcsofmordor
+				} 
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = very_strong_sauron_strength
+			}
+			spawn_army = {
+					levies = 40000
+					location = province:5120
+					name = orcsofmordor
+				} 
+		}
+		else_if = {
+			limit = {
+				has_game_rule = strong_sauron_strength
+			}
+			spawn_army = {
+					levies = 30000
+					location = province:5120
+					name = orcsofmordor
+				} 
+		}
+		else_if = {
+			limit = {
+				has_game_rule = default_sauron_strength
+			}
+			spawn_army = {
+					levies = 20000
+					location = province:5120
+					name = orcsofmordor
+				} 
+		}
+			
+				
+		
+			
+			
+		
+		
+		
+		
+		
+		
+		every_tributary = {
+			end_tributary = yes
+			start_tributary = {
+					contract_group = tributary_subjugated
+					suzerain = scope:lordmordor
+				}
+		}
+		
+		
+		
+		ai_chance = { base = 100 }
+	}
+	
+	option = {
+		name = ee_arnor.10.b
+		hidden_effect = {
+			title:k_angmar = {
+					every_de_jure_county = {
+						limit = {
+							any_county_province = {
+							has_holding_type = wastelands_holding
+											
+							}
+						}
+						random_list = {
+							33 = { change_development_level = 2 }
+							33 = { change_development_level = 3 }
+							33 = { change_development_level = 4 }
+						}
+						save_temporary_scope_as = target_county
+						
+						ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+						
+								scope:target_county = {
+									if = {
+										limit = { root = { is_elf = yes } }
+										title_province = { set_holding_type = elven_holding }
+									} else_if = {
+										limit = { title_province = { terrain = halls } }
+										title_province = { set_holding_type = dwarven_holding }
+									} else_if = {
+										limit = { root = { is_hobbit = yes } }
+										title_province = { set_holding_type = city_holding }
+									} else = {
+										if = {
+											limit = { root = { has_government = tribal_government } }
+											title_province = { set_holding_type = tribal_holding }
+										} else = {
+											title_province = { set_holding_type = castle_holding }
+										}
+									}
+									set_county_culture = culture:uruk_ongmair
+								}
+					
+							
+			
+
+						if = { #Fallback
+							limit = { faith = faith:faith_wastelands_pagan }
+							set_county_faith = root.faith
+						}
+						if = { #Fallback
+							limit = { culture = culture:wastelands }
+							set_county_culture = culture:uruk_ongmair
+						}
+					}
+			}
+		}
+		
+		set_realm_capital = title:c_carn_dum
+		add_gold = 10000
+		
+		root.culture = {
+			change_cultural_acceptance = {
+				target = culture:uruk_ongmair
+				value = 100
+				desc = base
+			}
+		}
+		
+		culture:uruk_ongmair = {
+			get_all_innovations_from = culture:murdurhai
+		}
+		
+		every_held_title = {
+			limit = {
+				NOT = {
+					any_county_province = {
+						geographical_region	= middleearth_forodwaith_angmar
+					}
+				}
+			}
+			create_title_and_vassal_change = {
+				type = conquest 
+				save_scope_as = change 
+				add_claim_on_loss = yes
+			}
+			change_title_holder	= {
+				holder = scope:lordmordor
+				change = scope:change
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+		every_vassal = {
+				create_title_and_vassal_change = {
+					type = swear_fealty
+					save_scope_as = change2
+					add_claim_on_loss = no
+				}
+				change_liege = {
+					liege = scope:lordmordor
+					change = scope:change2
+				}
+				resolve_title_and_vassal_change = scope:change2
+		}
+			
+		get_title = title:e_angmar
+		get_title = title:k_angmar
+		
+		title:k_angmar = {
+			every_de_jure_county = {
+				save_temporary_scope_as = target_county
+				scope:target_county = {
+				
+					title_province = { add_building  = uruk_pits_03 }
+					title_province = { add_building  = furnaces_03 }
+
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_game_rule = apocalyptic_sauron_strength
+			}
+			root = {
+				spawn_army = {
+					levies = 50000
+					location = province:5120
+					name = orcsofmordor
+				} 
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = very_strong_sauron_strength
+			}
+			spawn_army = {
+					levies = 40000
+					location = province:5120
+					name = orcsofmordor
+				} 
+		}
+		else_if = {
+			limit = {
+				has_game_rule = strong_sauron_strength
+			}
+			spawn_army = {
+					levies = 30000
+					location = province:5120
+					name = orcsofmordor
+				} 
+		}
+		else_if = {
+			limit = {
+				has_game_rule = default_sauron_strength
+			}
+			spawn_army = {
+					levies = 20000
+					location = province:5120
+					name = orcsofmordor
+				} 
+		}
+		
+		every_tributary = {
+			end_tributary = yes
+			start_tributary = {
+					contract_group = tributary_subjugated
+					suzerain = scope:lordmordor
+				}
+		}
+		
+		set_player_character = scope:lordmordor
+		
+		ai_chance = { base = 100 }
+	}
+		
+	
+	after = {
+		
+			
+	}
+}

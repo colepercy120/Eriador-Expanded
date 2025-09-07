@@ -1,0 +1,1038 @@
+﻿
+decision_restore_angmar = {
+	title = decision_restore_angmar
+	desc = decision_restore_angmar_desc
+	confirm_text = decision_restore_angmar_confirm
+	selection_tooltip = decision_restore_angmar_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_angmar_01.dds"
+	}
+	
+
+	# AI
+	ai_check_interval = 1
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1000
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		this = character:lineofsauron
+		any_ruler = {
+			has_title = title:e_arnor
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_restore_angmar
+			}		
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		custom_tooltip = {
+			text = decision_restore_angmar_trigger
+			any_ruler = {
+				has_title = title:e_arnor
+			}
+			title:e_arnor = {
+				any_de_jure_county = { 
+					percent < 0.50 
+					any_county_province = {
+							has_holding_type = wastelands_holding
+											
+						}
+				}	
+			}
+		}
+		custom_tooltip = {
+			text = decision_restore_angmar_trigger2 
+			exists = character:nazgul1
+		}
+		
+		custom_tooltip = {
+			text = decision_restore_angmar_trigger3 
+			title:k_angmar = {
+				any_de_jure_county = { 
+					percent > 0.5 
+					any_county_province = {
+							has_holding_type = wastelands_holding
+											
+						}
+				}	
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		custom_tooltip = {
+			text = decision_restore_angmar_effect
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_restore_angmar
+		}
+		
+		character:nazgul1 = {
+			trigger_event = {
+				id = ee_angmar.10
+			
+			}
+		}
+	}
+}
+
+decision_colonize_dark = {
+	title = decision_colonize
+	desc = decision_colonize_desc
+	confirm_text = decision_colonize_confirm
+	selection_tooltip = decision_colonize_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_angmar_01.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1000
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_minor 
+	
+	is_shown = {
+		has_title = title:e_angmar
+		root = character:nazgul1
+	}
+	
+	# IS VALID
+	is_valid = {
+		NOT = {
+			has_character_flag = Colonizing
+			
+		}
+		custom_tooltip = {
+			text = decision_colonize_dark_effect
+			any_sub_realm_county = {
+				any_neighboring_county = {
+					count > 2
+					any_county_province = {
+						has_holding_type = wastelands_holding
+											
+					}
+				}
+			}
+		}
+	}
+	is_valid_showing_failures_only = {
+		
+	}
+
+	# EFFECT
+	effect = {	
+		random_sub_realm_county = {
+			limit = {
+				any_neighboring_county = {
+					any_county_province = {
+						has_holding_type = wastelands_holding
+												
+					}
+				}
+			}
+			random_neighboring_county = { 
+				limit = {
+					any_county_province = {
+						has_holding_type = wastelands_holding
+											
+					}
+				}
+				save_scope_as = target_county
+			}
+			ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+			 
+			scope:target_county = {
+				random_list = {
+					33 = { change_development_level = 2 }
+					33 = { change_development_level = 3 }
+					33 = { change_development_level = 4 }
+				}
+				if = {
+					limit = { root = { is_elf = yes } }
+					title_province = { set_holding_type = elven_holding }
+				} else_if = {
+					limit = { root.location = { terrain = halls } }
+					title_province = { set_holding_type = dwarven_holding }
+				} else_if = {
+					limit = { root = { is_hobbit = yes } }
+					title_province = { set_holding_type = city_holding }
+				} else = {
+					if = {
+						limit = { root = { has_government = tribal_government } }
+						title_province = { set_holding_type = tribal_holding }
+					} else = {
+						title_province = { set_holding_type = castle_holding }
+					}
+				}
+			}
+
+			if = { #Fallback
+				limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+				scope:target_county = { set_county_faith = root.faith }
+			}
+			if = { #Fallback
+				limit = { scope:target_county.culture = culture:wastelands }
+				scope:target_county = { set_county_culture = root.culture }
+			}
+			 
+			root = { add_gold = 100 }
+		}
+		random_sub_realm_county = {
+			limit = {
+				any_neighboring_county = {
+					any_county_province = {
+						has_holding_type = wastelands_holding
+												
+					}
+				}
+			}
+			random_neighboring_county = { 
+				limit = {
+					any_county_province = {
+						has_holding_type = wastelands_holding
+											
+					}
+				}
+				save_scope_as = target_county
+			}
+			
+			
+			
+			
+			ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+			 
+			scope:target_county = {
+				random_list = {
+					33 = { change_development_level = 2 }
+					33 = { change_development_level = 3 }
+					33 = { change_development_level = 4 }
+				}
+				if = {
+					limit = { root = { is_elf = yes } }
+					title_province = { set_holding_type = elven_holding }
+				} else_if = {
+					limit = { root.location = { terrain = halls } }
+					title_province = { set_holding_type = dwarven_holding }
+				} else_if = {
+					limit = { root = { is_hobbit = yes } }
+					title_province = { set_holding_type = city_holding }
+				} else = {
+					if = {
+						limit = { root = { has_government = tribal_government } }
+						title_province = { set_holding_type = tribal_holding }
+					} else = {
+						title_province = { set_holding_type = castle_holding }
+					}
+				}
+			}
+
+			if = { #Fallback
+				limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+				scope:target_county = { set_county_faith = root.faith }
+			}
+			if = { #Fallback
+				limit = { scope:target_county.culture = culture:wastelands }
+				scope:target_county = { set_county_culture = root.culture }
+			}
+			 
+			root = { add_gold = 100 }
+		}
+		random_sub_realm_county = {
+			limit = {
+				any_neighboring_county = {
+					any_county_province = {
+						has_holding_type = wastelands_holding
+												
+					}
+				}
+			}
+			random_neighboring_county = { 
+				limit = {
+					any_county_province = {
+						has_holding_type = wastelands_holding
+											
+					}
+				}
+				save_scope_as = target_county
+			}
+			
+			
+			
+			
+			ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+			 
+			scope:target_county = {
+				random_list = {
+					33 = { change_development_level = 2 }
+					33 = { change_development_level = 3 }
+					33 = { change_development_level = 4 }
+				}
+				if = {
+					limit = { root = { is_elf = yes } }
+					title_province = { set_holding_type = elven_holding }
+				} else_if = {
+					limit = { root.location = { terrain = halls } }
+					title_province = { set_holding_type = dwarven_holding }
+				} else_if = {
+					limit = { root = { is_hobbit = yes } }
+					title_province = { set_holding_type = city_holding }
+				} else = {
+					if = {
+						limit = { root = { has_government = tribal_government } }
+						title_province = { set_holding_type = tribal_holding }
+					} else = {
+						title_province = { set_holding_type = castle_holding }
+					}
+				}
+			}
+
+			if = { #Fallback
+				limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+				scope:target_county = { set_county_faith = root.faith }
+			}
+			if = { #Fallback
+				limit = { scope:target_county.culture = culture:wastelands }
+				scope:target_county = { set_county_culture = root.culture }
+			}
+			 
+			root = { add_gold = 100 }
+		}		
+		add_character_flag = { flag = Colonizing weeks = 1 }
+		
+	}
+	
+}
+
+
+decision_rally_eriador = {
+	title = decision_rally_eriador
+	desc = decision_rally_eriador_desc
+	confirm_text = decision_rally_eriador_confirm
+	selection_tooltip = decision_rally_eriador_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_angmar_01.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1000
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major 
+	
+	is_shown = {
+		has_title = title:e_angmar
+		root = character:nazgul1
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_rally_eriador
+			}	
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		custom_tooltip = {
+			text = decision_rally_eriador_trigger 
+		
+		any_county = {
+				any_county_province = {
+					OR = {
+						has_building = troll_cave
+						has_building = wild_orcs
+						
+					}
+					OR = {
+						geographical_region = middleearth_west_arnor
+						geographical_region = middleearth_forodwaith_forochel
+						geographical_region = middleearth_forodwaith_angmar
+						geographical_region = middleearth_west_eregion
+						geographical_region = middleearth_west_beleriand
+						geographical_region = middleearth_west_enedhwaith
+						geographical_region = middleearth_mountains_blue
+					}
+				}
+				
+			}
+		}
+		prestige_level >= high_prestige_level
+		
+		
+	}
+	
+	cost = {
+		prestige = major_prestige_value
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		custom_tooltip = {
+			text = decision_rally_eriador_effect 
+		}
+		hidden_effect = {	
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_rally_eriador
+			}	
+				
+			every_county = {
+				limit = {
+					any_county_province = {
+						OR = {
+							has_building = troll_cave
+							has_building = wild_orcs
+							
+						}
+						OR = {
+							geographical_region = middleearth_west_arnor
+							geographical_region = middleearth_forodwaith_forochel
+							geographical_region = middleearth_forodwaith_angmar
+							geographical_region = middleearth_west_eregion
+							geographical_region = middleearth_west_beleriand
+							geographical_region = middleearth_west_enedhwaith
+							geographical_region = middleearth_mountains_blue
+						}
+					}
+					
+				}
+				save_scope_as = target_county
+				
+				root = { add_gold = 100 }
+				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+				
+				scope:target_county = {
+					random_list = {
+							33 = { change_development_level = 2 }
+							33 = { change_development_level = 3 }
+							33 = { change_development_level = 4 }
+					}
+					if = {
+						limit = { root = { is_elf = yes } }
+						title_province = { set_holding_type = elven_holding }
+					} else_if = {
+						limit = { title_province = { terrain = halls } }
+						title_province = { set_holding_type = dwarven_holding }
+					} else_if = {
+						limit = { root = { is_hobbit = yes } }
+						title_province = { set_holding_type = city_holding }
+					} else = {
+						if = {
+							limit = { root = { has_government = tribal_government } }
+							title_province = { set_holding_type = tribal_holding }
+						} else = {
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+					set_county_culture = culture:uruk_ongmair
+				}
+	
+				if = { #Fallback
+					limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+					scope:target_county = { set_county_faith = root.faith }
+				}
+				if = { #Fallback
+					limit = { scope:target_county.culture = culture:wastelands }
+					scope:target_county = { set_county_culture = culture:uruk_ongmair }
+				}
+			}	 
+		}
+	}
+	
+}
+
+decision_orc_angmar = {
+	title = decision_orc_angmar
+	desc = decision_orc_angmar_desc
+	confirm_text = decision_orc_angmar_confirm
+	selection_tooltip = decision_orc_angmar_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_angmar_01.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		has_title = title:e_angmar
+		root = character:nazgul1
+		any_ruler = {
+			is_orc = yes
+			is_independent_ruler = yes
+			is_ai = yes
+			any_sub_realm_county = { 
+				any_county_province = {
+					OR = {
+						geographical_region = middleearth_west_arnor
+						geographical_region = middleearth_forodwaith_forochel
+						geographical_region = middleearth_forodwaith_angmar
+						geographical_region = middleearth_west_eregion
+						geographical_region = middleearth_west_beleriand
+						geographical_region = middleearth_west_enedhwaith
+						geographical_region = middleearth_mountains_blue
+						geographical_region = middleearth_mountains_misty
+					}
+				}
+			}
+		}
+		
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		any_ruler = {
+			is_orc = yes
+			is_independent_ruler = yes
+			is_ai = yes
+			any_sub_realm_county = { 
+				any_county_province = {
+					OR = {
+						geographical_region = middleearth_west_arnor
+						geographical_region = middleearth_forodwaith_forochel
+						geographical_region = middleearth_forodwaith_angmar
+						geographical_region = middleearth_west_eregion
+						geographical_region = middleearth_west_beleriand
+						geographical_region = middleearth_west_enedhwaith
+						geographical_region = middleearth_mountains_blue
+						geographical_region = middleearth_mountains_misty
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		custom_tooltip = {
+			text = decision_orc_angmar_effect
+		}
+		every_ruler = { 
+			limit = { 
+				is_orc = yes
+				is_independent_ruler = yes
+				is_ai = yes
+				any_sub_realm_county = { 
+					any_county_province = {
+						OR = {
+							geographical_region = middleearth_west_arnor
+							geographical_region = middleearth_forodwaith_forochel
+							geographical_region = middleearth_forodwaith_angmar
+							geographical_region = middleearth_west_eregion
+							geographical_region = middleearth_west_beleriand
+							geographical_region = middleearth_west_enedhwaith
+							geographical_region = middleearth_mountains_blue
+							geographical_region = middleearth_mountains_misty
+						}
+					}
+				}
+			} 
+			trigger_event = {
+				id = ee_angmar.40
+				days = 1
+			}
+		}
+	}
+}
+
+decision_winter_king = {
+	title = decision_winter_king
+	desc = decision_winter_king_desc
+	confirm_text = decision_winter_king_confirm
+	selection_tooltip = decision_winter_king_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_angmar_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		has_title = title:e_angmar
+		root = character:nazgul1
+		NOT = {
+			has_faith = faith:faith_angmar_evil
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		piety_level >= high_piety_level
+		
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		custom_tooltip = {
+			text = decision_winter_king_effect
+			set_character_faith = faith:faith_angmar_evil
+			faith:faith_angmar_evil = {
+				set_religious_head_title = title:e_angmar
+			}
+			every_sub_realm_county = {
+				limit = {
+					faith = {
+						religion_tag = sauronic_religion
+					}
+				}
+				set_county_faith = faith:faith_angmar_evil
+			}
+			every_vassal_or_below = { 
+				limit = { has_religion = religion:sauronic_religion } 
+				set_character_faith = faith:faith_angmar_evil
+			}	
+		}
+	}
+}
+
+
+
+decision_empire_angmar_restore = {
+	title = decision_empire_angmar_restore
+	desc = decision_empire_angmar_restore_desc
+	confirm_text = decision_empire_angmar_restore_confirm
+	selection_tooltip = decision_empire_angmar_restore_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_angmar_03.dds"
+	}
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		is_independent_ruler = yes
+		faith_is_evil = yes
+		capital_province = { geographical_region = middleearth_forodwaith_angmar }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_empire_angmar_restore
+			}		
+		}
+		highest_held_title_tier < tier_empire
+	}
+	
+	
+	is_valid = {
+		prestige_level >= high_prestige_level
+		completely_controls_region = custom_lowlands_angmar
+		completely_controls = title:k_langwell
+		completely_controls = title:d_gundalok
+		highest_held_title_tier < tier_empire
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	
+	effect = {
+		if = {
+			limit = { government_has_flag = government_is_tribal }
+			convert_whole_realm_to_feudalism_effect = yes
+			add_realm_law_skip_effects = crown_authority_1
+			root.dynasty = {
+				add_dynasty_prestige = 500
+			}
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					government_has_flag = government_is_clan
+					government_has_flag = government_is_feudal
+				}
+			}
+			root.dynasty = {
+				add_dynasty_prestige = 500
+			}
+			add_realm_law_skip_effects = crown_authority_3
+			add_piety = 1000
+			add_prestige = 1000
+		}
+
+		title:k_angmar = {
+			set_de_jure_liege_title = title:e_angmar
+		}
+		title:k_langwell = {
+			set_de_jure_liege_title = title:e_angmar
+		}
+		title:k_gundabad = {
+			set_de_jure_liege_title = title:e_angmar
+		}
+		
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = yes
+		}
+		title:e_angmar = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+		set_primary_title_to = title:e_angmar
+
+		
+
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_empire_angmar_restore
+		}
+
+		trigger_event = {
+			id = forodwaith.0001	
+		}
+	}
+}
+
+decision_empire_angmar_restore_witch_king = {
+	title = decision_empire_angmar_restore
+	desc = decision_empire_angmar_restore_desc
+	confirm_text = decision_empire_angmar_restore_confirm
+	selection_tooltip = decision_empire_angmar_restore_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_angmar_03.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		is_independent_ruler = yes
+		faith_is_evil = yes
+		capital_province = { geographical_region = middleearth_forodwaith_angmar }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_empire_angmar_restore
+			}		
+		}
+		root = character:nazgul1
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		completely_controls = title:k_angmar
+		completely_controls = title:k_langwell
+		completely_controls = title:k_gundabad
+		
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		if = {
+			limit = { government_has_flag = government_is_tribal }
+			convert_whole_realm_to_feudalism_effect = yes
+			add_realm_law_skip_effects = crown_authority_1
+			root.dynasty = {
+				add_dynasty_prestige = 500
+			}
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					government_has_flag = government_is_clan
+					government_has_flag = government_is_feudal
+				}
+			}
+			root.dynasty = {
+				add_dynasty_prestige = 500
+			}
+			add_realm_law_skip_effects = crown_authority_3
+			add_piety = 1000
+			add_prestige = 1000
+		}
+
+		title:k_angmar = {
+			set_de_jure_liege_title = title:e_angmar
+		}
+		title:k_langwell = {
+			set_de_jure_liege_title = title:e_angmar
+		}
+		title:k_gundabad = {
+			set_de_jure_liege_title = title:e_angmar
+		}
+		#Create the title and make it primary
+		
+
+		#hidden_effect = {
+		#	if = {
+		#		limit = {
+		#			completely_controls = title:k_gundabad
+		#		}
+		#		title:k_gundabad = {
+		#			set_de_jure_liege_title = title:e_angmar
+		#		}
+		#	}
+		#}
+
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_empire_angmar_restore
+		}
+
+		trigger_event = {
+			id = forodwaith.0001	# Restore the Iron Crown of Angmar
+		}
+	}
+}
+
+decision_annex_east_forodwaith_witch_king = {
+	sort_order = 97
+	# # TEXT
+	title = decision_annex_east_forodwaith
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_angmar_03.dds"
+	} 
+	selection_tooltip = decision_annex_east_forodwaith_tooltip
+	desc = decision_annex_east_forodwaith_desc
+	confirm_text = decision_annex_east_forodwaith_confirm
+	
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		is_ruler = yes
+		root = character:nazgul1
+		is_landed = yes
+		has_title = title:k_angmar
+		religion = { 
+			is_in_family = rf_forcesofevil 
+		}
+		NOT = {
+			
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_annex_east_forodwaith
+			}
+		}
+	
+	}
+
+	# IS_VALID
+	is_valid = {
+		completely_controls_region = custom_east_forodwaith
+		is_independent_ruler = yes
+		prestige_level >= medium_prestige_level
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no 
+	}
+	#COST
+	cost = {
+		gold = 100
+		prestige = 150
+	}
+	# EFFECT 
+	effect = {
+		# Make de jure
+		title:d_jokiranta = {
+			set_de_jure_liege_title = title:k_angmar
+		}
+		title:d_korkein_ma = {
+			set_de_jure_liege_title = title:k_angmar
+		}
+		#Flip Counties
+		
+		every_sub_realm_county = {
+			limit = {
+				OR = {
+					holder = root
+					holder.top_liege = root
+				}	
+			 	title_province = { geographical_region = custom_east_forodwaith } 
+			}
+			custom = decision_angmar_integrate_counties_custom
+			random = {
+					chance = 80
+					set_county_culture = culture:angmarrim
+				}
+			random = {
+				chance = 80
+				set_county_faith = faith:faith_angmar_evil
+				}
+			}
+			
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_annex_east_forodwaith
+		}
+		trigger_event = {
+			id = angmar.1001	# East Forodwaith Annexed
+		}
+	}	
+
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+
+
+
+decision_integrate_arnor = {
+	title = decision_integrate_arnor
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_angmar_01.dds"
+	}
+	
+	selection_tooltip = decision_integrate_arnor_tooltip
+	desc = decision_integrate_arnor_desc
+	confirm_text = decision_integrate_arnor_confirm
+
+	decision_group_type = realms_in_exile_major
+	
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+
+	is_shown = {
+		is_independent_ruler = yes
+		root = character:nazgul1
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_integrate_arnor
+			}
+		}
+	}
+
+	is_valid = {
+        completely_controls_region = middleearth_west_arnor
+        
+    }
+
+    is_valid_showing_failures_only = {
+        is_imprisoned = no
+        is_available_adult = yes
+        is_at_war = no
+    }
+
+	effect = {
+		
+		dynasty = { add_dynasty_prestige = 1500 }
+		
+		every_kingdom = { 
+			limit = { 
+				any_de_jure_county = {
+					any_county_province = { geographical_region = middleearth_west_arnor }
+				}
+			}
+			set_de_jure_liege_title = title:e_angmar
+		
+		}
+			
+			
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_integrate_arnor
+		}
+	}	
+}

@@ -1,0 +1,1289 @@
+﻿namespace = ee_elf
+
+ee_elf.2 = { # spawn nenuial
+	content_source = realms_dlc
+	type = character_event
+	
+	hidden = yes
+	orphan = yes
+
+	immediate = {
+		
+		
+		get_title = title:k_nenuial
+		
+		title:d_eketya = {
+			set_de_jure_liege_title = title:k_nenuial
+		}
+		title:d_tarmea = {
+			set_de_jure_liege_title = title:k_nenuial
+		}
+		
+		title:k_nenuial = {
+					every_de_jure_county = {
+						
+						random_list = {
+							33 = { change_development_level = 2 }
+							33 = { change_development_level = 3 }
+							33 = { change_development_level = 4 }
+						}
+						save_temporary_scope_as = target_county
+						
+						ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+						
+								scope:target_county = {
+									if = {
+										limit = { root = { is_elf = yes } }
+										title_province = { set_holding_type = elven_holding }
+									} else_if = {
+										limit = { title_province = { terrain = halls } }
+										title_province = { set_holding_type = dwarven_holding }
+									} else_if = {
+										limit = { root = { is_hobbit = yes } }
+										title_province = { set_holding_type = city_holding }
+									} else = {
+										if = {
+											limit = { root = { has_government = tribal_government } }
+											title_province = { set_holding_type = tribal_holding }
+										} else = {
+											title_province = { set_holding_type = castle_holding }
+										}
+									}
+									
+								}
+					
+							
+			
+
+						if = { #Fallback
+							limit = { faith = faith:faith_wastelands_pagan }
+							set_county_faith = root.faith
+						}
+						if = { #Fallback
+							limit = { culture = culture:wastelands }
+							set_county_culture = root.culture
+						}
+					}
+			}
+		title:k_nenuial = {
+			set_de_jure_liege_title = title:e_lindon
+		}
+		
+		
+		add_gold = 25000
+		
+		change_government = elven_government
+			
+		
+	}
+}
+
+ee_elf.3 = { # spawn eregion
+	content_source = realms_dlc
+	type = character_event
+	hidden = yes
+	
+	
+
+	immediate = {
+		
+		
+		get_title = title:k_eregion
+		
+		
+		
+		title:k_eregion = {
+					every_de_jure_county = {
+						
+						random_list = {
+							33 = { change_development_level = 2 }
+							33 = { change_development_level = 3 }
+							33 = { change_development_level = 4 }
+						}
+						save_temporary_scope_as = target_county
+						
+						ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+						
+								scope:target_county = {
+									if = {
+										limit = { root = { is_elf = yes } }
+										title_province = { set_holding_type = elven_holding }
+									} else_if = {
+										limit = { title_province = { terrain = halls } }
+										title_province = { set_holding_type = dwarven_holding }
+									} else_if = {
+										limit = { root = { is_hobbit = yes } }
+										title_province = { set_holding_type = city_holding }
+									} else = {
+										if = {
+											limit = { root = { has_government = tribal_government } }
+											title_province = { set_holding_type = tribal_holding }
+										} else = {
+											title_province = { set_holding_type = castle_holding }
+										}
+									}
+									
+								}
+					
+							
+			
+
+						if = { #Fallback
+							limit = { faith = faith:faith_wastelands_pagan }
+							set_county_faith = root.faith
+						}
+						if = { #Fallback
+							limit = { culture = culture:wastelands }
+							set_county_culture = culture:uruk_ongmair
+						}
+					}
+			}
+		
+		
+		
+		add_gold = 25000
+	
+		
+			
+		
+	}
+}
+
+ee_elf.4 = { # spawn sirgala
+	content_source = realms_dlc
+	type = character_event
+	hidden = yes
+	
+	
+
+	immediate = {
+		
+		
+		get_title = title:k_sirgala
+		
+		title:d_siragale = {
+			set_de_jure_liege_title = title:k_sirgala
+		}
+		title:d_hyarromenya = {
+			set_de_jure_liege_title = title:k_sirgala
+		}
+		title:d_sarn_athrad = { 
+			set_de_jure_liege_title = title:k_sirgala
+		}
+		
+		if = {
+			limit = { has_game_rule = greater_sirgala_restored }
+			title:c_dunglan = {
+				set_de_jure_liege_title = title:d_shire
+			}
+			title:d_shire = { 
+				set_de_jure_liege_title = title:k_sirgala
+			}
+		}
+			
+		
+		title:k_sirgala = {
+					every_de_jure_county = {
+						
+						random_list = {
+							33 = { change_development_level = 2 }
+							33 = { change_development_level = 3 }
+							33 = { change_development_level = 4 }
+						}
+						save_temporary_scope_as = target_county
+						
+						ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+						
+								scope:target_county = {
+									if = {
+										limit = { root = { is_elf = yes } }
+										title_province = { set_holding_type = elven_holding }
+									} else_if = {
+										limit = { title_province = { terrain = halls } }
+										title_province = { set_holding_type = dwarven_holding }
+									} else_if = {
+										limit = { root = { is_hobbit = yes } }
+										title_province = { set_holding_type = city_holding }
+									} else = {
+										if = {
+											limit = { root = { has_government = tribal_government } }
+											title_province = { set_holding_type = tribal_holding }
+										} else = {
+											title_province = { set_holding_type = castle_holding }
+										}
+									}
+									
+								}
+					
+							
+			
+
+						if = { #Fallback
+							limit = { faith = faith:faith_wastelands_pagan }
+							set_county_faith = root.faith
+						}
+						if = { #Fallback
+							limit = { culture = culture:wastelands }
+							set_county_culture = root.culture
+						}
+					}
+			}
+		
+		
+		
+		add_gold = 25000
+		
+		change_government = elven_government
+		
+		
+		
+	}
+}
+
+ee_elf.05 = {	# Reclaim Nenunial Kingdom
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.05.t
+	desc = ee_elf.05.desc
+	theme = stewardship_duty_focus
+	override_background = {
+		reference = eregion
+	}
+
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+
+	option = {
+		name = ee_elf.05.a
+	}
+}
+
+ee_elf.06 = {	# Reclaim Eriador
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.06.t
+	desc = ee_elf.06.desc
+	theme = stewardship_duty_focus
+	override_background = {
+		reference = eregion
+	}
+
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+
+	option = {
+		name = ee_elf.06.a
+	}
+}
+
+ee_elf.07 = {	# West Eregion
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.07.t
+	desc = ee_elf.07.desc
+	theme = stewardship_duty_focus
+	override_background = {
+		reference = eregion
+	}
+
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+
+	option = {
+		name = ee_elf.07.a
+		
+		culture:laurenoldor = {
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:noldor
+			get_all_innovations_from = culture:galadhrim
+		}
+		
+		set_culture = culture:laurenoldor
+		
+		every_realm_county = {
+			limit = {
+				culture = {
+					OR = {
+						this = culture:galadhrim
+						this = culture:noldor
+					}
+				}
+			}
+			set_county_culture = culture:laurenoldor
+		}
+		every_vassal = {
+			limit = {
+				OR = {
+					has_culture = culture:galadhrim
+					has_culture = culture:noldor
+				}
+			}
+			set_culture = culture:laurenoldor
+		}
+		every_courtier = {
+			limit = {
+				OR = {
+					has_culture = culture:galadhrim
+					has_culture = culture:noldor
+				}
+			}
+			set_culture = culture:laurenoldor
+		}
+	}
+}
+
+#####################
+## Restore Eregion ##
+#####################
+
+ee_elf.1000 = {	# Choose who to offer Eregion to.
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.1000.t
+	desc = ee_elf.1000.desc
+	theme = stewardship_duty_focus
+	override_background = {
+		reference = eregion
+	}
+
+	right_portrait = {
+		character = root
+		animation = steward
+	}
+	
+	lower_left_portrait = {
+		character = character:lineofelrond1
+		animation = steward
+	}
+	lower_center_portrait = {
+		character = character:lineoffinarfin5
+		animation = steward
+	}
+	lower_right_portrait = {
+		character = character:lineoffeanor2
+		animation = steward
+	}
+	
+	immediate = {
+		character:lineofelrond1 = {
+			save_scope_as = elrond
+		}
+		character:lineoffinarfin5 = {
+			save_scope_as = galadriel
+		}
+		character:lineoffeanor2 = {
+			save_scope_as = maglor
+		}
+		primary_title = {
+			save_scope_as = primarytitle
+		}
+	}
+
+	option = {
+		name = ee_elf.1000.a
+		
+		character:lineofelrond1 = {
+			custom_tooltip = {
+				text = eregion_message1
+				trigger_event = {
+					id = ee_elf.1001
+					days = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = ee_elf.1000.b
+		
+		character:lineoffinarfin5 = {
+			custom_tooltip = {
+				text = eregion_message2
+				trigger_event = {
+					id = ee_elf.1001
+					days = 5
+				}
+			}
+			
+		}
+	}
+	option = {
+		name = ee_elf.1000.c
+		
+		character:lineoffeanor2 = {
+			custom_tooltip = {
+				text = eregion_message3
+				trigger_event = {
+					id = ee_elf.1001
+					days = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = ee_elf.1000.d
+		hidden_effect = {
+			create_character = {
+				template = noldor_feanorian
+				location = root.location
+				
+			
+				save_scope_as = eregion_ruler
+			}
+			every_realm_county = {
+				limit = {
+					any_county_province = {
+						geographical_region = middleearth_west_eregion
+					}
+				}
+				add_to_list = target_counties
+			}
+			create_title_and_vassal_change = {
+				type = granted 
+				save_scope_as = change 
+				add_claim_on_loss = no
+			}
+		
+		
+			every_in_list = {
+				list = target_counties
+				change_title_holder	= {
+					holder = scope:eregion_ruler
+					change = scope:change
+				}	
+			}
+			
+			resolve_title_and_vassal_change = scope:change
+			
+			scope:eregion_ruler = {
+				get_title = title:k_eregion
+				convert_elven_holdings_effect = yes
+			}
+			
+			create_title_and_vassal_change = {
+				type = granted 
+				save_scope_as = change2
+				add_claim_on_loss = no
+			}
+			scope:eregion_ruler = {
+				becomes_independent = { change = scope:change2 }
+				resolve_title_and_vassal_change = scope:change2
+				set_realm_capital = title:c_ost_in_edhil
+			}
+		}
+		
+	}
+	
+	after = {
+		
+		
+	}
+}
+
+ee_elf.1001 = {	# Ping to Elves offering Eregion
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.1001.t
+	desc = ee_elf.1001.desc
+	theme = stewardship_duty_focus
+	override_background = {
+		reference = eregion
+	}
+
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:eregion_restorer
+		animation = happiness
+	}
+	lower_right_portrait = {
+		character = scope:eregion_ruler
+		animation = happiness
+	}
+	
+	
+	immediate = {
+		random_ruler = {
+			limit = {
+				has_character_flag = eregion_restorer
+			}
+			save_scope_as = eregion_restorer
+			every_realm_county = {
+				limit = {
+					any_county_province = {
+						geographical_region = middleearth_west_eregion
+					}
+				}
+				add_to_list = target_counties
+			}
+		}
+		create_character = {
+			template = noldor_feanorian
+			location = root.location
+			culture = culture:noldor
+			faith = root.faith
+			
+			save_scope_as = eregion_ruler
+		}
+	}
+
+	option = { # Take it yourself
+		name = ee_elf.1001.a
+		
+		get_title = title:k_eregion
+		get_title = title:d_eregion
+		
+		create_title_and_vassal_change = {
+			type = granted 
+			save_scope_as = change 
+			add_claim_on_loss = yes
+		}
+		
+		
+		every_in_list = {
+			list = target_counties
+			change_title_holder	= {
+				holder = root
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		
+	}
+	option = { # Abandon your realm and take it
+		name = ee_elf.1001.b
+		
+		
+		
+		create_title_and_vassal_change = {
+			type = granted 
+			save_scope_as = change 
+			add_claim_on_loss = yes
+		}
+		
+		
+		every_in_list = {
+			list = target_counties
+			change_title_holder	= {
+				holder = root
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		
+		every_held_title = {
+			limit = {
+				any_de_jure_county = {
+					NOT = {
+						any_county_province = {
+							geographical_region = middleearth_west_eregion_south
+						}
+					}
+				}
+			}
+			add_to_list = target_counties2
+		}
+		
+		create_title_and_vassal_change = {
+			type = granted 
+			save_scope_as = change2
+			add_claim_on_loss = yes
+		}
+		
+		
+		
+		every_in_list = {
+			list = target_counties2
+			change_title_holder	= {
+				holder = root.primary_heir
+				change = scope:change2
+			}
+		}
+		resolve_title_and_vassal_change = scope:change2
+		
+		get_title = title:k_eregion
+		get_title = title:d_eregion
+	}
+	option = { # Refuse it
+		name = ee_elf.1001.c
+		
+		scope:eregion_ruler = {
+			create_title_and_vassal_change = {
+				type = granted 
+				save_scope_as = change 
+				add_claim_on_loss = yes
+			}
+		
+		
+			every_in_list = {
+				list = target_counties
+				change_title_holder	= {
+					holder = scope:eregion_ruler
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+			
+			get_title = title:k_eregion
+			get_title = title:d_eregion
+		}
+	}
+	
+	
+	after = {
+		hidden_effect = {
+		title:k_eregion.holder = {
+			create_title_and_vassal_change = {
+				type = granted 
+				save_scope_as = change3
+				add_claim_on_loss = no
+			}
+			becomes_independent = { change = scope:change3 }
+			resolve_title_and_vassal_change = scope:change3
+			
+			
+			convert_elven_holdings_effect = yes
+			
+		}
+		}
+	}
+}
+
+#########################################
+## Rage Against the Dying of the Light ##
+#########################################
+
+ee_elf.2000 = {	# Rage Against the Dying of the Light Intro
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.2000.t
+	desc = ee_elf.2000.desc
+	theme = elven
+	
+
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+
+	option = {
+		name = ee_elf.2000.a
+	}
+}
+
+ee_elf.2001 = {	# Search Eregion
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.2001.t
+	desc = ee_elf.2001.desc
+	theme = elven
+	override_background = {
+		reference = eregion
+	}
+
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	artifact = { # To display the artifact in the event-window
+		target = scope:artifact1
+		position = lower_center_portrait
+	}
+	artifact = { # To display the artifact in the event-window
+		target = scope:artifact2
+		position = lower_left_portrait
+	}
+	
+	immediate = {
+		set_artifact_rarity_illustrious = yes
+		
+		create_artifact = {
+			name = noldorin_tools_name
+			description = noldorin_tools_description
+			type = crafting_tools
+			visuals = noldorin_tools
+			wealth = scope:wealth
+			quality = scope:quality
+			modifier = noldorin_tools_modifier
+			save_scope_as = newly_created_artifact
+			decaying = yes
+		}
+
+		scope:newly_created_artifact = {
+			set_variable = { name = historical_unique_artifact value = yes }
+			set_variable = noldorin_tools
+			set_variable = elven 
+			save_scope_as = artifact1
+			
+		}
+		
+		create_artifact = {
+			name = ring_manual
+			description = ring_manual_desc
+			type = journal
+			visuals = book
+			wealth = scope:wealth
+			quality = scope:quality
+			modifier = ring_manual_modifier
+			save_scope_as = newly_created_artifact
+			decaying = yes
+		}
+		
+		scope:newly_created_artifact = {
+			set_variable = { name = historical_unique_artifact value = yes }
+			set_variable = ring_manual
+			set_variable = elven 
+			save_scope_as = artifact2
+			
+		}
+	}
+
+	option = { # Survivors
+		name = ee_elf.2001.a
+		custom_tooltip = {
+			text = ee_elf.2001.a.effect
+			start_travel_plan = {
+				destination = title:c_imladris.title_province
+				on_arrival_event = ee_elf.2002
+				return_trip = yes
+				players_use_planner = no
+				on_arrival_destinations = all_but_last
+			}
+		}
+	}
+	
+	option = { # Saruman
+		name = ee_elf.2001.b
+		trigger = {
+			character:lineofsaruman = {
+				faith_is_evil = no
+			}
+		}
+		custom_tooltip = {
+			text = ee_elf.2001.b.effect
+			start_travel_plan = {
+				destination = character:lineofsaruman.location
+				on_arrival_event = ee_elf.2003
+				return_trip = yes
+				players_use_planner = no
+				on_arrival_destinations = all_but_last
+			}
+		}
+	}
+	
+	option = { # None
+		name = ee_elf.2001.c
+	}
+	
+	after = {
+		
+	}
+}
+
+ee_elf.2002 = {	# Surviving Smith
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.2002.t
+	desc = ee_elf.2002.desc
+	theme = elven
+	
+
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+	
+	right_portrait = {
+		character = scope:smith
+		animation = steward
+	}
+	
+	immediate = {
+		create_character = {
+			culture = culture:noldor
+			faith = faith:faith_eldar
+			gender = male
+			
+			name = last_smith_name
+			
+			age = 7031
+			
+			learning = {10 15}
+			stewardship = {10 15}
+			
+			
+			random_traits = yes
+			trait = lifestyle_artifact_crafting 
+			trait = enchanter
+			trait = artificer
+			trait = twotreeslight
+			trait = depressed_1 			
+			random_traits_list = {
+				count = 1
+				education_learning_4 = {}
+				education_learning_5 = {}
+				education_stewardship_4 = {}
+				education_stewardship_5 = {}
+			}
+			employer = character:lineofelrond1
+			save_scope_as = smith
+		}
+		
+		scope:smith = {
+			give_nickname = nick_last_smith
+		}
+		
+	}
+
+	option = {
+		name = ee_elf.2002.a
+		
+		duel = {
+ 			skill = diplomacy
+			target = scope:smith 
+ 			50 = {
+				# You're successful
+ 				desc = ee_elf.2002.a.success
+ 				compare_modifier = {
+ 					value = scope:duel_value
+ 					multiplier = 3.5
+ 					min = -49
+ 				}
+ 				hidden_effect = { 
+					send_interface_toast = {
+						title = ee_elf.2002.a.success
+						left_icon = root
+						right_icon = scope:smith
+					}
+				}
+				add_courtier = scope:smith
+				scope:smith = { set_character_faith = faith:faith_arimaite_creed }
+				add_character_flag = last_smith
+ 			}
+ 			50 = {
+ 				# You failed
+ 				desc = ee_elf.2002.a.failure
+ 				compare_modifier = {
+ 					value = scope:duel_value
+ 					multiplier = -3.5
+ 					min = -49
+ 				}
+				hidden_effect = {
+					send_interface_toast = {
+						title = ee_elf.2002.a.failure
+						left_icon = root
+						right_icon = scope:smith
+					}
+				}
+				add_prestige = minor_prestige_loss
+				hidden_effect = { scope:smith = { silent_disappearance_effect = yes } }
+ 			}
+		}
+	}
+}
+
+ee_elf.2003 = {	# Saruman's Aid
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.2003.t
+	desc = ee_elf.2003.desc
+	theme = elven
+	
+
+	right_portrait = {
+		character = root
+		animation = steward
+	}
+	
+	left_portrait = {
+		character = character:lineofsaruman
+		animation = holding_staff
+	}
+	
+	immediate = {
+		
+		
+	}
+
+	option = {
+		name = ee_elf.2003.a
+		
+		duel = {
+ 			skill = diplomacy
+			target = character:lineofsaruman 
+ 			90 = {
+				# You're successful
+ 				desc = ee_elf.2003.a.success
+ 				compare_modifier = {
+ 					value = scope:duel_value
+ 					multiplier = 3.5
+ 					min = -49
+ 				}
+ 				hidden_effect = { 
+					send_interface_toast = {
+						title = ee_elf.2003.a.success
+						left_icon = root
+						right_icon = character:lineofsaruman
+					}
+				}
+				custom_tooltip = {
+					text = ee_elf.2003.a.effect
+				}
+				add_character_flag = saruman_aid
+ 			}
+ 			10 = {
+ 				# You failed
+ 				desc = ee_elf.2003.a.failure
+ 				compare_modifier = {
+ 					value = scope:duel_value
+ 					multiplier = -3.5
+ 					min = -49
+ 				}
+				hidden_effect = {
+					send_interface_toast = {
+						title = ee_elf.2003.a.failure
+						left_icon = root
+						right_icon = character:lineofsaruman
+					}
+				}
+				add_prestige = minor_prestige_loss
+				
+ 			}
+		}
+	}
+}
+
+ee_elf.2004 = {	# Attempt to Forge a Ring Of Power
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.2004.t
+	desc = ee_elf.2004.desc
+	theme = elven
+	
+	override_background = {
+		reference = eregion_crebain
+	}
+	
+
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = ee_elf.2004.a
+		
+		duel = {
+ 			skills = {
+				learning
+				stewardship
+			}
+			value = 20 
+ 			10 = {
+				# You're successful
+ 				desc = ee_elf.2004.a.success
+ 				compare_modifier = {
+ 					value = scope:duel_value
+ 					multiplier = 2`
+ 					min = -49`
+ 				}
+				modifier = {
+					has_character_flag = last_smith
+					factor = 2
+				}
+				modifier = {
+					has_character_flag = saruman_aid
+					factor = 2
+				}
+ 				hidden_effect = { 
+					send_interface_toast = {
+						title = ee_elf.2004.a.success
+						left_icon = root
+					}
+				}
+				save_scope_as = owner
+		
+				set_artifact_rarity_illustrious = yes
+				
+				create_artifact = {
+					name = new_ring_name
+					description = new_ring_description
+					creator = root 
+					type = miscellaneous
+					visuals = ring
+					wealth = scope:wealth
+					quality = scope:quality
+					template = ring_of_mortals_template # Template is where you set restrictions on usability!
+					modifier = ring_of_mortals_elves_modifier
+					save_scope_as = newly_created_artifact
+					decaying = no
+				}
+		
+				scope:newly_created_artifact = {
+					set_variable = { name = historical_unique_artifact value = yes }
+					set_variable = corrupted_ring
+					set_variable = ring_of_power
+					set_variable = ring_of_mortals
+					save_scope_as = epic
+				}
+				if = {
+					limit = { has_character_flag = saruman_aid }
+					character:lineofsaruman = {
+						set_artifact_rarity_illustrious = yes
+				
+						create_artifact = {
+							name = ring_saruman_name
+							description = ring_saruman_description
+							creator = character:lineofsaruman 
+							type = miscellaneous
+							visuals = ring
+							wealth = scope:wealth
+							quality = scope:quality
+							
+							modifier = ee_ring_saruman_modifier
+							save_scope_as = newly_created_artifact
+							decaying = no
+						}
+				
+						scope:newly_created_artifact = {
+							set_variable = { name = historical_unique_artifact value = yes }
+							set_variable = ring_saruman 
+							save_scope_as = epic
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:decision_forge_ring
+				}
+ 			}
+ 			90 = {
+ 				# You failed
+ 				desc = ee_elf.2004.a.failure
+ 				
+				add_prestige = major_prestige_loss
+				
+ 			}
+		}
+		
+		
+	}
+}
+
+ee_elf.2005 = {	# duel saruon
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.2005.t
+	desc = ee_elf.2005.desc
+	theme = elven
+	override_background = {
+		reference = throne_room_sauron
+	}
+
+	left_portrait = {
+		character = root
+		animation = aggressive_sword
+	}
+	
+	right_portrait = {
+		character = character:lineofsauron
+		animation = eyeroll
+	}
+	
+	immediate = {
+		
+		
+	}
+
+	option = {
+		name = ee_elf.2005.a
+		trigger = {
+			NOT = {	any_character_artifact = { has_variable = corrupted_ring } }
+		}
+		
+			duel = {
+				skills = { 
+					prowess
+					learning
+					intrigue
+				}
+				target = character:lineofsauron 
+				10 = {
+					# You're successful
+					desc = ee_elf.2005.a.success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 2
+						min = -49
+					}
+					hidden_effect = { 
+						send_interface_toast = {
+							title = ee_elf.2005.a.success
+							left_icon = root
+							right_icon = character:lineofsauron
+						}
+					}
+					character:lineofsauron = {
+						death = { killer = root death_reason = death_duel }
+					}
+					add_prestige = 10000
+					give_nickname = nick_shadow_slayer
+					kill_nazgul_effect = yes
+					random_list = {
+						66 = {
+							death = { killer = character:lineofsauron death_reason = death_duel }
+						}
+						34 = {
+						
+						}
+					}
+				}
+				90 = {
+					# You failed
+					desc = ee_elf.2005.a.failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -2
+						min = -49
+					}
+					hidden_effect = {
+						send_interface_toast = {
+							title = ee_elf.2005.a.failure
+							left_icon = root
+							right_icon = character:lineofsauron
+						}
+					}
+					death = { killer = character:lineofsauron death_reason = death_duel }
+					
+				}
+			}
+		
+		
+	}
+	option = {
+		name = ee_elf.2005.b
+		trigger = {
+			NOT = {	any_character_artifact = { has_variable = corrupted_ring } }
+		}
+			duel = {
+				skill = prowess
+				target = character:lineofsauron 
+				90 = {
+					# You're successful
+					desc = ee_elf.2005.b.success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 2
+						min = -49
+					}
+					hidden_effect = { 
+						send_interface_toast = {
+							title = ee_elf.2005.b.success
+							left_icon = root
+							right_icon = character:lineofsauron
+						}
+					}
+					character:lineofsauron = {
+						add_prestige = major_prestige_gain
+					}
+					add_prestige = major_prestige_loss
+					apply_maimed_trait_and_modifier_effect = yes
+					
+				}
+				10 = {
+					# You failed
+					desc = ee_elf.2005.a.failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -2
+						min = -49
+					}
+					hidden_effect = {
+						send_interface_toast = {
+							title = ee_elf.2005.a.failure
+							left_icon = root
+							right_icon = character:lineofsauron
+						}
+					}
+					death = { killer = character:lineofsauron death_reason = death_duel }
+					
+				}
+			}
+		
+		
+	}
+	option = {
+		name = ee_elf.2005.c
+			trigger = {
+				any_character_artifact = { has_variable = corrupted_ring }
+			}
+			duel = {
+				skill = learning
+				target = character:lineofsauron 
+				10 = {
+					# You're successful
+					desc = ee_elf.2005.c.success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 2
+						min = -49
+					}
+					hidden_effect = { 
+						send_interface_toast = {
+							title = ee_elf.2005.c.success
+							left_icon = root
+							right_icon = character:lineofsauron
+						}
+					}
+					character:lineofsauron = {
+						add_prestige = major_prestige_gain
+					}
+					add_prestige = major_prestige_loss
+					
+					
+				}
+				90 = {
+					# You failed
+					desc = ee_elf.2005.c.failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -2
+						min = -49
+					}
+					hidden_effect = {
+						send_interface_toast = {
+							title = ee_elf.2005.c.failure
+							left_icon = root
+							right_icon = character:lineofsauron
+						}
+					}
+					add_stress = -300
+					add_piety_level = -1
+					add_prestige_level = -1
+					root.dynasty = { add_dynasty_prestige_level = -1 }
+					set_character_faith = faith:lidless_eye
+					character:lineofsauron = {
+						add_hook = {
+							type = loyalty_hook
+							target = root
+						}
+					}
+					start_tributary = {
+						contract_group = tributary_subjugated
+						suzerain = character:lineofsauron
+					}
+					
+				}
+			}
+		
+		
+	}
+}

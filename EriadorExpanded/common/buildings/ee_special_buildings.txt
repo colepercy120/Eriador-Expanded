@@ -1,0 +1,352 @@
+﻿
+wonder_tradeport_of_hyarmenyalond_01 = {
+	type_icon = "icon_building_tradeport.dds"
+	flag = fully_upgraded		
+	construction_time = slow_construction_time
+	effect_desc = explore_history_cost_discount_max_desc
+	cost_gold = 500
+	can_construct = {
+		
+	}
+	character_modifier = {
+		monthly_prestige = 0.1
+		
+	}
+	
+	
+	next_building = wonder_tradeport_of_hyarmenyalond_02
+	
+	
+	
+	ai_value = {
+		base = 100
+	}
+	type = special
+	flag = travel_point_of_interest_economic
+}
+
+wonder_tradeport_of_hyarmenyalond_02 = {
+	type_icon = "icon_building_tradeport.dds"
+	flag = fully_upgraded		
+	construction_time = slow_construction_time
+	effect_desc = explore_history_cost_discount_max_desc
+	cost_gold = 1000
+	can_construct = {
+		
+	}
+	character_modifier = {
+		embarkation_cost_mult = -0.25
+		monthly_prestige = 0.5
+	}
+	levy = 1000
+	county_modifier = {
+		
+	}
+	province_modifier = {
+		monthly_income = 1
+		fort_level = 2
+		supply_limit_mult = 0.5
+	}
+	
+	is_enabled = {
+		
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	type = special
+	flag = travel_point_of_interest_economic
+}
+
+#wonder_edhelas_01 = {
+#	type_icon = "icon_wonder_caras_galadhon_2.dds"
+#	flag = fully_upgraded		
+#	construction_time = slow_construction_time
+#	effect_desc = explore_history_cost_discount_max_desc
+#	cost_gold = 500
+#	can_construct = {
+#		scope:holder ?= {
+#			is_elf = yes
+#			culture = culture:galadhrim
+#		}
+#		building_requirement_elven = yes
+#	}
+#	character_modifier = {
+#		monthly_piety = 0.1
+#		
+#	}
+#	
+#	
+#	next_building = wonder_edhelas_02
+#	
+#	
+#	
+#	ai_value = {
+#		base = 100
+#	}
+#	type = special
+#	flag = travel_point_of_interest_learning
+#}
+
+#wonder_edhelas_02 = {
+#	type_icon = "icon_wonder_caras_galadhon_2.dds"
+#	flag = fully_upgraded		
+#	construction_time = slow_construction_time
+#	effect_desc = explore_history_cost_discount_max_desc
+#	cost_gold = 4000
+#	can_construct = {
+#		scope:holder ?= {
+#			is_elf = yes
+#			
+#		}
+#		building_requirement_elven = yes
+#	}
+#	character_modifier = {
+#		monthly_piety = 0.5
+#		vassal_opinion = 5
+#	}
+#	levy = 1000
+#	county_modifier = {
+#		defender_holding_advantage = good_building_fort_level_tier_4
+#	}
+#	province_modifier = {
+#		monthly_income = 5
+#		fort_level = 8
+#		supply_limit_mult = 0.5
+#	}
+#	
+#	is_enabled = {
+#		scope:holder ?= {
+#			is_elf = yes
+#		}
+#
+#	}
+#	
+#	ai_value = {
+#		base = 100
+#	}
+#	type = special
+#	flag = travel_point_of_interest_learning
+#}
+
+wonder_angle_of_eriador = { # Tradeport of Kheledul
+	type_icon = "icon_structure_walls_of_benin.dds"
+	
+
+	construction_time = slow_construction_time
+	cost_gold = 450
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		
+	}
+
+	
+	province_modifier = {
+		fort_level = 2
+		monthly_income = 1
+	}
+
+	character_modifier = {
+		
+		monthly_prestige = 0.5
+	}
+
+	is_enabled = { 
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+	flag = travel_point_of_interest_economic
+}
+
+#wonder_minas_formen_01 = {
+#	type_icon = "icon_wonder_numenorean_tower.dds"
+#	
+#	construction_time = very_slow_construction_time
+#	cost_gold = 500
+#	
+#	can_construct = {
+#		building_requirement_castle_city_church = { LEVEL = 03 }
+#		culture = {
+#			has_innovation = innovation_hoardings
+#		}
+#	}
+#	
+#	province_modifier = {
+#		fort_level = 1
+#	}
+#
+#	character_modifier = {
+#		monthly_prestige = 0.2
+#	}
+#	#is_enabled = {
+#	#	scope:holder.culture ?= { has_cultural_pillar = heritage_dunedain }
+#	#}
+#	type = special
+#	flag = travel_point_of_interest_religious
+#	
+#	ai_value = {
+#		base = 100
+#	}
+#}
+
+wonder_mirdairond_human = {
+	type_icon = "icon_building_observatory.dds"
+	
+	construction_time = very_slow_construction_time
+	effect_desc = explore_history_cost_discount_max_desc
+	cost_gold = 500
+	
+	can_construct = {
+		is_elf = yes
+	}
+	
+	province_modifier = {
+		fort_level = 1
+		monthly_income = 4
+		tax_mult = 0.2
+	}
+
+	county_modifier = {
+		development_growth = 0.2
+		development_growth_factor = 0.25
+	}
+
+	character_modifier = {
+        monthly_prestige = 0.8
+		monthly_learning_lifestyle_xp_gain_mult = 0.1
+		#monthly_crafting_lifestyle_xp_gain_mult = 0.25
+		artifact_decay_reduction_mult = -0.5
+	}
+
+	is_enabled = {
+		OR = {
+			is_elf = yes
+			#and = {
+			#	faith_is_good = yes
+			#	scope:holder.culture ?= { has_cultural_pillar = heritage_dunedain }
+			#	# Add dynamic 'elf friend' cultural attribute when we add it...
+			#}
+		}
+	}
+	type = special
+	flag = travel_point_of_interest_learning
+}
+
+wonder_fort_arlas_01 = {
+	type_icon = "icon_wonder_numenorean_tower.dds"
+	
+	construction_time = very_slow_construction_time
+	cost_gold = 500
+	
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		culture = {
+			has_innovation = innovation_hoardings
+		}
+	}
+	
+	province_modifier = {
+		fort_level = 3
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.5
+	}
+	#is_enabled = {
+	#	scope:holder.culture ?= { has_cultural_pillar = heritage_dunedain }
+	#}
+	type = special
+	flag = travel_point_of_interest_religious
+	
+	ai_value = {
+		base = 100
+	}
+}
+
+wonder_shrouded_isles_01 = { 
+	type_icon = "icon_structure_shrouded_isles.dds"
+	
+
+	construction_time = slow_construction_time
+	cost_gold = 450
+	can_construct = {
+	
+		
+	}
+
+	
+	province_modifier = {
+		
+		travel_danger = 10
+	}
+
+	character_modifier = {
+		
+		stress_gain_mult = 0.1
+		stress_loss_mult = -0.1
+	}
+
+	is_enabled = { 
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	next_building = wonder_shrouded_isles_02
+	
+	type = special
+	flag = travel_point_of_interest_religious
+}
+
+wonder_shrouded_isles_02 = { 
+	type_icon = "icon_structure_shrouded_isles.dds"
+	
+
+	construction_time = slow_construction_time
+	cost_gold = 1000
+	can_construct = {
+		scope:holder ?= {
+			is_elf = yes
+			has_title = title:k_nenuial
+		}
+		building_requirement_elven = yes
+	}
+
+	
+	province_modifier = {
+		
+		
+	}
+	
+	character_modifier = {
+		stress_gain_mult = -0.1
+		stress_loss_mult = 0.1
+	}
+	levy = 1000
+	county_modifier = {
+		defender_holding_advantage = good_building_fort_level_tier_4
+	}
+	province_modifier = {
+		monthly_income = 5
+		fort_level = 8
+		supply_limit_mult = 0.5
+	}
+
+	
+
+	is_enabled = { 
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+	flag = travel_point_of_interest_religious
+}
