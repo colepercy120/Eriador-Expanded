@@ -209,12 +209,12 @@ l_english:
  
  ### Southern Faithful
  
- decision_southern_faithful_invasion: "Invade Thani-Hazad"
- decision_southern_faithful_invasion_desc: "Its time for the [adunai|e] to learn of our peaceful ways... By Force! If we are ever to break the Adunai from their heathean ways we need to break the structure of their society and cast down the old elites!"
- decision_southern_faithful_invasion_tooltip: "Invade Thani-Hazad."
- decision_southern_faithful_invasion_confirm: "Invade Thani-Hazad."
+#  decision_southern_faithful_invasion: "Invade Thani-Hazad"
+#  decision_southern_faithful_invasion_desc: "Its time for the [adunai|e] to learn of our peaceful ways... By Force! If we are ever to break the Adunai from their heathean ways we need to break the structure of their society and cast down the old elites!"
+#  decision_southern_faithful_invasion_tooltip: "Invade Thani-Hazad."
+#  decision_southern_faithful_invasion_confirm: "Invade Thani-Hazad."
  
- decision_southern_faithful_culture: "Redeam the Anduai"
- decision_southern_faithful_culture_desc: "We have Liberated the lands of [thanihazad|e] and restored worship of the [valargods|e] to the region. It's time for us to cast down the heresy of [sauroncharacter|e] and redeem the [adunai|e] once and for all!"
- decision_southern_faithful_culture_tooltip: "Redeam the Anduai."
- decision_southern_faithful_culture_confirm: "Restore the South to Glory!"
+#  decision_southern_faithful_culture: "Redeam the Anduai"
+#  decision_southern_faithful_culture_desc: "We have Liberated the lands of [thanihazad|e] and restored worship of the [valargods|e] to the region. It's time for us to cast down the heresy of [sauroncharacter|e] and redeem the [adunai|e] once and for all!"
+#  decision_southern_faithful_culture_tooltip: "Redeam the Anduai."
+#  decision_southern_faithful_culture_confirm: "Restore the South to Glory!"

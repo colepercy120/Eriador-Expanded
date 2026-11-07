@@ -230,9 +230,9 @@ l_english:
  
  ### Easter Egg
  
- ee_arnor.5000.t: "The Southern Faithful!"
- ee_arnor.5000.desc: "[ROOT.Char.GetFirstName]  was the last scion of a nearly extinct [arnorian|e] house who fled the great plague, in Early 2752 of the [thirdage|e] she and her husband [ROOT.Char.GetPrimarySpouse.GetFirstName], a [adunai|e] prince who had spent most of his childhood on trade ships between [thanihazad|e] and [gondor|e] and had become enamored with the [faithful|e], were sent to [thanihazad|e] by the Steward of [gondor|e] in an attempt to convert the [adunai|e] and attempt to rally them against the [darklord|e]. Arriving in [ROOT.Char.GetPrimarySpouse.GetFirstName]'s home of [GetTitleByKey('d_inzilloni').GetNameNoTier] with a Host of Gondorian Volunteers and a burning desire to liberate the lands of the Utter South!"
- ee_arnor.5000.a: "Hope is not lost!"
+#  ee_arnor.5000.t: "The Southern Faithful!"
+#  ee_arnor.5000.desc: "[ROOT.Char.GetFirstName]  was the last scion of a nearly extinct [arnorian|e] house who fled the great plague, in Early 2752 of the [thirdage|e] she and her husband [ROOT.Char.GetPrimarySpouse.GetFirstName], a [adunai|e] prince who had spent most of his childhood on trade ships between [thanihazad|e] and [gondor|e] and had become enamored with the [faithful|e], were sent to [thanihazad|e] by the Steward of [gondor|e] in an attempt to convert the [adunai|e] and attempt to rally them against the [darklord|e]. Arriving in [ROOT.Char.GetPrimarySpouse.GetFirstName]'s home of [GetTitleByKey('d_inzilloni').GetNameNoTier] with a Host of Gondorian Volunteers and a burning desire to liberate the lands of the Utter South!"
+#  ee_arnor.5000.a: "Hope is not lost!"
  gondorian_host: "Gondorian Host"
  
  ### Lonelands

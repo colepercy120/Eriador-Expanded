@@ -154,11 +154,11 @@ l_english:
  nick_shadow_slayer: "Shadow Slayer"
  nick_shadow_slayer_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] Slew the Dark Lord [sauroncharacter|e]."
  
- nick_faithful: "The Faithful"
- nick_faithful_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] is a [adunai|e] convert to the ways of the [dunedain|e]"
+#  nick_faithful: "The Faithful"
+#  nick_faithful_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] is a [adunai|e] convert to the ways of the [dunedain|e]"
  
- nick_redeemer: "The Redeemer"
- nick_redeemer_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] traveled from the lands of the [faithful|e] to convert the [adunai|e] and suceeded in returning them to the ways of the [dunedain|e]
+#  nick_redeemer: "The Redeemer"
+#  nick_redeemer_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] traveled from the lands of the [faithful|e] to convert the [adunai|e] and suceeded in returning them to the ways of the [dunedain|e]
  
 
  

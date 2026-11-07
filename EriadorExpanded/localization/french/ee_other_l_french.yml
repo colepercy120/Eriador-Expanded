@@ -33,8 +33,8 @@ h_cyrdor_adj: "Cŷrdorien"
 k_wadewater: "Gué des Eaux"
 k_wadewater_adj: "Gué des Eaux"
 
-d_laamp_southern_faithful: "Les Fidèles du Sud"
-d_laamp_southern_faithful_adj: "Fidèles du Sud"
+# d_laamp_southern_faithful: "Les Fidèles du Sud"
+# d_laamp_southern_faithful_adj: "Fidèles du Sud"
 
 ### Titres et appellations
 emperor_feudal_male_steward_arnor: "Intendant régnant"
@@ -116,11 +116,11 @@ nick_last_smith_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] est le dern
 nick_shadow_slayer: "Tueur d’Ombres"
 nick_shadow_slayer_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] a terrassé le Seigneur des Ténèbres [sauroncharacter|e]."
 
-nick_faithful: "Le Fidèle"
-nick_faithful_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] est un converti [adunai|e] aux voies des [dunedain|e]"
+# nick_faithful: "Le Fidèle"
+# nick_faithful_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] est un converti [adunai|e] aux voies des [dunedain|e]"
 
-nick_redeemer: "Le Rédempteur"
-nick_redeemer_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] a voyagé depuis les terres des [faithful|e] pour convertir les [adunai|e] et a réussi à les ramener aux voies des [dunedain|e]"
+# nick_redeemer: "Le Rédempteur"
+# nick_redeemer_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] a voyagé depuis les terres des [faithful|e] pour convertir les [adunai|e] et a réussi à les ramener aux voies des [dunedain|e]"
 
 last_smith_name: "Damron"
 

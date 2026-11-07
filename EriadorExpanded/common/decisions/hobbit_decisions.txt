@@ -321,4 +321,6 @@ decision_establish_wadewater = {
 
 		trigger_event = {
 			id = ee_hobbit.0102
+		}
+	}
 }
