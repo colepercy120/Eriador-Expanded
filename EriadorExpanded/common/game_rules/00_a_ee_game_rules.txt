@@ -80,6 +80,10 @@ angmar_rule = {
 	no_angmar = {
 
 	}
+	
+	angmar_disabled = {
+
+	}
 
 	angmar_restored = {
 
@@ -102,5 +106,65 @@ moria_rule = {
 
 	}
 	
+	
+}
+
+moria_restored_rule = { 
+	default = moria_ruined
+
+	categories = {
+		realms tweaks
+	}
+
+	moria_ruined = {
+
+	}
+
+	moria_restored = {
+
+	}
+	
+	
+}
+
+lonelands_rule = {
+	default = lonelands_enabled
+
+	categories = {
+		realms tweaks
+	}
+
+	lonelands_enabled = {
+
+	}
+
+	lonelands_disabled = {
+
+	}
+	
+	
+	
+}
+
+nogrod_belegost_rule = {
+	default = both_disabled
+
+	categories = {
+		realms tweaks
+	}
+
+	nogrod_enabled = {
+
+	}
+
+	belegost_enabled = {
+
+	}
+	both_enabled = {
+
+	}
+	both_disabled = {
+
+	}
 	
 }

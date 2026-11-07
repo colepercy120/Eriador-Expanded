@@ -426,211 +426,7 @@ ee_arnor.44 = { # spawn vassals
 #	}
 #}
 
-ee_arnor.6 = { # palintir fishing
-	content_source = realms_dlc
-	type = character_event
-	title = ee_arnor.6.t
-	desc = ee_arnor.6.desc
-	theme = sailing_activity
-	
-	override_background = {
-		reference = wilderness_arctic
-	}
-	
-	left_portrait = {
-		character = root
-		animation = happiness
-	}
 
-	option = {
-		name = ee_arnor.6.a
-		
-		add_prestige = 2000
-		dynasty = { add_dynasty_prestige = 1000 }
-		create_artifact_palantir_annuminas_effect = { OWNER = this }
-		create_artifact_palantir_amonsul_effect = { OWNER = this }
-
-	}
-}
-
-ee_arnor.7 = { # palintir fishing 2
-	content_source = realms_dlc
-	type = character_event
-	title = ee_arnor.7.t
-	desc = ee_arnor.7.desc
-	theme = sailing_activity
-	
-	left_portrait = {
-		character = root
-		animation = happiness
-	}
-
-	option = {
-		name = ee_arnor.7.a
-		
-		add_prestige = 2000
-		dynasty = { add_dynasty_prestige = 1000 }
-		create_artifact_palantir_osgiliath_effect = { OWNER = this }
-		
-
-	}
-}
-
-ee_arnor.8 = { # palintir fishing fail
-	content_source = realms_dlc
-	type = character_event
-	title = ee_arnor.8.t
-	desc = ee_arnor.8.desc
-	theme = sailing_activity
-	
-	right_portrait = {
-		character = root
-		animation = disapproval
-	}
-	
-	
-	override_background = {
-		reference = wilderness_arctic
-	}
-
-	option = {
-		name = ee_arnor.8.a
-		
-		add_gold = major_gold_loss
-		
-		hidden_effect = {
-			random_list = {
-				10 = {
-					trigger_event = {
-						id = ee_arnor.6
-						months = 6
-					}
-				}
-				5 = {
-					trigger_event = {
-						id = ee_arnor.9
-						months = 9
-					}
-				}
-				85 = {
-					trigger_event = {
-						id = ee_arnor.8
-						months = 6
-					}
-				}
-			}
-		}
-
-	}
-	option = {
-		name = ee_arnor.8.b
-		
-
-	}
-}
-
-ee_arnor.9 = { # boy in the ice
-	content_source = realms_dlc
-	type = character_event
-	title = ee_arnor.9.t
-	desc = ee_arnor.9.desc
-	theme = sailing_activity
-	
-	override_background = {
-		reference = wilderness_arctic
-	}
-	
-	left_portrait = {
-		character = root
-		animation = shock
-	}
-	
-	right_portrait = {
-		character = scope:iceboy
-		animation = shiver
-		triggered_outfit = {
-			outfit_tags = { beggar_rags }
-		}
-	}
-	
-	immediate = {
-		create_character = { 
-			age = 180
-			culture = culture:numenorean
-			faith = faith:faith_numenorean
-			gender = female
-			trait = born_on_numenor 
-			trait = blood_of_numenor_10
-			father = character:lineofelros27
-			dynasty = inherit
-			location = root.location
-			save_scope_as = iceboy_mom
-			after_creation = {
-				death = { death_reason = death_numenor_drowned }
-			}
-		}
-		
-		create_character = { 
-			age = 9
-			culture = culture:numenorean
-			faith = faith:faith_numenorean
-			gender = male
-			dynasty = inherit
-			mother = scope:iceboy_mom
-			location = root.location
-			trait = born_on_numenor 
-			trait = blood_of_numenor_10
-			trait = wounded_3
-			trait = stuttering
-			trait = intellect_good_2
-			
-			trait = shy
-			trait = craven
-			trait = curious
-			
-			random_traits = no
-			name = iceboy_name_2
-			
-			save_scope_as = iceboy
-			
-			diplomacy = { 5 15 }
-			martial = { 5 15 }
-			stewardship = { 7 17 }
-			intrigue = { 5 15 }
-			learning = { 7 17 }
-			prowess = { 0 5 }
-			after_creation = {
-				give_nickname = nick_iceborn
-				add_pressed_claim = title:e_numenor
-				
-			}
-		}
-		
-	}
-
-	option = {
-		name = ee_arnor.9.a
-		
-		add_gold = 2000
-		create_artifact_numenorean_steelbow_effect = { OWNER = root }
-		
-		add_courtier = scope:iceboy
-		if = {
-			limit = {
-				num_of_relation_ward < 2
-			}
-			set_relation_ward = scope:iceboy
-		}
-		scope:iceboy = {
-		#	change_first_name = iceboy_name
-		}
-		trigger_event = {
-			id = ee_arnor.6
-			months = 6
-		}
-
-	}
-}
 
 ee_arnor.20 = { # Dwarf King decides who to send to the White Mountain
 	content_source = realms_dlc
@@ -1623,4 +1419,86 @@ ee_arnor.4000 = {
 		name = balrog_struggle.1011.b
 		
 	}
+}
+
+
+ee_arnor.5000 = { # southern faithful intro event
+	content_source = realms_dlc
+	type = character_event
+	title = ee_arnor.5000.t
+	desc = ee_arnor.5000.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = aggressive_sword
+	}
+	right_portrait = {
+		character = root.primary_spouse
+		animation = aggressive_sword
+	}
+	
+	
+	immediate = {
+		add_gold = 10000
+		domicile = { 
+			add_domicile_building = camp_main_02
+			add_domicile_building = camp_main_03 
+			
+			add_domicile_building = proving_grounds_01
+			add_domicile_building = proving_grounds_02
+			add_domicile_building = proving_grounds_03
+			add_domicile_building = proving_grounds_04
+			
+			add_domicile_building = camp_fire_01
+			add_domicile_building = camp_fire_02
+			add_domicile_building = camp_fire_03
+			add_domicile_building = camp_fire_04
+			
+			add_domicile_building = supply_tent_01
+			add_domicile_building = supply_tent_02
+			add_domicile_building = supply_tent_03
+			add_domicile_building = supply_tent_04
+		}
+		spawn_army = {
+			levies = 1000
+			men_at_arms = { # optional, multiple can be specified. Need either levies or MAA
+				type = gondorian_footmen
+				stacks = 6
+			}
+			men_at_arms = { # optional, multiple can be specified. Need either levies or MAA
+				type = gondorian_bowmen
+				stacks = 6
+			}
+			men_at_arms = { # optional, multiple can be specified. Need either levies or MAA
+				type = trebuchet
+				stacks = 5
+			}
+			name = gondorian_host
+			inheritable = yes
+			location = root.location
+		}
+		add_character_flag = southern_faithful 
+		add_pressed_claim = title:e_thani_hazad
+		add_pressed_claim = title:d_inzilloni
+		break_alliance = character:lineofinzilloni36
+		
+		primary_spouse = {
+			
+			give_nickname = nick_faithful
+		}
+	}
+	
+	
+	option = { # Fund them with a large sum
+		name = ee_arnor.5000.a 
+		
+		
+		
+		
+		
+		
+	}
+	
+	
 }

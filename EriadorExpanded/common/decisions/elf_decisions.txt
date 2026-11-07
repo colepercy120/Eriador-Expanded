@@ -48,6 +48,7 @@ decision_reclaim_nenuial = {
 		prestige_level >= high_prestige_level
 		completely_controls = title:d_eketya # Completely controls the old heartland of the Kingdom
 		completely_controls = title:d_tarmea # Completely controls the old heartland of the Kingdom
+		has_medium_hope_or_higher = yes
 	}
 
 	is_valid_showing_failures_only = {
@@ -191,6 +192,7 @@ decision_invite_elves_eregion = {
 	# EFFECT
 	effect = {
 		custom_tooltip = decision_invite_elves_eregion_effect_tooltip
+		add_elven_hope_global_effect = { VALUE = medium_elven_hope_gain HOPE_EFFECT = effect_elven_hope_good_realm_rises }
 		
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
@@ -219,7 +221,7 @@ decision_invite_elves_eregion = {
 	}
 }
 
-decision_reclaim_eriador = {
+decision_reclaim_eriador_elf = {
 	title = decision_reclaim_eriador
 	desc = decision_reclaim_eriador_desc
 	confirm_text = decision_reclaim_eriador_confirm
@@ -270,8 +272,9 @@ decision_reclaim_eriador = {
 		legitimacy_level >= 5
 		prestige_level >= 5
 		piety_level >= 5
-		
+		has_high_hope_or_higher = yes
 		completely_controls_region = custom_eriador
+		
 		custom_tooltip = {
 			text = no_evil_rulers_in_forodwaith_tt
 			any_county_in_region = {
@@ -348,9 +351,167 @@ decision_reclaim_eriador = {
 				
 			}	
 		}
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					root = {
+						has_title = title:h_noldor
+					}
+				}
+				title:e_eriador = {
+					set_de_jure_liege_title = title:h_noldor
+				}
+			}
+		}
 
 		trigger_event = {
 			id = ee_elf.06	# Reclaim Nenuial Kingdom
+		}
+	}
+}
+
+
+
+
+decision_unite_western_elves = {
+	title = decision_unite_western_elves
+	desc = decision_unite_western_elves_desc
+	confirm_text = decision_unite_western_elves_confirm
+	selection_tooltip = decision_unite_western_elves_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_host_of_the_west.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		is_elf = yes
+		OR = {
+			
+			capital_province = {
+				geographical_region = custom_eriador
+			}
+			capital_province = {
+				geographical_region = middleearth_west_beleriand
+			}
+		
+		}
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_unite_western_elves
+			}		
+		}
+	}
+	
+	cost = {
+		prestige = 10000
+		piety = 5000
+	}
+	
+	# IS VALID
+	is_valid = {
+		legitimacy_level >= 5
+		prestige_level >= 5
+		piety_level >= 5
+		has_high_hope_or_higher = yes
+		completely_controls_region = custom_eriador
+		completely_controls_region = middleearth_west_beleriand
+		custom_tooltip = {
+			text = no_evil_rulers_in_forodwaith_tt
+			any_county_in_region = {
+				region = middleearth_forodwaith
+				holder = {
+					faith_is_evil = no
+				}
+				count = all
+			}
+		}
+		
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		
+		
+		
+		#Create the title and make it primary
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = yes
+		}
+		
+		title:h_cyrdor = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+		
+		
+		if = {
+			limit = { highest_held_title_tier < tier_hegemony }
+			set_primary_title_to = title:h_cyrdor
+		}
+		
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_unite_western_elves
+		}
+		
+		
+		
+		custom_tooltip = {
+			text = decision_cyrdor_effect
+			every_empire= {
+				limit = {
+					title_capital_county = {
+						any_county_province = {
+							OR = {
+								geographical_region = custom_eriador
+								geographical_region = middleearth_forodwaith
+								geographical_region = middleearth_west_beleriand
+							}
+						}
+					}
+				}
+				set_de_jure_liege_title = title:h_cyrdor
+			}
+		}
+
+		custom_tooltip = {
+			text = decision_noldor_eriador_effect
+			every_county_in_region = {
+				region = middleearth_west_arnor
+				add_county_modifier = elven_homeland_county_modifier
+				
+			}	
+		}
+
+		trigger_event = {
+			id = ee_elf.09	# Reclaim Nenuial Kingdom
 		}
 	}
 }
@@ -369,12 +530,13 @@ decision_rage_aganist_the_dying_of_the_light = { #Intro
 		always = yes
 	}
 	ai_will_do = {
-		base = 1
+		base = 0
 	}
 	
 	decision_group_type = realms_in_exile_major
 	is_shown = {
 		is_elf = yes
+		
 		NOT = {
 			has_trait = rageagainstlight
 			
@@ -392,7 +554,7 @@ decision_rage_aganist_the_dying_of_the_light = { #Intro
 			has_trait = twotreeslight
 			
 		}
-		
+		age < 3000
 		is_ruler = yes
 	}
 
@@ -400,6 +562,8 @@ decision_rage_aganist_the_dying_of_the_light = { #Intro
 		add_trait = rageagainstlight
 		set_character_faith = faith:faith_arimaite_creed
 		trigger_event = ee_elf.2000
+		
+		add_elven_hope_global_effect = { VALUE = 100 HOPE_EFFECT = effect_elven_hope_good_realm_rises }
 		
 		save_scope_as = adventurer
 		if = {
@@ -696,7 +860,7 @@ decision_forge_ring = { #Intro
 			text = decision_forge_ring_effect
 			trigger_event = ee_elf.2004
 		}
-		
+		add_elven_hope_global_effect = { VALUE = 100 HOPE_EFFECT = effect_elven_hope_good_realm_rises }
 	}
 }
 
@@ -745,6 +909,7 @@ decision_vanquish_darkess = { #Intro
 			name = unavailable_unique_decisions
 			target = flag:decision_vanquish_darkess
 		}
+		add_elven_hope_global_effect = { VALUE = 100 HOPE_EFFECT = effect_elven_hope_good_realm_rises }
 	}
 }
 
@@ -839,7 +1004,7 @@ decision_slay_sauron = { #Intro
 
 decision_lorien_eregion = {
 	picture = {
-		reference = "gfx/interface/illustrations/event_scenes/eregion.dds"
+		reference = "gfx/interface/illustrations/decisions/decision_elves_01.dds"
 	}
 	title = decision_lorien_eregion
 	desc = decision_lorien_eregion_desc	
@@ -870,11 +1035,11 @@ decision_lorien_eregion = {
 		prestige_level >= max_prestige_level
 		has_title = title:k_lothlorien
 		completely_controls = title:k_eregion
-		
+		has_medium_hope_or_higher = yes
 		
 		title:c_ost_in_edhil = { 
 			title_province = {
-				has_building = wonder_mirdairond
+				has_building_or_higher = wonder_ost_in_edhil_02
 			}
 		}
 	}
@@ -908,6 +1073,7 @@ decision_lorien_eregion = {
 			}
 		
 		trigger_event = ee_elf.07
+		add_elven_hope_global_effect = { VALUE = medium_elven_hope_gain HOPE_EFFECT = effect_elven_hope_good_realm_rises }
 	}
 
 	# Cost

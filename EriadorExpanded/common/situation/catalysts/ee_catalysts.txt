@@ -1,0 +1,3 @@
+﻿# Colonisation mechanic
+catalyst_increased_dev = {} 
+catalyst_decreased_dev = {} 

@@ -327,6 +327,7 @@ decision_arthedain_provinces = {
 	is_valid = {
 		prestige_level >= high_prestige_level
 		completely_controls = title:k_arthedain # Completely controls the old heartland of the Kingdom
+		completely_controls_region = middleearth_west_arnor_arthedain
 	}
 
 	is_valid_showing_failures_only = {
@@ -373,10 +374,17 @@ decision_arthedain_provinces = {
 				set_de_jure_liege_title = title:d_shire
 				
 		}
-		title:k_shire = {
-			change_title_holder = {
-				holder = root
-				change = scope:title_change
+		if = {
+			limit = {
+				title:k_shire.holder = {
+					is_hobbit = no
+				}
+			}
+			title:k_shire = {
+				change_title_holder = {
+					holder = root
+					change = scope:title_change
+				}
 			}
 		}
 		
@@ -401,25 +409,7 @@ decision_arthedain_provinces = {
 			set_capital_county = title:c_annuminas
 		}
 		
-		if = {
-				limit = {
-					has_title = title:e_reunitedkingdom
-					is_target_in_global_variable_list = {
-						name = unavailable_unique_decisions
-						target = flag:decision_solidify_reunited_kingdom
-					}
-				}
-				title:k_fornost = { set_de_jure_liege_title = title:e_reunitedkingdom }
-				title:k_sirgala = { set_de_jure_liege_title = title:e_reunitedkingdom }
-				title:k_shire = { set_de_jure_liege_title = title:e_reunitedkingdom }
-			}
-		else_if = {
-				limit = { has_title = title:e_numenor_in_exile }
-				title:k_fornost = { set_de_jure_liege_title = title:e_numenor_in_exile }
-				title:k_sirgala = { set_de_jure_liege_title = title:e_numenor_in_exile }
-				title:k_shire = { set_de_jure_liege_title = title:e_numenor_in_exile }
-				
-			}
+		
 		
 		
 		resolve_title_and_vassal_change = scope:title_change
@@ -762,176 +752,7 @@ decision_rhudaur_provinces = {
 #	}
 #}
 
-decision_palintir_fishing = {
-	title = decision_palintir_fishing
-	desc = decision_palintir_fishing_desc
-	confirm_text = decision_palintir_fishing_confirm
-	selection_tooltip = decision_palintir_fishing_tooltip
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
-	}
-	
 
-	# AI
-	ai_goal = yes
-	ai_potential = {
-		always = yes
-	}
-	ai_will_do = {
-		base = 100
-	}
-	
-	# IS SHOWN
-	decision_group_type = realms_in_exile_major
-	
-	is_shown = {
-		
-		is_arnor = yes
-	
-		
-		
-		NOT = {
-			is_target_in_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:decision_palintir_fishing
-			}		
-		}
-	}
-	
-	cost = {
-		prestige = major_prestige_value
-		gold = 1500
-	}
-	
-	# IS VALID
-	is_valid = {
-		prestige_level >= high_prestige_level
-		completely_controls = title:k_forochel # Completely controls the old heartland of the Kingdom
-	}
-
-	is_valid_showing_failures_only = {
-		is_imprisoned = no
-		is_available_adult = yes
-		is_at_war = no
-	}
-
-	# EFFECT
-	effect = {
-
-		custom_tooltip = {
-			text = decision_palintir_fishing_effect
-		}
-
-		
-		add_to_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:decision_palintir_fishing
-		}
-		
-		hidden_effect = {
-			random_list = {
-				10 = {
-					trigger_event = {
-						id = ee_arnor.6
-						months = 6
-					}
-				}
-				5 = {
-					trigger_event = {
-						id = ee_arnor.9
-						months = 9
-					}
-				}
-				85 = {
-					trigger_event = {
-						id = ee_arnor.8
-						months = 6
-					}
-				}
-			}
-		}
-		
-	}
-}
-
-decision_palintir_fishing_gondor = {
-	title = decision_palintir_fishing_gondor
-	desc = decision_palintir_fishing_gondor_desc
-	confirm_text = decision_palintir_fishing_gondor_confirm
-	selection_tooltip = decision_palintir_fishing_gondor_tooltip
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_osgiliath_01.dds"
-	}
-	
-
-	# AI
-	ai_goal = yes
-	ai_potential = {
-		always = yes
-	}
-	ai_will_do = {
-		base = 100
-	}
-	
-	# IS SHOWN
-	decision_group_type = realms_in_exile_major
-	
-	is_shown = {
-		OR = {
-			is_gondor = yes
-		}
-		
-		
-		NOT = {
-			is_target_in_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:decision_palintir_fishing_gondor
-			}		
-		}
-	}
-	
-	cost = {
-		prestige = major_prestige_value
-		gold = 1000
-	}
-	
-	# IS VALID
-	is_valid = {
-		prestige_level >= high_prestige_level
-		
-				completely_controls = title:c_osgiliath
-				province:202 = { has_building_or_higher = wonder_osgiliath_05 }
-				province:203 = { has_building_or_higher = wonder_osgiliath_05 }
-			
-	}
-
-	is_valid_showing_failures_only = {
-		is_imprisoned = no
-		is_available_adult = yes
-		is_at_war = no
-	}
-
-	# EFFECT
-	effect = {
-
-		custom_tooltip = {
-			text = decision_palintir_fishing_gondor_effect
-		}
-
-		
-		add_to_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:decision_palintir_fishing_gondor
-		}
-		
-		trigger_event = {
-			id = ee_arnor.7
-			months = 6
-		}
-
-		
-	}
-}
 
 decision_rebuild_ost_in_edhil= {
 	title = decision_rebuild_ost_in_edhil
@@ -1141,142 +962,151 @@ decision_arnor_colony = {
 	
 
 
-decision_colonize_arnor = {
-	title = decision_colonize
-	desc = decision_colonize_desc
-	confirm_text = decision_colonize_confirm
-	selection_tooltip = decision_colonize_tooltip
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
-	}
-	
-
-	# AI
-	ai_goal = yes
-	ai_potential = {
-		always = yes
-	}
-	ai_will_do = {
-		base = 1000
-	}
-	
-	# IS SHOWN
-	decision_group_type = realms_in_exile_minor 
-	
-	is_shown = {
-			
-		OR = {		
-			has_title = title:e_arnor
-			has_title = title:k_arthedain
-			has_title = title:k_cardolan
-			has_title = title:k_rhudaur
-			has_title = title:k_arnor_steward
-			
-		}	
-		
-		
-	}
-	
-	# IS VALID
-	is_valid = {
-		NOT = {
-			has_character_flag = Colonizing
-			completely_controls_region = middleearth_west_arnor
-		}
-		any_sub_realm_county = {
-			any_neighboring_county = {
-				any_county_province = {
-					has_holding_type = wastelands_holding
-					geographical_region = middleearth_west_arnor					
-				}
-			}
-		}
-		
-		
-	}
-	
-	cost = {
-		gold = minor_gold_value
-	}
-
-	is_valid_showing_failures_only = {
-		
-	}
-
-	# EFFECT
-	effect = {
-			
-			
-			
-		random_sub_realm_county = {
-				limit = {
-					any_neighboring_county = {
-						any_county_province = {
-							has_holding_type = wastelands_holding
-							geographical_region = middleearth_west_arnor						
-						}
-					}
-				}
-				random_neighboring_county = { 
-					limit = {
-						any_county_province = {
-							has_holding_type = wastelands_holding
-							geographical_region = middleearth_west_arnor						
-						}
-					}
-					save_scope_as = target_county
-				}
-			}
-			
-			
-			
-				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
-				 
-				scope:target_county = {
-					random_list = {
-						33 = { change_development_level = 2 }
-						33 = { change_development_level = 3 }
-						33 = { change_development_level = 4 }
-					}
-					if = {
-						limit = { root = { is_elf = yes } }
-						title_province = { set_holding_type = elven_holding }
-					} else_if = {
-						limit = { root.location = { terrain = halls } }
-						title_province = { set_holding_type = dwarven_holding }
-					} else_if = {
-						limit = { root = { is_hobbit = yes } }
-						title_province = { set_holding_type = city_holding }
-					} else = {
-						if = {
-							limit = { root = { has_government = tribal_government } }
-							title_province = { set_holding_type = tribal_holding }
-						} else = {
-							title_province = { set_holding_type = castle_holding }
-						}
-					}
-				}
-
-				if = { #Fallback
-					limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
-					scope:target_county = { set_county_faith = root.faith }
-				}
-				if = { #Fallback
-					limit = { scope:target_county.culture = culture:wastelands }
-					scope:target_county = { set_county_culture = root.culture }
-				}
-			 
-		
-		
-		
-			
-			
-		add_character_flag = { flag = Colonizing months = 3 }
-		add_gold = 100
-		correct_wastelands_tracker
-	}
-	
-}}
+#decision_colonize_arnor = {
+#	title = decision_colonize
+#	desc = decision_colonize_desc
+#	confirm_text = decision_colonize_confirm
+#	selection_tooltip = decision_colonize_tooltip
+#	picture = {
+#		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
+#	}
+#	
+#
+#	# AI
+#	ai_goal = yes
+#	ai_potential = {
+#		always = yes
+#	}
+#	ai_will_do = {
+#		base = 0 # LotR: This should be tied to WotR mode.
+#		modifier = { # Game Rule
+#			has_game_rule = accelerated_colonize_rule_disabled_ai
+#			add = 0
+#		}
+#		modifier = { # Game Rule
+#			has_game_rule = accelerated_colonize_rule_enabled
+#			add = 100
+#		}
+#	}
+#	
+#	# IS SHOWN
+#	decision_group_type = realms_in_exile_minor 
+#	
+#	is_shown = {
+#		always = no
+#		OR = {		
+#			has_title = title:e_arnor
+#			has_title = title:k_arthedain
+#			has_title = title:k_cardolan
+#			has_title = title:k_rhudaur
+#			has_title = title:k_arnor_steward
+#			
+#		}	
+#		
+#		NOT = { has_game_rule = accelerated_colonize_rule_disabled }
+#		
+#	}
+#	
+#	# IS VALID
+#	is_valid = {
+#		NOT = {
+#			has_character_flag = Colonizing
+#			completely_controls_region = middleearth_west_arnor
+#		}
+#		any_sub_realm_county = {
+#			any_neighboring_county = {
+#				any_county_province = {
+#					has_holding_type = wastelands_holding
+#					geographical_region = middleearth_west_arnor					
+#				}
+#			}
+#		}
+#		
+#		
+#	}
+#	
+#	cost = {
+#		gold = minor_gold_value
+#	}
+#
+#	is_valid_showing_failures_only = {
+#		
+#	}
+#
+#	# EFFECT
+#	effect = {
+#			
+#			
+#			
+#		random_sub_realm_county = {
+#				limit = {
+#					any_neighboring_county = {
+#						any_county_province = {
+#							has_holding_type = wastelands_holding
+#							geographical_region = middleearth_west_arnor						
+#						}
+#					}
+#				}
+#				random_neighboring_county = { 
+#					limit = {
+#						any_county_province = {
+#							has_holding_type = wastelands_holding
+#							geographical_region = middleearth_west_arnor						
+#						}
+#					}
+#					save_scope_as = target_county
+#				}
+#			}
+#			
+#			
+#			
+#				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+#				 
+#				scope:target_county = {
+#					random_list = {
+#						33 = { change_development_level = 2 }
+#						33 = { change_development_level = 3 }
+#						33 = { change_development_level = 4 }
+#					}
+#					if = {
+#						limit = { root = { is_elf = yes } }
+#						title_province = { set_holding_type = elven_holding }
+#					} else_if = {
+#						limit = { root.location = { terrain = halls } }
+#						title_province = { set_holding_type = dwarven_holding }
+#					} else_if = {
+#						limit = { root = { is_hobbit = yes } }
+#						title_province = { set_holding_type = city_holding }
+#					} else = {
+#						if = {
+#							limit = { root = { has_government = tribal_government } }
+#							title_province = { set_holding_type = tribal_holding }
+#						} else = {
+#							title_province = { set_holding_type = castle_holding }
+#						}
+#					}
+#				}
+#
+#				if = { #Fallback
+#					limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+#					scope:target_county = { set_county_faith = root.faith }
+#				}
+#				if = { #Fallback
+#					limit = { scope:target_county.culture = culture:wastelands }
+#					scope:target_county = { set_county_culture = root.culture }
+#				}
+#			 
+#		
+#		
+#		
+#			
+#			
+#		add_character_flag = { flag = Colonizing months = 3 }
+#		add_gold = 100
+#		correct_wastelands_tracker
+#	}
+#	
+#}}
 
 decision_adopt_arnorian_culture_colonist = {
 	sort_order = 97
@@ -1634,289 +1464,460 @@ decision_arnor_king = {
 	}
 }
 
-decision_colonize_rhudaur = {
-	title = decision_colonize
-	desc = decision_colonize_desc
-	confirm_text = decision_colonize_confirm
-	selection_tooltip = decision_colonize_tooltip
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
-	}
-	
-
-	# AI
-	ai_goal = yes
-	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
-	
-	# IS SHOWN
-	decision_group_type = realms_in_exile_minor 
-	
-	is_shown = {
-			
-		OR = {		
-			has_title = title:d_northern_dunedain
-			
-			
-		}
-
-		NOT = {
-			OR = {		
-				has_title = title:e_arnor
-				has_title = title:k_rhudaur
-				has_title = title:k_cardolan
-				has_title = title:k_arthedain
-			
-			
-			}
-			
-		}	
-		
-		
-	}
-	
-	# IS VALID
-	is_valid = {
-		NOT = {
-			has_character_flag = Colonizing
-			completely_controls = title:k_rhudaur
-		}
-		any_sub_realm_county = {
-			any_neighboring_county = {
-				any_county_province = {
-					has_holding_type = wastelands_holding
-					geographical_region = middleearth_west_arnor_rhudaur						
-				}
-			}
-		
-		}
-	}
-	
-	cost = {
-		gold = minor_gold_value
-	}
-
-	is_valid_showing_failures_only = {
-		
-	}
-
-	# EFFECT
-	effect = {
-			
-			
-			
-		random_sub_realm_county = {
-				limit = {
-					any_neighboring_county = {
-						any_county_province = {
-							has_holding_type = wastelands_holding
-							geographical_region = middleearth_west_arnor_rhudaur						
-						}
-					}
-				}
-				random_neighboring_county = { 
-					limit = {
-						any_county_province = {
-							has_holding_type = wastelands_holding
-							geographical_region = middleearth_west_arnor_rhudaur						
-						}
-					}
-					save_scope_as = target_county
-				}
-			}
-			
-			
-			
-				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
-				 
-				scope:target_county = {
-					random_list = {
-						33 = { change_development_level = 2 }
-						33 = { change_development_level = 3 }
-						33 = { change_development_level = 4 }
-					}
-					if = {
-						limit = { root = { is_elf = yes } }
-						title_province = { set_holding_type = elven_holding }
-					} else_if = {
-						limit = { root.location = { terrain = halls } }
-						title_province = { set_holding_type = dwarven_holding }
-					} else_if = {
-						limit = { root = { is_hobbit = yes } }
-						title_province = { set_holding_type = city_holding }
-					} else = {
-						if = {
-							limit = { root = { has_government = tribal_government } }
-							title_province = { set_holding_type = tribal_holding }
-						} else = {
-							title_province = { set_holding_type = castle_holding }
-						}
-					}
-				}
-
-				if = { #Fallback
-					limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
-					scope:target_county = { set_county_faith = root.faith }
-				}
-				if = { #Fallback
-					limit = { scope:target_county.culture = culture:wastelands }
-					scope:target_county = { set_county_culture = root.culture }
-				}
-			 
-		
-		
-		
-			
-			
-		add_character_flag = { flag = Colonizing months = 6 }
-		add_gold = 100
-
-	}
-	
-}
-
-decision_colonize_arthedain = {
-	title = decision_colonize
-	desc = decision_colonize_desc
-	confirm_text = decision_colonize_confirm
-	selection_tooltip = decision_colonize_tooltip
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
-	}
-	
-
-	# AI
-	ai_goal = yes
-	ai_potential = {
-		always = yes
-	}
-	ai_will_do = {
-		base = 1000
-	}
-	
-	# IS SHOWN
-	decision_group_type = realms_in_exile_minor 
-	
-	is_shown = {
-			
-		OR = {		
-			has_title = title:d_emyn_uial
-			
-			
-		}	
-		NOT = {
-			OR = {		
-				has_title = title:e_arnor
-				has_title = title:k_rhudaur
-				has_title = title:k_cardolan
-				has_title = title:k_arthedain
-			
-			
-			}
-			
-		}
-		
-	}
-	
-	# IS VALID
-	is_valid = {
-		NOT = {
-			has_character_flag = Colonizing
-			completely_controls = title:k_arthedain
-		}
-		any_sub_realm_county = {
-			any_neighboring_county = {
-				any_county_province = {
-					has_holding_type = wastelands_holding
-					geographical_region = middleearth_west_arnor_arthedain						
-				}
-			}
-		}
-		
-	}
-	
-	cost = {
-		gold = minor_gold_value
-	}
-
-	is_valid_showing_failures_only = {
-		
-	}
-
-	# EFFECT
-	effect = {
-			
-			
-			
-		random_sub_realm_county = {
-				limit = {
-					any_neighboring_county = {
-						any_county_province = {
-							has_holding_type = wastelands_holding
-							geographical_region = middleearth_west_arnor_arthedain						
-						}
-					}
-				}
-				random_neighboring_county = { 
-					limit = {
-						any_county_province = {
-							has_holding_type = wastelands_holding
-							geographical_region = middleearth_west_arnor_arthedain						
-						}
-					}
-					save_scope_as = target_county
-				}
-			}
-			
-			
-			
-				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
-				 
-				scope:target_county = {
-					random_list = {
-						33 = { change_development_level = 2 }
-						33 = { change_development_level = 3 }
-						33 = { change_development_level = 4 }
-					}
-					if = {
-						limit = { root = { is_elf = yes } }
-						title_province = { set_holding_type = elven_holding }
-					} else_if = {
-						limit = { root.location = { terrain = halls } }
-						title_province = { set_holding_type = dwarven_holding }
-					} else_if = {
-						limit = { root = { is_hobbit = yes } }
-						title_province = { set_holding_type = city_holding }
-					} else = {
-						if = {
-							limit = { root = { has_government = tribal_government } }
-							title_province = { set_holding_type = tribal_holding }
-						} else = {
-							title_province = { set_holding_type = castle_holding }
-						}
-					}
-				}
-
-				if = { #Fallback
-					limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
-					scope:target_county = { set_county_faith = root.faith }
-				}
-				if = { #Fallback
-					limit = { scope:target_county.culture = culture:wastelands }
-					scope:target_county = { set_county_culture = root.culture }
-				}
-			 
-		
-		
-		
-			
-			
-		add_character_flag = { flag = Colonizing months = 6 }
-		add_gold = 100
-		
-	}
-	
-}
+#decision_colonize_rhudaur = {
+#	title = decision_colonize
+#	desc = decision_colonize_desc
+#	confirm_text = decision_colonize_confirm
+#	selection_tooltip = decision_colonize_tooltip
+#	picture = {
+#		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
+#	}
+#	
+#
+#	# AI
+#	ai_goal = yes
+#	ai_potential = { always = yes }
+#	ai_will_do = {
+#		base = 0 # LotR: This should be tied to WotR mode.
+#		modifier = { # Game Rule
+#			has_game_rule = accelerated_colonize_rule_disabled_ai
+#			add = 0
+#		}
+#		modifier = { # Game Rule
+#			has_game_rule = accelerated_colonize_rule_enabled
+#			add = 100
+#		}
+#	}
+#	
+#	# IS SHOWN
+#	decision_group_type = realms_in_exile_minor 
+#	
+#	is_shown = {
+#			NOT = { has_game_rule = accelerated_colonize_rule_disabled }
+#		OR = {		
+#			has_title = title:d_northern_dunedain
+#			
+#			
+#		}
+#		always = no
+#
+#		NOT = {
+#			OR = {		
+#				has_title = title:e_arnor
+#				has_title = title:k_rhudaur
+#				has_title = title:k_cardolan
+#				has_title = title:k_arthedain
+#			
+#			
+#			}
+#			
+#		}	
+#		
+#		
+#	}
+#	
+#	# IS VALID
+#	is_valid = {
+#		NOT = {
+#			has_character_flag = Colonizing
+#			completely_controls = title:k_rhudaur
+#		}
+#		any_sub_realm_county = {
+#			any_neighboring_county = {
+#				any_county_province = {
+#					has_holding_type = wastelands_holding
+#					geographical_region = middleearth_west_arnor_rhudaur						
+#				}
+#			}
+#		
+#		}
+#	}
+#	
+#	cost = {
+#		gold = minor_gold_value
+#	}
+#
+#	is_valid_showing_failures_only = {
+#		
+#	}
+#
+#	# EFFECT
+#	effect = {
+#			
+#			
+#			
+#		random_sub_realm_county = {
+#				limit = {
+#					any_neighboring_county = {
+#						any_county_province = {
+#							has_holding_type = wastelands_holding
+#							geographical_region = middleearth_west_arnor_rhudaur						
+#						}
+#					}
+#				}
+#				random_neighboring_county = { 
+#					limit = {
+#						any_county_province = {
+#							has_holding_type = wastelands_holding
+#							geographical_region = middleearth_west_arnor_rhudaur						
+#						}
+#					}
+#					save_scope_as = target_county
+#				}
+#			}
+#			
+#			
+#			
+#				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+#				 
+#				scope:target_county = {
+#					random_list = {
+#						33 = { change_development_level = 2 }
+#						33 = { change_development_level = 3 }
+#						33 = { change_development_level = 4 }
+#					}
+#					if = {
+#						limit = { root = { is_elf = yes } }
+#						title_province = { set_holding_type = elven_holding }
+#					} else_if = {
+#						limit = { root.location = { terrain = halls } }
+#						title_province = { set_holding_type = dwarven_holding }
+#					} else_if = {
+#						limit = { root = { is_hobbit = yes } }
+#						title_province = { set_holding_type = city_holding }
+#					} else = {
+#						if = {
+#							limit = { root = { has_government = tribal_government } }
+#							title_province = { set_holding_type = tribal_holding }
+#						} else = {
+#							title_province = { set_holding_type = castle_holding }
+#						}
+#					}
+#				}
+#
+#				if = { #Fallback
+#					limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+#					scope:target_county = { set_county_faith = root.faith }
+#				}
+#				if = { #Fallback
+#					limit = { scope:target_county.culture = culture:wastelands }
+#					scope:target_county = { set_county_culture = root.culture }
+#				}
+#			 
+#		
+#		
+#		
+#			
+#			
+#		add_character_flag = { flag = Colonizing months = 6 }
+#		add_gold = 100
+#
+#	}
+#	
+#}
+#
+#decision_colonize_arthedain = {
+#	title = decision_colonize
+#	desc = decision_colonize_desc
+#	confirm_text = decision_colonize_confirm
+#	selection_tooltip = decision_colonize_tooltip
+#	picture = {
+#		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
+#	}
+#	
+#
+#	# AI
+#	ai_goal = yes
+#	ai_potential = {
+#		always = yes
+#	}
+#	ai_will_do = {
+#		base = 0 # LotR: This should be tied to WotR mode.
+#		modifier = { # Game Rule
+#			has_game_rule = accelerated_colonize_rule_disabled_ai
+#			add = 0
+#		}
+#		modifier = { # Game Rule
+#			has_game_rule = accelerated_colonize_rule_enabled
+#			add = 100
+#		}
+#	}
+#	
+#	# IS SHOWN
+#	decision_group_type = realms_in_exile_minor 
+#	
+#	is_shown = {
+#		NOT = { has_game_rule = accelerated_colonize_rule_disabled }
+#		OR = {		
+#			has_title = title:d_emyn_uial
+#			
+#			
+#		}
+#		always = no
+#		NOT = {
+#			OR = {		
+#				has_title = title:e_arnor
+#				has_title = title:k_rhudaur
+#				has_title = title:k_cardolan
+#				has_title = title:k_arthedain
+#			
+#			
+#			}
+#			
+#		}
+#		
+#	}
+#	
+#	# IS VALID
+#	is_valid = {
+#		NOT = {
+#			has_character_flag = Colonizing
+#			completely_controls = title:k_arthedain
+#		}
+#		any_sub_realm_county = {
+#			any_neighboring_county = {
+#				any_county_province = {
+#					has_holding_type = wastelands_holding
+#					geographical_region = middleearth_west_arnor_arthedain						
+#				}
+#			}
+#		}
+#		
+#	}
+#	
+#	cost = {
+#		gold = minor_gold_value
+#	}
+#
+#	is_valid_showing_failures_only = {
+#		
+#	}
+#
+#	# EFFECT
+#	effect = {
+#			
+#			
+#			
+#		random_sub_realm_county = {
+#				limit = {
+#					any_neighboring_county = {
+#						any_county_province = {
+#							has_holding_type = wastelands_holding
+#							geographical_region = middleearth_west_arnor_arthedain						
+#						}
+#					}
+#				}
+#				random_neighboring_county = { 
+#					limit = {
+#						any_county_province = {
+#							has_holding_type = wastelands_holding
+#							geographical_region = middleearth_west_arnor_arthedain						
+#						}
+#					}
+#					save_scope_as = target_county
+#				}
+#			}
+#			
+#			
+#			
+#				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+#				 
+#				scope:target_county = {
+#					random_list = {
+#						33 = { change_development_level = 2 }
+#						33 = { change_development_level = 3 }
+#						33 = { change_development_level = 4 }
+#					}
+#					if = {
+#						limit = { root = { is_elf = yes } }
+#						title_province = { set_holding_type = elven_holding }
+#					} else_if = {
+#						limit = { root.location = { terrain = halls } }
+#						title_province = { set_holding_type = dwarven_holding }
+#					} else_if = {
+#						limit = { root = { is_hobbit = yes } }
+#						title_province = { set_holding_type = city_holding }
+#					} else = {
+#						if = {
+#							limit = { root = { has_government = tribal_government } }
+#							title_province = { set_holding_type = tribal_holding }
+#						} else = {
+#							title_province = { set_holding_type = castle_holding }
+#						}
+#					}
+#				}
+#
+#				if = { #Fallback
+#					limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+#					scope:target_county = { set_county_faith = root.faith }
+#				}
+#				if = { #Fallback
+#					limit = { scope:target_county.culture = culture:wastelands }
+#					scope:target_county = { set_county_culture = root.culture }
+#				}
+#			 
+#		
+#		
+#		
+#			
+#			
+#		add_character_flag = { flag = Colonizing months = 6 }
+#		add_gold = 100
+#		
+#	}
+#	
+#}
+#
+#decision_colonize_cardolan = {
+#	title = decision_colonize
+#	desc = decision_colonize_desc
+#	confirm_text = decision_colonize_confirm
+#	selection_tooltip = decision_colonize_tooltip
+#	picture = {
+#		reference = "gfx/interface/illustrations/decisions/decision_mithlond_02.dds"
+#	}
+#	
+#
+#	# AI
+#	ai_goal = yes
+#	ai_potential = {
+#		always = yes
+#	}
+#	ai_will_do = {
+#		base = 0 # LotR: This should be tied to WotR mode.
+#		modifier = { # Game Rule
+#			has_game_rule = accelerated_colonize_rule_disabled_ai
+#			add = 0
+#		}
+#		modifier = { # Game Rule
+#			has_game_rule = accelerated_colonize_rule_enabled
+#			add = 100
+#		}
+#	}
+#	
+#	# IS SHOWN
+#	decision_group_type = realms_in_exile_minor 
+#	
+#	is_shown = {
+#		NOT = { has_game_rule = accelerated_colonize_rule_disabled }
+#		OR = {		
+#			has_title = title:d_tharbad_titular
+#			has_title = title:k_saralain
+#			
+#		}	
+#		NOT = {
+#			OR = {		
+#				has_title = title:e_arnor
+#				has_title = title:k_rhudaur
+#				has_title = title:k_cardolan
+#				has_title = title:k_arthedain
+#			
+#			
+#			}
+#			
+#		}
+#		
+#	}
+#	
+#	# IS VALID
+#	is_valid = {
+#		NOT = {
+#			has_character_flag = Colonizing
+#			completely_controls = title:k_cardolan
+#		}
+#		any_sub_realm_county = {
+#			any_neighboring_county = {
+#				any_county_province = {
+#					has_holding_type = wastelands_holding
+#					geographical_region = middleearth_west_arnor_arthedain						
+#				}
+#			}
+#		}
+#		
+#	}
+#	
+#	cost = {
+#		gold = minor_gold_value
+#	}
+#
+#	is_valid_showing_failures_only = {
+#		
+#	}
+#
+#	# EFFECT
+#	effect = {
+#			
+#			
+#			
+#		random_sub_realm_county = {
+#				limit = {
+#					any_neighboring_county = {
+#						any_county_province = {
+#							has_holding_type = wastelands_holding
+#							geographical_region = middleearth_west_arnor_cardolan					
+#						}
+#					}
+#				}
+#				random_neighboring_county = { 
+#					limit = {
+#						any_county_province = {
+#							has_holding_type = wastelands_holding
+#							geographical_region = middleearth_west_arnor_cardolan						
+#						}
+#					}
+#					save_scope_as = target_county
+#				}
+#			}
+#			
+#			
+#			
+#				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+#				 
+#				scope:target_county = {
+#					random_list = {
+#						33 = { change_development_level = 2 }
+#						33 = { change_development_level = 3 }
+#						33 = { change_development_level = 4 }
+#					}
+#					if = {
+#						limit = { root = { is_elf = yes } }
+#						title_province = { set_holding_type = elven_holding }
+#					} else_if = {
+#						limit = { root.location = { terrain = halls } }
+#						title_province = { set_holding_type = dwarven_holding }
+#					} else_if = {
+#						limit = { root = { is_hobbit = yes } }
+#						title_province = { set_holding_type = city_holding }
+#					} else = {
+#						if = {
+#							limit = { root = { has_government = tribal_government } }
+#							title_province = { set_holding_type = tribal_holding }
+#						} else = {
+#							title_province = { set_holding_type = castle_holding }
+#						}
+#					}
+#				}
+#
+#				if = { #Fallback
+#					limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+#					scope:target_county = { set_county_faith = root.faith }
+#				}
+#				if = { #Fallback
+#					limit = { scope:target_county.culture = culture:wastelands }
+#					scope:target_county = { set_county_culture = root.culture }
+#				}
+#			 
+#		
+#		
+#		
+#			
+#			
+#		add_character_flag = { flag = Colonizing months = 6 }
+#		add_gold = 100
+#		
+#	}
+#	
+#}
 
 decision_attack_balrog = {
 	title = decision_attack_balrog
@@ -1930,12 +1931,12 @@ decision_attack_balrog = {
 
 	decision_group_type = realms_in_exile_major
 	
-	ai_goal = yes
+	ai_goal = no
 	ai_potential = {
-		always = yes
+		always = no
 	}
 	ai_will_do = {
-		base = 100
+		base = 0
 	}
 
 	is_shown = {
@@ -2029,4 +2030,321 @@ decision_attack_balrog = {
 		}
 		
 	}	
+}
+
+decision_saralain_arnorian = {
+	title = decision_saralain_arnorian
+	desc = decision_saralain_arnorian_desc
+	confirm_text = decision_saralain_arnorian_confirm
+	selection_tooltip = decision_saralain_arnorian_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_minas_tirith_02.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		has_culture = culture:saralain
+		
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_saralain_arnorian
+			}		
+		}
+	}
+	
+	cost = {
+		prestige = major_prestige_value
+		
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		
+		realm_size >= 30
+		
+		completely_controls = title:c_mistalonde
+		completely_controls = title:c_tharbad
+		completely_controls = title:c_thalion
+		completely_controls = title:c_girithlindor
+		completely_controls = title:c_argond
+		
+		has_religion = religion:dunedain_religion
+		
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+	
+		custom_tooltip = {
+			text = saralain_arnorian_effect
+			root.culture = {
+				set_heritage_from = culture:arnorian
+				set_language_from = culture:arnorian
+			}
+		
+		}
+		root.culture = {
+			add_culture_tradition = tradition_arnorian_legacy
+			get_all_innovations_from = culture:arnorian
+		}
+
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_saralain_arnorian
+		}
+		
+		
+
+		
+	}
+}
+
+decision_greater_cardolan = {
+	title = decision_greater_cardolan
+	desc = decision_greater_cardolan_desc
+	confirm_text = decision_greater_cardolan_confirm
+	selection_tooltip = decision_greater_cardolan_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_amon_sul.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		
+			is_independent_ruler = yes
+		OR = {
+			has_title = title:k_cardolan
+			has_title = title:d_tharbad_titular
+			has_title = title:c_thalion
+			has_title = title:c_tharbad
+		}
+		NOT = {
+			has_title = title:e_arnor
+		}
+		
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_greater_cardolan
+			}		
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		completely_controls_region = greater_cardolan
+		
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		add_prestige = 1000
+		
+		
+
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_greater_cardolan
+		}
+		get_title = title:e_cardolan
+		custom_tooltip = decision_greater_cardolan_effect
+		
+		hidden_effect = {
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = title_change
+				add_claim_on_loss = yes
+			}
+			
+			title:d_girithlin = {
+					set_de_jure_liege_title = title:k_mistalonde
+				}
+			title:d_dol_caladir = {
+					set_de_jure_liege_title = title:k_mistalonde
+				}
+			title:d_ethir_gwathlo = {
+					set_de_jure_liege_title = title:k_mistalonde
+				}
+			title:d_eryn_vorn = {
+					set_de_jure_liege_title = title:k_mistalonde
+				}
+			
+			title:k_mistalonde = {
+				change_title_holder = {
+					holder = root
+					change = scope:title_change
+				}
+			}
+	
+			title:k_mistalonde = {
+				set_de_jure_liege_title = title:e_cardolan
+			}
+			title:k_cardolan = {
+				set_de_jure_liege_title = title:e_cardolan
+			}
+			
+			title:d_siragale = {
+				set_de_jure_liege_title = title:k_sirgala
+			}
+			title:d_hyarromenya = {
+				set_de_jure_liege_title = title:k_sirgala
+			}
+			title:d_sarn_athrad = { # Vector Note - see above comment
+				set_de_jure_liege_title = title:k_sirgala
+			}
+			title:d_dor_tinuviel = { # Vector Note - see above comment
+				set_de_jure_liege_title = title:k_sirgala
+			}
+			title:k_sirgala = { # Vector Note - see above comment
+				set_de_jure_liege_title = title:e_cardolan
+			}
+			
+			
+			title:k_sirgala = {
+				change_title_holder = {
+					holder = root
+					change = scope:title_change
+				}
+			}
+			
+			if = {
+					limit = {
+						has_title = title:e_reunitedkingdom
+						is_target_in_global_variable_list = {
+							name = unavailable_unique_decisions
+							target = flag:decision_solidify_reunited_kingdom
+						}
+					}
+					title:k_mistalonde = { set_de_jure_liege_title = title:e_reunitedkingdom }
+					
+				}
+			else_if = {
+					limit = { has_title = title:e_numenor_in_exile }
+					title:k_mistalonde = { set_de_jure_liege_title = title:e_numenor_in_exile }
+	
+					
+				}
+			
+			resolve_title_and_vassal_change = scope:title_change
+		}
+		
+	}
+}
+
+decision_restore_arne = {
+	title = decision_restore_arne
+	desc = decision_restore_arne_desc
+	confirm_text = decision_restore_arne_confirm
+	selection_tooltip = decision_restore_arne_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_breeland.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		
+		is_independent_ruler = yes
+		culture = { has_cultural_pillar = heritage_eriadorim }
+		
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_restore_arne
+			}		
+		}
+	}
+	
+	# IS VALID
+	is_valid = {
+		prestige_level >= high_prestige_level
+		completely_controls_region = middleearth_west_arnor_arne
+		
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		add_prestige = 1000
+		
+		
+
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_restore_arne
+		}
+		get_title = title:k_arne
+		custom_tooltip = decision_restore_arne_effect
+		
+		hidden_effect = {
+			every_county_in_region = {
+				region = middleearth_west_arnor_arne
+				duchy = {
+					set_de_jure_liege_title = title:k_arne
+				}
+			}
+		}
+		
+	}
 }

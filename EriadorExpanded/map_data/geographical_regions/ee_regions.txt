@@ -1,0 +1,42 @@
+﻿
+
+greater_cardolan = {
+	regions = {
+		
+		
+		
+		
+	}
+	duchies = {
+		d_sarn_athrad
+		d_siragale
+		d_hyarromenya
+		d_dor_tinuviel
+	}
+	kingdoms = {
+		k_cardolan
+	}
+}
+
+
+middleearth_west_arnor_arne = {
+	regions = {
+		
+		
+		
+		
+	}
+	duchies = {
+		d_nan_turath
+		d_emyn_sul
+		d_tyrn_gorthad
+		d_minhiriath
+		d_faerdor
+		d_dyr_maenason
+		d_dul_glandagol
+		d_dyr_eldanaryon
+	}
+	kingdoms = {
+		
+	}
+}

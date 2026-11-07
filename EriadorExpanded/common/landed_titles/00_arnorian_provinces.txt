@@ -68,3 +68,50 @@ e_eriador = {
 	capital = c_ost_in_edhil
 	
 }
+
+h_cyrdor = { 
+	color = { 245 230 66}
+	#landless = yes
+	always_follows_primary_heir = yes
+	
+	
+
+	capital = c_ost_in_edhil
+	
+}
+
+k_wadewater = { 
+	color = { 4 35 214 }
+	#landless = yes
+	always_follows_primary_heir = yes
+	
+	
+
+	capital = c_swanfleet
+	
+}
+
+d_laamp_southern_faithful = { # Gandalf
+	color = { 100 100 100 }
+	capital = c_inzilloni
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+e_cardolan = {
+		color = { 60 120 0 }
+
+		capital = c_thalion
+		always_follows_primary_heir = yes
+
+		can_create = {
+			is_wastelands = no
+		}
+}

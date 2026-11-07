@@ -1,0 +1,11 @@
+﻿investment_event = {
+  effect = {
+    trigger_event = ee_lonelands.001
+  }
+}
+
+automation_event = {
+  effect = {
+    trigger_event = ee_lonelands.004
+  }
+}

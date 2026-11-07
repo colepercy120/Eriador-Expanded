@@ -1,0 +1,6 @@
+﻿
+
+colonization_power = {
+	parent = colonisation
+	texture = "gfx/interface/icons/concept_icons/conceptwilderness.dds"
+}

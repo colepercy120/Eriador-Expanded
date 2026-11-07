@@ -338,6 +338,35 @@ ee_elf.07 = {	# West Eregion
 	}
 }
 
+
+
+ee_elf.09 = {	# Unite the Western Elves
+	content_source = realms_dlc
+	type = character_event
+	title = ee_elf.09.t
+	desc = ee_elf.09.desc
+	theme = stewardship_duty_focus
+	override_background = {
+		reference = eregion
+	}
+
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+	
+	immediate = {
+		root = {
+			save_scope_as = root
+		}
+		
+	}
+
+	option = {
+		name = ee_elf.09.a
+	}
+}
+
 #####################
 ## Restore Eregion ##
 #####################
@@ -1269,7 +1298,17 @@ ee_elf.2005 = {	# duel saruon
 					add_piety_level = -1
 					add_prestige_level = -1
 					root.dynasty = { add_dynasty_prestige_level = -1 }
-					set_character_faith = faith:lidless_eye
+					if = {
+						limit = {
+							faith:faith_ring_cult = {
+								exists = yes
+							}
+						}
+						set_character_faith = faith:faith_ring_cult
+					}
+					else = {
+						set_character_faith = faith:lidless_eye
+					}
 					character:lineofsauron = {
 						add_hook = {
 							type = loyalty_hook

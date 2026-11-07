@@ -1,0 +1,324 @@
+﻿
+
+decision_shire_independence = {
+	title = decision_shire_independence_title
+	desc = decision_shire_independence_desc
+	selection_tooltip = decision_shire_independence_tooltip
+	confirm_text = decision_shire_independence_confirm
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_shire_01.dds"
+	}
+	sort_order = 100
+	
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 12
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		is_landed = yes
+		is_hobbit = yes # Don't have Men do this
+		any_realm_county = {
+			duchy = title:d_shire
+		}
+		has_title = title:k_shire
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_shire_independence
+			}
+		}
+		
+	}
+	
+	is_valid = {
+		prestige_level >= high_prestige_level
+		completely_controls = title:d_shire
+		has_title = title:k_shire
+		
+		title:d_shire = {
+			NOT = { de_jure_liege = title:k_shire }
+		}
+		is_independent_ruler = yes
+	}
+	
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_lotr_adult = yes
+		is_at_war = no
+	}
+	
+	cost = { gold = { value = 100 } }
+	
+	effect = {
+		title:d_shire = {
+			set_de_jure_liege_title = title:k_shire
+			
+		}
+		dynasty = { add_dynasty_prestige = 300 }
+		trigger_event = {
+			id = ee_hobbit.0100
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_shire_independence
+		}
+	}
+}
+
+decision_reclaim_eriador = {
+	title = decision_reclaim_eriador_hobbit
+	desc = decision_reclaim_eriador_hobbit_desc
+	confirm_text = decision_reclaim_eriador_hobbit_confirm
+	selection_tooltip = decision_reclaim_eriador_hobbit_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_shire_01.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		is_hobbit = yes
+		OR = {
+			
+			capital_province = {
+				geographical_region = custom_eriador
+			}
+		
+		}
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_reclaim_eriador
+			}		
+		}
+	}
+	
+	cost = {
+		prestige = 10000
+		piety = 5000
+	}
+	
+	# IS VALID
+	is_valid = {
+		legitimacy_level >= 5
+		prestige_level >= 5
+		piety_level >= 5
+		
+		completely_controls_region = custom_eriador
+		
+		
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		
+		
+		
+		#Create the title and make it primary
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = yes
+		}
+		
+		title:e_eriador = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+		
+		
+		if = {
+			limit = { highest_held_title_tier < tier_empire }
+			set_primary_title_to = title:e_eriador
+		}
+		
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_reclaim_eriador
+		}
+		
+		custom_tooltip = {
+			text = decision_reclaim_eriador_effect
+			every_kingdom = {
+				limit = {
+					title_capital_county = {
+						any_county_province = {
+							OR = {
+								geographical_region = custom_eriador
+								geographical_region = middleearth_forodwaith
+							}
+						}
+					}
+				}
+				set_de_jure_liege_title = title:e_eriador
+			}
+		}
+
+		
+
+		trigger_event = {
+			id = ee_hobbit.0101
+		}
+	}
+}
+
+decision_establish_wadewater = {
+	title = decision_establish_wadewater
+	desc = decision_establish_wadewater_desc
+	confirm_text = decision_establish_wadewater_confirm
+	selection_tooltip = decision_establish_wadewater_tooltip
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_shire_01.dds"
+	}
+	
+
+	# AI
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	
+	# IS SHOWN
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		is_hobbit = yes
+		OR = {
+			
+			capital_province = {
+				geographical_region = custom_eriador
+			}
+			capital_province = {
+				geographical_region = middleearth_west_enedhwaith
+			}
+		}
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_establish_wadewater
+			}		
+		}
+	}
+	
+	cost = {
+		
+		
+	}
+	
+	# IS VALID
+	is_valid = {
+		
+		prestige_level >= 3
+		
+		
+		completely_controls = title:d_swanfell
+		custom_tooltip = {
+			text = swanfell_settled
+			title:d_swanfell = {
+				any_de_jure_county = {
+					count = all
+					title_province = {
+						NOR = {
+							has_holding_type = settlement_holding
+							has_holding_type = wastelands_holding
+						}
+					}	
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# EFFECT
+	effect = {
+		
+		
+		
+		#Create the title and make it primary
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = yes
+		}
+		
+		title:k_wadewater = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+		
+		
+		if = {
+			limit = { highest_held_title_tier < tier_kingdom }
+			set_primary_title_to = title:k_wadewater
+		}
+		
+		title:d_swanfell = {
+			set_de_jure_liege_title = title:k_wadewater
+			every_de_jure_county = {
+				change_development_level = 3
+			}
+		}
+		title:k_wadewater = {
+			set_de_jure_liege_title = title:e_enedhwaith
+		
+		}
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_establish_wadewater
+		}
+		
+		
+
+		
+
+		trigger_event = {
+			id = ee_hobbit.0102
+}

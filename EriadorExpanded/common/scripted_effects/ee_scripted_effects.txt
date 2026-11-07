@@ -1,1 +1,185 @@
 ﻿
+colonize_power_tick = {
+	situation:lonelands = {
+		every_situation_participant = {
+			set_variable = {
+				name = colonization_power_change
+				value = 0
+			}
+			set_variable = {
+				name = colonization_power_change_dev
+				value = 0
+			}
+			set_variable = {
+				name = colonization_power_change_racial_multiplyer
+				value = 0
+			}
+			set_variable = {
+				name = colonization_power_change_modifier_multiplyer
+				value = 0
+			}
+			save_scope_as = colonizer
+			every_sub_realm_county = {
+				save_scope_value_as = {
+					name = county_dev_level
+					value = development_level
+				}
+				scope:colonizer = {
+					change_variable = { 
+						name = colonization_power_change_dev 
+						add = scope:county_dev_level
+					}
+				}
+			}
+			scope:colonizer = {
+				change_variable = { 
+						name = colonization_power_change_dev 
+						divide = 20
+					}
+				if = {
+					limit = {
+						is_elf = yes
+					}
+					set_variable = {
+						name = colonization_power_change_racial_multiplyer
+						value = 0.1
+					}
+				}
+				else_if = {
+					limit = {
+						is_dwarf = yes
+					}
+					set_variable = {
+						name = colonization_power_change_racial_multiplyer
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						is_orc = yes
+					}
+					set_variable = {
+						name = colonization_power_change_racial_multiplyer
+						value = 1.5
+					}
+				}
+				else_if = {
+					limit = {
+						is_hobbit = yes
+					}
+					set_variable = {
+						name = colonization_power_change_racial_multiplyer
+						value = 0.75
+					}
+				}
+				else = {
+					set_variable = {
+						name = colonization_power_change_racial_multiplyer
+						value = 1
+					}
+				}
+				if = {
+					limit = {
+						has_character_modifier = ee_lonelands_no_investment
+					}
+					set_variable = {
+						name = colonization_power_change_modifier_multiplyer
+						value = 0
+					}
+				}
+				if = {
+					limit = {
+						has_character_modifier = ee_lonelands_small_investment
+					}
+					set_variable = {
+						name = colonization_power_change_modifier_multiplyer
+						value = 0.5
+					}
+				}
+				if = {
+					limit = {
+						has_character_modifier = ee_lonelands_medium_investment
+					}
+					set_variable = {
+						name = colonization_power_change_modifier_multiplyer
+						value = 1
+					}
+				}
+				if = {
+					limit = {
+						has_character_modifier = ee_lonelands_large_investment
+					}
+					set_variable = {
+						name = colonization_power_change_modifier_multiplyer
+						value = 1.5
+					}
+				}
+				if = {
+					limit = {
+						has_character_modifier = ee_lonelands_huge_investment
+					}
+					set_variable = {
+						name = colonization_power_change_modifier_multiplyer
+						value = 2
+					}
+				}
+				if = {
+					limit = {
+						has_character_modifier = ee_lonelands_massive_investment
+					}
+					set_variable = {
+						name = colonization_power_change_modifier_multiplyer
+						value = 3
+					}
+				}
+				change_variable = { 
+					name = colonization_power_change 
+					add = var:colonization_power_change_dev
+				}
+				change_variable = { 
+					name = colonization_power_change 
+					multiply = var:colonization_power_change_racial_multiplyer
+				}
+				change_variable = { 
+					name = colonization_power_change 
+					multiply = var:colonization_power_change_modifier_multiplyer
+				}
+				
+			
+				change_variable = { 
+					name = colonization_power 
+					add = var:colonization_power_change 
+				}
+			}
+		}
+	}
+}
+
+small_colonization_power_increase = {
+	change_variable = { 
+		name = colonization_power 
+		add = 10 
+	}
+	custom_tooltip = small_colonization_power_increase
+}
+small_colonization_power_decrease = {
+	change_variable = { 
+		name = colonization_power 
+		add = -10 
+	}
+	custom_tooltip = small_colonization_power_decrease
+}
+large_colonization_power_increase = {
+	change_variable = { 
+		name = colonization_power 
+		add = 50 
+	}
+	custom_tooltip = large_colonization_power_increase
+}
+large_colonization_power_decrease = {
+	change_variable = { 
+		name = colonization_power 
+		add = -50 
+	}
+	custom_tooltip = large_colonization_power_decrease
+}

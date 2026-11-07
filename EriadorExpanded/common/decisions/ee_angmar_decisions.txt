@@ -32,6 +32,9 @@ decision_restore_angmar = {
 				target = flag:decision_restore_angmar
 			}		
 		}
+		NOT = {
+			has_game_rule = angmar_disabled
+		}
 	}
 	
 	# IS VALID
@@ -95,239 +98,253 @@ decision_restore_angmar = {
 	}
 }
 
-decision_colonize_dark = {
-	title = decision_colonize
-	desc = decision_colonize_desc
-	confirm_text = decision_colonize_confirm
-	selection_tooltip = decision_colonize_tooltip
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_angmar_01.dds"
-	}
-	
-
-	# AI
-	ai_goal = yes
-	ai_potential = {
-		always = yes
-	}
-	ai_will_do = {
-		base = 1000
-	}
-	
-	# IS SHOWN
-	decision_group_type = realms_in_exile_minor 
-	
-	is_shown = {
-		has_title = title:e_angmar
-		root = character:nazgul1
-	}
-	
-	# IS VALID
-	is_valid = {
-		NOT = {
-			has_character_flag = Colonizing
-			
-		}
-		custom_tooltip = {
-			text = decision_colonize_dark_effect
-			any_sub_realm_county = {
-				any_neighboring_county = {
-					count > 2
-					any_county_province = {
-						has_holding_type = wastelands_holding
-											
-					}
-				}
-			}
-		}
-	}
-	is_valid_showing_failures_only = {
-		
-	}
-
-	# EFFECT
-	effect = {	
-		random_sub_realm_county = {
-			limit = {
-				any_neighboring_county = {
-					any_county_province = {
-						has_holding_type = wastelands_holding
-												
-					}
-				}
-			}
-			random_neighboring_county = { 
-				limit = {
-					any_county_province = {
-						has_holding_type = wastelands_holding
-											
-					}
-				}
-				save_scope_as = target_county
-			}
-			ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
-			 
-			scope:target_county = {
-				random_list = {
-					33 = { change_development_level = 2 }
-					33 = { change_development_level = 3 }
-					33 = { change_development_level = 4 }
-				}
-				if = {
-					limit = { root = { is_elf = yes } }
-					title_province = { set_holding_type = elven_holding }
-				} else_if = {
-					limit = { root.location = { terrain = halls } }
-					title_province = { set_holding_type = dwarven_holding }
-				} else_if = {
-					limit = { root = { is_hobbit = yes } }
-					title_province = { set_holding_type = city_holding }
-				} else = {
-					if = {
-						limit = { root = { has_government = tribal_government } }
-						title_province = { set_holding_type = tribal_holding }
-					} else = {
-						title_province = { set_holding_type = castle_holding }
-					}
-				}
-			}
-
-			if = { #Fallback
-				limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
-				scope:target_county = { set_county_faith = root.faith }
-			}
-			if = { #Fallback
-				limit = { scope:target_county.culture = culture:wastelands }
-				scope:target_county = { set_county_culture = root.culture }
-			}
-			 
-			root = { add_gold = 100 }
-		}
-		random_sub_realm_county = {
-			limit = {
-				any_neighboring_county = {
-					any_county_province = {
-						has_holding_type = wastelands_holding
-												
-					}
-				}
-			}
-			random_neighboring_county = { 
-				limit = {
-					any_county_province = {
-						has_holding_type = wastelands_holding
-											
-					}
-				}
-				save_scope_as = target_county
-			}
-			
-			
-			
-			
-			ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
-			 
-			scope:target_county = {
-				random_list = {
-					33 = { change_development_level = 2 }
-					33 = { change_development_level = 3 }
-					33 = { change_development_level = 4 }
-				}
-				if = {
-					limit = { root = { is_elf = yes } }
-					title_province = { set_holding_type = elven_holding }
-				} else_if = {
-					limit = { root.location = { terrain = halls } }
-					title_province = { set_holding_type = dwarven_holding }
-				} else_if = {
-					limit = { root = { is_hobbit = yes } }
-					title_province = { set_holding_type = city_holding }
-				} else = {
-					if = {
-						limit = { root = { has_government = tribal_government } }
-						title_province = { set_holding_type = tribal_holding }
-					} else = {
-						title_province = { set_holding_type = castle_holding }
-					}
-				}
-			}
-
-			if = { #Fallback
-				limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
-				scope:target_county = { set_county_faith = root.faith }
-			}
-			if = { #Fallback
-				limit = { scope:target_county.culture = culture:wastelands }
-				scope:target_county = { set_county_culture = root.culture }
-			}
-			 
-			root = { add_gold = 100 }
-		}
-		random_sub_realm_county = {
-			limit = {
-				any_neighboring_county = {
-					any_county_province = {
-						has_holding_type = wastelands_holding
-												
-					}
-				}
-			}
-			random_neighboring_county = { 
-				limit = {
-					any_county_province = {
-						has_holding_type = wastelands_holding
-											
-					}
-				}
-				save_scope_as = target_county
-			}
-			
-			
-			
-			
-			ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
-			 
-			scope:target_county = {
-				random_list = {
-					33 = { change_development_level = 2 }
-					33 = { change_development_level = 3 }
-					33 = { change_development_level = 4 }
-				}
-				if = {
-					limit = { root = { is_elf = yes } }
-					title_province = { set_holding_type = elven_holding }
-				} else_if = {
-					limit = { root.location = { terrain = halls } }
-					title_province = { set_holding_type = dwarven_holding }
-				} else_if = {
-					limit = { root = { is_hobbit = yes } }
-					title_province = { set_holding_type = city_holding }
-				} else = {
-					if = {
-						limit = { root = { has_government = tribal_government } }
-						title_province = { set_holding_type = tribal_holding }
-					} else = {
-						title_province = { set_holding_type = castle_holding }
-					}
-				}
-			}
-
-			if = { #Fallback
-				limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
-				scope:target_county = { set_county_faith = root.faith }
-			}
-			if = { #Fallback
-				limit = { scope:target_county.culture = culture:wastelands }
-				scope:target_county = { set_county_culture = root.culture }
-			}
-			 
-			root = { add_gold = 100 }
-		}		
-		add_character_flag = { flag = Colonizing weeks = 1 }
-		
-	}
-	
-}
+#decision_colonize_dark = {
+#	title = decision_colonize
+#	desc = decision_colonize_desc
+#	confirm_text = decision_colonize_confirm
+#	selection_tooltip = decision_colonize_tooltip
+#	picture = {
+#		reference = "gfx/interface/illustrations/decisions/decision_angmar_01.dds"
+#	}
+#	
+#
+#	# AI
+#	ai_goal = yes
+#	ai_potential = {
+#		always = yes
+#	}
+#	ai_will_do = {
+#		base = 0 # LotR: This should be tied to WotR mode.
+#		modifier = { # Game Rule
+#			has_game_rule = accelerated_colonize_rule_disabled_ai
+#			add = 0
+#		}
+#		modifier = { # Game Rule
+#			has_game_rule = accelerated_colonize_rule_enabled
+#			add = 100
+#		}
+#	}
+#	
+#	# IS SHOWN
+#	decision_group_type = realms_in_exile_minor 
+#	
+#	is_shown = {
+#		has_title = title:e_angmar
+#		root = character:nazgul1
+#		NOT = { has_game_rule = accelerated_colonize_rule_disabled }
+#		NOT = {
+#			has_game_rule = angmar_disabled
+#		}
+#	}
+#	
+#	# IS VALID
+#	is_valid = {
+#		
+#		
+#		NOT = {
+#			has_character_flag = Colonizing
+#			
+#		}
+#		custom_tooltip = {
+#			text = decision_colonize_dark_effect
+#			any_sub_realm_county = {
+#				any_neighboring_county = {
+#					count > 2
+#					any_county_province = {
+#						has_holding_type = wastelands_holding
+#											
+#					}
+#				}
+#			}
+#		}
+#	}
+#	is_valid_showing_failures_only = {
+#		
+#	}
+#
+#	# EFFECT
+#	effect = {	
+#		random_sub_realm_county = {
+#			limit = {
+#				any_neighboring_county = {
+#					any_county_province = {
+#						has_holding_type = wastelands_holding
+#												
+#					}
+#				}
+#			}
+#			random_neighboring_county = { 
+#				limit = {
+#					any_county_province = {
+#						has_holding_type = wastelands_holding
+#											
+#					}
+#				}
+#				save_scope_as = target_county
+#			}
+#			ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+#			 
+#			scope:target_county = {
+#				random_list = {
+#					33 = { change_development_level = 2 }
+#					33 = { change_development_level = 3 }
+#					33 = { change_development_level = 4 }
+#				}
+#				if = {
+#					limit = { root = { is_elf = yes } }
+#					title_province = { set_holding_type = elven_holding }
+#				} else_if = {
+#					limit = { root.location = { terrain = halls } }
+#					title_province = { set_holding_type = dwarven_holding }
+#				} else_if = {
+#					limit = { root = { is_hobbit = yes } }
+#					title_province = { set_holding_type = city_holding }
+#				} else = {
+#					if = {
+#						limit = { root = { has_government = tribal_government } }
+#						title_province = { set_holding_type = tribal_holding }
+#					} else = {
+#						title_province = { set_holding_type = castle_holding }
+#					}
+#				}
+#			}
+#
+#			if = { #Fallback
+#				limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+#				scope:target_county = { set_county_faith = root.faith }
+#			}
+#			if = { #Fallback
+#				limit = { scope:target_county.culture = culture:wastelands }
+#				scope:target_county = { set_county_culture = root.culture }
+#			}
+#			 
+#			root = { add_gold = 100 }
+#		}
+#		random_sub_realm_county = {
+#			limit = {
+#				any_neighboring_county = {
+#					any_county_province = {
+#						has_holding_type = wastelands_holding
+#												
+#					}
+#				}
+#			}
+#			random_neighboring_county = { 
+#				limit = {
+#					any_county_province = {
+#						has_holding_type = wastelands_holding
+#											
+#					}
+#				}
+#				save_scope_as = target_county
+#			}
+#			
+#			
+#			
+#			
+#			ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+#			 
+#			scope:target_county = {
+#				random_list = {
+#					33 = { change_development_level = 2 }
+#					33 = { change_development_level = 3 }
+#					33 = { change_development_level = 4 }
+#				}
+#				if = {
+#					limit = { root = { is_elf = yes } }
+#					title_province = { set_holding_type = elven_holding }
+#				} else_if = {
+#					limit = { root.location = { terrain = halls } }
+#					title_province = { set_holding_type = dwarven_holding }
+#				} else_if = {
+#					limit = { root = { is_hobbit = yes } }
+#					title_province = { set_holding_type = city_holding }
+#				} else = {
+#					if = {
+#						limit = { root = { has_government = tribal_government } }
+#						title_province = { set_holding_type = tribal_holding }
+#					} else = {
+#						title_province = { set_holding_type = castle_holding }
+#					}
+#				}
+#			}
+#
+#			if = { #Fallback
+#				limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+#				scope:target_county = { set_county_faith = root.faith }
+#			}
+#			if = { #Fallback
+#				limit = { scope:target_county.culture = culture:wastelands }
+#				scope:target_county = { set_county_culture = root.culture }
+#			}
+#			 
+#			root = { add_gold = 100 }
+#		}
+#		random_sub_realm_county = {
+#			limit = {
+#				any_neighboring_county = {
+#					any_county_province = {
+#						has_holding_type = wastelands_holding
+#												
+#					}
+#				}
+#			}
+#			random_neighboring_county = { 
+#				limit = {
+#					any_county_province = {
+#						has_holding_type = wastelands_holding
+#											
+#					}
+#				}
+#				save_scope_as = target_county
+#			}
+#			
+#			
+#			
+#			
+#			ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+#			 
+#			scope:target_county = {
+#				random_list = {
+#					33 = { change_development_level = 2 }
+#					33 = { change_development_level = 3 }
+#					33 = { change_development_level = 4 }
+#				}
+#				if = {
+#					limit = { root = { is_elf = yes } }
+#					title_province = { set_holding_type = elven_holding }
+#				} else_if = {
+#					limit = { root.location = { terrain = halls } }
+#					title_province = { set_holding_type = dwarven_holding }
+#				} else_if = {
+#					limit = { root = { is_hobbit = yes } }
+#					title_province = { set_holding_type = city_holding }
+#				} else = {
+#					if = {
+#						limit = { root = { has_government = tribal_government } }
+#						title_province = { set_holding_type = tribal_holding }
+#					} else = {
+#						title_province = { set_holding_type = castle_holding }
+#					}
+#				}
+#			}
+#
+#			if = { #Fallback
+#				limit = { scope:target_county.faith = faith:faith_wastelands_pagan }
+#				scope:target_county = { set_county_faith = root.faith }
+#			}
+#			if = { #Fallback
+#				limit = { scope:target_county.culture = culture:wastelands }
+#				scope:target_county = { set_county_culture = root.culture }
+#			}
+#			 
+#			root = { add_gold = 100 }
+#		}		
+#		add_character_flag = { flag = Colonizing weeks = 4 }
+#		
+#	}
+#	
+#}
 
 
 decision_rally_eriador = {
@@ -360,6 +377,9 @@ decision_rally_eriador = {
 				name = unavailable_unique_decisions
 				target = flag:decision_rally_eriador
 			}	
+		}
+		NOT = {
+			has_game_rule = angmar_disabled
 		}
 	}
 	
@@ -523,7 +543,9 @@ decision_orc_angmar = {
 				}
 			}
 		}
-		
+		NOT = {
+			has_game_rule = angmar_disabled
+		}
 	}
 	
 	# IS VALID
@@ -617,6 +639,9 @@ decision_winter_king = {
 		NOT = {
 			has_faith = faith:faith_angmar_evil
 		}
+		NOT = {
+			has_game_rule = angmar_disabled
+		}
 	}
 	
 	# IS VALID
@@ -687,6 +712,9 @@ decision_empire_angmar_restore = {
 			}		
 		}
 		highest_held_title_tier < tier_empire
+		NOT = {
+			has_game_rule = angmar_disabled
+		}
 	}
 	
 	
@@ -799,6 +827,9 @@ decision_empire_angmar_restore_witch_king = {
 			}		
 		}
 		root = character:nazgul1
+		NOT = {
+			has_game_rule = angmar_disabled
+		}
 	}
 	
 	# IS VALID
@@ -903,6 +934,9 @@ decision_annex_east_forodwaith_witch_king = {
 				target = flag:decision_annex_east_forodwaith
 			}
 		}
+		NOT = {
+			has_game_rule = angmar_disabled
+		}
 	
 	}
 
@@ -1001,6 +1035,9 @@ decision_integrate_arnor = {
 				name = unavailable_unique_decisions
 				target = flag:decision_integrate_arnor
 			}
+		}
+		NOT = {
+			has_game_rule = angmar_disabled
 		}
 	}
 

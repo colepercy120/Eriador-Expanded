@@ -1,0 +1,208 @@
+﻿# LotR: This file needs to be kept in sync with the release version.
+#   Edited the dates
+#	Edited the loading screen text
+
+l_french:
+
+ ### Arnor
+ 
+ decision_integrate_eregion_arnor_tooltip:0 "Intégrer le royaume elfique d’Eregion"
+decision_integrate_eregion_arnor_desc:0 "Nous avons reconquis et repeuplé l’ancien royaume elfique d’Eregion, jadis perdu dans l’oubli et l’ombre. Par le labeur, le sacrifice et la volonté inébranlable de notre peuple, il se dresse à nouveau, non plus comme une simple mémoire du passé, mais comme une part vivante et essentielle de notre royaume. Ses terres font désormais partie intégrante d’Arnor, au même titre que le Cardolan ou l’Arthedain, liées par le sang, les serments et l’œuvre des générations. L’Eregion ne sera plus évoquée comme un vestige du peuple elfique uniquement : elle est désormais arnoriénne, nôtre de par le droit de l’établissement, de la protection et de la force durable de notre royaume. Le temps est venu que le monde reconnaisse cette vérité, et qu’il admette que la bannière d’Arnor flotte sur l’Eregion aussi sûrement que sur chaque colline et chaque vallée de notre terre."
+decision_integrate_eregion_arnor_confirm:0 "Reconnaître la réalité"
+
+decision_integrate_the_southern_provinces:0 "Pousser jusqu’à l’Isen"
+decision_integrate_the_southern_provinces_desc:0 "L’Enedwaith s’est longtemps tenue comme une marche-frontière de notre royaume, une terre sauvage et indomptée, négligée et non gouvernée depuis des générations. Pourtant, en son sein, et plus particulièrement dans les terres entre les rivières Gwathló et Isen, se trouvent de fertiles plaines et de riches forêts, regorgeant de potentiel. Sous la direction et la protection d’Arnor, ces terres pourraient prospérer, leur sauvagerie domptée et leurs richesses mises au service de notre royaume. Avec le retrait du Gondor de ces confins occidentaux, nul pouvoir ne conteste désormais notre juste revendication. L’Enedwaith est sans défense, son avenir incertain hormis la certitude que nous en tenons le destin entre nos mains. Aucune force ne s’oppose à nous, aucune voix assez forte pour nous nier. L’heure est venue. Par la plume ou par l’épée, par la carte ou par la charrue, nous n’avons qu’à redessiner les frontières pour refléter une réalité déjà accomplie. L’Enedwaith est d’Arnor de droit : à nous de la façonner, de l’occuper et de la gouverner."
+decision_integrate_the_southern_provinces_tooltip:0 "Intégrer l’Enedwaith"
+decision_integrate_the_southern_provinces_confirm:0 "Affirmer l’autorité royale"
+
+decision_integrate_isengard:0 "Occuper Orthanc"
+decision_integrate_isengard_desc:0 "La forteresse d’Orthanc demeure l’une des plus anciennes et des plus puissantes de toute la Terre du Milieu, un chef-d’œuvre d’un art oublié, taillé dans une pierre noire qu’aucun outil ni des Hommes ni des Elfes ne peut entamer. Elle a résisté au passage des âges, invaincue et indestructible, témoignage de l’habileté et du pouvoir de ceux qui la bâtirent. Sa position, dominant le vital Gouffre du Rohan et veillant sur la rivière Isen, en fait le bastion idéal pour sécuriser notre frontière méridionale. De ses hauteurs, nous pouvons surveiller les passages, contrôler le flux des armées et du commerce, et garantir qu’aucune menace ne surgisse à notre insu. Mais Orthanc n’est pas seulement fait de pierres et de murs : en sa tour repose l’un des plus grands trésors du monde ancien, un Palantír, l’une des pierres de vision de l’Ouest. Grâce à lui, nous ne tenons pas seulement le territoire, mais aussi le pouvoir de voir au loin, de prévenir les périls cachés et de guider le destin de notre royaume. Entre nos mains, Orthanc devient la clef de voûte de notre domination au sud, un flambeau de la force d’Arnor, et un symbole de notre portée, de notre vigilance et de notre autorité inébranlable."
+decision_integrate_isengard_tooltip:0 "Occuper Orthanc"
+decision_integrate_isengard_confirm:0 "Occuper la Tour"
+
+decision_arthedain_provinces:0 "Établir le système tírian en Arthedain"
+decision_arthedain_provinces_desc:0 "En mettant en place le système tírian, l’Arthedain est réorganisé en provinces distinctes, permettant une gestion plus efficace et une autonomie régionale accrue. Cette réforme entraîne un profond changement, notamment à Fornost, jadis capitale et symbole de la force de l’Arthedain, ainsi que dans la Comté, réputée pour sa tranquillité rurale et son rôle agricole vital. Le nouveau système permet aux gouvernances locales de s’épanouir dans ces régions diverses, tout en maintenant un royaume unifié sous la couronne."
+decision_arthedain_provinces_confirm:0 "Établir le système tírian"
+decision_arthedain_provinces_tooltip:0 "Met en place le système tírian, divisant le royaume en provinces pour une meilleure gouvernance et organisation."
+
+decision_cardolan_provinces:0 "Établir le système tírian en Cardolan"
+decision_cardolan_provinces_desc:0 "Le système tírian inaugure une nouvelle ère de gouvernance au Cardolan en divisant le royaume en provinces, chacune disposant d’un contrôle local renforcé. Cette transformation touche particulièrement des régions comme Mistolondë, jadis haut lieu de la puissance maritime du Cardolan et du Minhiriath, réputé pour ses forêts denses et sa position stratégique. Ce système est conçu pour permettre à ces provinces de mieux gérer leurs ressources, garantissant que la diversité culturelle et économique du Cardolan, des routes maritimes de Mistolondë aux frontières boisées du Minhiriath, soit préservée et enrichie."
+ 
+decision_rhudaur_provinces:0 "Établir le système tírian en Rhudaur"
+decision_rhudaur_provinces_desc:0 "Le système tírian est mis en place au Rhudaur afin de répondre au besoin croissant de contrôle local, en particulier dans la région du Mitheithel. Connue pour son relief escarpé et ses frontières complexes, le Mitheithel a toujours eu du mal à s’intégrer au reste du Rhudaur, dominé par les terres rudes du Nord. En séparant le Mitheithel en une province distincte, le royaume vise à simplifier la gouvernance, permettant à cette région stratégiquement importante de mieux gérer ses ressources et sa sécurité, tandis que le reste du Rhudaur pourra se concentrer sur ses propres défis et son développement particulier."
+
+#decision_restore_shire:0 "Rétablir l’autorité royale dans la Comté"
+#decision_restore_shire_desc:0 "Depuis des générations, les Hobbits veillent sur la Comté avec constance et simplicité, cultivant ses champs et protégeant ses frontières avec la sagesse tranquille et la résilience qui les définissent depuis que mes prédécesseurs leur accordèrent cette terre en un âge aujourd’hui presque oublié. Ils ont longtemps connu la paix, abrités dans leurs vertes collines et leurs douces vallées, à l’écart du monde extérieur. Mais à présent qu’un roi a repris place à Annúminas et que l’ancien trône est de nouveau occupé, il est temps que la Comté rejoigne le giron du Nord. Non comme des sujets contraints sous une couronne lointaine, mais comme des parents chéris, liés par les serments d’autrefois et par le sang de nos ancêtres communs. L’heure est venue pour eux de se rassembler à nouveau sous la bannière du Nord, non seulement comme gardiens de leur terre, mais comme une part d’un tout plus vaste, reconnue, protégée et honorée à sa juste valeur."
+#decision_restore_shire_confirm:0 "Envoyer l’émissaire"
+#decision_restore_shire_tooltip:0 "Envoyer un messager aux Hobbits pour rétablir notre autorité sur la Comté"
+#decision_restore_shire_effect:0 "Un messager est envoyé au Thain"
+
+decision_palintir_fishing:0 "Tenter de récupérer les palantíri"
+decision_palintir_fishing_desc:0 "Les rivages glacés du Forochel sont enfin sous notre bannière, et avec eux renaît le mince espoir de retrouver ce que l’on croyait à jamais perdu dans les profondeurs. Jadis, dans les sombres jours du déclin de notre royaume, les palantíri d’Annúminas et d’Amon Sûl furent engloutis par les mers gelées. Trésors inestimables, héritage de notre lignée, engloutis par les cruelles eaux du Nord. Mais désormais, maîtres de ces terres, nous pouvons tenter ce que nul n’a osé avant nous, fouiller les flots glacés et les épaves englouties pour retrouver nos pierres de vision perdues. C’est une entreprise périlleuse, digne des désespérés ou des audacieux. Mais si ne serait-ce qu’un seul palantír était retrouvé, il deviendrait un flambeau pour le renouveau d’Arnor et unirait à nouveau le royaume brisé du Nord."
+decision_palintir_fishing_confirm:0 "Envoyer une équipe de récupération"
+decision_palintir_fishing_tooltip:0 "Envoyer une équipe à la recherche de l’épave d’Arvedui et des palantíri perdus"
+decision_palintir_fishing_effect:0 "Une équipe est envoyée explorer les étendues glacées du Forochel pour retrouver l’épave d’Arvedui et les palantíri perdus. Attention, cela prendra du temps."
+
+decision_rebuild_ost_in_edhil_human_desc:0 "Alors que la lumière de notre royaume s’accroît, l’heure est venue de revendiquer le cœur de l’Eriador, et nul endroit n’est plus approprié qu’Ost-in-Edhil. Jadis joyau étincelant du royaume elfique d’Eregion, ses tours et ses salles ne sont plus que ruines, témoins d’un âge oublié. Les Elfes sont depuis longtemps partis, ne laissant derrière eux que leur art intemporel et l’écho de ce qui fut. Nous, les Dúnedain d’Arnor, ne nous contenterons pas de reprendre cette cité : nous la bâtirons à nouveau, à notre image, en y insufflant la force et la vision de notre peuple. Il ne suffit pas de se dresser sur les vestiges du passé : nous devons en surgir, pour forger un nouvel héritage. La cité deviendra un symbole de notre puissance et de notre avenir, aussi durable que la pierre sur laquelle elle repose. Nous redonnerons vie à ses rues antiques, élèverons nos propres tours, dignes de rivaliser avec les fières flèches des Elfes, et ferons d’Ost-in-Edhil un témoignage vivant de la grandeur d’Arnor. Que le monde le sache : notre revendication ne porte pas seulement sur cette terre, mais sur son avenir même."
+decision_rebuild_ost_in_edhil_human_confirm:0 "Nous revendiquons Ost-in-Edhil et la forgerons de nouveau, en symbole de la puissance et de l’avenir d’Arnor."
+
+decision_arnor_colony:0 "Tenter de rétablir une colonie en Arnor"
+decision_arnor_colony_desc:0 "L’Eriador est depuis longtemps en ruines, et il ne subsiste que l’écho silencieux de ce qui fut Arnor, royaume des nobles Dúnedain du Nord. La guerre, la peste et le temps ont brisé ses cités et effacé ses routes. Mais le Nord ne saurait demeurer une désolation. Si le Gondor doit perdurer, nous devons restaurer le royaume du Nord. Le Girithlin, encore riche de promesses, est le lieu où commencer. Toutefois, une telle entreprise exige plus que de la volonté : elle requiert un dirigeant doté de vision, de force et de détermination. La question n’est pas de savoir si nous le rétablirons, mais qui en portera le fardeau."
+decision_arnor_colony_confirm:0 "Chercher des candidats"
+decision_arnor_colony_tooltip:0 "Commencer à planifier l’établissement d’une colonie au Girithlin"
+
+arnor_colony_requriement:0 "Vous avez réintégré au moins deux territoires perdus grâce à la [decision|E] #bold $decision_restore_gondor_province.gondorian$#!"
+
+ decision_colonize:0 "Coloniser"
+decision_colonize_desc:0 "Coloniser une province voisine"
+decision_colonize_confirm:0 "Envoyer les colons"
+decision_colonize_tooltip:0 "Coloniser une province voisine"
+
+decision_arnor_king:0 "Rechercher un roi"
+decision_arnor_king_desc:0 "Nous avons reconquis une part substantielle du Nord, suffisante pour restaurer notre légitime prétention en tant qu’héritiers véritables de l’ancien royaume d’Arnor. Les terres sont sécurisées, le peuple se rallie à nous, et l’héritage de nos aïeux s’éveille à nouveau dans le cœur des hommes. Il ne reste plus qu’à voir surgir un roi digne du trône et de la couronne d’Elendil, pour unir le royaume sous une seule bannière."
+decision_arnor_king_tooltip:0 "Chercher un héritier d’Isildur"
+
+decision_palintir_fishing_gondor:0 "Draguer l’Anduin"
+decision_palintir_fishing_gondor_desc:0 "La pierre maîtresse d’Osgiliath fut le premier palantír perdu. Durant la [kinstrife|e], la Tour du Dôme fut détruite et la pierre d’Osgiliath disparut dans l’Anduin. Bien que sphérique, elle était lourde et massive. Mais l’Anduin, large et sans courant notable, a sans doute gardé la pierre sur place, simplement ensevelie sous des siècles de limon. Avec des dragages suffisants, nous devrions pouvoir la retrouver."
+decision_palintir_fishing_gondor_confirm:0 "Une chance de retrouver notre antique héritage !"
+decision_palintir_fishing_gondor_tooltip:0 "Draguer l’Anduin"
+decision_palintir_fishing_gondor_effect:0 "Vos ingénieurs draguent l’Anduin à la recherche du palantír perdu"
+
+### Angmar
+
+decision_restore_angmar:0 "Rétablir l’Angmar"
+decision_restore_angmar_desc:0 "Les Dúnedain du Nord osent renaître de leurs cendres, rassemblant leurs lignes brisées et se proclamant royaume à nouveau ; Arnor restauré. Insensés ! Ils vêtent un cadavre et l’appellent roi ! Jadis, j’ai brisé le Nord, et je ne permettrai pas qu’il se relève. Si on les laisse prospérer, leur force renaîtra et la lame qui autrefois me défia sera reforgée. Mon plus fidèle serviteur, le Roi-Sorcier, retournera en Angmar pour assurer leur chute. Depuis Carn Dûm, il sèmera la terreur, détruira leurs cités et réduira leur unité en ruine. Qu’ils se souviennent : la volonté de Sauron ne saurait être contestée."
+decision_restore_angmar_confirm:0 "Envoyer le Roi-Sorcier"
+decision_restore_angmar_tooltip:0 "Envoyer le Roi-Sorcier en Angmar"
+
+decision_rally_eriador:0 "Rassembler les orques de l’Eriador"
+decision_rally_eriador_desc:0 "Des siècles ont passé depuis que notre défaite dispersa les légions de l’Angmar, laissant nos orques brisés, isolés et oubliés de tous — mais jamais détruits. Dans les recoins obscurs du Nord, ils ont survécu, nourrissant leur haine, leur esprit demeurant intact sous la glace et la pierre. Aujourd’hui, moi, le Roi-Sorcier, je suis revenu, et avec moi l’ombre de l’ancien pouvoir renaît. Ils se souviennent de ma voix, de ma volonté, de ma colère, et ils répondront. L’un après l’autre, les clans épars surgiront de leurs trous et de leurs ruines, attirés une fois de plus par la bannière de Carn Dûm. Le Nord saignera, et dans ce sang notre domination sera ravivée."
+decision_rally_eriador_confirm:0 "Rassembler les orques"
+decision_rally_eriador_tooltip:0 "Rassembler les orques de l’Eriador"
+ 
+ decision_orc_angmar:0 "Rassembler les orques des Montagnes"
+decision_orc_angmar_desc:0 "Vous qui avez vécu dans les profondeurs et les lieux oubliés des Monts Brumeux, vous qui avez gratté, combattu et survécu des restes abandonnés par les Hommes et les Nains, votre temps de cachette est révolu ! Plus jamais vous ne serez des clans dispersés et des loqueteux querelleurs. Je suis le Roi-Sorcier, serviteur du Grand Œil, et je vous appelle maintenant à la guerre. Sortez de vos tunnels et de vos crêtes, de Gobelin-ville à Gundabad, et pliez le genou devant la volonté de l’Angmar. Ensemble, nous ferons trembler les montagnes et noierons l’Ouest sous le feu et l’ombre. L’âge des Hommes s’affaiblit et s’aveugle, qu’ils s’étouffent dans notre retour !"
+decision_orc_angmar_confirm:0 "L’Appel du Roi d’Hiver"
+decision_orc_angmar_tooltip:0 "Vassalise tous les orques des Monts Brumeux"
+decision_orc_angmar_effect:0 "Tente de vassaliser tous les orques des Monts Brumeux"
+
+decision_winter_king:0 "Rétablir le culte du Roi-Sorcier"
+decision_winter_king_desc:0 "Le culte du Roi-Sorcier, jadis sombre cœur de la domination de l’Angmar, renaîtra des cendres de la peur et des rites oubliés. Dans les lieux secrets, les tombes profondes, les autels noirs et les tours en ruine, les fidèles ont murmuré mon nom durant le long silence, gardant les fragments de l’ancien pouvoir. À présent, le voile est levé et le temps est venu de restaurer les anciens usages. Les prêtres noirs marcheront à nouveau sur la terre, drapés d’ombre et de flammes, semant la terreur et exigeant l’obéissance en mon nom. Par le sang, le feu et une volonté implacable, le culte rassemblera les orques, les bêtes et tous les serviteurs des ténèbres dans un seul dessein inflexible : briser le monde et le refaçonner à l’image de la vengeance de l’Angmar."
+decision_winter_king_confirm:0 "Le Roi-Sorcier appelle"
+decision_winter_king_tooltip:0 "Restaure le culte du Roi d’Hiver"
+
+decision_integrate_arnor:0 "Briser l’Arnor"
+decision_integrate_arnor_desc:0 "Ils fuient devant moi comme des feuilles emportées par la tempête. Leur ultime résistance s’effondre sous le fer et la flamme, leurs forteresses tombant une à une tandis que mes bannières s’élèvent sur leurs ruines. Le peuple murmure mon nom avec effroi, et leurs rois, les rares qui demeurent, ploient le genou ou périssent. J’ai brisé leur volonté, noyé leurs espoirs dans l’ombre, et à chaque citadelle abattue, l’Arnor se soumet à moi. Cette terre autrefois rebelle appartient désormais aux ténèbres. Elle est mienne."
+decision_integrate_arnor_confirm:0 "Affermir le contrôle"
+decision_integrate_arnor_tooltip:0 "Affermit le contrôle sur l’Arnor"
+
+### Elfes
+
+decision_rage_aganist_the_dying_of_the_light:0 "Se dresser contre le déclin de la lumière"
+decision_rage_aganist_the_dying_of_the_light_desc:0 "Pourquoi les Eldar, les Premiers-Nés d’Ilúvatar, devraient-ils s’éteindre dans l’ombre et le silence, se terrant dans les forêts tels des spectres d’un âge oublié ? Bien que la chute d’Eregion nous ait meurtris, nous sommes plus que notre deuil, n’avons-nous pas vu les Hommes se relever des ruines du Númenor et façonner le monde à nouveau ? Nous, qui avons marché sous les étoiles avant même le Soleil et la Lune, ne devons pas nous cacher dans des salles chargées de mémoire tandis que le monde avance. Nous ne sommes pas des reliques. Le feu de notre esprit brûle encore. Souvenons-nous de qui nous sommes, non pas dans le chagrin, mais avec résolution et montrons au monde que les Eldar perdurent !"
+
+decision_reclaim_nenuial:0 "Reprendre Nenuial"
+decision_reclaim_nenuial_desc:0 "Longtemps les rives de Nenuial sont demeurées silencieuses, intactes, à l’écart de la Maîtresse de la Magie. Le temps a passé depuis la chute de la Cité Blanche, et il ne reste plus que des ruines oubliées. Mais désormais, le chant des Elfes revient emplir les airs, résonnant à nouveau sur les rives argentées. Nous sommes de retour, et le grand royaume sera reforgé."
+decision_reclaim_nenuial_confirm:0 "Les Elfes sont revenus. Nenuial est à nous de nouveau."
+decision_reclaim_nenuial_tooltip:0 "Rétablir le royaume de Nenuial"
+ 
+decision_elf_have_more_kids:0 "Avoir davantage d’enfants"
+decision_elf_have_more_kids_desc:0 "Les [eldar|e] sont en déclin depuis deux âges entiers du monde. L’une des conséquences de cela est que les enfants elfes sont rares, et si la plupart des elfes n’en ont que durant une brève période de leur vie, rien ne m’oblige à suivre cette tradition."
+decision_elf_have_more_kids_confirm:0 "Mon cœur désire encore des enfants"
+decision_elf_have_more_kids_tooltip:0 "Avoir davantage d’enfants"
+
+decision_invite_elves_eregion:0 "Inviter les Elfes en Eregion"
+decision_invite_elves_eregion_desc:0 "L’ancien royaume de l’[eregion|E] fut détruit il y a des millénaires lors de la [waroftheelvesandsauron|E]. Depuis, le royaume des forgerons d’anneaux est demeuré à l’abandon, hanté seulement par les ombres du passé. À présent que la contrée a été purifiée, nous pouvons à nouveau inviter les [noldorelves|E] à rétablir leurs antiques demeures et à servir de rempart contre les ténèbres."
+decision_invite_elves_eregion_tooltip:0 "Inviter les Elfes en Eregion"
+decision_invite_elves_eregion_confirm:0 "Que l’ancien royaume se relève"
+decision_invite_elves_eregion_effect_tooltip:0 "Envoyer un émissaire aux [noldorelves|E]"
+fully_settled_eregion:0 "Le [GetTitleByKey('d_eregion').GetName] est pleinement repeuplé"
+noldor_friend:0 "Vous avez un [friend|e] parmi les [noldorelves|E]"
+
+decision_reclaim_eriador:0 "Restaurer la domination elfique sur l’Eriador"
+decision_reclaim_eriador_desc:0 "Durant la majeure partie du [firstage|e] et du [secondage|e], l’[eriador|e] fut une terre elfique, dont les frontières s’étendaient du Gwathló et des Monts Brumeux à l’est jusqu’aux Montagnes Bleues à l’ouest. La [waroftheelvesandsauron|E] brisa ce royaume et dispersa son peuple, et après la [downfallofnumenor|E] la contrée fut donnée aux [faithful|e]. Mais désormais les [dunedain|e] ont disparu depuis longtemps et l’Eriador gît abandonné, nous offrant l’occasion de restaurer notre antique demeure."
+decision_reclaim_eriador_confirm:0 "Que la terre résonne à nouveau de musique"
+decision_reclaim_eriador_tooltip:0 "Restaurer la domination elfique sur l’Eriador"
+decision_reclaim_eriador_effect:0 "Le [GetTitleByKey('e_eriador').GetName] deviendra le suzerain de jure de chaque [kingdom|e] dans [GetGeographicalRegion('custom_eriador').GetName] et [GetGeographicalRegion('middleearth_forodwaith').GetName]"
+
+decision_unite_western_elves: "Unir les Elfes de l’Ouest"
+decision_unite_western_elves_desc: "Au fil des millénaires, les Elfes de l’Ouest se sont mêlés et dispersés à travers les royaumes et les âges, rendant obsolète la structure traditionnelle des clans des [noldorelves|E], [sindarelves|e], [telerielves|e] et [avari|e]. Alors que le monde s’éteint et que nos rangs s’amenuisent, il est temps que les [eldar|e] restants soient réunis."
+decision_unite_western_elves_tooltip: "Unir les Elfes de l’Ouest."
+decision_unite_western_elves_confirm: "Unir les Elfes de l’Ouest."
+
+decision_cyrdor_effect: "[GetTitleByKey('h_cyrdor').GetName] deviendra le suzerain de jure de chaque [empire|e] dans [GetGeographicalRegion('custom_eriador').GetName], [GetGeographicalRegion('middleearth_west_beleriand').GetName] et [GetGeographicalRegion('middleearth_forodwaith').GetName]."
+
+decision_vanquish_darkess:0 "Vaincre les ténèbres"
+decision_vanquish_darkess_desc:0 "Trop longtemps les [eldar|e] ont laissé la Terre du Milieu sombrer dans l’obscurité. Nous sommes les Premiers-Nés, les intendants et les gardiens du monde. Nous avons abandonné notre devoir de protéger le monde depuis bien trop longtemps. Mais cela cesse aujourd’hui ! Le temps de rester dans nos salles sacrées est révolu. Voilà des âges que les Elfes ne se sont pas levés de leur torpeur, et le [darklord|e] a oublié notre force. Il est temps de la lui rappeler !"
+decision_vanquish_darkess_confirm:0 "Aux armes !"
+decision_vanquish_darkess_tooltip:0 "Vaincre les ténèbres"
+decision_vanquish_darkess_effect:0 "Débloque un nouveau [casus_belli|e] pour détruire les ténèbres"
+ 
+ decision_ring_lore:0 "Étudier le savoir des anneaux"
+decision_ring_lore_desc:0 "Les [ringsofpower|e] sont les plus grands artefacts créés par les elfes après les [elderdays|e], surpassés seulement par les [silmarils|e] de [feanor|e]. Bien sûr, ils ne furent conçus qu’avec l’aide de [annatarcharacter|e], qui les lia à sa volonté et à celle du [onering|e]. Mais le concept est solide, et [celebrimbor|e] créa les [threeringsofelvesshort|E] exempts de l’ombre.\n\nContrairement aux Silmarils, aucun matériau des Anneaux de Pouvoir n’est hors de notre portée. Tout ce qu’il nous faut, c’est le savoir. Si la plupart des grands forgerons des [noldorelves|E] périrent avec la chute d’[eregion|E], les ruines des grandes forges demeurent. Une visite des restes d’Ost-in-Edhil pourrait nous permettre de retrouver une part de leur savoir perdu."
+decision_ring_lore_tooltip:0 "Étudier le savoir des anneaux"
+decision_ring_lore_confirm:0 "En route pour Eregion !"
+decision_ring_lore_effect1:0 "Chercher dans les ruines le savoir sur les anneaux"
+decision_ring_lore_effect2:0 "Se rendre en Eregion pour explorer les ruines et retrouver le savoir des anneaux"
+
+decision_forge_ring:0 "Tenter de forger un Anneau de Pouvoir"
+decision_forge_ring_desc:0 "Le moment est venu ! Nous avons étudié l’œuvre de [celebrimbor|e], construit de grandes forges, rassemblé les meilleurs Chantelieurs restant en Terre du Milieu, et même contacté le Mage Blanc. Il est enfin temps de prouver que les [eldar|e] ne sont pas condamnés à disparaître vers l’Ouest ! Il est temps de forger un [ringofpower|e] !"
+decision_forge_ring_confirm:0 "Allumer les forges !"
+decision_forge_ring_tooltip:0 "Tenter de forger un Anneau de Pouvoir"
+decision_forge_ring_effect:0 "Tenter de forger un Anneau de Pouvoir"
+
+decision_slay_sauron:0 "Tuer Sauron"
+decision_slay_sauron_desc:0 "La source de tout mal encore présente en [arda|e] est le Seigneur Noir [sauroncharacter|e]. Il a repris là où [morgothcharacter|e] s’était arrêté et a levé une armée presque aussi vaste que celle de son ancien maître. Si nous voulons vraiment sauver ce monde, nous devons le détruire. Gil-galad et [elendil|E] périrent tous deux en tentant de le vaincre, et tout ce qu’ils firent fut de retarder sa puissance d’un âge. Pour le détruire véritablement, il faudra plus que de couper un anneau. Peut-être que [fingolfin|E] avait eu la bonne idée…"
+decision_slay_sauron_effect:0 "Se rendre en Mordor pour affronter [sauroncharacter|e] en combat singulier. - #bold Ceci est une mauvaise idée #!"
+decision_slay_sauron_tooltip:0 "Tuer Sauron"
+decision_slay_sauron_confirm:0 "En route pour Mordor !"
+decision_slay_sauron_trigger_1:0 "Toutes les terres de l’[empire|e] de votre [capital|e] ont été purgées du mal"
+decision_slay_sauron_trigger_2:0 "Toutes les terres voisines ont été purgées du mal"
+
+decision_attack_balrog:0 "Marcher contre le Balrog"
+decision_attack_balrog_desc:0 "Le [balrog|E] de [moria|e] a été laissé persister bien trop longtemps. Depuis la destruction de Khazad-Dûm, nous savons qu’une obscurité repose dans les profondeurs. Mais elle a été laissée à se répandre. Assez ! Nous allons enfin purger les ténèbres et ramener la lumière dans les tunnels !"
+decision_attack_balrog_confirm:0 "Préparez les troupes !"
+decision_attack_balrog_tooltip:0 "Marcher contre le Balrog"
+decision_attack_balrog_trigger_1:0 "Tout autre mal a été purgé de [moria|e]"
+
+decision_lorien_eregion: "Proclamer le Royaume du Lorien Occidental"
+decision_lorien_eregion_desc: "[eregion|E] fut fondé par Dame Galadriel avant qu’elle ne s’établisse ici en Lothlorien. Elle en fut expulsée par [celebrimbor|e] après l’arrivée de [annatarcharacter|e], ce qui mena à la destruction de ce royaume. Cependant, maintenant qu’Eregion lui a été rendu, il est évident d’unir ses deux royaumes."
+decision_lorien_eregion_confirm: "Proclamer le Royaume du Lorien Occidental"
+decision_lorien_eregion_effect: "Le [GetTitleByKey('k_eregion').GetName] recevra un nouveau nom, symbolisant son renouveau."
+decision_lorien_eregion_tooltip: "Proclamer le Royaume du Lorien Occidental"
+
+decision_reclaim_gondolin: "Restaurer Gondolin"
+decision_reclaim_gondolin_desc: "Depuis la [warofwrath|e], [gondolin|e] repose sous la mer, au large de la côte sud-ouest de Tol Fuin. Bien que les montagnes environnantes aient été réduites à l’état de sable et que la valeur stratégique de Tol Fuin soit bien moindre que durant les [elderdays|e], Gondolin demeure l’un des plus éclatants symboles d’[hope|e] des [eldar|e]. Sa restauration serait une déclaration audacieuse de notre endurance face au temps."
+decision_reclaim_gondolin_tooltip: "Restaurer Gondolin"
+decision_reclaim_gondolin_confirm: "Restaurer la Cité Cachée !"
+
+### Hobbits
+
+decision_shire_independence_title: "Proclamer notre indépendance"
+decision_shire_independence_desc: "Depuis près d’un millénaire, la Comté fonctionne en dehors de toute autorité royale. Il est temps d’admettre la vérité : le roi ne reviendra pas. Nous sommes notre propre royaume, et non le dernier vestige du [northernkingdom|e]."
+decision_shire_independence_tooltip: "Proclamer notre indépendance !"
+decision_shire_independence_confirm: "Déclarer l’indépendance."
+
+decision_reclaim_eriador_hobbit: "Coloniser l’Eriador"
+decision_reclaim_eriador_hobbit_desc: "Depuis près de mille ans, [eriador|e] est une terre sauvage abandonnée, la [shire|e] étant le seul territoire habité de toute la région. Les Hobbits n’aspirent pas à la grandeur ni à diriger de vastes royaumes, mais il est douloureux de voir tant de terres fertiles laissées à l’abandon. Il est temps de changer cela !"
+decision_reclaim_eriador_hobbit_tooltip: "Coloniser l’Eriador."
+decision_reclaim_eriador_hobbit_confirm: "Proclamer la Grande Comté."
+
+swanfell_settled: "[GetTitleByKey('d_swanfell').GetName] est entièrement colonisée"
+
+decision_establish_wadewater: "Restaurer le Gué des Eaux"
+decision_establish_wadewater_desc: "Il y a longtemps, les Hobbits des Stoors vivaient dans la région du Marais des Cygnes, qu’ils appelaient le Gué des Eaux. Avant la fondation de la [shire|e], le Gué des Eaux était le plus grand foyer de notre peuple. Cependant, lors de la Grande Peste, les Stoors furent contraints de fuir et rejoignirent la Comté. Maintenant que notre population est assurée, il est enfin temps de restaurer cette ancienne patrie !"
+decision_establish_wadewater_tooltip: "Restaurer le Gué des Eaux."
+decision_establish_wadewater_confirm: "Restaurer le Gué des Eaux."
+
+### Southern Faithful
+
+decision_southern_faithful_invasion: "Envahir Thani-Hazad"
+decision_southern_faithful_invasion_desc: "Il est temps que les [adunai|e] découvrent nos voies pacifiques… par la force ! Si nous voulons briser leurs coutumes hérétiques, nous devons démanteler leur société et renverser leurs anciennes élites !"
+decision_southern_faithful_invasion_tooltip: "Envahir Thani-Hazad."
+decision_southern_faithful_invasion_confirm: "Envahir Thani-Hazad."
+
+decision_southern_faithful_culture: "Racheter les Anduai"
+decision_southern_faithful_culture_desc: "Nous avons libéré les terres de [thanihazad|e] et rétabli le culte des [valargods|e] dans la région. Il est temps de renverser l’hérésie de [sauroncharacter|e] et de racheter les [adunai|e] une fois pour toutes !"
+decision_southern_faithful_culture_tooltip: "Racheter les Anduai."
+decision_southern_faithful_culture_confirm: "Rendre au Sud sa gloire !"

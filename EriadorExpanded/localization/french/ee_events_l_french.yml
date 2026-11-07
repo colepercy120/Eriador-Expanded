@@ -1,0 +1,232 @@
+﻿# LotR: This file needs to be kept in sync with the release version.
+#   Edited the dates
+#	Edited the loading screen text
+
+l_french:
+ 
+ ### Arnor 
+ 
+ee_arnor.1.t:0 "Intégration des provinces du Sud"
+ee_arnor.1.desc:0 "Enfin, les terres sauvages d’Enedwaith et de Dunland sont désormais sous le contrôle ferme et juste de l'Arnor. Trop longtemps, ces collines escarpées et ces vallées ombragées ont abrité des tribus d’hommes des collines indisciplinés, infidèles et querelleurs, dont les loyautés changeaient comme les vents de la montagne. Aujourd’hui, les bannières du Royaume du Nord flottent fièrement sur leurs forteresses de pierre et leurs vallons boisés. L’ordre est rétabli là où régnait le chaos, et la paix du Roi s’étend des Barrows au Greyflood. Ce n’est pas une simple conquête, c’est une réappropriation, l’accomplissement du devoir ancien de l'Arnor, dompter ces frontières sauvages et guider ces peuples égarés vers la lumière de la civilisation. Que l’on sache dans toutes les terres de l'Eriador et au-delà, Enedwaith et Dunland témoignent de la force durable d’Arnor ! Les chefs des collines, jadis fiers et rebelles, s’inclinent désormais devant le trône, jurant fidélité sur l’acier et la pierre. Routes seront tracées, forteresses élevées, et la langue de l’Ouest résonnera dans des terres longtemps muettes à notre voix. Le sauvage reculera, la terre sera fertile sous notre main, et la justice du Roi règnera sans conteste. Ainsi, l’héritage d’Elendil est renouvelé et la gloire du Royaume du Nord brille toujours plus."
+ee_arnor.1.a:0 "Du Gwathló à l’Isen, le Sud est à nous !"
+
+ee_arnor.2.t:0 "La Reconquête d’Eregion"
+ee_arnor.2.desc:0 "Par un labeur inflexible, des sacrifices et la détermination de notre peuple, l’ancien royaume oublié d’Eregion se dresse à nouveau, prospérant désormais au sein des frontières d’Arnor. Il n’est plus uniquement le domaine ancien des elfes : il constitue désormais une part intégrante et vivante de notre royaume. La bannière d’Arnor flotte fièrement sur Eregion, et le monde doit reconnaître qu’elle nous appartient autant que n’importe quelle autre terre de notre royaume."
+ee_arnor.2.a:0 "Déclarer Eregion comme partie d’Arnor"
+
+ee_arnor.3.t:0 "La Cession d’Orthanc"
+ee_arnor.3.desc:0 "Dans un moment de grande importance, la forteresse d’Orthanc, l’ancienne tour de l’Isen, passe aux mains de l'Arnor. Jadis bastion de Gondor, elle s’élevait comme sentinelle dans les confins du Sud de la Terre du Milieu, ses murs de pierre noire veillant sur le Goulet de Rohan et les terres tumultueuses à l’Ouest. Aujourd’hui, avec le retrait de Gondor et le changement des forces, la forteresse est formellement remise à notre royaume. La puissance de la tour, sa position stratégique et son rôle ancien comme bastion défensif serviront désormais les intérêts d’Arnor comme jamais auparavant. Le Palantír d’Orthanc, trésor d’une valeur inestimable, est désormais entre nos mains, un phare de savoir et de puissance qui guidera l’avenir de l'Arnor comme il a façonné le passé de la Terre du Milieu. Nous contrôlerons les vents de la fortune, les orientant vers la prospérité de notre peuple et la sécurité de nos frontières. Orthanc n’est plus le symbole du déclin de Gondor, elle devient une pierre angulaire du règne d’Arnor, une tour inébranlable au cœur de notre domination grandissante. De ses hauteurs, nous veillerons sur le pays, et de ses profondeurs, nous apprendrons les secrets du monde. L’avenir est à nous."
+ee_arnor.3.a:0 "Orthanc appartient désormais à Arnor, quel nouveau pouvoir tirerons-nous de ses anciennes salles ?"
+
+ee_arnor.5.t: "Le Retour du Roi"
+ee_arnor.5.desc: "Avec le retour tant attendu du Roi d’Arthedain, une nouvelle nous est parvenue du Nord. Un émissaire, vêtu des armoiries de l’ancienne Arnor, s’est présenté porteur du sceau royal et de ses paroles solennelles. Il ne parle ni en menaces ni en ordres, mais avec le poids des liens anciens et la force tranquille d’un souverain revenu sur son trône légitime. Dans sa main, il tient un parchemin de fine facture, dont l’écriture rappelle les serments jadis prêtés par nos ancêtres. Il nous appelle aujourd’hui à nous souvenir de ces promesses faites aux jours de nos aïeux, à redevenir les protecteurs des terres qui nous furent confiées, et à veiller sur la Comté, ce coin paisible du monde souvent ignoré, mais cher au cœur du Nord. L’émissaire demande que nous restaurions nos serments envers la cité d’Annúminas, antique siège des rois de l'Arnor, désormais relevée de ses ruines par la main du roi. Il nous exhorte à surveiller les frontières de la Comté, afin de la protéger de toute ombre ou menace qui viendrait troubler sa paix. Ce n’est pas seulement un appel aux armes, mais une convocation à l’honneur, à reprendre le devoir que portaient nos pères, et à nous souvenir des anciennes alliances qui ont façonné notre peuple. Un temps de réflexion nous est accordé, mais le message est clair, le Nord s’éveille à nouveau, et avec lui renaît le souvenir de ce qui fut perdu, et de ce qui pourrait encore être restauré."
+ee_arnor.5.a: "Jurer fidélité"
+ee_arnor.5.b: "La Comté n’a pas besoin de roi"
+
+ee_arnor.6.t:0 "La Récupération des Palantíri"
+ee_arnor.6.desc:0 "L’équipe de récupération mit les voiles sous un soleil pâle et fatigué, son cap dirigé vers les eaux agitées et glaciales des régions les plus désolées de Forochel. Pendant des semaines, leurs efforts n’avaient produit que la côte rocheuse et gelée et le murmure du vent dans le silence. Mais ce matin, alors que l’équipage lançait ses filets sur les eaux où les courants étaient encore plus froids, la mer offrit un sombre trésor. Sous les vagues sombres, l’épave de l’Arvedui, le légendaire navire du dernier Roi d’Arthedain, gisait entre les rochers acérés, sa coque brisée mais tenant encore, défiant le temps, les secrets de son dernier voyage. Pour les hommes à bord, la vue de l’épave fut un mélange de crainte et d’émerveillement, à la fois triomphe de la découverte et rappel des périls que la mer a pris. Les plongeurs, désormais prudents face aux profondeurs impitoyables, bravèrent les eaux glaciales avec une seule mission : récupérer le Palantír perdu.\n\nLes heures passèrent dans un silence tendu, seulement brisé par le grincement du navire et le fracas des vagues lointaines. Puis, dans un effort défiant l’océan lui-même, la première pierre refit surface — sombre, lisse et ancienne, sa surface de verre brillant étrangement sous la pâle lumière. Le Palantír d’Annúminas était retrouvé, ses mystères préservés dans l’étreinte froide de la mer. La seconde suivit bientôt, pierre d’égal âge mais déformée par le temps, le Palantír d’Amon Sûl. Leur récupération fut une victoire non seulement pour l’équipe, mais pour le royaume lui-même, car ces pierres portaient désormais la promesse de restaurer la vision d’Arnor, si le Roi osait les utiliser. À leur retour sur la terre ferme, le poids de l’histoire sembla se déplacer, et l’ombre lointaine du passé commença à s’éveiller à nouveau."
+ee_arnor.6.a:0 "Hourra !"
+ 
+ee_arnor.4000.t:0 "Le Jeu des Nombres"
+ee_arnor.4000.desc:0 "Le Balrog de Moria est une menace comme aucune autre. Ancien Maiar déchu et serviteur de Morgoth depuis le commencement de la Grande Musique, il se situe dans une classe bien au-delà de tout être vivant en Terre du Milieu aujourd’hui, à l’exception du Seigneur des Ténèbres lui-même. Nous ne sommes que des fourmis face à sa puissance. Mais les fourmis peuvent abattre même le plus puissant guerrier, à condition d’avoir une stratégie adaptée. \n\nEn aménageant correctement des champs de bataille dans les tunnels, nous pourrons user le Balrog par un processus d’attrition constant. Des milliers mourront, mais c’est un sacrifice nécessaire pour détruire le dernier Balrog et libérer le monde de l’ombre !"
+ee_arnor.4000.a:0 "Hommes, à vos positions !"
+
+ee_arnor.8.t:0 "Pas de nouvelles du Nord"
+ee_arnor.8.desc:0 "Nous n’avons encore reçu aucune nouvelle de la recherche des Palantíri perdus de l'Arnor. Nos meilleurs aventuriers poursuivent leur exploration de la baie de Forochel à la recherche du navire d’Arvedui. Tout ce qu’il nous reste à faire est d’attendre leurs résultats."
+ee_arnor.8.a:0 "Nous attendons avec impatience leur succès."
+ee_arnor.8.b:0 "Rappelez-les, nous ne pouvons pas nous permettre de continuer ainsi."
+
+ee_arnor.9.t:0 "Un miracle gelé"
+ee_arnor.9.desc:0 "Nous avons reçu un rapport absolument stupéfiant de nos aventuriers à Forochel. Ils ont découvert un navire numénoréen prisonnier d’un iceberg. L’embarquement fut problématique, mais une fois à l’intérieur, il était clair que le navire transportait quelqu’un d’important. L’équipage, encore étrangement conservé par la glace, portait de riches robes et des armes fines. Nos équipes extrayèrent les corps pour leur offrir des funérailles dignes de nos ancêtres et récupérèrent autant que possible les ornements et documents du navire. Puis ils poursuivirent la recherche des Palantíri perdus. Mais alors survint le miracle : un enfant, identifié dans les registres comme Ârûbên, neveu de Pharazôn, s’éveilla soudain. Gravement engourdi par le froid et incapable de se tenir debout, il était néanmoins vivant."
+ee_arnor.9.a:0 "Amenez immédiatement l’héritier de Númenor à la capitale !"
+
+ee_arnor.7.t:0 "La Pierre d’Osgiliath retrouvée !"
+ee_arnor.7.desc:0 "Après de longs mois de dragage et plusieurs propositions pour détourner le fleuve, l’une de nos grues rencontra une grande pierre près des fondations d’un ancien pont. Au départ, nous pensions qu’il ne s’agissait que d’un rocher ordinaire. Mais à mesure que la masse émergeait de l’eau, sa forme devint évidente. Après quelques efforts de nettoyage et de polissage, nos soupçons furent confirmés : nous avions retrouvé le Palantír Maître d’Osgiliath !"
+ee_arnor.7.a:0 "La Pierre-Maîtresse restaurée !"
+
+ee_arnor.20.t:0 "Choisir un candidat"
+ee_arnor.20.desc:0 "Maintenant que la décision d’envoyer une expédition en Arnor a été prise, il m’incombe, en tant que Intendant de Gondor, de choisir un leader digne de cette mission cruciale. Ce choix ne peut être fait à la légère, car la route vers le Nord est longue et périlleuse, et le destin de cette entreprise reposera lourdement sur celui qui la dirigera. Le leader doit posséder non seulement des compétences martiales et une sagesse stratégique, mais aussi la force de volonté pour supporter les épreuves du voyage et le poids de la responsabilité. Il doit être un modèle de loyauté envers Gondor, capable d’inspirer ses compagnons et de naviguer à travers les terres sauvages et les alliances incertaines qui attendent dans les vestiges de l’ancien royaume du Nord. En tant qu’Intendant, il est de mon devoir de m’assurer que nos espoirs ne reposent pas entre des mains fragiles, car le succès de cette expédition pourrait façonner l’avenir de Gondor et d’Arnor."
+ee_arnor.20.a:0 "Mon chevalier, [candidate1.GetName] est à la hauteur !"
+ee_arnor.20.a.tt:0 "[candidate1.GetName] se rendra en Arnor pour établir une nouvelle colonie"
+ee_arnor.20.b:0 "Je confie cette mission à vous, [candidate2.GetFirstName]."
+ee_arnor.20.b.tt:0 "[candidate2.GetFirstName] se rendra en Arnor pour établir une nouvelle colonie"
+ee_arnor.20.c:0 "Je crois que [candidate3.GetName] est le mieux placé pour cette mission."
+ee_arnor.20.c.tt:0 "[candidate3.GetName] se rendra en Arnor pour établir une nouvelle colonie"
+ee_arnor.20.d:0 "C’est une tâche pour [faramir.GetFirstName], capitaine de Gondor !"
+ee_arnor.20.d.tt:0 "[faramir.GetName] se rendra en Arnor pour établir une nouvelle colonie"
+
+ee_arnor.21.t:0 "L’expédition s’assemble"
+ee_arnor.21.desc:0 "En réponse à mon invitation récente à mener une expédition en Arnor, [arnorsettler.GetName] est arrivé à ma cour avec un petit groupe d’hommes aventureux.\n\nIls demandent combien d’or je suis prêt à investir pour coloniser [target_county.GetNameNoTier]. Si je les aide, leur nouveau royaume pourra croître beaucoup plus rapidement et devenir plus prospère…"
+ee_arnor.21.a:0 "Je leur accorderai une somme généreuse."
+ee_arnor.21.a.tt:0 "La nouvelle colonie disposera de deux bâtiments supplémentaires hautement développés"
+ee_arnor.21.b:0 "Finançons-les correctement."
+ee_arnor.21.b.tt:0 "La nouvelle colonie disposera de deux bâtiments supplémentaires"
+ee_arnor.21.c:0 "Ils auront une partie de mon excédent d’or."
+ee_arnor.21.c.tt:0 "La nouvelle colonie disposera d’un bâtiment supplémentaire"
+ee_arnor.21.d:0 "Je crains de ne pouvoir rien accorder pour le moment."
+ee_arnor.21.d.tt:0 "La nouvelle colonie n’aura pas de bâtiment supplémentaire"
+ 
+ ee_arnor.23.t:0 "Girithlin Colonisée"
+ee_arnor.23.desc:0 "De réjouissantes nouvelles me parviennent de la colonie en Arnor que j’ai parrainée. La construction est terminée, et le nouvel établissement de [target_county.GetNameNoTier] est achevé !\n\nLe nouveau seigneur, [arnorsettler.GetName], a pris possession de ce fief, et les Dúnedain ont commencé à étendre leur nouveau domaine avec diligence. Que [ROOT.Char.GetFaith.HighGodName] leur accorde succès et prospérité dans leurs entreprises !"
+ee_arnor.23.a:0 "Bonne chance à notre colonie !"
+ee_arnor.23.a.tt:0 "Vous gagnez une [defensive_alliance|E] avec [arnorsettler.GetName]"
+ee_arnor.23.b:0 "Espérons qu'ils ne nous en voudront pas d'avoir refusé des fonds..."
+ee_arnor.23.c:0 "Je me demande ce que [arnorsettler.GetFirstName] fera ensuite…"
+
+ee_arnor.24.t:0 "Girithlin Colonisée"
+ee_arnor.24.desc:0 "Notre colonisation de Girithlin a dépassé nos espérances les plus ambitieuses, progressant avec une rapidité et un succès que peu pouvaient prévoir. Ce qui avait commencé comme un modeste avant-poste autour de l’ancienne tour s’est rapidement transformé en un domaine florissant, nos habitants s’étendant sur toute la région. La terre, jadis sauvage et indomptée, porte désormais la marque de notre établissement, des villages surgissent le long des rivières, des routes traversent les forêts denses, et les champs sont cultivés pour offrir leurs richesses. Nos ingénieurs ont restauré l’ancienne tour dans toute sa splendeur, non pas comme relique du passé, mais comme symbole de notre légitime domination sur ces terres. Le commerce prospère, et nos défenses se renforcent chaque jour. Les habitants de Girithlin ne se considèrent plus comme de simples colons, mais comme les véritables gardiens de cette terre, forgeant un nouveau chapitre dans son histoire longue et légendaire. Cependant, en célébrant nos succès, nous devons rester vigilants : la nature sauvage au-delà de nos frontières recèle encore des secrets, et tous ceux qui habitaient ces terres autrefois ne verront pas notre présence d’un bon œil."
+ee_arnor.24.a:0 "D’abord Girithlin, puis le Cardolan, puis tout l'Arnor !"
+
+ee_arnor.30.t:0 "Le Roi d’Arnor ?"
+ee_arnor.30.desc:0 "Maintenant que nous avons sécurisé une grande partie de l’ancien royaume d’Arnor, il est temps d’en restaurer l’ancienne gloire en couronnant un roi. Les terres autrefois en ruine ont été reconquises, le peuple unifié sous un objectif commun, et l’héritage noble d’Arnor commence à se réveiller dans le cœur de ses habitants. La stabilité revenant dans la région et l’ombre du chaos reculant, la nécessité d’un souverain fort et légitime n’a jamais été aussi pressante. Une couronne doit être posée sur une tête digne—celle d’un dirigeant capable de guider Arnor avec sagesse, courage et vision, vers une nouvelle ère de paix et de prospérité."
+ee_arnor.30.a:0 "Je suis le restaurateur du royaume, il est juste que je monte sur le trône."
+ee_arnor.30.a.tt:0 "[candidate1.GetFirstName] montera sur le trône"
+ee_arnor.30.b:0 "Je confie cette charge à vous, [candidate2.GetFirstName]."
+ee_arnor.30.b.tt:0 "[candidate2.GetFirstName] montera sur le trône"
+ee_arnor.30.c:0 "Je crois que [candidate3.GetName] est le mieux placé pour cette tâche."
+ee_arnor.30.c.tt:0 "[candidate3.GetName] montera sur le trône"
+ee_arnor.30.d:0 "Je crois que [candidate4.GetName] est le meilleur choix."
+ee_arnor.30.d.tt:0 "[candidate4.GetName] montera sur le trône"
+ee_arnor.30.e:0 "Il est temps que les royaumes soient réunis !"
+ee_arnor.30.e.tt:0 "Vous deviendrez vassal de Gondor"
+
+ee_arnor.31.t:0 "Le Retour du Roi ?"
+ee_arnor.31.desc:0 "Je n’aurais jamais imaginé que ce jour viendrait—pas vraiment. Lorsque l’expédition gondorienne marcha vers le nord, je pensais seulement à aider à la reconquête des ruines de l'Arnor, honorant la mémoire d’un royaume perdu dans le temps et l’ombre. Pourtant maintenant, après des mois de victoires âprement disputées et de reconstruction infatigable, ils se tiennent devant moi avec des yeux solennels et m’offrent l’impensable : le trône d’Arnor. Moi un homme à la lignée effacée, mentionnée dans de vieux livres et chansons à demi oubliées. Pourtant je ne suis pas seul, d’autres possèdent un sang qui pourrait légitimer la couronne, tous des vestiges dispersés d’une noble lignée plongée dans le silence depuis des siècles. Pourtant, ils se tournent vers moi, peut-être pour mes choix, la confiance que j’ai gagnée, ou la manière dont je suis resté inébranlable tandis que le royaume se réveillait. Et maintenant, je dois décider si je prendrai ce fardeau ancien, et devenir quelque chose de plus qu’une ombre du passé—quelque chose digne du trône lui-même."
+ee_arnor.31.a:0 "Salut au Retour du Roi !"
+ee_arnor.31.a.tt:0 "Je prendrai le trône"
+ee_arnor.31.b:0 "Je ne suis pas le bon candidat…"
+ee_arnor.31.b.tt:0 "[arnorsteward.GetFirstName] choisira un autre candidat"
+
+ee_arnor.32.t:0 "Notre colonie jure fidélité"
+ee_arnor.32.desc:0 "La colonie que nous avons envoyée en Arnor a prospéré au-delà de nos espérances, se transformant d’un avant-poste fragile en une forteresse florissante qui détient désormais une grande partie du Royaume du Nord jadis perdu. Par la persévérance, la sagesse et la force de son peuple, la colonie a su stabiliser la région sauvage et les ruines, ravivant l’esprit ancien d’Arnor. Face à ce succès remarquable, le Steward du Nord déclare qu’il est temps pour le Royaume du Nord de revenir dans le giron du royaume—non pas comme un fragment dispersé ou une province oubliée, mais comme un royaume renouvelé, digne de son passé légendaire. C’est un appel non seulement à la gouvernance, mais à l’unité, l’héritage et la restauration d’un royaume longtemps considéré comme perdu dans la légende."
+ee_arnor.32.a:0 "Il est temps que les royaumes soient réunis."
+ee_arnor.32.a.tt:0 "[arnorsteward.GetFirstName] deviendra votre vassal"
+ee_arnor.32.b:0 "Le moment n’est pas encore venu."
+ee_arnor.32.b.tt:0 "[arnorsteward.GetFirstName] restera indépendant"
+  
+ ### Angmar 
+ 
+ ee_arnor.10.t:0 "Le Retour d’Angmar"
+ee_arnor.10.desc:0 "La volonté du Seigneur Noir pressait mon esprit, un appel à la fois irréfutable et absolu. Je me suis agenouillé devant le grand œil sans paupière, enveloppé d’ombre, attendant son ordre. Arnor s’est relevé de sa tombe, la voix de Sauron grondant dans mon crâne, un murmure de malice et d’acier. Ses rois s’enhardissent. Son peuple oublie son destin funeste. Va, mon lieutenant. Va en Angmar, et rappelle-leur leur sort. Un frisson de puissance me parcourut, ravivant le sombre dominion que j’avais autrefois exercé. Le Nord avait dormi trop longtemps en l’absence de son vrai maître. Les vents glacés de Carn Dûm hurleraient à mon retour, et par eux, la peur se répandrait comme un gel rampant. Les royaumes des hommes, si insensés dans leur restauration, apprendraient qu’aucun royaume né de vieilles ruines ne peut résister à la colère du Roi-Sorcier.\n\nLorsque je me relevai de mon hommage, les forges de Barad-dûr rugirent, et mon destrier m’attendait, ses yeux brûlant de la même flamme glaciale qui animait mon corps. Les étendards d’Angmar se lèveraient à nouveau, et avec eux, la nuit. Je rassemblerais les vestiges des anciennes bandes de guerre, invoquerais les esprits errant dans les tumulus et lèverais de nouvelles légions des terres glacées. Le Nord avait toujours été mien, et désormais, par décret de mon maître, il le serait à nouveau. Les fils d’Arnor trembleraient à mon approche, et leurs rois, aussi nobles soient-ils, chancelleraient comme leurs ancêtres avant eux. Sauron a parlé. J’obéirai."
+ee_arnor.10.a:0 "Mon Seigneur commande"
+ee_arnor.10.b:0 "Nous lui souhaitons bonne chance. (Continuer à Mordor)"
+
+ee_arnor.11.t: "Le retour du Roi-Sorcier en Angmar !"
+ee_arnor.11.desc: "Avec la renaissance d’Arnor, le Roi-Sorcier d’Angmar s’est éveillé des ombres de la légende et a quitté sa sombre forteresse. Après des siècles de silence, sa présence se répand à nouveau dans les vents du Nord, apportant avec elle une terreur renouvelée. L’ancien ennemi, jadis vaincu et relégué dans l’oubli, est revenu avec un objectif précis : reconquérir ce qui fut perdu et éteindre l’étincelle d’espoir qui ose encore brûler dans le cœur des hommes. Son regard se tourne vers les vestiges brisés du Nord, où tremblent les anciennes alliances et où la lignée des rois s’élevait autrefois fièrement.\n\nMais cette fois, le Roi-Sorcier ne revient pas comme une simple ombre de lui-même. Renforcé par des sorcelleries plus profondes et plus sombres, et mû par une vengeance ayant mûri au fil des âges, il ne vise pas seulement la chute d’Arnor, mais l’anéantissement total de son héritage. Ses armées se rassemblent dans le secret, des créatures ténébreuses émergent de lieux oubliés, et la terre elle-même semble gémir sous le poids de son retour. Ce qu’il avait commencé autrefois, guerre, ruine et domination, il entend désormais l’achever, et sans une nouvelle union des peuples libres, le Nord pourrait bien sombrer sous une seconde ombre, plus impitoyable encore."
+
+ee_arnor.11.b: "Le Roi-Sorcier revient pour réclamer son juste domaine !"
+ee_arnor.11.a: "Nous réussirons là où nos ancêtres ont échoué."
+ee_arnor.11.c: "Que ruine ou renaissance en découle, seul le temps le dira."
+
+ee_arnor.40.t: "Espace réservé"
+ee_arnor.40.desc: "Espace réservé"
+ee_arnor.40.a: "Espace réservé"
+ee_arnor.40.b: "Espace réservé"
+
+ee_arnor.12.t: "Espace réservé"
+ee_arnor.12.desc: "Espace réservé"
+ee_arnor.12.a: "Espace réservé"
+ee_arnor.12.b: "Espace réservé"
+ee_arnor.12.c: "Espace réservé"
+
+ ### Elf
+
+ee_elf.05.t:0 "Nenuial Reprise !"
+ee_elf.05.desc:0 "Les rivages de Nenuial, autrefois honorés par la présence de la Dame Galadriel, étaient silencieux depuis de longues années, leur beauté enfouie sous le poids du temps. Les ruines d’Annúminas, jadis cœur du Royaume d’Arnor, gisent désormais en décomposition, ombre d’une gloire humaine destinée à périr. Les pierres laissées par les hommes rappellent leur passage éphémère, mais le chant elfique s’élève à nouveau, alors que nous revenons sur ces rivages où Galadriel marchait.\n\nNous ne venons pas pour préserver les vestiges des royaumes mortels, ni pour honorer des ruines dénuées de sens. Non, nous venons pour dissiper ce qui n’a pas sa place dans l’avenir de cette terre. Leurs murs brisés, leurs routes fanées—ce ne sont que des échos d’un âge révolu. Nous les balaierons, car ils n’étaient jamais destinés à perdurer.\n\nÀ leur place, nous construirons un royaume digne des étoiles, aussi intemporel et éternel que les Elfes eux-mêmes. Les terres de Nenuial brilleront de nouveau, phare de lumière et de grâce. L’héritage de Galadriel, qui a marché sur ces rivages, sera honoré non par des vestiges, mais par la création d’un royaume elfique qui brillera pour tous les âges à venir."
+ee_elf.05.a:0 "Une aube nouvelle pour les rivages au clair de lune"
+
+ee_elf.06.t:0 "Le Haut Royaume d’Eriador"
+ee_elf.06.desc:0 "Pendant des âges, [eriador|e] fut l’un des plus grands et puissants royaumes elfique de la Terre du Milieu. Protégé à l’ouest par les Ered Luin et à l’est par les Hithaeglir, Eriador fut longtemps une terre juste et paisible des [eldar|e]. Cependant, il fut détruit lors de la [waroftheelvesandsauron|E] et donné aux Dúnedain après la chute.\n\nMais ce n’est plus le cas ! L'Eriador résonne à nouveau de chants elfique et de champs fleuris. Les forêts s’avancent sur les plaines longtemps stériles, [eregion|e] renaît tel un phénix, un nouveau printemps atteint [GetTitleByKey('k_sirgala').GetNameNoTier] et les rivages au clair de lune de [GetTitleByKey('k_nenuial').GetNameNoTier] sont à nouveau immaculés. Eriador est redevenu elfique !"
+ee_elf.06.a:0 "Et il ne tombera plus jamais !"
+
+ee_elf.07.t: "Lórien Occidental"
+ee_elf.07.desc: "Depuis longtemps, [eregion|e] gisait abandonnée. Depuis la [waroftheelvesandsauron|E], ma seconde patrie n’était plus que ruines, mais cela change aujourd’hui ! Avec la maîtrise du passage et la restauration du royaume, il est enfin temps de fusionner ces deux royaumes et ces deux peuples en un seul."
+ee_elf.07.a: "Pour l’éternité à venir."
+
+ee_elf.08.t: "Gondolin restaurée !"
+ee_elf.08.desc: "Depuis la [warofwrath|e], [gondolin|e] reposait abandonnée au large de Tol Fuin. Deux âges entiers du monde ont vu la cité demeurer en ruines. Mais cela n’est plus ! Gondolin, la Cité Cachée, et l’[hope|e] de tous les [eldar|e], renaît !\n\nAprès des années de travaux pour draguer les ruines et reconstruire la terre même sur laquelle elle repose, Gondolin est à nouveau emplie de chants elfiques ! Et bien que les Montagnes Enceintes aient disparu, c’est désormais la Grande Mer elle-même qui protège la cité."
+ee_elf.08.a: "Une déclaration de notre endurance dans un monde en perpétuel changement !"
+
+ee_elf.09.t: "L’Union de [root.GetFirstName]"
+ee_elf.09.desc: "Trop longtemps les [eldar|e] ont été divisés. Depuis la [greatjourney|e], les Elfes de l’Ouest se sont fragmentés. Mais au fil des millénaires, les différents clans elfiques se sont mêlés et entremêlés. Il n’a plus de sens qu’il existe un Haut Roi des [noldorelves|E] ou des [sindarelves|e] : il est temps qu’il n’y ait plus qu’un seul Haut Roi de tous les Eldar !"
+ee_elf.09.a: "Une nouvelle ère pour notre peuple !"
+
+ee_elf.1000.t:0 "La Restauration de l'Eregion"
+ee_elf.1000.desc:0 "La terre de [eregion|e] est demeurée trop longtemps abandonnée. Par la puissance de [primarytitle.GetNameNoTier], elle a été purifiée et rendue habitable à nouveau. Il est maintenant temps d’envoyer nos émissaires aux [noldorelves|E] et de désigner un nouveau seigneur pour gouverner ces terres."
+ee_elf.1000.a:0 "Envoyez un message à [elrond.GetName], le plus sage des [noldorelves|E]."
+ee_elf.1000.b:0 "Envoyez un message à [galadriel.GetName], l’une des dernières survivantes de l'Eregion."
+ee_elf.1000.c:0 "Envoyez un message à [maglor.GetName], le dernier fils de [feanor|e]."
+ee_elf.1000.d:0 "Laissez les Elfes choisir un chef parmi eux."
+eregion_message1:0 "Envoyez un message à [elrond.GetFirstName]."
+eregion_message2:0 "Envoyez un message à [galadriel.GetFirstName]."
+eregion_message3:0 "Envoyez un message à [maglor.GetFirstName]."
+ 
+ee_elf.1001.t: "La restauration de l’Eregion"
+ee_elf.1001.desc: "Depuis de nombreuses années, les terres de [eregion|E] sont en ruines. Depuis la [waroftheelvesandsauron|E], le pays des Forgeurs d'Anneaux est resté à l’abandon. Mais cela n’est plus ! [eregion_restorer.GetName], par un immense labeur, a restauré cette terre perdue et, chose plus étrange encore, m’a proposé d’en devenir le seigneur."
+ee_elf.1001.a: "Rallumons les forges !"
+ee_elf.1001.b: "Je serai le seigneur de l’Eregion et rien d’autre."
+ee_elf.1001.c: "Je ne peux abandonner mon foyer pour régner sur une terre maudite."
+
+ ee_elf.2000.t:0 "Rage contre le Déclin de la Lumière"
+ee_elf.2000.desc:0 "Pourquoi les Eldar devraient-ils se cacher dans les forêts et montagnes du monde comme des fantômes d’un âge oublié ? Pourquoi nous, les Premiers-Nés d’Ilúvatar, devrions-nous fuir la lumière et abandonner l’héritage de notre passé, simplement parce que les ombres du mal ont connu la victoire ? La chute d’Eregion fut une blessure amère, oui, mais ne sommes-nous pas plus grands que notre peine ? La race des Hommes ne s’est-elle pas relevée des cendres de Númenor, forgeant royaumes et destinées malgré sa mortalité ?\n\nDevons-nous, qui avons vu les Deux Arbres fleurir et dépérir, qui avons marché sous les étoiles avant que le Soleil et la Lune ne naissent, désormais nous terrer dans des clairières cachées, attendant que le monde nous dépasse ? Pourquoi rester en silence, derrière des murs de marbre et des salles chargées de mémoire, tandis que le monde change sans nous ?\n\nNon. Je dis que nous ne sommes pas des reliques. Nous ne sommes pas le chant déclinant. Le feu de notre esprit brûle encore. Rappelons-nous qui nous sommes, non dans le deuil, mais avec un but. Que les vents portent nos voix à nouveau. Que le monde voie que les Eldar n’ont pas disparu : nous perdurons ! Et peut-être, nous nous élèverons de nouveau."
+ee_elf.2000.a:0 "Nous ne nous tairons pas !"
+
+ee_elf.2001.t:0 "Une Découverte Chanceuse"
+ee_elf.2001.desc:0 "Nous n’avions exploré les ruines de l’[eregion|e] que depuis peu lorsque l’un de nos compagnons s’écria. Elle avait fouillé les anciennes forges et découvert une alcôve cachée dans le mur d’une des smithies. Derrière une brique détachée se trouvait non seulement un ensemble d’outils de forge, mais aussi un ancien manuel. En le feuilletant, je réalisai qu’il s’agissait des Enseignements de [celebrimbor|e] ! Apparemment, ce forgeron ne voulait pas que quiconque sache qu’il consultait ce livre. Mais ce trésor caché pourrait bien expliquer pourquoi les [eldar|e] n’ont jamais perdu l’art de la forge des anneaux !\n\nIl ne reste plus qu’à décider de notre prochaine étape, rechercher les survivants de l’Eregion à [imladris|e] ou solliciter l’aide du Magicien Blanc, [sarumancharacter|e]."
+ee_elf.2001.a:0 "Vers Imladris !"
+ee_elf.2001.b:0 "Allons trouver le Magicien Blanc !"
+ee_elf.2001.c:0 "Nous n’avons besoin de personne !"
+ee_elf.2001.a.effect:0 "Voyage vers Imladris"
+ee_elf.2001.b.effect:0 "Voyage vers Sarouman"
+
+ee_elf.2002.t:0 "Le Dernier Forgeron"
+ee_elf.2002.desc:0 "[imladris|e] est un lieu étrange, la Maison du Dernier Foyer à l’ouest des Montagnes Brumeuses. Tout ce que j’y vois, c’est le potentiel perdu. C’est là que se sont réfugiés les [eldar|e] après la [waroftheelvesandsauron|e] ? Cette vallée cachée dans les montagnes ? Triste état pour notre peuple.\n\nMais j’ai une tâche à accomplir. Imladris abrite les survivants de l’[eregion|e] et les Forgeurs d’Anneaux. Avec un peu de chance, je trouverai un forgeron survivant ayant l’expérience directe de la création des anneaux de pouvoir. Après quelques recherches, je trouvai [smith.GetFirstName]. Il prétend être le dernier forgeron des Noldor, mais affirme avoir perdu tout espoir pour l’avenir de la Terre du Milieu."
+ee_elf.2002.a:0 "Voyons si je peux le convaincre du contraire."
+ee_elf.2002.a.success:0 "Vous le convainquez"
+ee_elf.2002.a.failure:0 "Vous échouez à le convaincre"
+
+ee_elf.2003.t:0 "Le Magicien Blanc"
+ee_elf.2003.desc:0 "Je me tiens devant le Magicien Blanc [sarumancharacter|e], l’un des cinq [istariconcept|e] envoyés par les [valargods|e] pour guider les peuples de la Terre du Milieu, avec une demande inhabituelle. Le Magicien Blanc fut autrefois un [maiargods|e] de [aulecharacter|e], réputé pour son talent exceptionnel. Si quelqu’un peut reproduire l’aide que [sauroncharacter|e] donna à Celebrimbor, c’est bien lui. On dit même qu’il entreprit un projet similaire pour comprendre les [ringsofpower|e] et contrer les [oneringshort|e]."
+ee_elf.2003.a:0 "Voyons si nous pouvons parvenir à un accord."
+ee_elf.2003.a.success:0 "Vous parvenez à un accord"
+ee_elf.2003.a.failure:0 "Vous échouez à parvenir à un accord"
+ee_elf.2003.a.effect:0 "Saruman accepte de vous aider"
+
+ee_elf.2004.t:0 "Un Nouvel Anneau"
+ee_elf.2004.desc:0 "Le moment est enfin venu de forger un nouvel anneau de pouvoir ! Nous avons rassemblé les matériaux, effectué de nombreux tests et pratiqué chaque étape selon les méthodes de [celebrimbor|e], jusqu’à la perfection, car cette tâche exige la perfection. Sinon, quelqu’un d’autre l’aurait accomplie il y a des millénaires. Il est temps de montrer au monde que les [eldar|e] ne sont pas un peuple déclinant, mais qu’ils existent encore et se battent pour protéger ce monde !"
+ee_elf.2004.a:0 "Allumez les Forges"
+ee_elf.2004.a.success:0 "Un Anneau est Forgé"
+ee_elf.2004.a.failure:0 "Le Projet échoue"
+
+ee_elf.2005.t:0 "Face à la Tour Noire"
+ee_elf.2005.desc:0 "'Sors et affronte-moi !' criai-je vers la tour insondable et j’attends une réponse. Le regard de l’Œil sans Paupière me scrute depuis le sommet, mais je tiens bon. Je suis l’espoir des Peuples Libres ! Je suis la Flamme de l’Ouest ! Je prouverai une bonne fois pour toutes que les [eldar|e] sont toujours aussi grands qu’aux [elderdays|e]. Je vais tuer [sauroncharacter|e] ! Mon regard se reporte sur la porte qui s’ouvre et le Seigneur des Terres Noires apparaît…"
+ee_elf.2005.a:0 "Je vengerai mes ancêtres !"
+ee_elf.2005.b:0 "Peut-être est-ce une mauvaise idée ?"
+ee_elf.2005.c:0 "#italic Salut Annatar, Seigneur des Anneaux ! #!"
+ee_elf.2005.a.success:0 "Le Seigneur Noir tombe sous votre lame"
+ee_elf.2005.a.failure:0 "Sauron vous écrase de son marteau"
+ee_elf.2005.b.success:0 "Vous vous échappez"
+ee_elf.2005.c.success:0 "Vous résistez à l’Anneau"
+ee_elf.2005.c.failure:0 "Vous succombez à l’Anneau"
+
+### Hobbit
+
+ee_hobbit.0100.t: "Notre déclaration d’indépendance"
+ee_hobbit.0100.desc: "La [shire|e] est légalement un royaume subordonné au [northkingdom|e] depuis plus d’un millénaire. Cependant, depuis la destruction d’Arnor, il n’y a plus de roi. Pourquoi maintenir la fiction selon laquelle nous sommes une province d’Arnor, alors qu’il ne reste plus rien d’Arnor auquel nous pourrions appartenir ? Il est temps d’en finir avec cela et de rendre la Comté véritablement indépendante."
+ee_hobbit.0100.a: "Nous tenons debout par nous-mêmes !"
+
+ee_hobbit.0101.t: "La Grande Comté"
+ee_hobbit.0101.desc: "La [shire|e] a longtemps été la seule région habitée de [eriador|e], dernier bastion de civilisation dans les terres désolées. Bien que nous n’ayons à l’origine reçu que les terres de la Comté, personne n’a contesté notre présence depuis des siècles. Il est temps d’étendre notre autorité sur ces terres jusqu’aux frontières de l’Eriador !"
+ee_hobbit.0101.a: "Que les terres désolées refleurissent !"
+
+ee_hobbit.0102.t: "La restauration du Gué des Eaux"
+ee_hobbit.0102.desc: "Le Gué des Eaux, l’ancienne patrie des Hobbits Stoors, a été restaurée. Des terres restées vides pendant des siècles sont à nouveau remplies de l’odeur du tabac à pipe et du son des rires. Des Hobbits de la [shire|e] affluent déjà vers ce nouveau domaine, et des routes commerciales à travers [eriador|e] ont déjà été établies. Il est désormais temps de proclamer officiellement la théocratie du Gué des Eaux !"
+ee_hobbit.0102.a: "Un nouveau foyer !"
+
+### Easter Egg
+
+ee_arnor.5000.t: "Les Fidèles du Sud !"
+ee_arnor.5000.desc: "[ROOT.Char.GetFirstName] était le dernier rejeton d’une maison [arnorian|e] presque éteinte, ayant fui la Grande Peste. Au début de l’an 2752 du [thirdage|e], elle et son époux [ROOT.Char.GetPrimarySpouse.GetFirstName], un prince [adunai|e] ayant passé la majeure partie de son enfance sur des navires marchands entre [thanihazad|e] et [gondor|e], et devenu fervent des [faithful|e], furent envoyés en [thanihazad|e] par le Sénéchal de [gondor|e] dans le but de convertir les [adunai|e] et de tenter de les rallier contre le [darklord|e]. Ils arrivèrent dans le pays natal de [ROOT.Char.GetPrimarySpouse.GetFirstName], à [GetTitleByKey('d_inzilloni').GetNameNoTier], avec une armée de volontaires gondoriens et une volonté ardente de libérer les terres de l’Extrême Sud !"
+ee_arnor.5000.a: "L’espoir n’est pas perdu !"
+
+gondorian_host: "Armée gondorienne"

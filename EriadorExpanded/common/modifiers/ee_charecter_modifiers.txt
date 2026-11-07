@@ -25,3 +25,28 @@ ee_ring_saruman_modifier = {
 	intrigue_per_prestige_level = 1
 	diplomacy_per_prestige_level = 1
 }
+
+ee_lonelands_no_investment = {
+	icon = economy_positive
+	
+}
+ee_lonelands_small_investment = {
+	icon = economy_negative
+	monthly_income_mult = -0.1
+}
+ee_lonelands_medium_investment = {
+	icon = economy_negative
+	monthly_income_mult = -0.25
+}
+ee_lonelands_large_investment = {
+	icon = economy_negative
+	monthly_income_mult = -0.5
+}
+ee_lonelands_huge_investment = {
+	icon = economy_negative
+	monthly_income_mult = -0.75
+}
+ee_lonelands_massive_investment = {
+	icon = economy_negative
+	monthly_income_mult = -1
+}

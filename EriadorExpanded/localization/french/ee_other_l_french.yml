@@ -1,0 +1,144 @@
+﻿# LotR: This file needs to be kept in sync with the release version.
+#   Edited the dates
+#	Edited the loading screen text
+
+l_french:
+
+ ### Titles
+ 
+k_fornost: "Fornost"
+k_fornost_adj: "Fornostien"
+
+k_mistalonde: "Mistalondë"
+k_mistalonde_adj: "Mistalondën"
+
+k_mitheithel: "Mitheithel"
+k_mitheithel_adj: "Mitheithel"
+
+k_nenuial: "Nenuial"
+k_nenuial_adj: "Nenuialien"
+
+k_arnor_steward: "Arnor"
+k_arnor_steward_adj: "Arnorien"
+
+e_eriador: "Eriador"
+e_eriador_adj: "Eriadorien"
+
+cn_west_lorien: "Lórien de l’Ouest"
+cn_west_lorien_adj: "Lórien de l’Ouest"
+
+h_cyrdor: "Cŷrdor"
+h_cyrdor_adj: "Cŷrdorien"
+
+k_wadewater: "Gué des Eaux"
+k_wadewater_adj: "Gué des Eaux"
+
+d_laamp_southern_faithful: "Les Fidèles du Sud"
+d_laamp_southern_faithful_adj: "Fidèles du Sud"
+
+### Titres et appellations
+emperor_feudal_male_steward_arnor: "Intendant régnant"
+emperor_feudal_female_steward_arnor: "Intendante régnante"
+emperor_feudal_female_steward_nonholder_arnor: "Dame"
+prince_male_steward_arnor: "Seigneur"
+prince_female_steward_arnor: "Dame"
+empire_feudal_steward_arnor: "Intendance"
+empress_mother_steward_arnor: "Dame"
+
+### Modificateurs
+ratdotl_modifier: "Rage contre le Déclin de la Lumière"
+
+### Traits
+trait_rageagainstlight: "Rage contre le Déclin de la Lumière"
+trait_rageagainstlight_desc: "Ce personnage se révolte contre le déclin des [eldar|E], œuvrant à préserver les œuvres des [elderdays|e] et à créer de nouvelles merveilles."
+
+#### Règles de jeu
+rule_eregion_rule: "L’Existence de l'Eregion"
+setting_eregion_restored: "Eregion Restaurée"
+setting_eregion_restored_desc: "Eregion sera entièrement restaurée et dirigée par Elrond au début de la partie."
+setting_no_eregion: "Eregion Détruite"
+setting_no_eregion_desc: "Eregion restera inchangée."
+
+rule_sirgala_rule: "L’Existence de Sirgala"
+setting_sirgala_restored: "Sirgala Restaurée"
+setting_sirgala_restored_desc: "Sirgala sera entièrement restaurée et dirigée par Karamar au début de la partie."
+setting_no_sirgala: "Sirgala Détruite"
+setting_no_sirgala_desc: "Sirgala restera inchangée."
+setting_greater_sirgala_restored: "Grande Sirgala Restaurée"
+setting_greater_sirgala_restored_desc: "La Grande Sirgala sera entièrement restaurée et dirigée par Karamar au début de la partie."
+
+rule_angmar_rule: "L’Existence de l'Angmar"
+setting_angmar_restored: "Angmar Restauré"
+setting_angmar_restored_desc: "Angmar sera entièrement restauré et dirigé par le Roi-Sorcier au début de la partie."
+setting_no_angmar: "Angmar Détruit"
+setting_no_angmar_desc: "Angmar restera inchangé."
+ 
+rule_arnor_rule: "L’Existence de l'Arnor"
+setting_arnor_restored: "Arnor Restauré"
+setting_arnor_restored_desc: "Arnor sera entièrement restauré et dirigé par l’Héritier d’Isildur au début de la partie."
+setting_no_arnor: "Arnor Détruit"
+setting_no_arnor_desc: "Arnor restera inchangé."
+setting_gondor_colony: "Expédition Gondorienne"
+setting_gondor_colony_desc: "Gondor lancera immédiatement une expédition de colonisation vers Arnor au lieu d’attendre les conditions normales (pour jouer la colonie, sélectionnez Gondor et suivez la chaîne d’événements)."
+
+rule_moria_rule: "La Lutte pour la Moria"
+setting_yes_balrog: "Lutte Activée"
+setting_yes_balrog_desc: "La lutte contre le Balrog de Moria sera activée."
+setting_no_balrog: "Lutte Désactivée"
+setting_no_balrog_desc: "La lutte pour la Moria sera désactivée."
+
+rule_accelerated_colonize_rule: "EE : Colonisation accélérée"
+setting_accelerated_colonize_rule_enabled: "Activé"
+setting_accelerated_colonize_rule_enabled_desc: "La [decision|E] de colonisation est activée"
+setting_accelerated_colonize_rule_disabled: "Désactivé"
+setting_accelerated_colonize_rule_disabled_desc: "La [decision|E] de colonisation est désactivée"
+setting_accelerated_colonize_rule_disabled_ai: "Joueur uniquement"
+setting_accelerated_colonize_rule_disabled_ai_desc: "La [decision|E] de colonisation est activée uniquement pour le joueur"
+
+### Guerres
+
+ELVEN_HOMELANDS_KINGDOM_CONQUEST_WAR_NAME: "Guerre pour Reconquérir les Terres Elfiques"
+ELVEN_HOMELANDS_KINGDOM_CONQUEST_CB_NAME: "[elven_homelands_conquest_casus_belli|E] contre [kingdom|E]"
+VANQUISH_DARKNESS_KINGDOM_WAR_NAME: "Guerre pour Chasser les Ténèbres de [TITLE.GetBaseName]"
+VANQUISH_DARKNESS_KINGDOM_CB_NAME: "[vanquish_darkness_casus_belli|E] contre [kingdom|E]"
+
+### Artéfacts
+ring_manual: "Enseignements de Celebrimbor"
+ring_manual_desc: "Recueil des enseignements du grand forgeron [celebrimbor|e] rédigé avant la chute d’[eregion|e], contenant tout ce qu’il apprit de [annatarcharacter|e] et la formule pour forger les [ringsofpower|e]."
+
+new_ring_name: "Anneau de [owner.GetFirstNameNoTooltip]"
+new_ring_description: "@warning_icon!#T Ne faites pas confiance à vos sens : la magie des [ringsofpower|E] change selon la race de son porteur.#!\n\nUn véritable miracle de la forge elfique. Un nouveau [ringofpower|e] forgé bien après la chute d’[eregion|e]. [owner.GetFirstName] étudia longuement le travail de [celebrimbor|e] afin de reproduire cet art sans l’aide de [sauroncharacter|e]. Seul le temps dira si cet anneau est exempt de l’ombre."
+
+### Surnoms
+nick_last_smith: "Le Dernier Forgeron"
+nick_last_smith_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] est le dernier des forgerons d’[eregion|e], ayant fui vers [imladris|e] pendant la [waroftheelvesandsauron|e]."
+
+nick_shadow_slayer: "Tueur d’Ombres"
+nick_shadow_slayer_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] a terrassé le Seigneur des Ténèbres [sauroncharacter|e]."
+
+nick_faithful: "Le Fidèle"
+nick_faithful_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] est un converti [adunai|e] aux voies des [dunedain|e]"
+
+nick_redeemer: "Le Rédempteur"
+nick_redeemer_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] a voyagé depuis les terres des [faithful|e] pour convertir les [adunai|e] et a réussi à les ramener aux voies des [dunedain|e]"
+
+last_smith_name: "Damron"
+
+iceboy_name: "Helcion"
+iceboy_name_2: "Ârûbên"
+
+nick_iceborn: "Helcion"
+nick_iceborn_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] était le neveu de [pharazon|e] durant la [downfallofnumenor|e]. Considéré comme un échec pour avoir suivi la voie de Tar-Palantir, son oncle l’envoya en expédition vers Forochel. Son navire fut détruit, mais miraculeusement [CHARACTER.GetShortUINameNoTooltipNoFormat|U] fut tiré de la glace par des sauveteurs d’Arnor à la fin du [thirdage|e]."
+
+### Culture
+
+laurenoldor: "Laurenoldor"
+laurenoldor_collective_noun: "Laurenoldor"
+laurenoldor_prefix: "Laurenoldo"
+
+otsonorian: "Otsonorien"
+otsonorian_collective_noun: "Otsonoriens"
+otsonorian_prefix: "Otsonorien"
+
+GONDOLIN: "Gondolin"
+TOL_FUIN: "Tol Fuin"

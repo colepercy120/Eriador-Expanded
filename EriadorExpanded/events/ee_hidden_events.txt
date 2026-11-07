@@ -21,6 +21,21 @@ ee.1 = { # integrate the southern provinces
 		province:4727 = {
 			add_special_building = wonder_shrouded_isles_01
 		}
+		province:4335 = {
+			add_special_building = wonder_gondolin_01
+			barony = {
+				set_title_name = GONDOLIN
+			}
+			county = {
+				set_title_name = GONDOLIN
+			}
+			duchy = {
+				set_title_name = TOL_FUIN
+			}
+		}
+		province:144 = {
+			add_special_building = wonder_wadewater
+		}
 		
 		if = {
 			limit = { has_game_rule = arnor_restored }
@@ -101,6 +116,54 @@ ee.1 = { # integrate the southern provinces
 					days = 1
 				}
 		}
+		#title:d_laamp_southern_faithful.holder = {
+		#	trigger_event = {
+		#		id = ee_arnor.5000
+		#		days = 1
+		#	}
+		#}
+		
+		if = {
+			limit = { has_game_rule = lonelands_enabled }
+			start_situation = {
+				type = lonelands
+				
+			}
+		}
+		if = {
+			limit = { 
+				OR = { 
+					has_game_rule = nogrod_enabled 
+					has_game_rule = both_enabled 
+				}
+			}
+			title:k_uris_folk.holder = {
+				trigger_event = ee.3
+			}
+		}
+		if = {
+			limit = { 
+				OR = { 
+					has_game_rule = belegost_enabled 
+					has_game_rule = both_enabled 
+				}
+			}
+			title:k_dwalins_folk.holder = {
+				trigger_event = ee.4
+			}
+		}
+		if = {
+			limit = { 
+				OR = { 
+					has_game_rule = moria_restored 
+					
+				}
+			}
+			title:k_durins_folk.holder = {
+				trigger_event = ee.5
+			}
+		}
+		
 	}
 }
 
@@ -112,6 +175,674 @@ ee.2 = { # integrate the southern provinces
 	immediate = {
 		
 			struggle:balrog_struggle = { end_struggle = yes }
+		
+	}
+}
+
+ee.3 = {
+	hidden = yes
+	type = character_event
+	
+	immediate = {
+		
+		title:k_nogrod = {
+			every_de_jure_county = {
+				limit = {
+					any_county_province = {
+						has_holding_type = wastelands_holding
+					}
+				}
+				random_list = {
+					33 = { change_development_level = 4 }
+					33 = { change_development_level = 5 }
+					33 = { change_development_level = 6 }
+				}
+				save_temporary_scope_as = target_county
+						
+				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+						
+				scope:target_county = {
+					if = {
+						limit = { root = { is_elf = yes } }
+						title_province = { set_holding_type = elven_holding }
+					} else_if = {
+						limit = { title_province = { terrain = halls } }
+						title_province = { set_holding_type = dwarven_holding }
+					} else_if = {
+						limit = { root = { is_hobbit = yes } }
+						title_province = { set_holding_type = city_holding }
+					} else = {
+						if = {
+							limit = { root = { has_government = tribal_government } }
+							title_province = { set_holding_type = tribal_holding }
+						} else = {
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+				}		
+
+				if = { #Fallback
+					limit = { faith = faith:faith_wastelands_pagan }
+					set_county_faith = root.faith
+				}
+				if = { #Fallback
+					limit = { culture = culture:wastelands }
+					set_county_culture = root.culture
+				}
+			}
+			every_de_jure_county = {
+				limit = {
+					any_county_province = {
+						NOT = { has_holding_type = wastelands_holding } 
+					}
+					NOT = { holder = root }
+				}
+				holder.top_liege = {
+					create_title_and_vassal_change = {
+						type = swear_fealty
+						save_scope_as = change
+					}
+					change_liege = {
+						liege = title:e_arnor.holder
+						change = scope:change
+				 	}
+					resolve_title_and_vassal_change = scope:change
+					if = {
+						limit = {
+							has_government = tribal_government
+						}
+						change_government = feudal_government
+						every_sub_realm_county = {
+							limit = {
+								title_province = { has_holding_type = tribal_holding }
+							}
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+				}
+			}
+			
+		}
+		
+		every_realm_province = {
+			limit = {
+				has_holding = yes
+			}
+			random_list = {
+				pick = 3
+				30 = {
+					
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_economic_building_effect = yes
+					county = { change_development_level = 3 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_military_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_fortification_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				
+			}
+			
+		}
+		
+		get_title = title:k_nogrod
+		
+		province:4869 = {
+			set_great_building = wonder_nogrod_reborn
+			
+			replace_building_effect = dwarven_depths_10
+			random_list = {
+				pick = 20
+				10 = {
+					
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_economic_building_effect = yes
+					county = { change_development_level = 3 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_military_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_fortification_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				
+			}
+			county = {
+				every_neighboring_county = {
+					title_province = {
+						replace_building_effect = dwarven_depths_07
+						random_list = {
+							pick = 10
+							10 = {
+								
+							}
+							10 = {
+								trigger = {
+									free_building_slots > 0
+								}
+								add_random_economic_building_effect = yes
+								county = { change_development_level = 3 }
+							}
+							10 = {
+								trigger = {
+									free_building_slots > 0
+								}
+								add_random_military_building_effect = yes
+								county = { change_development_level = 2 }
+							}
+							10 = {
+								trigger = {
+									free_building_slots > 0
+								}
+								add_random_fortification_building_effect = yes
+								county = { change_development_level = 2 }
+							}
+							
+						}
+					}
+				}
+			}
+		}
+		
+		trigger_event = {
+			id = ee.31
+			days = 1
+		}
+		
+		add_gold = 2000
+		
+		set_realm_capital = title:c_luznakuz
+	}
+}
+
+ee.31 = {
+	hidden = yes
+	type = character_event
+	
+	immediate = {
+		
+		
+		
+		province:4869 = {
+			
+			rebuild_great_building = yes
+			
+			
+		}
+		
+		
+	}
+}
+
+ee.4 = {
+	hidden = yes
+	type = character_event
+	
+	immediate = {
+		
+		title:k_belegost = {
+			every_de_jure_county = {
+				limit = {
+					any_county_province = {
+						has_holding_type = wastelands_holding
+					}
+				}
+				random_list = {
+					33 = { change_development_level = 4 }
+					33 = { change_development_level = 5 }
+					33 = { change_development_level = 6 }
+				}
+				save_temporary_scope_as = target_county
+						
+				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+						
+				scope:target_county = {
+					if = {
+						limit = { root = { is_elf = yes } }
+						title_province = { set_holding_type = elven_holding }
+					} else_if = {
+						limit = { title_province = { terrain = halls } }
+						title_province = { set_holding_type = dwarven_holding }
+					} else_if = {
+						limit = { root = { is_hobbit = yes } }
+						title_province = { set_holding_type = city_holding }
+					} else = {
+						if = {
+							limit = { root = { has_government = tribal_government } }
+							title_province = { set_holding_type = tribal_holding }
+						} else = {
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+				}		
+
+				if = { #Fallback
+					limit = { faith = faith:faith_wastelands_pagan }
+					set_county_faith = root.faith
+				}
+				if = { #Fallback
+					limit = { culture = culture:wastelands }
+					set_county_culture = root.culture
+				}
+			}
+			every_de_jure_county = {
+				limit = {
+					any_county_province = {
+						NOT = { has_holding_type = wastelands_holding } 
+					}
+					NOT = { holder = root }
+				}
+				holder.top_liege = {
+					create_title_and_vassal_change = {
+						type = swear_fealty
+						save_scope_as = change
+					}
+					change_liege = {
+						liege = title:e_arnor.holder
+						change = scope:change
+				 	}
+					resolve_title_and_vassal_change = scope:change
+					if = {
+						limit = {
+							has_government = tribal_government
+						}
+						change_government = feudal_government
+						every_sub_realm_county = {
+							limit = {
+								title_province = { has_holding_type = tribal_holding }
+							}
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+				}
+			}
+			
+		}
+		
+		every_realm_province = {
+			limit = {
+				has_holding = yes
+			}
+			random_list = {
+				pick = 3
+				30 = {
+					
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_economic_building_effect = yes
+					county = { change_development_level = 3 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_military_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_fortification_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				
+			}
+			
+		}
+		
+		get_title = title:k_belegost
+		
+		province:4841 = {
+			set_great_building = wonder_belegost_reborn
+			
+			replace_building_effect = dwarven_depths_10
+			random_list = {
+				pick = 20
+				10 = {
+					
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_economic_building_effect = yes
+					county = { change_development_level = 3 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_military_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_fortification_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				
+			}
+			county = {
+				every_neighboring_county = {
+					title_province = {
+						replace_building_effect = dwarven_depths_07
+						random_list = {
+							pick = 10
+							10 = {
+								
+							}
+							10 = {
+								trigger = {
+									free_building_slots > 0
+								}
+								add_random_economic_building_effect = yes
+								county = { change_development_level = 3 }
+							}
+							10 = {
+								trigger = {
+									free_building_slots > 0
+								}
+								add_random_military_building_effect = yes
+								county = { change_development_level = 2 }
+							}
+							10 = {
+								trigger = {
+									free_building_slots > 0
+								}
+								add_random_fortification_building_effect = yes
+								county = { change_development_level = 2 }
+							}
+							
+						}
+					}
+				}
+			}
+		}
+		
+		trigger_event = {
+			id = ee.41
+			days = 1
+		}
+		
+		add_gold = 2000
+		
+		set_realm_capital = title:c_azelanduzur
+	}
+}
+
+ee.41 = {
+	hidden = yes
+	type = character_event
+	
+	immediate = {
+		
+		
+		
+		province:4841 = {
+			
+			rebuild_great_building = yes
+			
+			
+		}
+		
+		
+	}
+}
+
+ee.5 = {
+	hidden = yes
+	type = character_event
+	
+	immediate = {
+		
+		title:k_khazad_dum = {
+			every_de_jure_county = {
+				limit = {
+					OR = {
+						any_county_province = {
+							has_holding_type = wastelands_holding
+						}
+						holder = {
+							is_orc = yes
+						}
+					}
+				}
+				random_list = {
+					33 = { change_development_level = 4 }
+					33 = { change_development_level = 5 }
+					33 = { change_development_level = 6 }
+				}
+				save_temporary_scope_as = target_county
+						
+				ai_colonisation_effect = { WASTELANDS = scope:target_county ROOT_SCOPE = root }
+						
+				scope:target_county = {
+					if = {
+						limit = { root = { is_elf = yes } }
+						title_province = { set_holding_type = elven_holding }
+					} else_if = {
+						limit = { title_province = { terrain = halls } }
+						title_province = { set_holding_type = dwarven_holding }
+					} else_if = {
+						limit = { root = { is_hobbit = yes } }
+						title_province = { set_holding_type = city_holding }
+					} else = {
+						if = {
+							limit = { root = { has_government = tribal_government } }
+							title_province = { set_holding_type = tribal_holding }
+						} else = {
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+				}		
+
+				if = { #Fallback
+					limit = { faith = faith:faith_wastelands_pagan }
+					set_county_faith = root.faith
+				}
+				if = { #Fallback
+					limit = { culture = culture:wastelands }
+					set_county_culture = root.culture
+				}
+			}
+			every_de_jure_county = {
+				limit = {
+					any_county_province = {
+						NOT = { has_holding_type = wastelands_holding } 
+					}
+					NOT = { holder = root }
+				}
+				holder.top_liege = {
+					create_title_and_vassal_change = {
+						type = swear_fealty
+						save_scope_as = change
+					}
+					change_liege = {
+						liege = title:e_arnor.holder
+						change = scope:change
+				 	}
+					resolve_title_and_vassal_change = scope:change
+					if = {
+						limit = {
+							has_government = tribal_government
+						}
+						change_government = feudal_government
+						every_sub_realm_county = {
+							limit = {
+								title_province = { has_holding_type = tribal_holding }
+							}
+							title_province = { set_holding_type = castle_holding }
+						}
+					}
+				}
+			}
+			
+		}
+		
+		every_realm_province = {
+			limit = {
+				has_holding = yes
+			}
+			random_list = {
+				pick = 3
+				30 = {
+					
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_economic_building_effect = yes
+					county = { change_development_level = 3 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_military_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_fortification_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				
+			}
+			
+		}
+		
+		get_title = title:k_khazad_dum
+		
+		province:4909 = {
+			set_great_building = wonder_durin_throne_t5
+			
+			replace_building_effect = dwarven_depths_10
+			random_list = {
+				pick = 10
+				10 = {
+					
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_economic_building_effect = yes
+					county = { change_development_level = 3 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_military_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				10 = {
+					trigger = {
+						free_building_slots > 0
+					}
+					add_random_fortification_building_effect = yes
+					county = { change_development_level = 2 }
+				}
+				
+			}
+			county = {
+				every_neighboring_county = {
+					title_province = {
+						replace_building_effect = dwarven_depths_07
+						random_list = {
+							pick = 5
+							10 = {
+								
+							}
+							10 = {
+								trigger = {
+									free_building_slots > 0
+								}
+								add_random_economic_building_effect = yes
+								county = { change_development_level = 3 }
+							}
+							10 = {
+								trigger = {
+									free_building_slots > 0
+								}
+								add_random_military_building_effect = yes
+								county = { change_development_level = 2 }
+							}
+							10 = {
+								trigger = {
+									free_building_slots > 0
+								}
+								add_random_fortification_building_effect = yes
+								county = { change_development_level = 2 }
+							}
+							
+						}
+					}
+				}
+			}
+		}
+		
+		trigger_event = {
+			id = ee.51
+			days = 1
+		}
+		
+		add_gold = 2000
+		
+		set_realm_capital = title:c_durins_hall
+	}
+}
+
+ee.51 = {
+	hidden = yes
+	type = character_event
+	
+	immediate = {
+		
+		
+		
+		province:4909 = {
+			
+			rebuild_great_building = yes
+			remove_building = wonder_durin_throne_orcish
+			
+		}
+		
 		
 	}
 }

@@ -350,3 +350,50 @@ wonder_shrouded_isles_02 = {
 	type = special
 	flag = travel_point_of_interest_religious
 }
+
+
+
+wonder_wadewater = { 
+	type_icon = "icon_building_brandy_hall.dds"
+
+	construction_time = slow_construction_time
+	cost_gold = 500
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder ?= {
+			is_hobbit = yes 
+		}
+	}
+
+	levy = 300
+	max_garrison = 75
+
+	province_modifier = {
+		fort_level = normal_building_fort_level_tier_1
+		monthly_income = 1
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.2
+	}
+
+	character_modifier = {
+		dynasty_opinion = 30
+        monthly_prestige = 0.2
+	}
+	
+	is_enabled = {
+		scope:holder ?= {
+			OR = { 
+			is_hobbit = yes
+			is_dwarf = yes
+		}
+		}
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	type = special
+	flag = travel_point_of_interest_diplomatic
+}

@@ -23,26 +23,26 @@ l_english:
  #ee_arnor.5.a: "Swear Fealty"
  #ee_arnor.5.b: "The Shire needs no king"
   
- ee_arnor.6.t: "The Recovery of the Palantíri"
- ee_arnor.6.desc: "The salvage team set sail under a pale, weary sun, their course aimed directly into the churning, frigid waters of Forochel’s most desolate reaches. For weeks, their efforts had yielded little beyond the jagged, frozen coastline and the murmur of the wind in the stillness. But this morning, as the crew cast their nets over the waters where the currents grew colder still, the sea offered a grim treasure. Beneath the dark waves, the wreck of the Arvedui, the fabled vessel of the last King of Arthedain, lay entangled in the jagged rocks, its hull shattered, yet still defiantly holding the secrets of its final voyage. For the men aboard, the sight of the wreck was a moment of awe and dread—both a triumph of discovery and a reminder of the perils the sea had claimed. The divers, now wary of the unforgiving depths, braved the icy waters with one mission: to recover the lost Palantír. \n\nHours passed in tense silence, broken only by the creaking of the ship and the crash of distant waves. Then, with an effort that seemed to defy the very ocean, the first stone surfaced—dark, smooth, and ancient, its glass surface gleaming eerily in the pale light. The Palantír of Annúminas was found, its mysteries preserved in the cold embrace of the sea. The second soon followed, a stone of equal age but twisted by time—the Palantír of Amon Sûl. Their recovery was a victory not only for the salvage team but for the realm itself, for the stones now held the promise of restoring the vision of Arnor, if the King dared to use them. As the team returned to shore, the weight of history seemed to shift, and the distant shadow of the past began to stir once again."
- ee_arnor.6.a: "Huzzah!"
+ #ee_arnor.6.t: "The Recovery of the Palantíri"
+ #ee_arnor.6.desc: "The salvage team set sail under a pale, weary sun, their course aimed directly into the churning, frigid waters of Forochel’s most desolate reaches. For weeks, their efforts had yielded little beyond the jagged, frozen coastline and the murmur of the wind in the stillness. But this morning, as the crew cast their nets over the waters where the currents grew colder still, the sea offered a grim treasure. Beneath the dark waves, the wreck of the Arvedui, the fabled vessel of the last King of Arthedain, lay entangled in the jagged rocks, its hull shattered, yet still defiantly holding the secrets of its final voyage. For the men aboard, the sight of the wreck was a moment of awe and dread—both a triumph of discovery and a reminder of the perils the sea had claimed. The divers, now wary of the unforgiving depths, braved the icy waters with one mission: to recover the lost Palantír. \n\nHours passed in tense silence, broken only by the creaking of the ship and the crash of distant waves. Then, with an effort that seemed to defy the very ocean, the first stone surfaced—dark, smooth, and ancient, its glass surface gleaming eerily in the pale light. The Palantír of Annúminas was found, its mysteries preserved in the cold embrace of the sea. The second soon followed, a stone of equal age but twisted by time—the Palantír of Amon Sûl. Their recovery was a victory not only for the salvage team but for the realm itself, for the stones now held the promise of restoring the vision of Arnor, if the King dared to use them. As the team returned to shore, the weight of history seemed to shift, and the distant shadow of the past began to stir once again."
+ #ee_arnor.6.a: "Huzzah!"
  
  ee_arnor.4000.t: "The Numbers Game"
  ee_arnor.4000.desc: "The [balrog|E] of [moria|e] is a threat unlike any other. A fallen [maiargods|E] and servent of [morgothcharacter|e] since the begining of the great music. It is in a class far beyond anything alive in Middle-Earth today, bar the [darklord|e] himself. We are but ants before its power. But ants can bring down even the strongest warrior. All they need is a proper strategy. \n\nTBy setting up propper killing fields in the tunnels we can wear the balrog down with constant attrition. Thousands will die, but that is a necessary sacrifice to destroy the last balrog and free the world of shadow!"
  ee_arnor.4000.a: "Men to your possitions!"
  
- ee_arnor.8.t: "No Word from the North"
- ee_arnor.8.desc: "We have not yet recived any word on the search for the lost Palantiri of Arnor. Our best adventurers are continuing to search the bay of forochel for any sign of Arvedui's ship. All thats left to do it wait for results."
- ee_arnor.8.a: "We Eagerly await their sucess."
- ee_arnor.8.b: "Recall them, we can't afford this."
- 
-  ee_arnor.9.t: "A Frozen Miracle"
- ee_arnor.9.desc: "We have recived an utterly astonishing report from the adventurers in Forochel. They encountered a [numenorean|e] ship frozen in an iceberg. Getting aboard was problomatic but once inside it was clear the ship was carrying someone importiant. The crew, still eerily preserved by ice, were clad in fine robes and equiped with fine weapons. Our teams pulled the bodies from the ice to give them proper funereals fitting for our ancestors and salvaged as much as they could of the finnery and documents on the vessel. Then continued to search for the lost Palantiri. But then the miracle happened. A child, identified in the logs as Ârûbên the nephew of [pharazon|e], suddenly awoke. He was badly frostbitten and not able to stand but he was, is, alive."
- ee_arnor.9.a: "Bring the Heir of Numenor to the Capital at once!"
- 
- ee_arnor.7.t: "The Osgiliath-Stone Recovered!"
- ee_arnor.7.desc: "After long months of dredging and several alternate proposals to divert the river for the project, one of our cranes came across a large stone near one of the footings for an ancient bridge. At first, we thought it was just another boulder. But as the massive rock emerged from the water, its shape was clear. After some polishing and cleaning efforts, our suspicions were confirmed: we had found the lost Master Palantír of Osgiliath!"
- ee_arnor.7.a: "The Master-Stone Restored!"
+ #ee_arnor.8.t: "No Word from the North"
+ #ee_arnor.8.desc: "We have not yet recived any word on the search for the lost Palantiri of Arnor. Our best adventurers are continuing to search the bay of forochel for any sign of Arvedui's ship. All thats left to do it wait for results."
+ #ee_arnor.8.a: "We Eagerly await their sucess."
+ #ee_arnor.8.b: "Recall them, we can't afford this."
+ #
+ #ee_arnor.9.t: "A Frozen Miracle"
+ #ee_arnor.9.desc: "We have recived an utterly astonishing report from the adventurers in Forochel. They encountered a [numenorean|e] ship frozen in an iceberg. Getting aboard was problomatic but once inside it was clear the ship was carrying someone importiant. The crew, still eerily preserved by ice, were clad in fine robes and equiped with fine weapons. Our teams pulled the bodies from the ice to give them proper funereals fitting for our ancestors and salvaged as much as they could of the finnery and documents on the vessel. Then continued to search for the lost Palantiri. But then the miracle happened. A child, identified in the logs as Ârûbên the nephew of [pharazon|e], suddenly awoke. He was badly frostbitten and not able to stand but he was, is, alive."
+ #ee_arnor.9.a: "Bring the Heir of Numenor to the Capital at once!"
+ #
+ #ee_arnor.7.t: "The Osgiliath-Stone Recovered!"
+ #ee_arnor.7.desc: "After long months of dredging and several alternate proposals to divert the river for the project, one of our cranes came across a large stone near one of the footings for an ancient bridge. At first, we thought it was just another boulder. But as the massive rock emerged from the water, its shape was clear. After some polishing and cleaning efforts, our suspicions were confirmed: we had found the lost Master Palantír of Osgiliath!"
+ #ee_arnor.7.a: "The Master-Stone Restored!"
 
  ee_arnor.20.t: "Chosing a Canidate"
  ee_arnor.20.desc: "Now that the decision has been made to send an expedition to Arnor, it falls upon me, as Steward of Gondor, to select a leader worthy of this vital mission. This choice cannot be made lightly, for the road to the north is long and perilous, and the fate of this endeavor will rest heavily upon the one who commands it. The leader must possess not only martial skill and strategic wisdom but also the strength of will to endure the hardships of the journey and the burden of responsibility. They must be a figure of unwavering loyalty to Gondor, one who can inspire those who follow them and navigate both the treacherous wilds and the uncertain alliances that may await in the remnants of the old northern kingdom. As Steward, it is my duty to ensure that our hopes do not rest upon unsteady hands, for the success of this expedition may shape the future of Gondor and Arnor alike."
@@ -135,7 +135,7 @@ l_english:
  
  ee_elf.05.t: "Nenunial Reclaimed!"
  ee_elf.05.desc: "The shores of Nenuial, once graced by the presence of the Lady Galadriel herself, have been silent for long years, their beauty hidden beneath the weight of time. The ruins of Annúminas, once the heart of the Kingdom of Arnor, now lie in crumbling decay, a shadow of a human glory that was never meant to last. The stones left behind by men serve as a reminder of their fleeting presence, but the Elven song now rises once more, as we return to these shores where Galadriel once stood.\n\nWe do not come to preserve the remnants of mortal kingdoms, nor to honor the ruins that have long since lost their meaning. No, we come to clear away the human remains that have no place in the future of this land. Their broken walls, their faded roads—these are but the fading echoes of an age that has passed. We will sweep them aside, for they were never meant to endure.\n\nIn their place, we shall build a realm worthy of the stars, as timeless and enduring as the Elves themselves. The lands of Nenuial shall once again be a beacon of light and grace. The legacy of Galadriel, who once walked these shores, shall be honored, not through the crumbling remnants of a past kingdom, but through the creation of something greater—an Elven realm that will shine for all ages to come."
- ee_elf.05.a: "A new dawn for the moonlit shores"
+ ee_elf.05.a: "A new dawn for the moonlit shores."
  
  
  
@@ -144,8 +144,16 @@ l_english:
  ee_elf.06.a: "And it will never fall again!"
  
  ee_elf.07.t: "West Lorien"
- ee_elf.07.desc: "Long has [eregion|e] lain abandoned. ever since the [waroftheelvesandsauron|E] has my second home been naught but ruins, but no more. with the taming of the pass and the restoration of the realm it is finally time to weld these two kingdoms and their two peoples together."
- ee_elf.07.a: "To Last Forever After"
+ ee_elf.07.desc: "Long has [eregion|e] lain abandoned. Ever since the [waroftheelvesandsauron|E] has my second home been naught but ruins, but no more! With the taming of the pass and the restoration of the realm it is finally time to weld these two kingdoms and their two peoples together."
+ ee_elf.07.a: "To Last Forever After."
+ 
+ #ee_elf.08.t: "Gondolin Restored!"
+ #ee_elf.08.desc: "Since the [warofwrath|e] [gondolin|e] has lain abandoned of the coast of Tol Fuin. Two full ages of the world has the city lain abandoned. But no longer! Gondolin, the Hidden City, and the [hope|e] of all [eldar|e] rises again! \n\nAfter years of work dredging the ruins and rebuilding the very land it rests on, Gondolin is again filled with Elven song! While the Encircling Mountians may be gone, now the Great Sea itself serves as the cities protection."
+ #ee_elf.08.a: "A Statement of our Endurance in the ever changing world!"
+ 
+ ee_elf.09.t: "The Union of [root.GetFirstName]"
+ ee_elf.09.desc: "For to long have the [eldar|e] been divided. Since the [greatjourney|e] the Elves of the West have been divided. But in the intervening millenia the various clans of elves have intermixed and intermingled. It no longer makes sense for there to be a High King of the [noldorelves|E] or the [sindarelves|e], it is time for there to be a single High King of all the Eldar!"
+ ee_elf.09.a: "A new era for our people!"
   
  ee_elf.1000.t: "The Restoration of Eregion"
  ee_elf.1000.desc: "For to long has the land of [eregion|e] lay abandoned. Now by the might of [primarytitle.GetNameNoTier] it has been cleansed and made habitable once more. Now it's time to send our emissaries to the [noldorelves|E] and nominate a new Lord of Eregion to rule these lands."
@@ -179,21 +187,21 @@ l_english:
  ee_elf.2002.t: "The Last Smith"
  ee_elf.2002.desc: "[imladris|e] is a strange place. The Last Homely House west of the Misty Mountians. To me, all I can see is the lost potential. This is the place the [eldar|e] retreated to after the [waroftheelvesandsauron|e]? This? It's basically a single valley hidden in the mountians. It's sad to see the state our people have fallen to. \n\nBut nevertheless, I have a job to do. Imladris is the home of the survivors of [eregion|e] and the Ring Smiths. With any luck I can find a surviving smith who has first hand experiance forging rings of power. After a short time asking around I found [smith.GetFirstName]. They claim to be the be the last smith of the Noldor. But they claim to have lost all hope for the future of Middle-Earth."
  ee_elf.2002.a: "Lets see if i can convince them otherwise."
- ee_elf.2002.a.success: "You convince them"
- ee_elf.2002.a.failure: "You fail to convince them"
+ ee_elf.2002.a.success: "You convince them."
+ ee_elf.2002.a.failure: "You fail to convince them."
  
  ee_elf.2003.t: "The White Wizard"
  ee_elf.2003.desc: "I stand before the White Wizard [sarumancharacter|e], one of the five [istariconcept|e] sent by the [valargods|e] to guide the peoples of Middle-Earth, with an odd request. The White Wizard was once a [maiargods|e] of [aulecharacter|e], known to be exceptional in craft. If anyone in Middle-Earth can replicate the aid [sauroncharacter|e] gave to Celebrimbor, it's him. The Wizard is even said to have been engaged on a similar quest to replicate the [ringsofpower|e], presumably to understand how to counter the [oneringshort|e]." 
  ee_elf.2003.a: "Lets see if we can come to an agreement."
- ee_elf.2003.a.success: "You come to an agreement"
- ee_elf.2003.a.failure: "You fail to come to an agreement"
- ee_elf.2003.a.effect: "Saruman agrees to aid you"
+ ee_elf.2003.a.success: "You come to an agreement."
+ ee_elf.2003.a.failure: "You fail to come to an agreement."
+ ee_elf.2003.a.effect: "Saruman agrees to aid you."
  
  ee_elf.2004.t: "A New Ring"
  ee_elf.2004.desc: "The time has finally arrived to forge a new ring of power! we have gathered the materials, made several tests and practiced everything according to [celebrimbor|e]'s methods tell we have it down to perfection, because this requires perfection. If it Didn't someone else would have managed to do this mellenia ago. it is finally time to show the world the [eldar|e] aren't a diminished people doomed to decay. that we are still a part of this world and will fight to defend it!"
- ee_elf.2004.a: "Light the Forges"
- ee_elf.2004.a.success: "A Ring is Forged"
- ee_elf.2004.a.failure: "The Project Fails"
+ ee_elf.2004.a: "Light the Forges!"
+ ee_elf.2004.a.success: "A Ring is Forged."
+ ee_elf.2004.a.failure: "The Project Fails."
  
  ee_elf.2005.t: "Before the Dark Tower"
  ee_elf.2005.desc: "'Come out and face me!' I shout up to the unfathomable tower and wait for a response. The gaze of the Lidless Eye beats on me from uptop the tower but I stand firm. I am the hope of the Free Peoples! I am the Flame of the West! I will show once and for all that the [eldar|e] are still as great as we were in the [elderdays|e]. I will slay [sauroncharacter|e]! My gaze snaps back to the gate as it opens and the Lord of the Black Land comes forth..."
@@ -202,6 +210,86 @@ l_english:
  ee_elf.2005.c: "#italic Hail Annatar, The Lord of the Rings! #!"
  ee_elf.2005.a.success: "The Dark Lord Falls to your blade"
  ee_elf.2005.a.failure: "Sauron crushes you with his Mace"
- ee_elf.2005.b.success: "You escape"
- ee_elf.2005.c.success: "You Resist the Ring"
- ee_elf.2005.c.failure: "You Fall to the Ring"
+ ee_elf.2005.b.success: "You escape."
+ ee_elf.2005.c.success: "You Resist the Ring."
+ ee_elf.2005.c.failure: "You Fall to the Ring."
+ 
+ ### Hobbit
+ 
+ ee_hobbit.0100.t: "Our Decleration of Independence"
+ ee_hobbit.0100.desc: "The [shire|e] has been legally a subordinate realm to the [northkingdom|e] for over a millenia. However since the destruction of Arnor there has been no king. Why should we maintain the fiction that we are a province of Arnor when theres nothing left in Arnor for us to be a part of. It's time to dispense with this and for the Shire to truly be independent."
+ ee_hobbit.0100.a: "We Stand on our own two feet!"
+ 
+ ee_hobbit.0101.t: "The Greater Shire"
+ ee_hobbit.0101.desc: "The [shire|e] has long been the only settled part of [eriador|e]. The last bastion of civilization in the lonelands. While we were only origionally granted the lands of the Shire, there hasn't been anyone to argue with our settlement for centuries. It's time for us to expand our stewardship of the land to the borders of Eriador!"
+ ee_hobbit.0101.a: "Let the lonelands bloom!"
+ 
+ ee_hobbit.0102.t: "the Restoration of Wadewater"
+ ee_hobbit.0102.desc: "Wadewater, the Ancient home of the Stoors, has been restored. Lands that have stood empty for centuries now are once again filled with the smell of pipeweed and the sounds of laughter. Hobbits from the [shire|e] have already been flocking to the new realm and trade routes across [eriador|e] have already been established. Now it's time for us to formally declare the Thaindom of Wadewater!"
+ ee_hobbit.0102.a: "A new home!"
+ 
+ ### Easter Egg
+ 
+ ee_arnor.5000.t: "The Southern Faithful!"
+ ee_arnor.5000.desc: "[ROOT.Char.GetFirstName]  was the last scion of a nearly extinct [arnorian|e] house who fled the great plague, in Early 2752 of the [thirdage|e] she and her husband [ROOT.Char.GetPrimarySpouse.GetFirstName], a [adunai|e] prince who had spent most of his childhood on trade ships between [thanihazad|e] and [gondor|e] and had become enamored with the [faithful|e], were sent to [thanihazad|e] by the Steward of [gondor|e] in an attempt to convert the [adunai|e] and attempt to rally them against the [darklord|e]. Arriving in [ROOT.Char.GetPrimarySpouse.GetFirstName]'s home of [GetTitleByKey('d_inzilloni').GetNameNoTier] with a Host of Gondorian Volunteers and a burning desire to liberate the lands of the Utter South!"
+ ee_arnor.5000.a: "Hope is not lost!"
+ gondorian_host: "Gondorian Host"
+ 
+ ### Lonelands
+ 
+ ee_lonelands.001.t: "Colonial Investment"
+ ee_lonelands.001.desc: "Every ruler in the Lonelands is faced with the choice of how much to spend on colonization, with the amount spent having a very direct effect on how fast our realm spreads in the [wilderness|E]"
+ ee_lonelands.001.a: "No Investment"
+ ee_lonelands.001.b: "Small Investment"
+ ee_lonelands.001.c: "Medium Investment"
+ ee_lonelands.001.d: "Large Investment"
+ ee_lonelands.001.e: "Huge Investment"
+ ee_lonelands.001.f: "Massive Investment"
+ 
+ ee_lonelands.002.t: "Expanding Frontiers"
+ ee_lonelands.002.desc: "Our Population has grown large enough to settle a [county|e] in the [wilderness|E] now its time to decide where to expand."
+ ee_lonelands.002.a: "Settle [target1.GetNameNoTier]"
+ ee_lonelands.002.b: "Settle [target2.GetNameNoTier]"
+ ee_lonelands.002.c: "Settle [target3.GetNameNoTier]"
+ ee_lonelands.002.d: "Reinvest in [target4.GetNameNoTier]"
+ ee_lonelands.002.e: "Finish the [colony|e] in [target5.GetNameNoTier]"
+ ee_lonelands.002.e.effect: "The [colony|e] in [target5.GetNameNoTier] is completed"
+ 
+ ee_lonelands.100.t: "Ahead of Schedule"
+ ee_lonelands.100.desc: "Our colonists report that the process of expanding our realm is going extraordinarily well, they report that we are several months ahead of schedule on construction and surveying, and they expect that nothing else will go wrong"
+ ee_lonelands.100.a: "Excelient"
+ 
+ ee_lonelands.101.t: "Behind Schedule"
+ ee_lonelands.101.desc: "Unfortanntly our colonists report that we are currently behind Schedule on the planned expansion, people haven't flocked to the frontiers as hoped and our construction projects are behind. they estimate that it will be some time before we can expect a sucessful colony"
+ ee_lonelands.101.a: "Unfortaint"
+ 
+ ee_lonelands.102.t: "Border Raids"
+ ee_lonelands.102.desc: "Mauraders have begun raiding the outskirts of our realm, picking off border villages and vanishing into the [wilderness|E]. We must work to surpress these Mauraders before they seriously impede our [colonisation|e] efforts"
+ ee_lonelands.102.a: "Handle it Personally"
+ ee_lonelands.102.b: "Have the Marshal Handle it"
+ ee_lonelands.102.success: "You Drive off the Bandits"
+ ee_lonelands.102.failure: "The bandits defeat you"
+ 
+ ee_lonelands.103.t: "Border Surveys"
+ ee_lonelands.103.desc: "Our [colonisation|e] efforts have reached the point where we must servay the border regions. border villages have been complaining about unclear or overlapping authorities, and our marshals have complained that peasents being in multiple jurisdictions is leading to inacurate numbers of troops for our wars. we must correct these issues before we procede with any more colonization"
+ ee_lonelands.103.a: "Handle it Personally"
+ ee_lonelands.103.b: "Have the Steward Handle it"
+ ee_lonelands.103.success: "The region is Surveyed"
+ ee_lonelands.103.failure: "You Bungle it"
+ 
+ ee_lonelands.104.t: "Colonials in [target1.GetNameNoTier]"
+ ee_lonelands.104.desc: "A Group of independent minded colonists, lead by [new_ruler.GetFirstName], have set themselves up in [target1.GetNameNoTier] and proclaimed their Independence. they claim to be seeking a repreive from taxation and to make their own destiny away from our rule."
+ ee_lonelands.104.a: "Intresting"
+ 
+ ee_lonelands.105.t: "Rangers in [target1.GetNameNoTier]"
+ ee_lonelands.105.desc: "a group of [dunedain|E] Rangers have set themselves up in [target1.GetNameNoTier], declaring their intent to guard us from the maurading [orcs|e] and [trolls|e] roaming [eriador|e]. Our people however remain skeptical. the Rangers once ruled these lands and their days are past, better left to memory then action "
+ ee_lonelands.105.a: "Intresting"
+ 
+ ee_lonelands.106.t: "Orcs in [target1.GetNameNoTier]"
+ ee_lonelands.106.desc: "A band of maurading [orcs|e] have established themselves in [target1.GetNameNoTier]. We suspect that they were drawn in by our prosperity and aim to raid and pillage our realm. no matter their reason for coming here they pose a serious threat to us and the surrounding region."
+ ee_lonelands.106.a: "We Must move to counter the threat!"
+ 
+ ee_lonelands.004.t: "Automation"
+ ee_lonelands.004.desc: "Do you want to Automate the Lonelands Situation Events, if you do then the game will chose an option for you instead of letting you decide how to use your colonization power"
+ ee_lonelands.004.a: "Yes - Automate The Situation"
+ ee_lonelands.004.b: "No - I want Control"
