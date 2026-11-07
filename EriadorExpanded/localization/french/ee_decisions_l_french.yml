@@ -197,12 +197,12 @@ decision_establish_wadewater_confirm: "Restaurer le Gué des Eaux."
 
 ### Southern Faithful
 
-decision_southern_faithful_invasion: "Envahir Thani-Hazad"
-decision_southern_faithful_invasion_desc: "Il est temps que les [adunai|e] découvrent nos voies pacifiques… par la force ! Si nous voulons briser leurs coutumes hérétiques, nous devons démanteler leur société et renverser leurs anciennes élites !"
-decision_southern_faithful_invasion_tooltip: "Envahir Thani-Hazad."
-decision_southern_faithful_invasion_confirm: "Envahir Thani-Hazad."
+# decision_southern_faithful_invasion: "Envahir Thani-Hazad"
+# decision_southern_faithful_invasion_desc: "Il est temps que les [adunai|e] découvrent nos voies pacifiques… par la force ! Si nous voulons briser leurs coutumes hérétiques, nous devons démanteler leur société et renverser leurs anciennes élites !"
+# decision_southern_faithful_invasion_tooltip: "Envahir Thani-Hazad."
+# decision_southern_faithful_invasion_confirm: "Envahir Thani-Hazad."
 
-decision_southern_faithful_culture: "Racheter les Anduai"
-decision_southern_faithful_culture_desc: "Nous avons libéré les terres de [thanihazad|e] et rétabli le culte des [valargods|e] dans la région. Il est temps de renverser l’hérésie de [sauroncharacter|e] et de racheter les [adunai|e] une fois pour toutes !"
-decision_southern_faithful_culture_tooltip: "Racheter les Anduai."
-decision_southern_faithful_culture_confirm: "Rendre au Sud sa gloire !"
+# decision_southern_faithful_culture: "Racheter les Anduai"
+# decision_southern_faithful_culture_desc: "Nous avons libéré les terres de [thanihazad|e] et rétabli le culte des [valargods|e] dans la région. Il est temps de renverser l’hérésie de [sauroncharacter|e] et de racheter les [adunai|e] une fois pour toutes !"
+# decision_southern_faithful_culture_tooltip: "Racheter les Anduai."
+# decision_southern_faithful_culture_confirm: "Rendre au Sud sa gloire !"

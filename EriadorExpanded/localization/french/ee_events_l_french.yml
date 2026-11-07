@@ -225,8 +225,8 @@ ee_hobbit.0102.a: "Un nouveau foyer !"
 
 ### Easter Egg
 
-ee_arnor.5000.t: "Les Fidèles du Sud !"
-ee_arnor.5000.desc: "[ROOT.Char.GetFirstName] était le dernier rejeton d’une maison [arnorian|e] presque éteinte, ayant fui la Grande Peste. Au début de l’an 2752 du [thirdage|e], elle et son époux [ROOT.Char.GetPrimarySpouse.GetFirstName], un prince [adunai|e] ayant passé la majeure partie de son enfance sur des navires marchands entre [thanihazad|e] et [gondor|e], et devenu fervent des [faithful|e], furent envoyés en [thanihazad|e] par le Sénéchal de [gondor|e] dans le but de convertir les [adunai|e] et de tenter de les rallier contre le [darklord|e]. Ils arrivèrent dans le pays natal de [ROOT.Char.GetPrimarySpouse.GetFirstName], à [GetTitleByKey('d_inzilloni').GetNameNoTier], avec une armée de volontaires gondoriens et une volonté ardente de libérer les terres de l’Extrême Sud !"
-ee_arnor.5000.a: "L’espoir n’est pas perdu !"
+# ee_arnor.5000.t: "Les Fidèles du Sud !"
+# ee_arnor.5000.desc: "[ROOT.Char.GetFirstName] était le dernier rejeton d’une maison [arnorian|e] presque éteinte, ayant fui la Grande Peste. Au début de l’an 2752 du [thirdage|e], elle et son époux [ROOT.Char.GetPrimarySpouse.GetFirstName], un prince [adunai|e] ayant passé la majeure partie de son enfance sur des navires marchands entre [thanihazad|e] et [gondor|e], et devenu fervent des [faithful|e], furent envoyés en [thanihazad|e] par le Sénéchal de [gondor|e] dans le but de convertir les [adunai|e] et de tenter de les rallier contre le [darklord|e]. Ils arrivèrent dans le pays natal de [ROOT.Char.GetPrimarySpouse.GetFirstName], à [GetTitleByKey('d_inzilloni').GetNameNoTier], avec une armée de volontaires gondoriens et une volonté ardente de libérer les terres de l’Extrême Sud !"
+# ee_arnor.5000.a: "L’espoir n’est pas perdu !"
 
 gondorian_host: "Armée gondorienne"
