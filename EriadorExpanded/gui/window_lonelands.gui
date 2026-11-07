@@ -427,7 +427,7 @@ window = {
 								}
 							}
 
-							vbox_participant_group_summary = { }
+							ee_lonelands_vbox_participant_group_summary = { }
 
 							expand = {}
 
@@ -441,14 +441,14 @@ window = {
 					}
 					expand = {}
 				}
-				vbox_actionable_section = {
+				ee_lonelands_vbox_actionable_section = {
 					margin = { 0 12 }
 				}
 			}
 		}
 	}
 
-	window_natural_disaster_participant_groups = {
+	ee_lonelands_participant_groups = {
 		datacontext = "[SituationWindow.AccessParticipantCharacterList]"
 		datacontext = "[SituationParticipantCharacterList.AccessCharacterList]"
 		visible = "[SituationParticipantCharacterList.IsVisible]"
@@ -463,7 +463,7 @@ window = {
 
 
 
-	type vbox_actionable_section = vbox
+	type ee_lonelands_vbox_actionable_section = vbox
 	{
 		layoutpolicy_horizontal = expanding
 
@@ -522,8 +522,8 @@ window = {
 
 	}
 
-	type window_situation_participant_groups = window  {
-		name = "window_situation_participant_groups"
+	type ee_lonelands_participant_groups = window  {
+		name = "ee_lonelands_participant_groups"
 		widgetanchor = right
 		position = { 30 100 }
 		size = { 740 82% }
@@ -631,7 +631,7 @@ window = {
 
 				expand = {}
 
-				vbox_participant_group_summary = {
+				ee_lonelands_vbox_participant_group_summary = {
 					datacontext = "[SituationParticipantCharacterList.GetSelectedParticipantGroup]"
 
 					layoutpolicy_vertical = expanding
@@ -690,7 +690,7 @@ window = {
 		}
 	}
 
-	type vbox_participant_group_summary = vbox
+	type ee_lonelands_vbox_participant_group_summary = vbox
 	{
 		margin_left = 10
 		ignoreinvisible = yes
@@ -725,7 +725,7 @@ window = {
 		}
 	}
 
-	type vbox_current_phase_desc = vbox
+	type ee_lonelands_vbox_current_phase_desc = vbox
 	{
 		name = "phase_desc"
 		layoutpolicy_horizontal = expanding
@@ -761,7 +761,7 @@ window = {
 }
 
 
-template situation_shadow_over_mirkwood_tooltip {
+template situation_lonelands_tooltip {
 	container = {
 		alwaystransparent = no
 

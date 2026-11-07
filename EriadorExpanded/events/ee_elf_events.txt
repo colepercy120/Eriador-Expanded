@@ -1021,8 +1021,8 @@ ee_elf.2004 = {	# Attempt to Forge a Ring Of Power
  				desc = ee_elf.2004.a.success
  				compare_modifier = {
  					value = scope:duel_value
- 					multiplier = 2`
- 					min = -49`
+					multiplier = 2
+					min = -49
  				}
 				modifier = {
 					has_character_flag = last_smith

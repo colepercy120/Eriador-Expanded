@@ -213,7 +213,7 @@ ee_arnor.4 = { # spawn arnor
 		
 		
 		add_gold = 25000
-		correct_wastelands_tracker
+		correct_wastelands_tracker = yes
 		
 		
 		
@@ -1019,7 +1019,7 @@ ee_arnor.24 = { # integrate isengard
 		}
 	}
 	after = {
-		correct_wastelands_tracker
+		correct_wastelands_tracker = yes
 	}
 }} 
 
