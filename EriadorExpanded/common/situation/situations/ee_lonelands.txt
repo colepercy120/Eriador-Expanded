@@ -11,7 +11,7 @@
 		eriador = {
 			icon = "gfx/interface/icons/situation_types/natural_disaster_earthquake.dds"
 			map_color = { 1 0.2 0.2 }
-			geographical_regions = { custom_eriador middleearth_forodwaith middleearth_west_enedhwaith }
+			geographical_regions = { custom_eriador middleearth_forodwaith_forochel middleearth_west_enedhwaith custom_lowlands_angmar }
 		}
 		
 	}
@@ -28,7 +28,7 @@
 		#		value = 0
 		#	}
 		#}
-		colonize_power_tick = yes
+		#colonize_power_tick = yes
 		#every_situation_county = {
 		#	add_county_modifier = block_settlement_ability
 		#}
