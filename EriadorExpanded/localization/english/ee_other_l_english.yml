@@ -60,7 +60,7 @@ l_english:
  ### Traits
  
  trait_rageagainstlight: "Raging Again the Dying of the Light"
- trait_rageagainstlight_desc: "This Character is raging against the fading of the [eldar|E], working to preserve the works of the [elderdays|e] and create new wonders."
+ trait_rageagainstlight_desc: "This Character is raging against the fading of the [eldar|e], working to preserve the works of the [elderdays|e] and create new wonders."
  
  #### Game Rules
  
@@ -102,11 +102,11 @@ l_english:
  
  rule_accelerated_colonize_rule: "#defender_color EE:#! Accelerated Colonization"
  setting_accelerated_colonize_rule_enabled: "Enabled"
- setting_accelerated_colonize_rule_enabled_desc: "The Colonization [decision|E] is enabled"
+ setting_accelerated_colonize_rule_enabled_desc: "The Colonization [decision|e] is enabled"
  setting_accelerated_colonize_rule_disabled: "Disabled"
- setting_accelerated_colonize_rule_disabled_desc: "The Colonization [decision|E] is disabled"
+ setting_accelerated_colonize_rule_disabled_desc: "The Colonization [decision|e] is disabled"
  setting_accelerated_colonize_rule_disabled_ai: "Player Only"
- setting_accelerated_colonize_rule_disabled_ai_desc: "The Colonization [decision|E] is enabled for the player only"
+ setting_accelerated_colonize_rule_disabled_ai_desc: "The Colonization [decision|e] is enabled for the player only"
  
  rule_lonelands_rule: "#defender_color EE:#! Lonelands Situation"
  setting_lonelands_enabled: "Enabled"
@@ -144,7 +144,7 @@ l_english:
  ring_manual_desc: "The collected teachings of the great smith [celebrimbor|e] written before the fall of [eregion|e], containing all he learned from [annatarcharacter|e] and the formula to forge the [ringsofpower|e]."
  
  new_ring_name: "Ring of [owner.GetFirstNameNoTooltip]"
- new_ring_description: "@warning_icon!#T Do not trust your senses: the magic of the [ringsofpower|E] changes according to the bearer's race.#! \n\n A True Miracle of Elvish Smith Craft. A new [ringofpower|e] forged long after the fall of [eregion|e]. [owner.GetFirstName] studied long the work of [celebrimbor|e] in order to replicate the craft without [sauroncharacter|e]'s help. But time will tell if this ring is free of the shadow."
+ new_ring_description: "@warning_icon!#T Do not trust your senses: the magic of the [ringsofpower|e] changes according to the bearer's race.#! \n\n A True Miracle of Elvish Smith Craft. A new [ringofpower|e] forged long after the fall of [eregion|e]. [owner.GetFirstName] studied long the work of [celebrimbor|e] in order to replicate the craft without [sauroncharacter|e]'s help. But time will tell if this ring is free of the shadow."
  
  ### Nicknames
  
@@ -186,28 +186,28 @@ l_english:
  ### Situations
  
  game_concept_colonization_power: "Colonization Power"
- game_concept_colonization_power_desc: "Colonization power represents the rate growth of your realms colonies, When it reaches 100 you will be able to choose a new [county|e] to settle. \n\nColonization Power is multiplied by a value depending on your race:\n[elves|E]: 0.1 \n[dwarves|E]: 0.5 \n[hobbits|e]: 0.75 \n[men|e]: 1 \n[orcs|e]: 1.5"
+ game_concept_colonization_power_desc: "Colonization power represents the rate growth of your realms colonies, When it reaches 100 you will be able to choose a new [county|e] to settle. \n\nColonization Power is multiplied by a value depending on your race:\n[elves|e]: 0.1 \n[dwarves|e]: 0.5 \n[hobbits|e]: 0.75 \n[men|e]: 1 \n[orcs|e]: 1.5"
  
  situation_lonelands: "The Lonelands"
- situation_lonelands_description: "[eriador|E] and the surrounding land have long laid in ruin, with great realms of [arnor|E], [angmar|e], and [eregion|e] being long destoryed. today most of the land is uninhabited and the borders of realms end with the end of settlement"
+ situation_lonelands_description: "[eriador|e] and the surrounding land have long laid in ruin, with great realms of [arnor|e], [angmar|e], and [eregion|e] being long destoryed. today most of the land is uninhabited and the borders of realms end with the end of settlement"
  
- situation_lonelands_colonization_power: "[colonization_power|E]: [GetPlayer.MakeScope.Var('colonization_power').GetValue|+]"
+ situation_lonelands_colonization_power: "[colonization_power|e]: [GetPlayer.MakeScope.Var('colonization_power').GetValue|+]"
  situation_lonelands_colonize_change: "Monthly Change: [GetPlayer.MakeScope.Var('colonization_power_change').GetValue|+]"
  situation_lonelands_colonize_explain: "From [development|e]: [GetPlayer.MakeScope.Var('colonization_power_change_dev').GetValue|+]\nRacial Multiplier: [GetPlayer.MakeScope.Var('colonization_power_change_racial_multiplyer').GetValue|+|%0]\nModifier Multiplier: [GetPlayer.MakeScope.Var('colonization_power_change_modifier_multiplyer').GetValue|+|%0]"
  
  ee_lonelands_no_investment: "No Colonial Investment"
- ee_lonelands_no_investment_desc: "Monthly [colonization_power|E]: ['(CFixedPoint)-1'|%0|+]"
+ ee_lonelands_no_investment_desc: "Monthly [colonization_power|e]: ['(CFixedPoint)-1'|%0|+]"
  
  ee_lonelands_small_investment: "Small Colonial Investment"
- ee_lonelands_small_investment_desc: "Monthly [colonization_power|E]: ['(CFixedPoint)-0.5'|%0|+]"
+ ee_lonelands_small_investment_desc: "Monthly [colonization_power|e]: ['(CFixedPoint)-0.5'|%0|+]"
  ee_lonelands_medium_investment: "Medium Colonial Investment"
- ee_lonelands_medium_investment_desc: "Monthly [colonization_power|E]: ['(CFixedPoint)1'|%0|+]"
+ ee_lonelands_medium_investment_desc: "Monthly [colonization_power|e]: ['(CFixedPoint)1'|%0|+]"
  ee_lonelands_large_investment: "Large Colonial Investment"
- ee_lonelands_large_investment_desc: "Monthly [colonization_power|E]: ['(CFixedPoint)1.5'|%0|+]"
+ ee_lonelands_large_investment_desc: "Monthly [colonization_power|e]: ['(CFixedPoint)1.5'|%0|+]"
  ee_lonelands_huge_investment: "Huge Colonial Investment"
- ee_lonelands_huge_investment_desc: "Monthly [colonization_power|E]: ['(CFixedPoint)2'|%0|+]"
+ ee_lonelands_huge_investment_desc: "Monthly [colonization_power|e]: ['(CFixedPoint)2'|%0|+]"
  ee_lonelands_massive_investment: "Massive Colonial Investment"
- ee_lonelands_massive_investment_desc: "Monthly [colonization_power|E]: ['(CFixedPoint)3'|%0|+]"
+ ee_lonelands_massive_investment_desc: "Monthly [colonization_power|e]: ['(CFixedPoint)3'|%0|+]"
  
  LONELANDS_SITUATION_WINDOW_CURRENT_HEADER: "Current Phase"
  

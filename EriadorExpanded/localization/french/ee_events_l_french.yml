@@ -69,7 +69,7 @@ ee_arnor.21.d.tt:0 "La nouvelle colonie n’aura pas de bâtiment supplémentair
  ee_arnor.23.t:0 "Girithlin Colonisée"
 ee_arnor.23.desc:0 "De réjouissantes nouvelles me parviennent de la colonie en Arnor que j’ai parrainée. La construction est terminée, et le nouvel établissement de [target_county.GetNameNoTier] est achevé !\n\nLe nouveau seigneur, [arnorsettler.GetName], a pris possession de ce fief, et les Dúnedain ont commencé à étendre leur nouveau domaine avec diligence. Que [ROOT.Char.GetFaith.HighGodName] leur accorde succès et prospérité dans leurs entreprises !"
 ee_arnor.23.a:0 "Bonne chance à notre colonie !"
-ee_arnor.23.a.tt:0 "Vous gagnez une [defensive_alliance|E] avec [arnorsettler.GetName]"
+ee_arnor.23.a.tt:0 "Vous gagnez une [defensive_alliance|e] avec [arnorsettler.GetName]"
 ee_arnor.23.b:0 "Espérons qu'ils ne nous en voudront pas d'avoir refusé des fonds..."
 ee_arnor.23.c:0 "Je me demande ce que [arnorsettler.GetFirstName] fera ensuite…"
 
@@ -136,11 +136,11 @@ ee_elf.05.desc:0 "Les rivages de Nenuial, autrefois honorés par la présence de
 ee_elf.05.a:0 "Une aube nouvelle pour les rivages au clair de lune"
 
 ee_elf.06.t:0 "Le Haut Royaume d’Eriador"
-ee_elf.06.desc:0 "Pendant des âges, [eriador|e] fut l’un des plus grands et puissants royaumes elfique de la Terre du Milieu. Protégé à l’ouest par les Ered Luin et à l’est par les Hithaeglir, Eriador fut longtemps une terre juste et paisible des [eldar|e]. Cependant, il fut détruit lors de la [waroftheelvesandsauron|E] et donné aux Dúnedain après la chute.\n\nMais ce n’est plus le cas ! L'Eriador résonne à nouveau de chants elfique et de champs fleuris. Les forêts s’avancent sur les plaines longtemps stériles, [eregion|e] renaît tel un phénix, un nouveau printemps atteint [GetTitleByKey('k_sirgala').GetNameNoTier] et les rivages au clair de lune de [GetTitleByKey('k_nenuial').GetNameNoTier] sont à nouveau immaculés. Eriador est redevenu elfique !"
+ee_elf.06.desc:0 "Pendant des âges, [eriador|e] fut l’un des plus grands et puissants royaumes elfique de la Terre du Milieu. Protégé à l’ouest par les Ered Luin et à l’est par les Hithaeglir, Eriador fut longtemps une terre juste et paisible des [eldar|e]. Cependant, il fut détruit lors de la [waroftheelvesandsauron|e] et donné aux Dúnedain après la chute.\n\nMais ce n’est plus le cas ! L'Eriador résonne à nouveau de chants elfique et de champs fleuris. Les forêts s’avancent sur les plaines longtemps stériles, [eregion|e] renaît tel un phénix, un nouveau printemps atteint [GetTitleByKey('k_sirgala').GetNameNoTier] et les rivages au clair de lune de [GetTitleByKey('k_nenuial').GetNameNoTier] sont à nouveau immaculés. Eriador est redevenu elfique !"
 ee_elf.06.a:0 "Et il ne tombera plus jamais !"
 
 ee_elf.07.t: "Lórien Occidental"
-ee_elf.07.desc: "Depuis longtemps, [eregion|e] gisait abandonnée. Depuis la [waroftheelvesandsauron|E], ma seconde patrie n’était plus que ruines, mais cela change aujourd’hui ! Avec la maîtrise du passage et la restauration du royaume, il est enfin temps de fusionner ces deux royaumes et ces deux peuples en un seul."
+ee_elf.07.desc: "Depuis longtemps, [eregion|e] gisait abandonnée. Depuis la [waroftheelvesandsauron|e], ma seconde patrie n’était plus que ruines, mais cela change aujourd’hui ! Avec la maîtrise du passage et la restauration du royaume, il est enfin temps de fusionner ces deux royaumes et ces deux peuples en un seul."
 ee_elf.07.a: "Pour l’éternité à venir."
 
 ee_elf.08.t: "Gondolin restaurée !"
@@ -148,12 +148,12 @@ ee_elf.08.desc: "Depuis la [warofwrath|e], [gondolin|e] reposait abandonnée au 
 ee_elf.08.a: "Une déclaration de notre endurance dans un monde en perpétuel changement !"
 
 ee_elf.09.t: "L’Union de [root.GetFirstName]"
-ee_elf.09.desc: "Trop longtemps les [eldar|e] ont été divisés. Depuis la [greatjourney|e], les Elfes de l’Ouest se sont fragmentés. Mais au fil des millénaires, les différents clans elfiques se sont mêlés et entremêlés. Il n’a plus de sens qu’il existe un Haut Roi des [noldorelves|E] ou des [sindarelves|e] : il est temps qu’il n’y ait plus qu’un seul Haut Roi de tous les Eldar !"
+ee_elf.09.desc: "Trop longtemps les [eldar|e] ont été divisés. Depuis la [greatjourney|e], les Elfes de l’Ouest se sont fragmentés. Mais au fil des millénaires, les différents clans elfiques se sont mêlés et entremêlés. Il n’a plus de sens qu’il existe un Haut Roi des [noldorelves|e] ou des [sindarelves|e] : il est temps qu’il n’y ait plus qu’un seul Haut Roi de tous les Eldar !"
 ee_elf.09.a: "Une nouvelle ère pour notre peuple !"
 
 ee_elf.1000.t:0 "La Restauration de l'Eregion"
-ee_elf.1000.desc:0 "La terre de [eregion|e] est demeurée trop longtemps abandonnée. Par la puissance de [primarytitle.GetNameNoTier], elle a été purifiée et rendue habitable à nouveau. Il est maintenant temps d’envoyer nos émissaires aux [noldorelves|E] et de désigner un nouveau seigneur pour gouverner ces terres."
-ee_elf.1000.a:0 "Envoyez un message à [elrond.GetName], le plus sage des [noldorelves|E]."
+ee_elf.1000.desc:0 "La terre de [eregion|e] est demeurée trop longtemps abandonnée. Par la puissance de [primarytitle.GetNameNoTier], elle a été purifiée et rendue habitable à nouveau. Il est maintenant temps d’envoyer nos émissaires aux [noldorelves|e] et de désigner un nouveau seigneur pour gouverner ces terres."
+ee_elf.1000.a:0 "Envoyez un message à [elrond.GetName], le plus sage des [noldorelves|e]."
 ee_elf.1000.b:0 "Envoyez un message à [galadriel.GetName], l’une des dernières survivantes de l'Eregion."
 ee_elf.1000.c:0 "Envoyez un message à [maglor.GetName], le dernier fils de [feanor|e]."
 ee_elf.1000.d:0 "Laissez les Elfes choisir un chef parmi eux."
@@ -162,7 +162,7 @@ eregion_message2:0 "Envoyez un message à [galadriel.GetFirstName]."
 eregion_message3:0 "Envoyez un message à [maglor.GetFirstName]."
  
 ee_elf.1001.t: "La restauration de l’Eregion"
-ee_elf.1001.desc: "Depuis de nombreuses années, les terres de [eregion|E] sont en ruines. Depuis la [waroftheelvesandsauron|E], le pays des Forgeurs d'Anneaux est resté à l’abandon. Mais cela n’est plus ! [eregion_restorer.GetName], par un immense labeur, a restauré cette terre perdue et, chose plus étrange encore, m’a proposé d’en devenir le seigneur."
+ee_elf.1001.desc: "Depuis de nombreuses années, les terres de [eregion|e] sont en ruines. Depuis la [waroftheelvesandsauron|e], le pays des Forgeurs d'Anneaux est resté à l’abandon. Mais cela n’est plus ! [eregion_restorer.GetName], par un immense labeur, a restauré cette terre perdue et, chose plus étrange encore, m’a proposé d’en devenir le seigneur."
 ee_elf.1001.a: "Rallumons les forges !"
 ee_elf.1001.b: "Je serai le seigneur de l’Eregion et rien d’autre."
 ee_elf.1001.c: "Je ne peux abandonner mon foyer pour régner sur une terre maudite."

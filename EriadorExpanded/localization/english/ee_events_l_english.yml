@@ -28,7 +28,7 @@ l_english:
  #ee_arnor.6.a: "Huzzah!"
  
  ee_arnor.4000.t: "The Numbers Game"
- ee_arnor.4000.desc: "The [balrog|E] of [moria|e] is a threat unlike any other. A fallen [maiargods|E] and servent of [morgothcharacter|e] since the begining of the great music. It is in a class far beyond anything alive in Middle-Earth today, bar the [darklord|e] himself. We are but ants before its power. But ants can bring down even the strongest warrior. All they need is a proper strategy. \n\nTBy setting up propper killing fields in the tunnels we can wear the balrog down with constant attrition. Thousands will die, but that is a necessary sacrifice to destroy the last balrog and free the world of shadow!"
+ ee_arnor.4000.desc: "The [balrog|e] of [moria|e] is a threat unlike any other. A fallen [maiargods|e] and servent of [morgothcharacter|e] since the begining of the great music. It is in a class far beyond anything alive in Middle-Earth today, bar the [darklord|e] himself. We are but ants before its power. But ants can bring down even the strongest warrior. All they need is a proper strategy. \n\nTBy setting up propper killing fields in the tunnels we can wear the balrog down with constant attrition. Thousands will die, but that is a necessary sacrifice to destroy the last balrog and free the world of shadow!"
  ee_arnor.4000.a: "Men to your possitions!"
  
  #ee_arnor.8.t: "No Word from the North"
@@ -69,7 +69,7 @@ l_english:
  ee_arnor.23.t: "Girithlin Settled"
  ee_arnor.23.desc: "Uplifting news reaches me from the colony in Arnor that I sponsored. Construction has been finished, and the new settlement in [target_county.GetNameNoTier] has been completed!\n\nThe new ruler, [arnorsettler.GetName], has taken up lordship of the new holding, and the Dunedain have diligently begun to expand their new domain. Let [ROOT.Char.GetFaith.HighGodName] grant them swift success in their endeavours!"
  ee_arnor.23.a: "Best of luck to our colony!"
- ee_arnor.23.a.tt: "You gain a [defensive_alliance|E] with [arnorsettler.GetName]"
+ ee_arnor.23.a.tt: "You gain a [defensive_alliance|e] with [arnorsettler.GetName]"
  ee_arnor.23.b: "Let us hope they don't resent us for refusing funds..."
  ee_arnor.23.c: "I do wonder what [arnorsettler.GetFirstName] will do next.."
  
@@ -140,11 +140,11 @@ l_english:
  
  
  ee_elf.06.t: "The High Kindom of Eriador"
- ee_elf.06.desc: "For Ages and Ages [eriador|e] was one of the largest and mightiest Elven Realms in Middle-Earth. Guarded in the West by the Ered Luin and the east by the Hithaeglir, Eriador was long a fair and peaceful land of the [eldar|e]. However it was destoryed in the [waroftheelvesandsauron|E] and given to the Dunedain after the downfall. \n\nBut no longer! Eriador once again is host to elven songs and fields of flowers. Forests march into long barren plains, [eregion|e] is rising as a phoenix, a new spring has reached [GetTitleByKey('k_sirgala').GetNameNoTier] and the moonlit shores of [GetTitleByKey('k_nenuial').GetNameNoTier] are once again prestine. Eriador is Elven once again!"
+ ee_elf.06.desc: "For Ages and Ages [eriador|e] was one of the largest and mightiest Elven Realms in Middle-Earth. Guarded in the West by the Ered Luin and the east by the Hithaeglir, Eriador was long a fair and peaceful land of the [eldar|e]. However it was destoryed in the [waroftheelvesandsauron|e] and given to the Dunedain after the downfall. \n\nBut no longer! Eriador once again is host to elven songs and fields of flowers. Forests march into long barren plains, [eregion|e] is rising as a phoenix, a new spring has reached [GetTitleByKey('k_sirgala').GetNameNoTier] and the moonlit shores of [GetTitleByKey('k_nenuial').GetNameNoTier] are once again prestine. Eriador is Elven once again!"
  ee_elf.06.a: "And it will never fall again!"
  
  ee_elf.07.t: "West Lorien"
- ee_elf.07.desc: "Long has [eregion|e] lain abandoned. Ever since the [waroftheelvesandsauron|E] has my second home been naught but ruins, but no more! With the taming of the pass and the restoration of the realm it is finally time to weld these two kingdoms and their two peoples together."
+ ee_elf.07.desc: "Long has [eregion|e] lain abandoned. Ever since the [waroftheelvesandsauron|e] has my second home been naught but ruins, but no more! With the taming of the pass and the restoration of the realm it is finally time to weld these two kingdoms and their two peoples together."
  ee_elf.07.a: "To Last Forever After."
  
  #ee_elf.08.t: "Gondolin Restored!"
@@ -152,12 +152,12 @@ l_english:
  #ee_elf.08.a: "A Statement of our Endurance in the ever changing world!"
  
  ee_elf.09.t: "The Union of [root.GetFirstName]"
- ee_elf.09.desc: "For to long have the [eldar|e] been divided. Since the [greatjourney|e] the Elves of the West have been divided. But in the intervening millenia the various clans of elves have intermixed and intermingled. It no longer makes sense for there to be a High King of the [noldorelves|E] or the [sindarelves|e], it is time for there to be a single High King of all the Eldar!"
+ ee_elf.09.desc: "For to long have the [eldar|e] been divided. Since the [greatjourney|e] the Elves of the West have been divided. But in the intervening millenia the various clans of elves have intermixed and intermingled. It no longer makes sense for there to be a High King of the [noldorelves|e] or the [sindarelves|e], it is time for there to be a single High King of all the Eldar!"
  ee_elf.09.a: "A new era for our people!"
   
  ee_elf.1000.t: "The Restoration of Eregion"
- ee_elf.1000.desc: "For to long has the land of [eregion|e] lay abandoned. Now by the might of [primarytitle.GetNameNoTier] it has been cleansed and made habitable once more. Now it's time to send our emissaries to the [noldorelves|E] and nominate a new Lord of Eregion to rule these lands."
- ee_elf.1000.a: "Send word to [elrond.GetName], The Wisest of the [noldorelves|E]."
+ ee_elf.1000.desc: "For to long has the land of [eregion|e] lay abandoned. Now by the might of [primarytitle.GetNameNoTier] it has been cleansed and made habitable once more. Now it's time to send our emissaries to the [noldorelves|e] and nominate a new Lord of Eregion to rule these lands."
+ ee_elf.1000.a: "Send word to [elrond.GetName], The Wisest of the [noldorelves|e]."
  ee_elf.1000.b: "Send word to [galadriel.GetName], One of the last surviors of Eregion."
  ee_elf.1000.c: "Send word to [maglor.GetName], the last son of [feanor|e]."
  ee_elf.1000.d: "Let the elves choose a leader amoung themselves."
@@ -166,7 +166,7 @@ l_english:
  eregion_message3: "Send word to [maglor.GetFirstName]."
  
  ee_elf.1001.t: "The Restoration of Eregion"
- ee_elf.1001.desc: "For many long years the lands of [eregion|E] have been ruined. Since the [waroftheelvesandsauron|E] the land of the Ring Smiths has laid bare. But no longer! [eregion_restorer.GetName], through great toil, has restored the lost land, and most strangly, has offered me rule over it."
+ ee_elf.1001.desc: "For many long years the lands of [eregion|e] have been ruined. Since the [waroftheelvesandsauron|e] the land of the Ring Smiths has laid bare. But no longer! [eregion_restorer.GetName], through great toil, has restored the lost land, and most strangly, has offered me rule over it."
  ee_elf.1001.a: "Let us reignite the forges!"
  ee_elf.1001.b: "I will be lord of Eregion and nothing else."
  ee_elf.1001.c: "I can not abandon my home to rule a cursed land."
@@ -238,7 +238,7 @@ l_english:
  ### Lonelands
  
  ee_lonelands.001.t: "Colonial Investment"
- ee_lonelands.001.desc: "Every ruler in the Lonelands is faced with the choice of how much to spend on colonization, with the amount spent having a very direct effect on how fast our realm spreads in the [wilderness|E]"
+ ee_lonelands.001.desc: "Every ruler in the Lonelands is faced with the choice of how much to spend on colonization, with the amount spent having a very direct effect on how fast our realm spreads in the [wilderness|e]"
  ee_lonelands.001.a: "No Investment"
  ee_lonelands.001.b: "Small Investment"
  ee_lonelands.001.c: "Medium Investment"
@@ -247,7 +247,7 @@ l_english:
  ee_lonelands.001.f: "Massive Investment"
  
  ee_lonelands.002.t: "Expanding Frontiers"
- ee_lonelands.002.desc: "Our Population has grown large enough to settle a [county|e] in the [wilderness|E] now its time to decide where to expand."
+ ee_lonelands.002.desc: "Our Population has grown large enough to settle a [county|e] in the [wilderness|e] now its time to decide where to expand."
  ee_lonelands.002.a: "Settle [target1.GetNameNoTier]"
  ee_lonelands.002.b: "Settle [target2.GetNameNoTier]"
  ee_lonelands.002.c: "Settle [target3.GetNameNoTier]"
@@ -264,7 +264,7 @@ l_english:
  ee_lonelands.101.a: "Unfortaint"
  
  ee_lonelands.102.t: "Border Raids"
- ee_lonelands.102.desc: "Mauraders have begun raiding the outskirts of our realm, picking off border villages and vanishing into the [wilderness|E]. We must work to surpress these Mauraders before they seriously impede our [colonisation|e] efforts"
+ ee_lonelands.102.desc: "Mauraders have begun raiding the outskirts of our realm, picking off border villages and vanishing into the [wilderness|e]. We must work to surpress these Mauraders before they seriously impede our [colonisation|e] efforts"
  ee_lonelands.102.a: "Handle it Personally"
  ee_lonelands.102.b: "Have the Marshal Handle it"
  ee_lonelands.102.success: "You Drive off the Bandits"
@@ -282,7 +282,7 @@ l_english:
  ee_lonelands.104.a: "Intresting"
  
  ee_lonelands.105.t: "Rangers in [target1.GetNameNoTier]"
- ee_lonelands.105.desc: "a group of [dunedain|E] Rangers have set themselves up in [target1.GetNameNoTier], declaring their intent to guard us from the maurading [orcs|e] and [trolls|e] roaming [eriador|e]. Our people however remain skeptical. the Rangers once ruled these lands and their days are past, better left to memory then action "
+ ee_lonelands.105.desc: "a group of [dunedain|e] Rangers have set themselves up in [target1.GetNameNoTier], declaring their intent to guard us from the maurading [orcs|e] and [trolls|e] roaming [eriador|e]. Our people however remain skeptical. the Rangers once ruled these lands and their days are past, better left to memory then action "
  ee_lonelands.105.a: "Intresting"
  
  ee_lonelands.106.t: "Orcs in [target1.GetNameNoTier]"

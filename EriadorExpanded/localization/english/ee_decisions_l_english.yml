@@ -47,7 +47,7 @@ l_english:
  decision_arnor_colony_tooltip: "Begin planning for a Colony in Girithlin."
  decision_arnor_colony_effect: "Search for Canidates to establish a colony in Girithlin."
  
- arnor_colony_requriement: "You have reintegrated 2 or more lost territories using the #bold $decision_restore_gondor_province.gondorian$#! [decision|E]."
+ arnor_colony_requriement: "You have reintegrated 2 or more lost territories using the #bold $decision_restore_gondor_province.gondorian$#! [decision|e]."
 
  decision_colonize: "Colonize"
  decision_colonize_desc: "Colonize a Neighboring Province."
@@ -61,7 +61,7 @@ l_english:
  decision_arnor_king_effect: "Search for an Heir to Isildur."
  
  decision_greater_cardolan: "Declare Greater Cardolan"
- decision_greater_cardolan_desc: "The people of [GetTitleByKey('k_cardolan').GetNameNoTier] have been ignored and mistreated for far to long, we are not just [arnorian|e], we are Cardolani, and we deserve to have a kingdom of our own, on the same level of [gondor|e] or {arnor|e]. and now that we have the land secured its time for the rest of the world to acknowledge it"
+ decision_greater_cardolan_desc: "The people of [GetTitleByKey('k_cardolan').GetNameNoTier] have been ignored and mistreated for far to long, we are not just [arnorian|e], we are Cardolani, and we deserve to have a kingdom of our own, on the same level of [gondor|e] or [arnor|e]. and now that we have the land secured its time for the rest of the world to acknowledge it"
  decision_greater_cardolan_confirm: "Declare Greater Cardolan"
  decision_greater_cardolan_tooltip: "Declare Greater Cardolan"
  decision_greater_cardolan_effect: "[GetTitleByKey('e_cardolan').GetName] will become de jure leige of every [kingdom|e] in [GetGeographicalRegion('greater_cardolan').GetName]"  
@@ -128,22 +128,22 @@ l_english:
  decision_elf_have_more_kids_tooltip: "Have More Kids!"
  
  decision_invite_elves_eregion: "Invite Elves to Eregion"
- decision_invite_elves_eregion_desc: "The Ancient realm of [eregion|E] was destoryed millennia ago during the [waroftheelvesandsauron|E]. Since then the realm of the ring makers has laid abandoned, with only the ghosts of the past inhabiting the ancient halls. Now that the realm has been cleansed we can again invite the [noldorelves|E] to reestablish their ancient halls and serve as a bulwark against the darkess."
+ decision_invite_elves_eregion_desc: "The Ancient realm of [eregion|e] was destoryed millennia ago during the [waroftheelvesandsauron|e]. Since then the realm of the ring makers has laid abandoned, with only the ghosts of the past inhabiting the ancient halls. Now that the realm has been cleansed we can again invite the [noldorelves|e] to reestablish their ancient halls and serve as a bulwark against the darkess."
  decision_invite_elves_eregion_tooltip: "Invite Elves to Eregion"
  decision_invite_elves_eregion_confirm: "Let the Ancient Realm Rise!"
- decision_invite_elves_eregion_effect_tooltip: "Send an emissary to the [noldorelves|E]."
+ decision_invite_elves_eregion_effect_tooltip: "Send an emissary to the [noldorelves|e]."
  fully_settled_eregion: "The [GetTitleByKey('d_eregion').GetName] is fully settled."
- noldor_friend: "You have a [friend|e] amongst the [noldorelves|E]."
+ noldor_friend: "You have a [friend|e] amongst the [noldorelves|e]."
 
  decision_reclaim_eriador: "Restore Elven Rule over Eriador"
- decision_reclaim_eriador_desc: "For most of the [firstage|e] and [secondage|e], [eriador|e] was an elven realm, with its borders stretching from the Gwathló and Misty Mountains in the East to the Blue Mountains in the west. The [waroftheelvesandsauron|E] shattered the realm and dispursed its people, and after the [downfallofnumenor|E] the land was given to the [faithful|e]. But now the [dunedain|e] are long gone and Eriador lays abandoned, presenting us with an oppritunity to restore our ancient home."
+ decision_reclaim_eriador_desc: "For most of the [firstage|e] and [secondage|e], [eriador|e] was an elven realm, with its borders stretching from the Gwathló and Misty Mountains in the East to the Blue Mountains in the west. The [waroftheelvesandsauron|e] shattered the realm and dispursed its people, and after the [downfallofnumenor|e] the land was given to the [faithful|e]. But now the [dunedain|e] are long gone and Eriador lays abandoned, presenting us with an oppritunity to restore our ancient home."
  decision_reclaim_eriador_confirm: "Let the land be filled with music once again"
  decision_reclaim_eriador_tooltip: "Restore Elven Rule over Eriador"
  decision_reclaim_eriador_effect: "[GetTitleByKey('e_eriador').GetName] will become de jure leige of every [kingdom|e] in [GetGeographicalRegion('custom_eriador').GetName] and [GetGeographicalRegion('middleearth_forodwaith').GetName]."
  decision_noldor_eriador_effect: "Every county in [GetGeographicalRegion('custom_eriador').GetName] will gain [GetModifier('elven_homeland_county_modifier').GetNameWithTooltip]."
  
  decision_unite_western_elves: "Unite The Elves of the West"
- decision_unite_western_elves_desc: "Over the millenia the Elves of the west have intermingled and interspread across the realms and ages. Making the traditional clan structure of the [noldorelves|E], [sindarelves|e], [telerielves|e], and [avari|e] obsolete. As the world fades and our numbers dwindle it's time the [eldar|e] who remain are reunited."
+ decision_unite_western_elves_desc: "Over the millenia the Elves of the west have intermingled and interspread across the realms and ages. Making the traditional clan structure of the [noldorelves|e], [sindarelves|e], [telerielves|e], and [avari|e] obsolete. As the world fades and our numbers dwindle it's time the [eldar|e] who remain are reunited."
  decision_unite_western_elves_tooltip: "Unite The Elves of the West."
  decision_unite_western_elves_confirm: "Unite The Elves of the West."
  decision_cyrdor_effect: "[GetTitleByKey('h_cyrdor').GetName] will become de jure leige of every [empire|e] in [GetGeographicalRegion('custom_eriador').GetName], [GetGeographicalRegion('middleearth_west_beleriand').GetName] and [GetGeographicalRegion('middleearth_forodwaith').GetName]."
@@ -155,7 +155,7 @@ l_english:
  decision_vanquish_darkess_effect: "Unlocks new [casus_belli|e] to destory darkness."
  
  decision_ring_lore: "Study Ring Lore"
- decision_ring_lore_desc: "The [ringsofpower|e] are the greatest artifacts created by elves after the [elderdays|e], only surpassed by [feanor|e]'s [silmarils|e]. Of course they were only designed with the help of [annatarcharacter|e], and he tied them to his will and that of the [onering|e]. But the concept is sound, and [celebrimbor|e] created the [threeringsofelvesshort|E] free of the shadow. \n\nUnlike the Silmarils, there is no material in the Rings of Power we can't possess. All we need is the knowledge. While most of the great smiths of the [noldorelves|E] perished with the fall of [eregion|E], the ruins of the great forges still stand. A visit to the remnants of Ost-in-Edhil might yield some of their lost knowledge."
+ decision_ring_lore_desc: "The [ringsofpower|e] are the greatest artifacts created by elves after the [elderdays|e], only surpassed by [feanor|e]'s [silmarils|e]. Of course they were only designed with the help of [annatarcharacter|e], and he tied them to his will and that of the [onering|e]. But the concept is sound, and [celebrimbor|e] created the [threeringsofelvesshort|e] free of the shadow. \n\nUnlike the Silmarils, there is no material in the Rings of Power we can't possess. All we need is the knowledge. While most of the great smiths of the [noldorelves|e] perished with the fall of [eregion|e], the ruins of the great forges still stand. A visit to the remnants of Ost-in-Edhil might yield some of their lost knowledge."
  decision_ring_lore_tooltip: "Study Ring Lore"
  decision_ring_lore_confirm: "to Eregion!"
  decision_ring_lore_effect1: "Search the Ruins for knowledge on the rings"
@@ -168,7 +168,7 @@ l_english:
  decision_forge_ring_effect: "Attempt to Forge a Ring of Power"
  
  decision_slay_sauron: "Slay Sauron"
- decision_slay_sauron_desc: "The root of all evil still left in [arda|e] is the Dark Lord [sauroncharacter|e]. He picked up right where [morgothcharacter|e] left off and has constructed a host almost as large as his former masters. If we want to truly save this world, then we must destory him. Gil-galad and [elendil|E] both died trying to defeat him miliarilarly, and all that did was delay him for an age. If we want to truly destroy him. then it will take more then cutting off a ring. Maybe [fingolfin|E] had the right idea..."
+ decision_slay_sauron_desc: "The root of all evil still left in [arda|e] is the Dark Lord [sauroncharacter|e]. He picked up right where [morgothcharacter|e] left off and has constructed a host almost as large as his former masters. If we want to truly save this world, then we must destory him. Gil-galad and [elendil|e] both died trying to defeat him miliarilarly, and all that did was delay him for an age. If we want to truly destroy him. then it will take more then cutting off a ring. Maybe [fingolfin|e] had the right idea..."
  decision_slay_sauron_effect: "Travel to Mordor to face [sauroncharacter|e] in single combat. - #bold This is a bad idea #!"
  decision_slay_sauron_tooltip: "Slay Sauron"
  decision_slay_sauron_confirm: "To Mordor!"
@@ -176,13 +176,13 @@ l_english:
  decision_slay_sauron_trigger_2: "All Neighboring Lands have been cleared of Evil."
  
  decision_attack_balrog: "March Against the Balrog"
- decision_attack_balrog_desc: "The [balrog|E] of [moria|e] has been allowed to persist for far to long. Ever since the destruction of Khazad-Dum we have known a darkness laid in the deep. But it has been left to fester. Enough is enough! We will finally purge the darkness and restore light to the tunnels!"
+ decision_attack_balrog_desc: "The [balrog|e] of [moria|e] has been allowed to persist for far to long. Ever since the destruction of Khazad-Dum we have known a darkness laid in the deep. But it has been left to fester. Enough is enough! We will finally purge the darkness and restore light to the tunnels!"
  decision_attack_balrog_confirm: "Ready the Troops!"
  decision_attack_balrog_tooltip: "March Against the Balrog."
- decision_attack_balrog_trigger_1: "Your Army is Strong Enough to kill the [balrog|E]."
+ decision_attack_balrog_trigger_1: "Your Army is Strong Enough to kill the [balrog|e]."
  
  decision_lorien_eregion: "Proclaim the Realm of West Lorien"
- decision_lorien_eregion_desc: "[eregion|E] was founded by Lady Galadriel before settling here in Lothlorien. She was expelled by [celebrimbor|e] after the arrival of [annatarcharacter|e], leading to that realm's destruction. However, now that Eregion has been restored to her, it is no brainer to unite both her realms."
+ decision_lorien_eregion_desc: "[eregion|e] was founded by Lady Galadriel before settling here in Lothlorien. She was expelled by [celebrimbor|e] after the arrival of [annatarcharacter|e], leading to that realm's destruction. However, now that Eregion has been restored to her, it is no brainer to unite both her realms."
  decision_lorien_eregion_confirm: "Proclaim the Realm of West Lorien"
  decision_lorien_eregion_effect: "The [GetTitleByKey('k_eregion').GetName] will receive a new name, symbolizing its renewed state."
  decision_lorien_eregion_tooltip: "Proclaim the Realm of West Lorien"

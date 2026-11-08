@@ -50,7 +50,7 @@ ratdotl_modifier: "Rage contre le Déclin de la Lumière"
 
 ### Traits
 trait_rageagainstlight: "Rage contre le Déclin de la Lumière"
-trait_rageagainstlight_desc: "Ce personnage se révolte contre le déclin des [eldar|E], œuvrant à préserver les œuvres des [elderdays|e] et à créer de nouvelles merveilles."
+trait_rageagainstlight_desc: "Ce personnage se révolte contre le déclin des [eldar|e], œuvrant à préserver les œuvres des [elderdays|e] et à créer de nouvelles merveilles."
 
 #### Règles de jeu
 rule_eregion_rule: "L’Existence de l'Eregion"
@@ -89,25 +89,25 @@ setting_no_balrog_desc: "La lutte pour la Moria sera désactivée."
 
 rule_accelerated_colonize_rule: "EE : Colonisation accélérée"
 setting_accelerated_colonize_rule_enabled: "Activé"
-setting_accelerated_colonize_rule_enabled_desc: "La [decision|E] de colonisation est activée"
+setting_accelerated_colonize_rule_enabled_desc: "La [decision|e] de colonisation est activée"
 setting_accelerated_colonize_rule_disabled: "Désactivé"
-setting_accelerated_colonize_rule_disabled_desc: "La [decision|E] de colonisation est désactivée"
+setting_accelerated_colonize_rule_disabled_desc: "La [decision|e] de colonisation est désactivée"
 setting_accelerated_colonize_rule_disabled_ai: "Joueur uniquement"
-setting_accelerated_colonize_rule_disabled_ai_desc: "La [decision|E] de colonisation est activée uniquement pour le joueur"
+setting_accelerated_colonize_rule_disabled_ai_desc: "La [decision|e] de colonisation est activée uniquement pour le joueur"
 
 ### Guerres
 
 ELVEN_HOMELANDS_KINGDOM_CONQUEST_WAR_NAME: "Guerre pour Reconquérir les Terres Elfiques"
-ELVEN_HOMELANDS_KINGDOM_CONQUEST_CB_NAME: "[elven_homelands_conquest_casus_belli|E] contre [kingdom|E]"
+ELVEN_HOMELANDS_KINGDOM_CONQUEST_CB_NAME: "[elven_homelands_conquest_casus_belli|e] contre [kingdom|e]"
 VANQUISH_DARKNESS_KINGDOM_WAR_NAME: "Guerre pour Chasser les Ténèbres de [TITLE.GetBaseName]"
-VANQUISH_DARKNESS_KINGDOM_CB_NAME: "[vanquish_darkness_casus_belli|E] contre [kingdom|E]"
+VANQUISH_DARKNESS_KINGDOM_CB_NAME: "[vanquish_darkness_casus_belli|e] contre [kingdom|e]"
 
 ### Artéfacts
 ring_manual: "Enseignements de Celebrimbor"
 ring_manual_desc: "Recueil des enseignements du grand forgeron [celebrimbor|e] rédigé avant la chute d’[eregion|e], contenant tout ce qu’il apprit de [annatarcharacter|e] et la formule pour forger les [ringsofpower|e]."
 
 new_ring_name: "Anneau de [owner.GetFirstNameNoTooltip]"
-new_ring_description: "@warning_icon!#T Ne faites pas confiance à vos sens : la magie des [ringsofpower|E] change selon la race de son porteur.#!\n\nUn véritable miracle de la forge elfique. Un nouveau [ringofpower|e] forgé bien après la chute d’[eregion|e]. [owner.GetFirstName] étudia longuement le travail de [celebrimbor|e] afin de reproduire cet art sans l’aide de [sauroncharacter|e]. Seul le temps dira si cet anneau est exempt de l’ombre."
+new_ring_description: "@warning_icon!#T Ne faites pas confiance à vos sens : la magie des [ringsofpower|e] change selon la race de son porteur.#!\n\nUn véritable miracle de la forge elfique. Un nouveau [ringofpower|e] forgé bien après la chute d’[eregion|e]. [owner.GetFirstName] étudia longuement le travail de [celebrimbor|e] afin de reproduire cet art sans l’aide de [sauroncharacter|e]. Seul le temps dira si cet anneau est exempt de l’ombre."
 
 ### Surnoms
 nick_last_smith: "Le Dernier Forgeron"
