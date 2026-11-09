@@ -1177,6 +1177,7 @@ ee_lonelands.106 = { ### Orc Camp
 	immediate = {
 		create_character = {
 			template = orc_champion_character
+			gender_female_chance = 30
 			location = root.location
 			culture = culture:worauthai_madur
 			faith = faith:faith_angmar_evil
