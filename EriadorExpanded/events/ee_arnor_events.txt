@@ -224,7 +224,7 @@ ee_arnor.4 = { # spawn arnor
 		
 			
 	}
-}}
+}
 
 ee_arnor.44 = { # spawn vassals
 	content_source = realms_dlc
@@ -1021,7 +1021,7 @@ ee_arnor.24 = { # integrate isengard
 	after = {
 		correct_wastelands_tracker = yes
 	}
-}} 
+} 
 
 ee_arnor.30 = { # Dwarf King decides who to send to the White Mountain
 	content_source = realms_dlc
