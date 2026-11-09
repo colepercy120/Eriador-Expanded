@@ -311,7 +311,7 @@
 		}
 		renewal = {
 			max_duration = { years = 500 }
-			icon = "gfx\interface\icons\situation_types\dale_pikes.dds"
+			icon = "gfx/interface/icons/situation_types/dale_pikes.dds"
 			illustration = "gfx/interface/illustrations/situation_phase/lotr_lonelands.dds"
 			
 			on_start = {
