@@ -237,7 +237,7 @@ window = {
 					hbox  = {
 						layoutpolicy_horizontal = expanding
 						
-						margin = 50
+						margin = { 50 50 }
 
 						
 						# Progressbar (custom built)
@@ -503,7 +503,7 @@ window = {
 					visible = "[EqualTo_string( 'shadow' , Situation.GetTopCurrentPhase.GetType.GetKey )]"
 					autoresize = yes
 					max_width = 500
-					text = "situation_mirkwood_shadow_description"
+					text = "situation_lonelands_description"
 				}
 
 				
@@ -512,7 +512,7 @@ window = {
 					visible = "[EqualTo_string( 'shadow' , Situation.GetTopCurrentPhase.GetType.GetKey )]"
 					autoresize = yes
 					max_width = 500
-					text = "situation_mirkwood_shadow_recommendations"
+					text = "situation_lonelands_recommendations"
 					default_format = "#help"
 				}
 
