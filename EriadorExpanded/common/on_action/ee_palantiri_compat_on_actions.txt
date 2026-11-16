@@ -1,0 +1,13 @@
+# Announce the EE/WED shared Arnor palantir expedition so TFW does not duplicate its decision.
+on_game_start = {
+	on_actions = { ee_palantiri_register_presence }
+}
+
+ee_palantiri_register_presence = {
+	effect = {
+		set_global_variable = {
+			name = tfw_palantiri_external_system_present
+			value = yes
+		}
+	}
+}

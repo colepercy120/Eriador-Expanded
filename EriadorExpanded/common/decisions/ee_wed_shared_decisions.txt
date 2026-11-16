@@ -24,6 +24,7 @@ decision_palintir_fishing = {
 	is_shown = {
 		
 		is_arnor = yes
+		NOT = { exists = global_var:tfw_palantiri_recovered }
 	
 		
 		

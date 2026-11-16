@@ -45,6 +45,8 @@ ee_wed_shared.02 = { # palintir fishing
 	}
 	
 	immediate = {
+		# Mark the original Arnor stones as recovered across all three mods.
+		set_global_variable = { name = tfw_palantiri_recovered value = yes }
 		create_artifact_palantir_annuminas_effect = { OWNER = this }
 		scope:newly_created_artifact = {
 			save_scope_as = artifact1
@@ -148,6 +150,12 @@ ee_wed_shared.04 = { # palintir fishing fail
 	}
 	option = {
 		name = ee_wed_shared.04.b
+
+		# Allow a canceled expedition to be started again.
+		remove_list_global_variable = {
+			name = unavailable_unique_decisions
+			target = flag:decision_palintir_fishing
+		}
 		
 
 	}
